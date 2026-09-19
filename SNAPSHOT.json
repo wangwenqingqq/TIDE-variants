@@ -1,0 +1,21 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_decision_repair_20260905_cpu_gate",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_decision_repair_20260905_cpu_gate"
+    }
+  ],
+  "files": {
+    "source/extract_sample.py": {
+      "mode": "100644",
+      "original_sha256": "a3971fda62ab24527a74cc605bf14d476d66cf2c91c833c4a8bb32677d1f66a7",
+      "publication_adjustments": [],
+      "sha256": "a3971fda62ab24527a74cc605bf14d476d66cf2c91c833c4a8bb32677d1f66a7",
+      "source_label": "TIDE/active/tide_decision_repair_20260905_cpu_gate/extract_sample.py"
+    }
+  },
+  "payload_sha256": "78c495b1ba1046384fcda146a84c71b68236aa8d967d4adbb6702fe036dae2a4",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
