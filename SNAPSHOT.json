@@ -1,0 +1,649 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_speculative_fallback_v4",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4"
+    }
+  ],
+  "files": {
+    "source/canary_runs/c2_v4_canary_v1/child_wrapper.sh": {
+      "mode": "100755",
+      "original_sha256": "5b1cae433f6c714d3f208ecf3ce19857455d8f27450a6c593699e213688de22e",
+      "publication_adjustments": [
+        {
+          "occurrences": 8,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "9ec53a378669dcdcee10effc761d86fef806501dea078c5bf057f7d4980feaaf",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/canary_runs/c2_v4_canary_v1/child_wrapper.sh"
+    },
+    "source/canary_runs/c2_v4_metadatafix_canary_v2/child_wrapper.sh": {
+      "mode": "100755",
+      "original_sha256": "c3232dac7346a4af9e20f9d6da0a0247b2284e1fe62c1c4ef70b94190bacc691",
+      "publication_adjustments": [
+        {
+          "occurrences": 8,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "a46d983b29e37509455adb58cada755a96ad4a66d47a6066afdf4d4754900596",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/canary_runs/c2_v4_metadatafix_canary_v2/child_wrapper.sh"
+    },
+    "source/formal_runs/c2_v4_calibration_v1/child_wrapper.sh": {
+      "mode": "100755",
+      "original_sha256": "0ca9511a3f06b0e313da8c3212855dfe33578211dc6ad57af46cc0d15c18be2e",
+      "publication_adjustments": [
+        {
+          "occurrences": 8,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "b841625543b2898bf58fb49a7a325bdd6372cb41b49f33078713db03ca69867f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/formal_runs/c2_v4_calibration_v1/child_wrapper.sh"
+    },
+    "source/formal_runs_v2/c2_v4_calibration_v2/child_wrapper.sh": {
+      "mode": "100755",
+      "original_sha256": "c4f88d4c85fdfe44dbcb252ad7e45e73bb48ef656c0dab4a4834a969cdb09812",
+      "publication_adjustments": [
+        {
+          "occurrences": 8,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "74aa122d7855b5448e5a0aebe482fc8ae1ac3f733c07d26d41450e302380ecc6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/formal_runs_v2/c2_v4_calibration_v2/child_wrapper.sh"
+    },
+    "source/formal_runs_v2/c2_v4_validation_v1/child_wrapper.sh": {
+      "mode": "100755",
+      "original_sha256": "dd5f0f1cfaf836d5f5cd39f8c5863dce4798d835b97d940264d12e730a943c34",
+      "publication_adjustments": [
+        {
+          "occurrences": 9,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "8311408948426916f584190474dff7faee48bacfc271522392963059897d9133",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/formal_runs_v2/c2_v4_validation_v1/child_wrapper.sh"
+    },
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/include/file.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "publication_adjustments": [],
+      "sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/include/residual_pruning.cuh"
+    },
+    "source/include/search_v4.cuh": {
+      "mode": "100644",
+      "original_sha256": "9c1940934018215dace781ef8d3ab0cea9a38f7c17d0d3fcb69a0014d6801367",
+      "publication_adjustments": [],
+      "sha256": "9c1940934018215dace781ef8d3ab0cea9a38f7c17d0d3fcb69a0014d6801367",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/include/search_v4.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/include/tree.cuh"
+    },
+    "source/src/gts_speculative_fallback_v4_metadatafix_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "810245916ff301a923c14847bb3e89f9d9d0e85523421c7856bc0bf34b83bf89",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "561be59b40a72311821f3cb4b97cbcbb42c1b77295373e4e0b0ebb9acebb93fa",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/src/gts_speculative_fallback_v4_metadatafix_v1.cu"
+    },
+    "source/src/gts_speculative_fallback_v4_sift1m.cu": {
+      "mode": "100644",
+      "original_sha256": "b5b05f269e4cfa6e94dd5c2238a32068a6651309a7495cad1261634c6c6ed27f",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5b8e2e24a8e1abbe4bef566e97db81d9d1e661fedb3229349aecd49878c56da3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/src/gts_speculative_fallback_v4_sift1m.cu"
+    },
+    "source/src/gts_speculative_fallback_v4_writerflush_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "b39113d5407219c88d1350e738c1ae2c58d8ddfac480be5237779a4f345140a0",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "b1d0d2d7d3a55dc306c4f9409a7acc99ec7aeaa1408caf955768628cdef546ff",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/src/gts_speculative_fallback_v4_writerflush_v1.cu"
+    },
+    "source/tests/test_v4_strict_top_level_json.py": {
+      "mode": "100755",
+      "original_sha256": "067e0f03ae673af9ab82631646a112ca168a731733973eb319d8d4a78845e9f8",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "0be00fd37234e3bfd3866b3edeca51bfceb4b929a85c08cbd536580d0bed51d4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tests/test_v4_strict_top_level_json.py"
+    },
+    "source/tools/audit_c2_v4_formal_calibration_preflight.py": {
+      "mode": "100755",
+      "original_sha256": "83f0e15dc5c7d99d787385bd02a92f02f585b804806752c026c99d5584356cbf",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "446f2663a52897eac7bbd40cd7170f35bace2c1a963b2e933417873f330ea91b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_formal_calibration_preflight.py"
+    },
+    "source/tools/audit_c2_v4_metadatafix_canary_preflight_v2.py": {
+      "mode": "100755",
+      "original_sha256": "cd174383e5dace1e153d32c5ae640e5663f3f65dce8492b87113b8ee97ea8bbb",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "d8d3d128f7f6a8c8d4a7d693b0f740efa5ea919af505f2e9cc948667d2621abb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_metadatafix_canary_preflight_v2.py"
+    },
+    "source/tools/audit_c2_v4_metadatafix_canary_result_v2.py": {
+      "mode": "100755",
+      "original_sha256": "b79753bbcdca852d825955415436113744468300fd5aa5171ed1b2b32335f50d",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "a32169198ecdd0d14b1612dc7e0110b65c3d43e840a847a67d340cc9cf3a0a61",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_metadatafix_canary_result_v2.py"
+    },
+    "source/tools/audit_c2_v4_metadatafix_formal_calibration_preflight_v2.py": {
+      "mode": "100755",
+      "original_sha256": "722c058716348d7f6230a1a47700c60ddc0ae22920d7cba743051054ce66e9c9",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "c11404c2c7a3389ae7ec370542a7fbb3b9e25e36c1d62eb5bc54f677fb9e23cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_metadatafix_formal_calibration_preflight_v2.py"
+    },
+    "source/tools/audit_c2_v4_metadatafix_formal_calibration_result_v2.py": {
+      "mode": "100755",
+      "original_sha256": "ddf29d210927fdb1842b5c4a18d12d48506c03d09959b25a18ce87743c53171a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "136ae7b9b6141afe4b62a310bde36b00629b126c1b03afd7c035616e6f801398",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_metadatafix_formal_calibration_result_v2.py"
+    },
+    "source/tools/audit_c2_v4_metadatafix_v1.py": {
+      "mode": "100755",
+      "original_sha256": "4826461fc46344fab9e78d9c3bd17bce6c28576df20e246f1dd860b83d1cea57",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "8316806613a6b2afe6faabff9984de092ce33dbc057e17a42234dbf280bdc8be",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_metadatafix_v1.py"
+    },
+    "source/tools/audit_c2_v4_metadatafix_validation_preflight_v1.py": {
+      "mode": "100755",
+      "original_sha256": "067e152e2552215e763bd984273cbf45cc3ef3c83bf63d75aec1cce0303f4ef8",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "fbccaa2681cc0d8707268980cf7c7ea0ded5ddba34b1f2b83c39e73aeeaa2871",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_metadatafix_validation_preflight_v1.py"
+    },
+    "source/tools/audit_c2_v4_writerflush_source_v1.py": {
+      "mode": "100755",
+      "original_sha256": "a54cfafde0e372ff30319f394e15305a73b9ad1dbf31e64d1612105061939258",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "47cf65522a66ec0af44cb1e20662a4c678aee6a6ec4e71920489f57023ced0d1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/audit_c2_v4_writerflush_source_v1.py"
+    },
+    "source/tools/build_c2_v4_canary_workload.py": {
+      "mode": "100755",
+      "original_sha256": "375579c9aa88288e956ea2c8b7d080dfa2b92f6f2401a42700c3ab16b80571c5",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "9c1b61040b97bc1a4ffabe6f846d5258a737e75827345a7168bddb21cee5a64f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/build_c2_v4_canary_workload.py"
+    },
+    "source/tools/build_c2_v4_final_binary.sh": {
+      "mode": "100755",
+      "original_sha256": "a4137ca4e9fca216f7532c150c9810172bb88a76cfb5f6e315fe9a30396fd502",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "63b6e42ad9158f3270b459dd87cc00f88176fd95f485ca01ed7dc4341f61112e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/build_c2_v4_final_binary.sh"
+    },
+    "source/tools/build_c2_v4_metadatafix_binary_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "724183d94d7bd7ef13f31c59382999ae54336b7dbf6427ce993981ca9eb050bb",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "c9da7e147a06812f0dc8f891e6288e096197b0cc6b4d549ac2123510ad9ca752",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/build_c2_v4_metadatafix_binary_v1.sh"
+    },
+    "source/tools/build_c2_v4_writerflush_binary_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "0df4822b85300cb15388ccfe8859f81f65757032a1f4cd60a366c31c41bf97bd",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "3a7a22cca956931670a296536bd447f8902fa8fb578bc199c63a5323080b9746",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/build_c2_v4_writerflush_binary_v1.sh"
+    },
+    "source/tools/c2_v4_cpu_exact_oracle.cpp": {
+      "mode": "100644",
+      "original_sha256": "4a1020111a5985c2b4d9f7650138b7c62015d64100b88a671b23eefc87d41ebb",
+      "publication_adjustments": [],
+      "sha256": "4a1020111a5985c2b4d9f7650138b7c62015d64100b88a671b23eefc87d41ebb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/c2_v4_cpu_exact_oracle.cpp"
+    },
+    "source/tools/c2_v4_guard_failure_integrity_source_only.sh": {
+      "mode": "100755",
+      "original_sha256": "96843588c678239d93d790f76f864f00f86c56312778ca303577a5053d45bce4",
+      "publication_adjustments": [],
+      "sha256": "96843588c678239d93d790f76f864f00f86c56312778ca303577a5053d45bce4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/c2_v4_guard_failure_integrity_source_only.sh"
+    },
+    "source/tools/c2_v4_strict_json_contract.py": {
+      "mode": "100755",
+      "original_sha256": "f8b78efd67dc83481c2f8ccb67ee126c6898b279b3ff0c3e224c0414bb60bb28",
+      "publication_adjustments": [],
+      "sha256": "f8b78efd67dc83481c2f8ccb67ee126c6898b279b3ff0c3e224c0414bb60bb28",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/c2_v4_strict_json_contract.py"
+    },
+    "source/tools/decide_c2_v4_metadatafix_validation_sealed_gate_v1.py": {
+      "mode": "100755",
+      "original_sha256": "02c9d1e406d8a15c1c476acfcb2d0e64a708b132ad96966bef9449466b508b74",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "e8259feab3f9bc280d04d8146ec2836fa9517ef5acd13d1e5f057387447d7790",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/decide_c2_v4_metadatafix_validation_sealed_gate_v1.py"
+    },
+    "source/tools/finalize_c2_v4_cpu_oracle.py": {
+      "mode": "100755",
+      "original_sha256": "27c34358316b6e714f193e9fe717072d42589893e6681a29bf7b627ba35fb318",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "b2408280067a55d0bc93035b2935bc72b0d021e50855fd9eed2ad52e04d373e0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/finalize_c2_v4_cpu_oracle.py"
+    },
+    "source/tools/finalize_c2_v4_cpu_oracle_v2.py": {
+      "mode": "100755",
+      "original_sha256": "64274658f33b112e5dd4f009de1d34e1777f0b7c02ad2b83db2fd4aef31dd007",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "d51d1affaa524d3781f0afb9fa76d7bbe6ea152b4207d48d2ca6333ae296de33",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/finalize_c2_v4_cpu_oracle_v2.py"
+    },
+    "source/tools/finalize_c2_v4_cpu_oracle_v3.py": {
+      "mode": "100755",
+      "original_sha256": "071e95f9f25561e16be898ed93ec74212c2fb01c47ecad07f33408f0e5a744e3",
+      "publication_adjustments": [
+        {
+          "occurrences": 6,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "d04405a78020e88d96d7259a233c517e87141144bc31db9bdab78db68ff55730",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/finalize_c2_v4_cpu_oracle_v3.py"
+    },
+    "source/tools/prepare_v4_fresh_selection_pre_gt.py": {
+      "mode": "100755",
+      "original_sha256": "3ef71d0d3825eca0f8ae6b830ac54f71c445d684088c070f904734c32a91c192",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "02fb0d87ca348d2b3b5b0639cf326a6c0b313c41ff2b9ee7e881a7a5cd1890db",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/prepare_v4_fresh_selection_pre_gt.py"
+    },
+    "source/tools/run_c2_v4_canary_gpu_guard.sh": {
+      "mode": "100755",
+      "original_sha256": "c1c7d1bc952035b7b37e89745020548e342af444e4f2370d23bb4f16b6f41fad",
+      "publication_adjustments": [
+        {
+          "occurrences": 9,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "77b6831ef972b136abdd144e6a284eaa754f8e146f199427454c45b3ff9296a1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_canary_gpu_guard.sh"
+    },
+    "source/tools/run_c2_v4_canary_preledger_gate.sh": {
+      "mode": "100755",
+      "original_sha256": "78918c5217817e49326ded3cd4a699a9fdd01e7fea502d2f7295df8553c6c214",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "8086e4191fac262a70d5628f9a6114335f846ed141c27f0da291099336d51d36",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_canary_preledger_gate.sh"
+    },
+    "source/tools/run_c2_v4_cpu_exact_oracle.sh": {
+      "mode": "100755",
+      "original_sha256": "49a3dbc3dc51783e0e72608cd1a4ec73c02190bbce104471577d92f1d690e47d",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "b5cccaf1b02589123bf4699d3c5236b3128a28ac9784229221c5dab771959e67",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_cpu_exact_oracle.sh"
+    },
+    "source/tools/run_c2_v4_formal_calibration_gpu_guard.sh": {
+      "mode": "100755",
+      "original_sha256": "40911347ad8e540a3442c807a0679bb54f0ed3c3efbe25d5ca0587a093d64813",
+      "publication_adjustments": [
+        {
+          "occurrences": 7,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "d8debc3fc24321de5f37bb9711a41865a7f4c252a11ea9c221ce838fc57c7650",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_formal_calibration_gpu_guard.sh"
+    },
+    "source/tools/run_c2_v4_metadatafix_canary_gpu_guard_v2.sh": {
+      "mode": "100755",
+      "original_sha256": "b83838504082e840215b6da63a22dda868a5d073a72dc95f20dc8653fc04d454",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "9f871078336181bda0248a72ff85cea55be2ce3483a94db2ca5aa7486d646763",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_metadatafix_canary_gpu_guard_v2.sh"
+    },
+    "source/tools/run_c2_v4_metadatafix_canary_preledger_gate_v2.sh": {
+      "mode": "100755",
+      "original_sha256": "fff04a5ee9202e13f2e317f1760a47cc80f21fe6a2f1d8f30dd57b51f0a014ee",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "3d19fe3a8fd6da67e1410906e0e71cbf1223c593507878af42cee6aac84bc1ac",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_metadatafix_canary_preledger_gate_v2.sh"
+    },
+    "source/tools/run_c2_v4_metadatafix_formal_calibration_gpu_guard_v2.sh": {
+      "mode": "100755",
+      "original_sha256": "093b066b178082401135de6dcca21d870e9069f2a9611aea9fca5370dc5f7db3",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "1831677f4661627d4311efb01a0b942407982a39858328d8dcfca2cac5885007",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_metadatafix_formal_calibration_gpu_guard_v2.sh"
+    },
+    "source/tools/run_c2_v4_metadatafix_preledger_gate_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "f7736d8dd316ebc0fc539258b3df23b90bc6350a2741b4366ad192ae06a1af24",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "98be89609fd0b2b98a0512aeb3de858bbf96c12917f787ab54b59d0662d4f791",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_metadatafix_preledger_gate_v1.sh"
+    },
+    "source/tools/run_c2_v4_metadatafix_validation_gpu_guard_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "8dd208bb5df625bea6ad1eb2faa6ebd0b36bf32a654fdd6c0aa3d31f66e892b6",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "7f1ef8528a7b97b6ba5a0737b396daea873e113aebf908adc4cec2565e31c17e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_metadatafix_validation_gpu_guard_v1.sh"
+    },
+    "source/tools/run_c2_v4_preledger_parser_gate.sh": {
+      "mode": "100755",
+      "original_sha256": "b37f9f47590b75f08b7afb6122e7b8f66fde844d2c2fc5a5d2c179c29a59dbfb",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "64a6eeec7959f8ad991137eeb87eb39bee6b8ca1ba837788718f82bacb1eacac",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_preledger_parser_gate.sh"
+    },
+    "source/tools/run_c2_v4_preledger_parser_gate_v2.sh": {
+      "mode": "100755",
+      "original_sha256": "e70dc9ccc3a19e49af47162ce90116528be83c7beabb9d2c6617ff4e9cb588b2",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "393af02050bde484e262167fcc3a880332bc0ee4fd329ba2fa4387373aabbdfc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/run_c2_v4_preledger_parser_gate_v2.sh"
+    },
+    "source/tools/verify_c2_v4_preledger_receipt.py": {
+      "mode": "100755",
+      "original_sha256": "530740ae173cbc736bca4721c27a0dd9358ab5d02a824aaeb2b46884be593378",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "102ddd1dc3ef0d8bf4a8271848573db3b80bc92c07574e17ba2b76e3a224e549",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/verify_c2_v4_preledger_receipt.py"
+    },
+    "source/tools/verify_v4_source_only.py": {
+      "mode": "100755",
+      "original_sha256": "c533660015467938636b141909b44757e79829ec2fb6628701ebfb4e80df19b8",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "02e2dbb21c6e632e7fe7a3d4148567b339e27864287649a157d470a8067fbca5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4/tools/verify_v4_source_only.py"
+    }
+  },
+  "payload_sha256": "fa75e506e844c7dfc1aa9fac8af7632238fb05e85c3d45d31b882e946fccfb84",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
