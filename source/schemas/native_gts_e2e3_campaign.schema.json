@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tide.native-gts-e2e3-campaign.v1",
+  "title": "TIDE native-GTS E2/E3 campaign plan",
+  "type": "object",
+  "required": ["schema", "template_only", "status", "campaign_id", "baseline", "native_gate1", "metric", "external_data", "common_policy", "variants", "e2", "e3", "independent_validation"],
+  "properties": {
+    "schema": {"const": "tide.native-gts-e2e3-campaign.v1"},
+    "template_only": {"type": "boolean"},
+    "status": {"enum": ["SOURCE_ONLY_NOT_EXECUTED", "FROZEN_PREEXECUTION"]},
+    "campaign_id": {"type": "string", "pattern": "^[0-9a-f]{32}$|^UNALLOCATED_"},
+    "baseline": {
+      "type": "object",
+      "required": ["git_commit", "dirty_original_gts_permitted", "isolated_clean_derivative_required"],
+      "properties": {
+        "git_commit": {"const": "b589f0c163b20e5344c9984eb58a3d84c37061d6"},
+        "dirty_original_gts_permitted": {"const": false},
+        "isolated_clean_derivative_required": {"const": true}
+      }
+    },
+    "metric": {
+      "type": "object",
+      "required": ["contract", "coordinate_domain", "tie_order"],
+      "properties": {
+        "contract": {"const": "integer_l2_squared_v1"},
+        "coordinate_domain": {"const": "integer_0_to_255_inclusive"},
+        "tie_order": {"const": ["distance_key", "stable_id"]}
+      }
+    },
+    "variants": {"const": ["certified_sidecar", "exact_delta"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"template_only": {"const": true}}},
+      "then": {"properties": {"status": {"const": "SOURCE_ONLY_NOT_EXECUTED"}}}
+    },
+    {
+      "if": {"properties": {"template_only": {"const": false}}},
+      "then": {"properties": {"status": {"const": "FROZEN_PREEXECUTION"}, "campaign_id": {"pattern": "^[0-9a-f]{32}$"}}}
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "tide.native-gts-topology-capture.v1",
+  "template_only": true,
+  "status": "UNCAPTURED_SOURCE_ONLY",
+  "baseline_git_commit": "b589f0c163b20e5344c9984eb58a3d84c37061d6",
+  "required_origin": "post-indexConstru synchronized arrays of the qualified native GTS target",
+  "prohibited_origins": [
+    "standalone_gtsq",
+    "synthetic_local_cells",
+    "host_reconstructed_router",
+    "legacy_searchIndexKnn_or_searchIndexKnnV2_receipt"
+  ],
+  "binding": {
+    "target_source_sha256": "UNALLOCATED",
+    "target_binary_sha256": "UNALLOCATED",
+    "raw_catalog_sha256": "UNALLOCATED",
+    "stable_to_local_map_sha256": "UNALLOCATED",
+    "tree_checksum": "UNALLOCATED",
+    "capture_artifact_sha256": "UNALLOCATED"
+  },
+  "native_semantics": {
+    "metric_contract": "integer_l2_squared_v1",
+    "tie_order": ["distance_key", "stable_id"],
+    "qualified_query_symbol": "UNALLOCATED",
+    "actual_receipt_api_symbol": "UNALLOCATED",
+    "physical_child_predicate_id": "UNALLOCATED",
+    "native_envelopes_immutable_online": true,
+    "no_next_sibling_inference": true,
+    "no_host_reconstruction_substitution": true
+  },
+  "required_arrays": ["TN", "id_list", "empty_list", "tree_height", "max_node_num"],
+  "required_records": {
+    "nodes": "one per physical node: id,parent,live,leaf,pivot stable id,lid,size,span stable-id digest",
+    "physical_children": "one per actual predicate child: parent pivot,child,lo_sq,hi_sq,unit,membership/span,finite proof",
+    "leaves": "one per receipt-addressable leaf: node id,span,stable-id digest",
+    "paths": "root-to-leaf ordered physical child IDs"
+  }
+}

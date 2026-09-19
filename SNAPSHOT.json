@@ -1,0 +1,56 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z"
+    }
+  ],
+  "files": {
+    "source/schemas/native_gts_e2e3_campaign.schema.json": {
+      "mode": "100644",
+      "original_sha256": "9785b1998a56d81651279d0b4fd88b3089e354458da19ef3a90195f3e3e85c2c",
+      "publication_adjustments": [],
+      "sha256": "9785b1998a56d81651279d0b4fd88b3089e354458da19ef3a90195f3e3e85c2c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z/schemas/native_gts_e2e3_campaign.schema.json"
+    },
+    "source/schemas/native_gts_raw_run_record.schema.json": {
+      "mode": "100644",
+      "original_sha256": "798d0ae156abcc65ff86ae532f2abbdad3bd47ebafa4102e2c46a5b52a9be50f",
+      "publication_adjustments": [],
+      "sha256": "798d0ae156abcc65ff86ae532f2abbdad3bd47ebafa4102e2c46a5b52a9be50f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z/schemas/native_gts_raw_run_record.schema.json"
+    },
+    "source/templates/NATIVE_GTS_E2E3_CAMPAIGN_PLAN_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "8a7477e3730cf96aff867596c97424506ae6546e52ace76e889a7d435506b5ba",
+      "publication_adjustments": [],
+      "sha256": "8a7477e3730cf96aff867596c97424506ae6546e52ace76e889a7d435506b5ba",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z/templates/NATIVE_GTS_E2E3_CAMPAIGN_PLAN_TEMPLATE.json"
+    },
+    "source/templates/NATIVE_GTS_TOPOLOGY_CAPTURE_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "558184b723a923569e606e1ee66a3b112709b83e05d6dc74695c905927f53dcb",
+      "publication_adjustments": [],
+      "sha256": "558184b723a923569e606e1ee66a3b112709b83e05d6dc74695c905927f53dcb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z/templates/NATIVE_GTS_TOPOLOGY_CAPTURE_TEMPLATE.json"
+    },
+    "source/tools/static_source_audit.py": {
+      "mode": "100755",
+      "original_sha256": "865f659da3a97c652784733b9cc40b210928dd9288efaaad57d9a66eeb20a37e",
+      "publication_adjustments": [],
+      "sha256": "865f659da3a97c652784733b9cc40b210928dd9288efaaad57d9a66eeb20a37e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z/tools/static_source_audit.py"
+    },
+    "source/tools/validate_native_gts_e2e3_plan.py": {
+      "mode": "100755",
+      "original_sha256": "d06be1bd0db55decea39d93f336e5cc0e86f3cd8879f57bb6370f8512f741cf8",
+      "publication_adjustments": [],
+      "sha256": "d06be1bd0db55decea39d93f336e5cc0e86f3cd8879f57bb6370f8512f741cf8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z/tools/validate_native_gts_e2e3_plan.py"
+    }
+  },
+  "payload_sha256": "c39c43cc1f9d80a59318d36055764a2e532032e6c5289cdb8d308056e98ded44",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
