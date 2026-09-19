@@ -1,0 +1,143 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/les3_same_data/sample_1m_20260902_v3",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/sample_4m_20260902_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_4m_20260902_v1"
+    }
+  ],
+  "files": {
+    "source/input/dense_to_les3.cpp": {
+      "mode": "100644",
+      "original_sha256": "ab0d01d8c941b751fcddeabfe3c03a5c9ac3f89c3613d93d2ff6da7bc182ff1f",
+      "publication_adjustments": [],
+      "sha256": "ab0d01d8c941b751fcddeabfe3c03a5c9ac3f89c3613d93d2ff6da7bc182ff1f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/input/dense_to_les3.cpp"
+    },
+    "source/input/make_contiguous_groups.py": {
+      "mode": "100755",
+      "original_sha256": "b786d389689ff426144606780e70b947c497883abc01c22ffb92b745d0dae992",
+      "publication_adjustments": [],
+      "sha256": "b786d389689ff426144606780e70b947c497883abc01c22ffb92b745d0dae992",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/input/make_contiguous_groups.py"
+    },
+    "source/input/measure_command.py": {
+      "mode": "100755",
+      "original_sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "publication_adjustments": [],
+      "sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/input/measure_command.py"
+    },
+    "source/input/same_data_sample_smoke.cpp": {
+      "mode": "100644",
+      "original_sha256": "7a9088903ce47b504d17dd550b23a3a5d4146ed9426173264b59e66a45cc0f55",
+      "publication_adjustments": [],
+      "sha256": "7a9088903ce47b504d17dd550b23a3a5d4146ed9426173264b59e66a45cc0f55",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/input/same_data_sample_smoke.cpp"
+    },
+    "source/upstream/Search/BRUTEFORCE.h": {
+      "mode": "100644",
+      "original_sha256": "8b277e2f09acb41febd0133ff46f10fecd2fd25655f6011e42fb5fd719ec7f4e",
+      "publication_adjustments": [],
+      "sha256": "8b277e2f09acb41febd0133ff46f10fecd2fd25655f6011e42fb5fd719ec7f4e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/BRUTEFORCE.h"
+    },
+    "source/upstream/Search/DualTrans.h": {
+      "mode": "100644",
+      "original_sha256": "038b85fa9d5715c0c6a4b181478c2ca025311c5efc086d6122f73a9b38761f55",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "local-home"
+        }
+      ],
+      "sha256": "af9cc7f523d0a5e8d52d04f247106571aa8040dc2ec4cd440f797d9fdf52626e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/DualTrans.h"
+    },
+    "source/upstream/Search/InvertedIndex.h": {
+      "mode": "100644",
+      "original_sha256": "5d1d90aea7e52f1fab2a3f59c51c3c96945d9c9073ed5d0bb443a8429bedc290",
+      "publication_adjustments": [],
+      "sha256": "5d1d90aea7e52f1fab2a3f59c51c3c96945d9c9073ed5d0bb443a8429bedc290",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/InvertedIndex.h"
+    },
+    "source/upstream/Search/LES3.h": {
+      "mode": "100644",
+      "original_sha256": "0871cd1ad004bc40fb2d2a11f59b3d9e67de576262e0ffc49eea954162e23998",
+      "publication_adjustments": [],
+      "sha256": "0871cd1ad004bc40fb2d2a11f59b3d9e67de576262e0ffc49eea954162e23998",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/LES3.h"
+    },
+    "source/upstream/Search/MEASURE.h": {
+      "mode": "100644",
+      "original_sha256": "1258394025f6e7668103377aae894678a2265379371fc7b4b79eaf9796d3cfbc",
+      "publication_adjustments": [],
+      "sha256": "1258394025f6e7668103377aae894678a2265379371fc7b4b79eaf9796d3cfbc",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/MEASURE.h"
+    },
+    "source/upstream/Search/PARAM.h": {
+      "mode": "100644",
+      "original_sha256": "b27cd9497557aee5b1eeca803d98cd27ce07d9d08c8847ee864f9e359fed0197",
+      "publication_adjustments": [],
+      "sha256": "b27cd9497557aee5b1eeca803d98cd27ce07d9d08c8847ee864f9e359fed0197",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/PARAM.h"
+    },
+    "source/upstream/Search/RNode.h": {
+      "mode": "100644",
+      "original_sha256": "50076f32aea903547309ea3f8f7ee92eef610012bbb08a0adefb1eb57d83455f",
+      "publication_adjustments": [],
+      "sha256": "50076f32aea903547309ea3f8f7ee92eef610012bbb08a0adefb1eb57d83455f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/RNode.h"
+    },
+    "source/upstream/Search/TGM_C.h": {
+      "mode": "100644",
+      "original_sha256": "9d1aa13d79b4626b09175159879a3789c0edf3739f3407ff29f0a43501f3c5d4",
+      "publication_adjustments": [],
+      "sha256": "9d1aa13d79b4626b09175159879a3789c0edf3739f3407ff29f0a43501f3c5d4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/TGM_C.h"
+    },
+    "source/upstream/Search/roaring.c": {
+      "mode": "100644",
+      "original_sha256": "163feea273976149322f8aedbe73eb23c24be1b376ba4421ccd64c3e3b4df818",
+      "publication_adjustments": [],
+      "sha256": "163feea273976149322f8aedbe73eb23c24be1b376ba4421ccd64c3e3b4df818",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/roaring.c"
+    },
+    "source/upstream/Search/roaring.h": {
+      "mode": "100644",
+      "original_sha256": "8cdcbb650a0c6f8cf2393ac05837506dbda741918b00820a876d66d9b3267878",
+      "publication_adjustments": [],
+      "sha256": "8cdcbb650a0c6f8cf2393ac05837506dbda741918b00820a876d66d9b3267878",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/roaring.h"
+    },
+    "source/upstream/Search/roaring.hh": {
+      "mode": "100644",
+      "original_sha256": "1349a7ddd072dd92e6f356d9df2fbc6262e1fe383e9393c55a3d8c6a6facdda4",
+      "publication_adjustments": [],
+      "sha256": "1349a7ddd072dd92e6f356d9df2fbc6262e1fe383e9393c55a3d8c6a6facdda4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/roaring.hh"
+    },
+    "source/upstream/Search/test_partition.cpp": {
+      "mode": "100644",
+      "original_sha256": "f4e9413206bd043a58bd907e76386c15cbf0d72283d3c94923b232536e29c746",
+      "publication_adjustments": [],
+      "sha256": "f4e9413206bd043a58bd907e76386c15cbf0d72283d3c94923b232536e29c746",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/test_partition.cpp"
+    },
+    "source/upstream/Search/test_search.cpp": {
+      "mode": "100644",
+      "original_sha256": "877c09468cc360052896a15103802c5cbb7e949f6d230467563f160e81833dc3",
+      "publication_adjustments": [],
+      "sha256": "877c09468cc360052896a15103802c5cbb7e949f6d230467563f160e81833dc3",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3/upstream/Search/test_search.cpp"
+    }
+  },
+  "payload_sha256": "186f454f004b00a93cf16d94f683abfa760d081d67d7248a66bb053f99164e68",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
