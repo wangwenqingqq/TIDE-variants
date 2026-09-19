@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_level10_20260903_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v1"
+    }
+  ],
+  "files": {
+    "source/input/l2p_build_ptr.cpp": {
+      "mode": "100644",
+      "original_sha256": "c2d66af1e308b148e11d336a7b1025acebce7670bb403c468a1185ea3457099d",
+      "publication_adjustments": [],
+      "sha256": "c2d66af1e308b148e11d336a7b1025acebce7670bb403c468a1185ea3457099d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v1/input/l2p_build_ptr.cpp"
+    },
+    "source/input/l2p_train.cpp": {
+      "mode": "100644",
+      "original_sha256": "0e6ca4c5928c8ad876b321107cd51030bc213a0577f4801123225ad12c46b27c",
+      "publication_adjustments": [],
+      "sha256": "0e6ca4c5928c8ad876b321107cd51030bc213a0577f4801123225ad12c46b27c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v1/input/l2p_train.cpp"
+    },
+    "source/input/measure_command.py": {
+      "mode": "100755",
+      "original_sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "publication_adjustments": [],
+      "sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v1/input/measure_command.py"
+    },
+    "source/input/test_l2p_train.py": {
+      "mode": "100644",
+      "original_sha256": "17ae31263a45e0ba3126a4e7df828c07dd41183b7af7d7662e838c44845df963",
+      "publication_adjustments": [],
+      "sha256": "17ae31263a45e0ba3126a4e7df828c07dd41183b7af7d7662e838c44845df963",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v1/input/test_l2p_train.py"
+    }
+  },
+  "payload_sha256": "a0d9a71b40a4e810c958faf98b649e07e2c68e8dca1025902ccc0600eecf7f91",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
