@@ -1,0 +1,165 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/query_study_p1_20260905_v3",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3"
+    }
+  ],
+  "files": {
+    "source/analysis/analyze.py": {
+      "mode": "100644",
+      "original_sha256": "c0b44984bea8498561e128e413738f0b6b109da67fb23f29b476d55fb4898888",
+      "publication_adjustments": [],
+      "sha256": "c0b44984bea8498561e128e413738f0b6b109da67fb23f29b476d55fb4898888",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/analysis/analyze.py"
+    },
+    "source/analysis/ncu_probe.py": {
+      "mode": "100644",
+      "original_sha256": "0037ff861d184e1c61e96b7dd1162f22194e7c573db1470ee6f6010660a354d1",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "4bc4c54a076ca1ce17b124306c1d394e26ec306fe41a9acb49a0f051fbd35e76",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/analysis/ncu_probe.py"
+    },
+    "source/analysis/profile_probe.py": {
+      "mode": "100644",
+      "original_sha256": "caf96f795e11311fc26f3d7ee0b034423016690fa946b706b5087fd7f750fa75",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "ffe3a610352d4191b32ef15aaa2804340dc83f20cfef716f7cf0961abae04b83",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/analysis/profile_probe.py"
+    },
+    "source/analysis/test_analyze.py": {
+      "mode": "100644",
+      "original_sha256": "f8ad828fd64d7ed86113e3c3f7c94659a005c20e79a3b41315fe3ebf0a873405",
+      "publication_adjustments": [],
+      "sha256": "f8ad828fd64d7ed86113e3c3f7c94659a005c20e79a3b41315fe3ebf0a873405",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/analysis/test_analyze.py"
+    },
+    "source/debug/probe_gpusim_v3.py": {
+      "mode": "100644",
+      "original_sha256": "6a9876f9152d0c58d1cadf162ffbf4b9aa3b2c28b7cbf927cc5517ad9a60b516",
+      "publication_adjustments": [],
+      "sha256": "6a9876f9152d0c58d1cadf162ffbf4b9aa3b2c28b7cbf927cc5517ad9a60b516",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/debug/probe_gpusim_v3.py"
+    },
+    "source/keeper/gpusim_adapter_keeper.cpp": {
+      "mode": "100644",
+      "original_sha256": "1a7e92944c4744022a949a7be737527df9a7a19067a1e6b519633f0fcb992c36",
+      "publication_adjustments": [],
+      "sha256": "1a7e92944c4744022a949a7be737527df9a7a19067a1e6b519633f0fcb992c36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/keeper/gpusim_adapter_keeper.cpp"
+    },
+    "source/keeper/tide_query_keeper.cu": {
+      "mode": "100644",
+      "original_sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "publication_adjustments": [],
+      "sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/keeper/tide_query_keeper.cu"
+    },
+    "source/src/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "087c5a5c2b826418b2429b5921f00136b1b9b3358f75de66f241204ab6bb0222",
+      "publication_adjustments": [],
+      "sha256": "087c5a5c2b826418b2429b5921f00136b1b9b3358f75de66f241204ab6bb0222",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/CMakeLists.txt"
+    },
+    "source/src/gpusim_bridge.cpp": {
+      "mode": "100644",
+      "original_sha256": "ac3a71d8a2d62573248a819e28ac65b0774718c4d33757d46c8aefe9e9b54ec2",
+      "publication_adjustments": [],
+      "sha256": "ac3a71d8a2d62573248a819e28ac65b0774718c4d33757d46c8aefe9e9b54ec2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/gpusim_bridge.cpp"
+    },
+    "source/src/guarded_run.py": {
+      "mode": "100644",
+      "original_sha256": "4edcecc027ae5a0ca340f8e0dbbc81b7af2c900baf856022a4e6e2678631141c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "ddda085feba3a397337df4bdb1beb03f08612d710b87a988d02f9cd023c7e701",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/guarded_run.py"
+    },
+    "source/src/make_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "b91d79611dbae4c7911aead0237d982d3eba1aab69d02f863906d2d5f6d28b7d",
+      "publication_adjustments": [],
+      "sha256": "b91d79611dbae4c7911aead0237d982d3eba1aab69d02f863906d2d5f6d28b7d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/make_oracle.py"
+    },
+    "source/src/oracle.cpp": {
+      "mode": "100644",
+      "original_sha256": "b6ff734a544a1cb15cecadb7d4e2a1f36ae319e796848d9ffb4194bbd8bf69b1",
+      "publication_adjustments": [],
+      "sha256": "b6ff734a544a1cb15cecadb7d4e2a1f36ae319e796848d9ffb4194bbd8bf69b1",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/oracle.cpp"
+    },
+    "source/src/prepare.py": {
+      "mode": "100644",
+      "original_sha256": "d3a85e632fb2909eff3f35973408dea735a26b4a25be36c7f4d33cb5787b6b77",
+      "publication_adjustments": [],
+      "sha256": "d3a85e632fb2909eff3f35973408dea735a26b4a25be36c7f4d33cb5787b6b77",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/prepare.py"
+    },
+    "source/src/run_backend.py": {
+      "mode": "100644",
+      "original_sha256": "019b4c4dc1abd1041f59a6e5fa096ce3fa1e8414f425610e2c3c91167cd5a6b4",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "030152770adfae375973d7778101b3ecd0381550dc9d181c23095fe589c8367b",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/run_backend.py"
+    },
+    "source/src/run_campaign.py": {
+      "mode": "100644",
+      "original_sha256": "568d70fdda2335ce4a8a510a96d33f83641faebf5d02ab599428ad676cc63095",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5f0416193f9e84f3092ad27e6564da4da72172d7dd59b39814878bf08e5c6e27",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/run_campaign.py"
+    },
+    "source/src/tide_bridge.cu": {
+      "mode": "100644",
+      "original_sha256": "40641b4a0e158c1bc819d29c0b57c47129217e8e89c7f0487ea7916f943f0095",
+      "publication_adjustments": [],
+      "sha256": "40641b4a0e158c1bc819d29c0b57c47129217e8e89c7f0487ea7916f943f0095",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/src/tide_bridge.cu"
+    },
+    "source/tests/test_contract.py": {
+      "mode": "100644",
+      "original_sha256": "ca2413119aff3954202bb3649772efda39ef3cf419ff5b70e9ec75959f0550c9",
+      "publication_adjustments": [],
+      "sha256": "ca2413119aff3954202bb3649772efda39ef3cf419ff5b70e9ec75959f0550c9",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/tests/test_contract.py"
+    },
+    "source/tests/test_prepare.py": {
+      "mode": "100644",
+      "original_sha256": "12944d2fda97e0fd10bf45b5abafb5c194a6d2ded5e18d76b9d70778db081710",
+      "publication_adjustments": [],
+      "sha256": "12944d2fda97e0fd10bf45b5abafb5c194a6d2ded5e18d76b9d70778db081710",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3/tests/test_prepare.py"
+    }
+  },
+  "payload_sha256": "e5d68bec5ba58cefc629cbda6d9a75d7eac4ed7b5d6a5ba5689f76fb8c68c050",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
