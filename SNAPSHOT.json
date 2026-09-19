@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_dynamic_e1_binding_preflight_v1_sourceonly_20260810T031500CST",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v1_sourceonly_20260810T031500CST"
+    }
+  ],
+  "files": {
+    "source/templates/DYNAMIC_BINDING_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "e92684a634d026ae45e414a97b0b232875c8a7d96a9025dddf261f0d86754cce",
+      "publication_adjustments": [],
+      "sha256": "e92684a634d026ae45e414a97b0b232875c8a7d96a9025dddf261f0d86754cce",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v1_sourceonly_20260810T031500CST/templates/DYNAMIC_BINDING_TEMPLATE.json"
+    },
+    "source/tools/validate_dynamic_binding.py": {
+      "mode": "100755",
+      "original_sha256": "16619976a9c36c19c12855d7287c9daf1e06d17e220600140d36d2c149dc25b9",
+      "publication_adjustments": [],
+      "sha256": "16619976a9c36c19c12855d7287c9daf1e06d17e220600140d36d2c149dc25b9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v1_sourceonly_20260810T031500CST/tools/validate_dynamic_binding.py"
+    }
+  },
+  "payload_sha256": "e4407455e94e76709b5befa5b83b13939446725fdfd974d18b34c3abd1d023da",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
