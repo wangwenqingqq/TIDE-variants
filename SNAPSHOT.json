@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate2_20260827",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate2_20260827"
+    }
+  ],
+  "files": {
+    "source/scripts/finalize_gate2.py": {
+      "mode": "100755",
+      "original_sha256": "69d7eb7d38b2b7777b6325d52ccce0eb712fe9ada158628f4cb32f9d1cc14993",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        }
+      ],
+      "sha256": "2a5ea8b138242bf18c1ec9b1cbde922041b1605177b642913382419171db54de",
+      "source_label": "TIDE/active/tide_surechembl_gate2_20260827/scripts/finalize_gate2.py"
+    },
+    "source/src/gpu_query_parallel_bench.cu": {
+      "mode": "100644",
+      "original_sha256": "4e5da5963c7e102f788d6e4a63241e251628e26de346b1ae3e4f428991d5a976",
+      "publication_adjustments": [],
+      "sha256": "4e5da5963c7e102f788d6e4a63241e251628e26de346b1ae3e4f428991d5a976",
+      "source_label": "TIDE/active/tide_surechembl_gate2_20260827/src/gpu_query_parallel_bench.cu"
+    }
+  },
+  "payload_sha256": "71450bacca198be806b00f3a4a59a36460d0e9360e0c16b43f763e09ff6fb6c8",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
