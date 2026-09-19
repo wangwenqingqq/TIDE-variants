@@ -1,0 +1,248 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_speculative_fallback_v3",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3"
+    }
+  ],
+  "files": {
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/include/file.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "publication_adjustments": [],
+      "sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/include/residual_pruning.cuh"
+    },
+    "source/include/search_v3.cuh": {
+      "mode": "100644",
+      "original_sha256": "6ec348af0864ac2df18503b4770a8960dec4b741b953045fc7c69f50c7b23742",
+      "publication_adjustments": [],
+      "sha256": "6ec348af0864ac2df18503b4770a8960dec4b741b953045fc7c69f50c7b23742",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/include/search_v3.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/include/tree.cuh"
+    },
+    "source/src/gts_speculative_fallback_v3_sift1m.cu": {
+      "mode": "100644",
+      "original_sha256": "7ec959eda1025205eb4a51c12ebf0a53c989f2b8b579abfb8da19bc34915c1e3",
+      "publication_adjustments": [],
+      "sha256": "7ec959eda1025205eb4a51c12ebf0a53c989f2b8b579abfb8da19bc34915c1e3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/src/gts_speculative_fallback_v3_sift1m.cu"
+    },
+    "source/tools/build_exact_gt_siftlearn_v3.cpp": {
+      "mode": "100644",
+      "original_sha256": "bb8fbceae0eeead23f87c47e10648e4a836ac622305b082d81e3a89a26409cf6",
+      "publication_adjustments": [],
+      "sha256": "bb8fbceae0eeead23f87c47e10648e4a836ac622305b082d81e3a89a26409cf6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/build_exact_gt_siftlearn_v3.cpp"
+    },
+    "source/tools/c2_v3_execution_common.py": {
+      "mode": "100755",
+      "original_sha256": "2271f249373f67243e8d9d1db31ff55be1b4089e4425895b96d434c14b7292a2",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "0b3cdb1bcef8f3fad438ec51d143a2e402826741af5e74e70c91504dc7d0799f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/c2_v3_execution_common.py"
+    },
+    "source/tools/c2_v3_execution_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "d4014ba537ae459acfb7ed82b7dec21220dcaa444e7dc43a25105bda9c57fe02",
+      "publication_adjustments": [],
+      "sha256": "d4014ba537ae459acfb7ed82b7dec21220dcaa444e7dc43a25105bda9c57fe02",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/c2_v3_execution_manifest.py"
+    },
+    "source/tools/compile_cpu_only.sh": {
+      "mode": "100755",
+      "original_sha256": "4f7c5fe3b72a1ad0b22bfe9841c2f598d6918fb431ca22e7d1331c62fe4cb1b3",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "1c296c276de62efb5ef292340e2a653a0f0462c609b1c5176fe56804b1cc33bf",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/compile_cpu_only.sh"
+    },
+    "source/tools/create_c2_v3_execution_pins.py": {
+      "mode": "100755",
+      "original_sha256": "ca78de9cf0cacb92601f3bf3774628e51527266a024d0f2bc0f15bc4bcd77de5",
+      "publication_adjustments": [],
+      "sha256": "ca78de9cf0cacb92601f3bf3774628e51527266a024d0f2bc0f15bc4bcd77de5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/create_c2_v3_execution_pins.py"
+    },
+    "source/tools/finalize_exact_gt_siftlearn_v3.py": {
+      "mode": "100755",
+      "original_sha256": "9c515dd245ef24e112e69e267bc9f149c6d1ada2f058d298e656748f54151187",
+      "publication_adjustments": [],
+      "sha256": "9c515dd245ef24e112e69e267bc9f149c6d1ada2f058d298e656748f54151187",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/finalize_exact_gt_siftlearn_v3.py"
+    },
+    "source/tools/launch_c2_v3_execution.sh": {
+      "mode": "100755",
+      "original_sha256": "039318aaaec7c7716e9f0ca42ac515505daef11f539d40bb52dca746b00ed917",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ea3ff1048408fbcac71eeabf7d9ad6d27031699653bdfb5fe97592a4f00dc9c3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/launch_c2_v3_execution.sh"
+    },
+    "source/tools/prepare_independent_sift_learn_v1.py": {
+      "mode": "100755",
+      "original_sha256": "57b2be568fe67da692b41ef5c0f60008c85f6a30f2736ac4d4d65d29f603b557",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "4f4ff600d55562c985f362b5994be62bdafa4ec7e8bbc5e6c96ca925fff88c6f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/prepare_independent_sift_learn_v1.py"
+    },
+    "source/tools/run_c2_v3_execution_guard.sh": {
+      "mode": "100755",
+      "original_sha256": "82954e824f6cd78d63b16e02e890eb10b0293746482e39a57425f6bc18a5e760",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "5dab1a4f3bcd1487d961c5991e06ea8475f2582ebffb0d099c672a90200f34d5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/run_c2_v3_execution_guard.sh"
+    },
+    "source/tools/run_c2_v3_execution_plan.sh": {
+      "mode": "100755",
+      "original_sha256": "73aeeaed0fc531322e27548bb17a8b289a7f5f4081b253033ea7e559022e5f7d",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "bbdf50ba7d785c6b0f2816ab9ad13e153aad4dc3647b002c1eb65cb5bc90ac02",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/run_c2_v3_execution_plan.sh"
+    },
+    "source/tools/run_exact_gt_siftlearn_v3.sh": {
+      "mode": "100755",
+      "original_sha256": "6197067f0d25037cec6f1ba5582eb5d1f35051ba22c962e068c75ec3e8dd9803",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "9f18796fbcd972b221c529bde625b8582397d2ae39f941ec6dce30bd81d080a7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/run_exact_gt_siftlearn_v3.sh"
+    },
+    "source/tools/run_v3_non_execute_guard.sh": {
+      "mode": "100755",
+      "original_sha256": "89f69dcb44941feda8b19bc5e1e0b623e90178603280ac4b76c562336258d785",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "eb1d9f2a4bb6de1453f4624db230578c1f82bd5e7e003496f0b6fdfe042909d1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/run_v3_non_execute_guard.sh"
+    },
+    "source/tools/verify_c2_v3_execution_artifacts.py": {
+      "mode": "100755",
+      "original_sha256": "d51ce8e47a22a25311102918a19defed4ce790f30cac14b28876868b28de8f26",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        }
+      ],
+      "sha256": "bf7d38d5d1851279bc4c05a279b08149233033cd38cf4e663d6fb2a61e884479",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/verify_c2_v3_execution_artifacts.py"
+    },
+    "source/tools/verify_c2_v3_execution_pins.py": {
+      "mode": "100755",
+      "original_sha256": "0511fe9613efc16f14ae0f9cc565fb08a59522ed5e0578a92d1baaa0c9dfd051",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        }
+      ],
+      "sha256": "98cb567057cd487ffa5871e3ff0d40bb437811e571cd2464254a9ac3743cdfad",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/verify_c2_v3_execution_pins.py"
+    },
+    "source/tools/verify_exact_gt_siftlearn_v3.cpp": {
+      "mode": "100644",
+      "original_sha256": "ebd48c6787b4c32ac4e820a756aedee40d693cfdc11955d5832fb8b2173bd187",
+      "publication_adjustments": [],
+      "sha256": "ebd48c6787b4c32ac4e820a756aedee40d693cfdc11955d5832fb8b2173bd187",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/verify_exact_gt_siftlearn_v3.cpp"
+    },
+    "source/tools/verify_tiefree_source_only.py": {
+      "mode": "100755",
+      "original_sha256": "74fc3d7d856571c5f2287f6cab4f8e6c044c4364f9d95e9cd0194be457a892e5",
+      "publication_adjustments": [],
+      "sha256": "74fc3d7d856571c5f2287f6cab4f8e6c044c4364f9d95e9cd0194be457a892e5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/verify_tiefree_source_only.py"
+    },
+    "source/tools/verify_v3_static.py": {
+      "mode": "100755",
+      "original_sha256": "164127dbe10d997b82ddbe175998db57c959ef3baaa0dd8e8ab61236bfa16fed",
+      "publication_adjustments": [],
+      "sha256": "164127dbe10d997b82ddbe175998db57c959ef3baaa0dd8e8ab61236bfa16fed",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3/tools/verify_v3_static.py"
+    }
+  },
+  "payload_sha256": "aefdec030132639f953ae249bfb8f776ee55514f2df688d4810ffbcef5a23866",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
