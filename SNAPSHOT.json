@@ -1,0 +1,149 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/companions/gts_gate0_20260825",
+      "role": "Related GTS/CertiGraph comparison, not a TIDE contribution",
+      "source_label": "TIDE/active/gts_gate0_20260825"
+    }
+  ],
+  "files": {
+    "source/aggregate_gate0.py": {
+      "mode": "100644",
+      "original_sha256": "39a7772d88c9a3c48b98d8850c0ac38b290be16cc4359b758305ac668a9d4e39",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "host-alias"
+        }
+      ],
+      "sha256": "2cbae56c5045aecdd6012e9f9173ce7d193531e50ea2e38599a6aa82e8683514",
+      "source_label": "TIDE/active/gts_gate0_20260825/aggregate_gate0.py"
+    },
+    "source/src/edit_flat_gate0.cu": {
+      "mode": "100644",
+      "original_sha256": "0ae76cabde59f64e246e05f27a4d2dd232e9716d2ed9c7641f3f9ee94efbfd07",
+      "publication_adjustments": [],
+      "sha256": "0ae76cabde59f64e246e05f27a4d2dd232e9716d2ed9c7641f3f9ee94efbfd07",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/edit_flat_gate0.cu"
+    },
+    "source/src/edit_flat_update_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "241b1280ba80b2ba6bb864c08cfd319fb4bfe32e9a857518d5177dfefdc75e47",
+      "publication_adjustments": [],
+      "sha256": "241b1280ba80b2ba6bb864c08cfd319fb4bfe32e9a857518d5177dfefdc75e47",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/edit_flat_update_probe.cu"
+    },
+    "source/src/native_gts_edit_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "e2561a484fee5deedacd24924a5d6eeb1147e13ea2de2ff9849bffe77782eb8a",
+      "publication_adjustments": [],
+      "sha256": "e2561a484fee5deedacd24924a5d6eeb1147e13ea2de2ff9849bffe77782eb8a",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_edit_probe.cu"
+    },
+    "source/src/native_gts_src/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/config.cuh"
+    },
+    "source/src/native_gts_src/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/file.cuh"
+    },
+    "source/src/native_gts_src/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/gpu_timer.cuh"
+    },
+    "source/src/native_gts_src/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/incremental_insert.cuh"
+    },
+    "source/src/native_gts_src/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/mlp_constant.cuh"
+    },
+    "source/src/native_gts_src/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/residual_pruning.cuh"
+    },
+    "source/src/native_gts_src/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/residual_tuner.cuh"
+    },
+    "source/src/native_gts_src/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/search.cuh"
+    },
+    "source/src/native_gts_src/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/search_naive.cuh"
+    },
+    "source/src/native_gts_src/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "publication_adjustments": [],
+      "sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/search_v2.cuh"
+    },
+    "source/src/native_gts_src/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/tree.cuh"
+    },
+    "source/src/native_gts_src/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "483a4386d7f8f858f2bae7e4eab55e6bd8c4951add433ca093c4e5b15bd30596",
+      "publication_adjustments": [],
+      "sha256": "483a4386d7f8f858f2bae7e4eab55e6bd8c4951add433ca093c4e5b15bd30596",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/update.cuh"
+    },
+    "source/src/native_gts_src/include/update_optimized.cuh": {
+      "mode": "100644",
+      "original_sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "publication_adjustments": [],
+      "sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/update_optimized.cuh"
+    },
+    "source/src/native_gts_src/include/update_user_modified.cuh": {
+      "mode": "100644",
+      "original_sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "publication_adjustments": [],
+      "sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "source_label": "TIDE/active/gts_gate0_20260825/src/native_gts_src/include/update_user_modified.cuh"
+    }
+  },
+  "payload_sha256": "b591a37c163e9b1e23c58d3fc9312660018cb703d58ad6fecbbc4f266d6084f8",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
