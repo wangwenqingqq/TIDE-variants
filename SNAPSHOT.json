@@ -1,0 +1,119 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness"
+    }
+  ],
+  "files": {
+    "source/include/safe_c1_search_native_routing_certificate.hpp": {
+      "mode": "100644",
+      "original_sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "publication_adjustments": [],
+      "sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/include/safe_c1_search_native_routing_certificate.hpp"
+    },
+    "source/include/safe_c1_tie_free_witness.hpp": {
+      "mode": "100644",
+      "original_sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "publication_adjustments": [],
+      "sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/include/safe_c1_tie_free_witness.hpp"
+    },
+    "source/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/include/safe_search_v2.cuh"
+    },
+    "source/src/safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "f41aabf042de8e445319c240f1aa07fc77f3f0c331422e4cab98e40d2cc037d8",
+      "publication_adjustments": [],
+      "sha256": "f41aabf042de8e445319c240f1aa07fc77f3f0c331422e4cab98e40d2cc037d8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/src/safe_c1_dynamic_gts.cu"
+    },
+    "source/tools/audit_g2_static_contract.py": {
+      "mode": "100755",
+      "original_sha256": "8e337889f9b9ff961b314a1c5d7ba6a1e31c95991858615253f8c84a45a34b17",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5ad079187cb803e9505c8920a4bc3469b35ff3c219932f53578d38ebc1c6493a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/audit_g2_static_contract.py"
+    },
+    "source/tools/finalize_g2_rebuild_witness.py": {
+      "mode": "100755",
+      "original_sha256": "ceee057d76de90094cf89fd7e92b2683936ccaca51667326193f92fc787bbf98",
+      "publication_adjustments": [],
+      "sha256": "ceee057d76de90094cf89fd7e92b2683936ccaca51667326193f92fc787bbf98",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/finalize_g2_rebuild_witness.py"
+    },
+    "source/tools/make_g2_rebuild_witness_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "04832df359742acdfde5fcbb680df251d76ab72ca3d290352c3a14577188ecff",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "c7cf01edbd51f2c493071de1e557612951eba001aaf7ecfb8e8b4e7fd3f17f63",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/make_g2_rebuild_witness_bundle.py"
+    },
+    "source/tools/preflight_g2_rebuild_witness.py": {
+      "mode": "100755",
+      "original_sha256": "3f858d28f0e2b9e9273d0d52133d990c77c1e0b6f21c731bd4e50090bc8e3978",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "1c194e09897dbabcc3445f31ebc6bcc9efdc1bdd178975949667fd8e782a2390",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/preflight_g2_rebuild_witness.py"
+    },
+    "source/tools/run_g2_rebuild_witness_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "b041010c0193c92147184056f30b7bbf8f50cb1938d17094b325e839515e2d74",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "c5d0ded61c8d891f61f3d3c5a526f8111ec22e8bcf5cd10f4ef3a887e05c1635",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/run_g2_rebuild_witness_guarded.sh"
+    },
+    "source/tools/safe_c1_v4_rebuild_bundle_contract.py": {
+      "mode": "100755",
+      "original_sha256": "eae5dfc16133fbb38372044185358b249638319d8c2fc1ea0e1e79503408d79b",
+      "publication_adjustments": [],
+      "sha256": "eae5dfc16133fbb38372044185358b249638319d8c2fc1ea0e1e79503408d79b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/safe_c1_v4_rebuild_bundle_contract.py"
+    },
+    "source/tools/test_g2_rebuild_witness_pipeline.py": {
+      "mode": "100755",
+      "original_sha256": "4421a1775b2aa082f80c91b6e8fec3f8e7c2db5d03d74d534a7c2ca103f41daa",
+      "publication_adjustments": [],
+      "sha256": "4421a1775b2aa082f80c91b6e8fec3f8e7c2db5d03d74d534a7c2ca103f41daa",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness/tools/test_g2_rebuild_witness_pipeline.py"
+    }
+  },
+  "payload_sha256": "8093bbef905daec221c25eb4705b6ec13b749753a8f2f30f25b979bcd397b34a",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
