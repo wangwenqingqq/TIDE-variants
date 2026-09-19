@@ -1,0 +1,203 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot"
+    }
+  ],
+  "files": {
+    "source/reference/g1_safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "3ba34419ad9da35401a85bb5af6362f40cfd90e13d6a2b370bbf072479e67431",
+      "publication_adjustments": [],
+      "sha256": "3ba34419ad9da35401a85bb5af6362f40cfd90e13d6a2b370bbf072479e67431",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/g1_safe_c1_dynamic_gts.cu"
+    },
+    "source/reference/g1_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/g1_safe_search_v2.cuh"
+    },
+    "source/reference/gts_tree_source.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/gts_tree_source.cuh"
+    },
+    "source/reference/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/include/config.cuh"
+    },
+    "source/reference/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/include/file.cuh"
+    },
+    "source/reference/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/include/mlp_constant.cuh"
+    },
+    "source/reference/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/include/residual_pruning.cuh"
+    },
+    "source/reference/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/include/safe_search_v2.cuh"
+    },
+    "source/reference/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/reference/include/tree.cuh"
+    },
+    "source/runner/g3_4k_pilot_wrapper.cu": {
+      "mode": "100644",
+      "original_sha256": "f87886b0cb97abfae37af7da36409574d454064d694f1b46ee170832af41d0a4",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "6b86f442d1734febe142c16a0436d4a074822e11b228d0892749a72cff9e7939",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/runner/g3_4k_pilot_wrapper.cu"
+    },
+    "source/src/g3_safe_c1_native_matrix.cu": {
+      "mode": "100644",
+      "original_sha256": "12ef95e115c92ed2ebc86fc116aa441aacdbadfe850676a684c0b9119aa8b138",
+      "publication_adjustments": [],
+      "sha256": "12ef95e115c92ed2ebc86fc116aa441aacdbadfe850676a684c0b9119aa8b138",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/src/g3_safe_c1_native_matrix.cu"
+    },
+    "source/src/g3_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "publication_adjustments": [],
+      "sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/src/g3_safe_search_v2.cuh"
+    },
+    "source/tools/.build_and_attest_g3_4k_single_tu.body.sh": {
+      "mode": "100644",
+      "original_sha256": "24ec3c889e05e0986477da5c2ee613d6fa08b794decc637f1c289de56109925e",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "e37e4db8e3c4cf9181b9496f49160280056af75ecc8888710afc463feecfd6aa",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/.build_and_attest_g3_4k_single_tu.body.sh"
+    },
+    "source/tools/.compile_g3_4k_wrapper_only.body.sh": {
+      "mode": "100644",
+      "original_sha256": "bb9d7b69900aea037ae727af8a488f29ca48849a72475a2ad174d0d248b0c2a5",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "77815024699969e9b3c33f27bf824cba2e669b6ce7332fd1be32beae5cb01fdb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/.compile_g3_4k_wrapper_only.body.sh"
+    },
+    "source/tools/.run_g3_4k_single_tu.body.sh": {
+      "mode": "100644",
+      "original_sha256": "3b84f8bbc114865b6029753ae02f6dc7518817c778768d93af51de21d009a7b9",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "05a103b90156cf459be9a4fc143270a96ab3591d9bd0333fe8f4cfb7b623708e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/.run_g3_4k_single_tu.body.sh"
+    },
+    "source/tools/build_and_attest_g3_4k_single_tu.sh": {
+      "mode": "100755",
+      "original_sha256": "ce6a0fc63c1014f0c52388a4748da7de1f1dd954241d8cf75f15008af12aaedd",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "d3f1bc2469b4554494f38443d435665843f3ec403a0ab830417794843a36cd86",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/build_and_attest_g3_4k_single_tu.sh"
+    },
+    "source/tools/compile_g3_4k_wrapper_only.sh": {
+      "mode": "100755",
+      "original_sha256": "adc96cb976af0080d790af1a34a0a33b7b81ad8cb2d305db187fbf967b641bf0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "b4168673427f4a8ad957de70053fe3c2a390422babed24349910be8242d4920f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/compile_g3_4k_wrapper_only.sh"
+    },
+    "source/tools/g3_common.py": {
+      "mode": "100644",
+      "original_sha256": "dbc806d80278c6d41da8dfcddda59294a5f720b51bd3393aa214ffb0ded1abb3",
+      "publication_adjustments": [],
+      "sha256": "dbc806d80278c6d41da8dfcddda59294a5f720b51bd3393aa214ffb0ded1abb3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/g3_common.py"
+    },
+    "source/tools/generate_g3_bootstrap_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "c187e1d84ff8e664e946e22981d284eed390d90cbbb58d31f86e6ae1421fac90",
+      "publication_adjustments": [],
+      "sha256": "c187e1d84ff8e664e946e22981d284eed390d90cbbb58d31f86e6ae1421fac90",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/generate_g3_bootstrap_oracle.py"
+    },
+    "source/tools/run_g3_4k_single_tu.sh": {
+      "mode": "100755",
+      "original_sha256": "f12c511fa1c847493b0cfca125ed7221156a9650910bf1d8e3a68841a989b7e7",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "dc53d35ac72435d5ae32c635745a2d571ef6cf7bda57429e653a87eef64d608c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/run_g3_4k_single_tu.sh"
+    },
+    "source/tools/validate_g3_bootstrap_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "3b061214e1601814ba09549816d41ff9223dcfcfcf8d1702924540eed99b0fdd",
+      "publication_adjustments": [],
+      "sha256": "3b061214e1601814ba09549816d41ff9223dcfcfcf8d1702924540eed99b0fdd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/validate_g3_bootstrap_oracle.py"
+    },
+    "source/tools/validate_g3_fixture.py": {
+      "mode": "100644",
+      "original_sha256": "54ea4d135cb361d1fd60ef964be168b45fb174bfebb8319d01c81661598cb89e",
+      "publication_adjustments": [],
+      "sha256": "54ea4d135cb361d1fd60ef964be168b45fb174bfebb8319d01c81661598cb89e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot/tools/validate_g3_fixture.py"
+    }
+  },
+  "payload_sha256": "cce6d794868e0e27e251867c6d5a1be1a96c514510a183ddeef996aebe0017fe",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
