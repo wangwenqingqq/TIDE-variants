@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/chemfp51_gate0/chemfp51_gate0_20260903_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chemfp51_gate0/chemfp51_gate0_20260903_v1"
+    }
+  ],
+  "files": {
+    "source/src/prepare_chemfp51_gate0_phase_a.py": {
+      "mode": "100644",
+      "original_sha256": "5f1ba117adea936130dd284a0ccdfe23207be6b2f8ef57bbad9e5fcaff89e6fc",
+      "publication_adjustments": [],
+      "sha256": "5f1ba117adea936130dd284a0ccdfe23207be6b2f8ef57bbad9e5fcaff89e6fc",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chemfp51_gate0/chemfp51_gate0_20260903_v1/src/prepare_chemfp51_gate0_phase_a.py"
+    },
+    "source/src/prepare_chemfp51_gate0_phase_a_v2.py": {
+      "mode": "100644",
+      "original_sha256": "688c4a151bea1d0c41d6916664d8f64222eb001bb2a774045bd71dfc311dc521",
+      "publication_adjustments": [],
+      "sha256": "688c4a151bea1d0c41d6916664d8f64222eb001bb2a774045bd71dfc311dc521",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chemfp51_gate0/chemfp51_gate0_20260903_v1/src/prepare_chemfp51_gate0_phase_a_v2.py"
+    },
+    "source/src/verify_chemfp51_gate0_phase_a.py": {
+      "mode": "100644",
+      "original_sha256": "55d74490a5f08a37682477db0f7c37ac1015d1a7c97aadcd99ad9f176a4e6ca0",
+      "publication_adjustments": [],
+      "sha256": "55d74490a5f08a37682477db0f7c37ac1015d1a7c97aadcd99ad9f176a4e6ca0",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chemfp51_gate0/chemfp51_gate0_20260903_v1/src/verify_chemfp51_gate0_phase_a.py"
+    },
+    "source/src/verify_chemfp51_gate0_phase_a_v2.py": {
+      "mode": "100644",
+      "original_sha256": "55d74490a5f08a37682477db0f7c37ac1015d1a7c97aadcd99ad9f176a4e6ca0",
+      "publication_adjustments": [],
+      "sha256": "55d74490a5f08a37682477db0f7c37ac1015d1a7c97aadcd99ad9f176a4e6ca0",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chemfp51_gate0/chemfp51_gate0_20260903_v1/src/verify_chemfp51_gate0_phase_a_v2.py"
+    }
+  },
+  "payload_sha256": "8b677514a3e80246d4d44a01a43bede3e1052b4f8633db959b9f3313722784ec",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
