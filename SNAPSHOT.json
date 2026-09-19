@@ -1,0 +1,56 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate1_20260827",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827"
+    }
+  ],
+  "files": {
+    "source/gpu_append_bench.cu": {
+      "mode": "100644",
+      "original_sha256": "a5a9c278143622a0baea89f310c70f2465bd369732738fc5f32614447a4624cf",
+      "publication_adjustments": [],
+      "sha256": "a5a9c278143622a0baea89f310c70f2465bd369732738fc5f32614447a4624cf",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827/gpu_append_bench.cu"
+    },
+    "source/src/cpu_gate.py": {
+      "mode": "100644",
+      "original_sha256": "9b7002590862f1a0f301cbddb33eabfefb4662fec996dec976d214e74e7c0f8e",
+      "publication_adjustments": [],
+      "sha256": "9b7002590862f1a0f301cbddb33eabfefb4662fec996dec976d214e74e7c0f8e",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827/src/cpu_gate.py"
+    },
+    "source/src/finalize_gate1.py": {
+      "mode": "100644",
+      "original_sha256": "6451c346d6557c913da921e7769e4c78dae9d523de588d900315a1a9eed38eef",
+      "publication_adjustments": [],
+      "sha256": "6451c346d6557c913da921e7769e4c78dae9d523de588d900315a1a9eed38eef",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827/src/finalize_gate1.py"
+    },
+    "source/src/finalize_stage_a.py": {
+      "mode": "100644",
+      "original_sha256": "daf8622add27d3b69281bb7e4f0c7a0a99d6b4e8a44800efcde61da52ed48ab0",
+      "publication_adjustments": [],
+      "sha256": "daf8622add27d3b69281bb7e4f0c7a0a99d6b4e8a44800efcde61da52ed48ab0",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827/src/finalize_stage_a.py"
+    },
+    "source/src/gpu_append_bench.cu": {
+      "mode": "100644",
+      "original_sha256": "294a30b4e21e173e97fad34cd84c488c3a2736e4f1e2cf94e08471e3100f7cd6",
+      "publication_adjustments": [],
+      "sha256": "294a30b4e21e173e97fad34cd84c488c3a2736e4f1e2cf94e08471e3100f7cd6",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827/src/gpu_append_bench.cu"
+    },
+    "source/src/prepare_stage_a.py": {
+      "mode": "100644",
+      "original_sha256": "9db83d815841a3fad6f00b1131c5892221acc6137f32460de91ea1042e0ab31b",
+      "publication_adjustments": [],
+      "sha256": "9db83d815841a3fad6f00b1131c5892221acc6137f32460de91ea1042e0ab31b",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827/src/prepare_stage_a.py"
+    }
+  },
+  "payload_sha256": "c875d98f4ceebdacf5bfc34368f017a801558c31c30665231227925532bb5713",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
