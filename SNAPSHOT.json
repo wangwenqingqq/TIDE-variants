@@ -1,0 +1,53 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_cuda_reference",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_reference"
+    }
+  ],
+  "files": {
+    "source/run_one.sh": {
+      "mode": "100755",
+      "original_sha256": "a46f41c6715afadb269883e3c565a0d1df6b3dcbddc24e358792bd416189093e",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "5480306fc09556943eb23349e4f7e491b1d5435c637ba4bdf92a9104b009ed02",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_reference/run_one.sh"
+    },
+    "source/run_suite.sh": {
+      "mode": "100755",
+      "original_sha256": "5a119661c113590872e98d16215fb177769e3c3b58752c48ad0af9732fac2a44",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "c9049ab70549d8e9227dd3dbfb93f1db3f40b76db4989d2d7166b5120e156997",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_reference/run_suite.sh"
+    },
+    "source/src/safe_c1_cuda_reference.cu": {
+      "mode": "100644",
+      "original_sha256": "c1f9b43cef98b58cac3a71c202586f1c4396bdd96c7703b9070c8060846fad1c",
+      "publication_adjustments": [],
+      "sha256": "c1f9b43cef98b58cac3a71c202586f1c4396bdd96c7703b9070c8060846fad1c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_reference/src/safe_c1_cuda_reference.cu"
+    }
+  },
+  "payload_sha256": "64f8779d940d4b0f80f860ec8c89070b4f23faec3b664cdd1c94afa87fb75396",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
