@@ -1,0 +1,49 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1"
+    }
+  ],
+  "files": {
+    "source/include/safe_c1_gts_topk_exporter.cuh": {
+      "mode": "100644",
+      "original_sha256": "260f4a4f9c18793af36db9a99e5c10ad9ea5db803e2853ac803044a6265888e6",
+      "publication_adjustments": [],
+      "sha256": "260f4a4f9c18793af36db9a99e5c10ad9ea5db803e2853ac803044a6265888e6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1/include/safe_c1_gts_topk_exporter.cuh"
+    },
+    "source/include/safe_c1_merge_contract.hpp": {
+      "mode": "100644",
+      "original_sha256": "b540866b933d24f0ff3d283e99abd781a75f8c5f80e777ee714f55a7ba29a55c",
+      "publication_adjustments": [],
+      "sha256": "b540866b933d24f0ff3d283e99abd781a75f8c5f80e777ee714f55a7ba29a55c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1/include/safe_c1_merge_contract.hpp"
+    },
+    "source/include/safe_c1_search_v2_leaf_export.cuh": {
+      "mode": "100644",
+      "original_sha256": "27efbb0ca507b8e893fec1209ba767d739e758607eefb5033ff9930a4f773429",
+      "publication_adjustments": [],
+      "sha256": "27efbb0ca507b8e893fec1209ba767d739e758607eefb5033ff9930a4f773429",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1/include/safe_c1_search_v2_leaf_export.cuh"
+    },
+    "source/src/compile_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "f148a5756646a68d4b9ce83045beba5cf05941f78ce88c8e1a500bba2c6837af",
+      "publication_adjustments": [],
+      "sha256": "f148a5756646a68d4b9ce83045beba5cf05941f78ce88c8e1a500bba2c6837af",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1/src/compile_probe.cu"
+    },
+    "source/src/merge_contract_test.cpp": {
+      "mode": "100644",
+      "original_sha256": "9712615ec64b2058a16d1db2264ddaa74357feea776e312cbf1e9082e7f69d78",
+      "publication_adjustments": [],
+      "sha256": "9712615ec64b2058a16d1db2264ddaa74357feea776e312cbf1e9082e7f69d78",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1/src/merge_contract_test.cpp"
+    }
+  },
+  "payload_sha256": "666498af930891284cca82582ec21d046b62a5184b154bca63b2503a6f4635f6",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
