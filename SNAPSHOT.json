@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_e1_synthetic_fixture_builder_v2_sourceonly_20260810T030500CST",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v2_sourceonly_20260810T030500CST"
+    }
+  ],
+  "files": {
+    "source/build_synthetic_e1_fixture.py": {
+      "mode": "100755",
+      "original_sha256": "3faf74d779dfd192f65b4e21b63d029aa4fee1795d049f5b903b8e6862a54e79",
+      "publication_adjustments": [],
+      "sha256": "3faf74d779dfd192f65b4e21b63d029aa4fee1795d049f5b903b8e6862a54e79",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v2_sourceonly_20260810T030500CST/build_synthetic_e1_fixture.py"
+    },
+    "source/launch_once.sh": {
+      "mode": "100755",
+      "original_sha256": "0fabb815b07a3244c9ff1790a3e0e7c9edfe7cecd4725e8707659ad283772b8d",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ee35e45bff25fd5684da4fc9891c32c2695620e42062f56435c5a3a19533ea84",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v2_sourceonly_20260810T030500CST/launch_once.sh"
+    }
+  },
+  "payload_sha256": "013e329009e2a191546c7a9f32ce5242133a736e3c343c37aa5f97072ca0ec80",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
