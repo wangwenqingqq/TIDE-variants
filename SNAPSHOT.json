@@ -1,0 +1,77 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z"
+    }
+  ],
+  "files": {
+    "source/templates/E1_BUNDLE_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "4e0506e2018b55eac58266b40e326e1b6f87f6c045b07ca22a985f6960c90366",
+      "publication_adjustments": [],
+      "sha256": "4e0506e2018b55eac58266b40e326e1b6f87f6c045b07ca22a985f6960c90366",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/templates/E1_BUNDLE_TEMPLATE.json"
+    },
+    "source/templates/E2E3_CAMPAIGN_PLAN_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "3fd49c3b4551e02296cd91bb765efce2e0f33762ac52d219bc748185cb9d27d1",
+      "publication_adjustments": [],
+      "sha256": "3fd49c3b4551e02296cd91bb765efce2e0f33762ac52d219bc748185cb9d27d1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/templates/E2E3_CAMPAIGN_PLAN_TEMPLATE.json"
+    },
+    "source/tools/oracle_replayer.py": {
+      "mode": "100755",
+      "original_sha256": "e7090216b6f376aa2dadcd03b429d85cf480d9bdf3358f8ae7a052df82fc4d45",
+      "publication_adjustments": [],
+      "sha256": "e7090216b6f376aa2dadcd03b429d85cf480d9bdf3358f8ae7a052df82fc4d45",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/oracle_replayer.py"
+    },
+    "source/tools/seal_artifact_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "ead60f2bbb0584c82789999e8268d7a417e96a2a3dce1f67548f867b2c13f4ea",
+      "publication_adjustments": [],
+      "sha256": "ead60f2bbb0584c82789999e8268d7a417e96a2a3dce1f67548f867b2c13f4ea",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/seal_artifact_manifest.py"
+    },
+    "source/tools/static_audit.py": {
+      "mode": "100755",
+      "original_sha256": "b0723787db00f0a13ab03e1c92c54b1a39e2958c2482fac29d0b7a22b99c6c8c",
+      "publication_adjustments": [],
+      "sha256": "b0723787db00f0a13ab03e1c92c54b1a39e2958c2482fac29d0b7a22b99c6c8c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/static_audit.py"
+    },
+    "source/tools/tide_protocol_lib.py": {
+      "mode": "100644",
+      "original_sha256": "a51163ddd1ed93c2f80985f1f2fafbfc26e136259ed7d72995edd793d07abede",
+      "publication_adjustments": [],
+      "sha256": "a51163ddd1ed93c2f80985f1f2fafbfc26e136259ed7d72995edd793d07abede",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/tide_protocol_lib.py"
+    },
+    "source/tools/validate_e1_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "649de2d863f5703c5889728c8ce086ad375207c42763c287a720faf80f928019",
+      "publication_adjustments": [],
+      "sha256": "649de2d863f5703c5889728c8ce086ad375207c42763c287a720faf80f928019",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/validate_e1_bundle.py"
+    },
+    "source/tools/validate_e2e3_plan.py": {
+      "mode": "100755",
+      "original_sha256": "f00d70410da2d653b46b88088f334c8bfa44e998ab91ddd4f7d96597ecad1d42",
+      "publication_adjustments": [],
+      "sha256": "f00d70410da2d653b46b88088f334c8bfa44e998ab91ddd4f7d96597ecad1d42",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/validate_e2e3_plan.py"
+    },
+    "source/tools/validate_trace.py": {
+      "mode": "100755",
+      "original_sha256": "8fe25116202b3b286b9c3aee68cec5a08c531a7c69483b59264c6d7977047c02",
+      "publication_adjustments": [],
+      "sha256": "8fe25116202b3b286b9c3aee68cec5a08c531a7c69483b59264c6d7977047c02",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z/tools/validate_trace.py"
+    }
+  },
+  "payload_sha256": "074005db9645250a802a564bda3456d1853f88fbf7f62b9332ba508a3bd840a0",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
