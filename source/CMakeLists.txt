@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.27)
+project(RTDistanceProbe LANGUAGES CUDA CXX)
+find_package(CUDAToolkit REQUIRED)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CUDA_STANDARD 17)
+add_executable(rt_distance_probe rt_distance_probe.cu)
+set_target_properties(rt_distance_probe PROPERTIES CUDA_ARCHITECTURES 120)
+target_link_libraries(rt_distance_probe PRIVATE CUDA::cudart)
