@@ -1,0 +1,63 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_level10_20260903_v2",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2"
+    }
+  ],
+  "files": {
+    "source/input/l2p_build_ptr.cpp": {
+      "mode": "100644",
+      "original_sha256": "c2d66af1e308b148e11d336a7b1025acebce7670bb403c468a1185ea3457099d",
+      "publication_adjustments": [],
+      "sha256": "c2d66af1e308b148e11d336a7b1025acebce7670bb403c468a1185ea3457099d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/l2p_build_ptr.cpp"
+    },
+    "source/input/l2p_train.cpp": {
+      "mode": "100644",
+      "original_sha256": "0e6ca4c5928c8ad876b321107cd51030bc213a0577f4801123225ad12c46b27c",
+      "publication_adjustments": [],
+      "sha256": "0e6ca4c5928c8ad876b321107cd51030bc213a0577f4801123225ad12c46b27c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/l2p_train.cpp"
+    },
+    "source/input/measure_command.py": {
+      "mode": "100755",
+      "original_sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "publication_adjustments": [],
+      "sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/measure_command.py"
+    },
+    "source/input/partition_tgm_stats.cpp": {
+      "mode": "100644",
+      "original_sha256": "5d2b040d4d63ff34f59213cf6e80edffbf252de09dd8dc1103eeca1011dcfc47",
+      "publication_adjustments": [],
+      "sha256": "5d2b040d4d63ff34f59213cf6e80edffbf252de09dd8dc1103eeca1011dcfc47",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/partition_tgm_stats.cpp"
+    },
+    "source/input/test_l2p_train.py": {
+      "mode": "100644",
+      "original_sha256": "17ae31263a45e0ba3126a4e7df828c07dd41183b7af7d7662e838c44845df963",
+      "publication_adjustments": [],
+      "sha256": "17ae31263a45e0ba3126a4e7df828c07dd41183b7af7d7662e838c44845df963",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/test_l2p_train.py"
+    },
+    "source/input/tgm_exact_search.cpp": {
+      "mode": "100644",
+      "original_sha256": "fd986a62ecefc375ce0328eb503179241e53e7b8a2c0180467665b21288331db",
+      "publication_adjustments": [],
+      "sha256": "fd986a62ecefc375ce0328eb503179241e53e7b8a2c0180467665b21288331db",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/tgm_exact_search.cpp"
+    },
+    "source/input/tgm_query_cost.cpp": {
+      "mode": "100644",
+      "original_sha256": "5bae689c61384b56b83bad65065e2e5fb463645dac4c00b483e7f65f54795bc5",
+      "publication_adjustments": [],
+      "sha256": "5bae689c61384b56b83bad65065e2e5fb463645dac4c00b483e7f65f54795bc5",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2/input/tgm_query_cost.cpp"
+    }
+  },
+  "payload_sha256": "0644b26193f5f92978727046592575c248dfdc63661b16dceeae15b2c78bb0de",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
