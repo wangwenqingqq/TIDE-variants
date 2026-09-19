@@ -1,0 +1,462 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight"
+    }
+  ],
+  "files": {
+    "source/aggregate_c1_formal_evidence_v7.py": {
+      "mode": "100755",
+      "original_sha256": "423271153e5b91d8608b73b25af533deee96bf78df13574367dc67dad79e4f2b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "67fbba4f79b7dd60de6cc6bca13d366f57fc761c4e793de75ff6568fc939ab6c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/aggregate_c1_formal_evidence_v7.py"
+    },
+    "source/analyze_c1_microbenchmark_v7.py": {
+      "mode": "100755",
+      "original_sha256": "e1074a60e247dedf964181634653f4c0203cb86d576f07200e221bb3b1797002",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "17b68958338721adce2592131ab16669eab0cf73cda5e2a1e5acbd55e9ef06eb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/analyze_c1_microbenchmark_v7.py"
+    },
+    "source/build_v7_variants.sh": {
+      "mode": "100755",
+      "original_sha256": "cafc712245a5c11f93e4cadd79cb99182c982c82de8c7d7ea2bba0774bc807dd",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        }
+      ],
+      "sha256": "98614872f059ed948b9840d9001a2ba8edebadcf5cd8d5ccbcba4396e7340d4b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/build_v7_variants.sh"
+    },
+    "source/c1_v7_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "cca89af5f97045304f0ee4fc6e06911dc4df10f8cda5746621ef8c51f7324551",
+      "publication_adjustments": [],
+      "sha256": "cca89af5f97045304f0ee4fc6e06911dc4df10f8cda5746621ef8c51f7324551",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/c1_v7_manifest.py"
+    },
+    "source/c1_v7_profile_manifest.py": {
+      "mode": "100644",
+      "original_sha256": "f09896b0b6e18bf3919864c0ba1f186a380eebfce4e05bbf5c54f8fda8f80694",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "3cb59e4dfb080aabdfca3171cece9ff7af7a1b2422a8bd6fad7a84ba08004cba",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/c1_v7_profile_manifest.py"
+    },
+    "source/capacity_snapshot_contract_v7.py": {
+      "mode": "100755",
+      "original_sha256": "314f4e5aa07ca6fabf126b6354bd3471a3c6156253cb4943a6e2432774c4ea9b",
+      "publication_adjustments": [],
+      "sha256": "314f4e5aa07ca6fabf126b6354bd3471a3c6156253cb4943a6e2432774c4ea9b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/capacity_snapshot_contract_v7.py"
+    },
+    "source/create_v7_build_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "a03f82af8b8c47b01999a2a0d2047edf501e6fc36ddd92b5cdf4613a51d44ce3",
+      "publication_adjustments": [],
+      "sha256": "a03f82af8b8c47b01999a2a0d2047edf501e6fc36ddd92b5cdf4613a51d44ce3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/create_v7_build_manifest.py"
+    },
+    "source/create_v7_pins.py": {
+      "mode": "100755",
+      "original_sha256": "604c16d01b1ca3ae14ebb0fe418f84a14b055e9875a12913bcc5ff35065bd20a",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "27227005e42f0f4aaed48b109c13c202742bd39d9b7b7ee63f48c12301df201f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/create_v7_pins.py"
+    },
+    "source/create_v7_source_pins.py": {
+      "mode": "100755",
+      "original_sha256": "4f0b342ccc6b72f17f20025004392207a59078376330fca214f85cfbd695ba39",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "0fda8ff298831dcb38dbdb8e1083d885351925f8f973bfc93c092c3fb4f9eb91",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/create_v7_source_pins.py"
+    },
+    "source/finalize_c1_evidence_v7.py": {
+      "mode": "100755",
+      "original_sha256": "8ced2465934a8cd3f5c3da41651754fe247c975436a0aaf61b0b344ff9faee43",
+      "publication_adjustments": [],
+      "sha256": "8ced2465934a8cd3f5c3da41651754fe247c975436a0aaf61b0b344ff9faee43",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/finalize_c1_evidence_v7.py"
+    },
+    "source/launch_c1_profile_v7.sh": {
+      "mode": "100755",
+      "original_sha256": "3e3b9aceaabd787101b99ec49f747bdfd7e0f92b85eddb9464d1ceec7e927e75",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "b5aa44c052f804199bb42510bf12ec321f086622b13f6aa510947e0d0f9ce914",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/launch_c1_profile_v7.sh"
+    },
+    "source/launch_c1_v7.sh": {
+      "mode": "100755",
+      "original_sha256": "cefe6142203de575ffdde79fa3a7dba6f33a0e3da25330e613ef49c7b2da9537",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "6f5588c53f9a401e20153c70cfb501d1511f8b4ce9db954658c50ecfdc7e817f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/launch_c1_v7.sh"
+    },
+    "source/run_c1_four_variants_v7.sh": {
+      "mode": "100755",
+      "original_sha256": "38a66c761d07fc7a60ff1d3308ed21cc638ed68b296fbafbefbf3a1bb98b937b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "c98794b6494ef538605b79dfcf587a118749e9402b889166020832a12c6fb923",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/run_c1_four_variants_v7.sh"
+    },
+    "source/run_c1_profile_guard_v7.sh": {
+      "mode": "100755",
+      "original_sha256": "3a19cbcf5f58fe81dc2e55297111ccaf116a7d670eba05e23f3ca3bcdbe805ac",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "82b4e14fc4cdcef2b367fb899737104b038d033c2333abff2e9d4f6735d44a6d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/run_c1_profile_guard_v7.sh"
+    },
+    "source/run_c1_profile_primary_v7.sh": {
+      "mode": "100755",
+      "original_sha256": "84112fa48d34da9e428000ea0852b8e6760f46c946460decf53a385df38e1f87",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "166b7d39deaa216f7eebc438879949adc4baa71dc2604d8a0a4d8b244f8f2ab8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/run_c1_profile_primary_v7.sh"
+    },
+    "source/run_c1_workspace_microbenchmark_guard_v7.sh": {
+      "mode": "100755",
+      "original_sha256": "2607f3480e67ba2040d0e6bb94715ff0642357673799df91dca410fe69f7733d",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "ec863846deed85bcbaea0e8f2f21ca70b98f56dfba7efffb29ad3a611d2cb4c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/run_c1_workspace_microbenchmark_guard_v7.sh"
+    },
+    "source/tools/canonical_inspect_v7.cpp": {
+      "mode": "100644",
+      "original_sha256": "3ac4fac10c222d16094db50b20d053aa480886d363db70122f7abeda9806280e",
+      "publication_adjustments": [],
+      "sha256": "3ac4fac10c222d16094db50b20d053aa480886d363db70122f7abeda9806280e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/tools/canonical_inspect_v7.cpp"
+    },
+    "source/tools/test_c1_v7_capacity_snapshot_fixtures.py": {
+      "mode": "100755",
+      "original_sha256": "d2aad07be45ace450035a4f8d1bedc4fcf8a587bc7113bab45e53ae7bea088f1",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "8335d734d3815f244741bac125edd4df6fe13ffb0c4d73469210ccc9a1b28ee7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/tools/test_c1_v7_capacity_snapshot_fixtures.py"
+    },
+    "source/tools/test_c1_v7_guard_session_fixtures.py": {
+      "mode": "100755",
+      "original_sha256": "5356d34c096051cbfae06cc5b4a2e27b550e9e4d2d714ddf72894b76b3b90f9b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "de780c598dd5540e4dccaf84f1f70143c5cfc7826953254494c9843c38c9f575",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/tools/test_c1_v7_guard_session_fixtures.py"
+    },
+    "source/tools/test_c1_v7_profile_guard_cli_contract.py": {
+      "mode": "100644",
+      "original_sha256": "bf07967e5acb871564b7fc248947015d2217622ab387bef2df901653fdb41be1",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "9ffde600608c4fd7b017ba67d544ed813eea9bf3bd31a0ec924142a69c8ca76d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/tools/test_c1_v7_profile_guard_cli_contract.py"
+    },
+    "source/tools/test_c1_v7_profile_manifest_fixtures.py": {
+      "mode": "100644",
+      "original_sha256": "7f401e3615d58199971326341c40ee3b551baaf4bcd152b6adfad53e8ba939e2",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "4200d8aa6ebd9c584c2b5a794dfa18cfde4b51eeb55f4f33afb243b7ead38e88",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/tools/test_c1_v7_profile_manifest_fixtures.py"
+    },
+    "source/tools/test_c1_v7_profile_terminal_fixture.py": {
+      "mode": "100644",
+      "original_sha256": "a969b25b38cfcac4b693da2acb971e1f332b8a78ceb24e67c1dc301d31ac2178",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "e447cc53faa176cc54322b9b6c602c50e511b6b4b36f565b13c673d50ed6f4f3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/tools/test_c1_v7_profile_terminal_fixture.py"
+    },
+    "source/verify_c1_profile_artifacts_v7.py": {
+      "mode": "100755",
+      "original_sha256": "2622bc3ac1e35e89339afda6208147c7b3d3074288dbaf3e2bb8b1bd5835d585",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "583784835a8b5de974d51216dc6bf722a3386cd18a800dbeeecfb805d7995c10",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/verify_c1_profile_artifacts_v7.py"
+    },
+    "source/verify_c1_semantics_v7.py": {
+      "mode": "100755",
+      "original_sha256": "46212e57ef6420c173dfd63ea7ef63272700943880dcf156539f94da01943058",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "12a8c720906efbbc69195700114ccded8525d17bab0a9288ba251f18288607a4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/verify_c1_semantics_v7.py"
+    },
+    "source/verify_v7_pins.py": {
+      "mode": "100755",
+      "original_sha256": "58b4d8d600325a0e609977dfce349a84fafa283dc97a69702b62fc4bf386fad7",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "11147d48c19d9caf98f9acf47ed9da0084c4ae9c130dfb20315da23e3c518519",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/verify_v7_pins.py"
+    },
+    "source/verify_v7_source_pins.py": {
+      "mode": "100755",
+      "original_sha256": "972d0b0beddb063392c85e445288ab3b82b54385a38d29ad2f1086f102222d99",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "admin-path"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "f5983d41c4fc7fc70cd995cc84b920ca55e2b6acd779cc404404fed5c03f46f4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/verify_v7_source_pins.py"
+    },
+    "source/worktree/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "c3904e2c3e5306ed426acb03b517234df7617278dc70678899858f7827b8908b",
+      "publication_adjustments": [],
+      "sha256": "c3904e2c3e5306ed426acb03b517234df7617278dc70678899858f7827b8908b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/CMakeLists.txt"
+    },
+    "source/worktree/include/c1_alloc_counter.cuh": {
+      "mode": "100644",
+      "original_sha256": "ac689cee7413cf25c16756a656136c2bda0cbbf37719becc99d3a03330c80c62",
+      "publication_adjustments": [],
+      "sha256": "ac689cee7413cf25c16756a656136c2bda0cbbf37719becc99d3a03330c80c62",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/c1_alloc_counter.cuh"
+    },
+    "source/worktree/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/config.cuh"
+    },
+    "source/worktree/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/file.cuh"
+    },
+    "source/worktree/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/gpu_timer.cuh"
+    },
+    "source/worktree/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/incremental_insert.cuh"
+    },
+    "source/worktree/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/mlp_constant.cuh"
+    },
+    "source/worktree/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/residual_pruning.cuh"
+    },
+    "source/worktree/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/residual_tuner.cuh"
+    },
+    "source/worktree/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/search.cuh"
+    },
+    "source/worktree/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/search_naive.cuh"
+    },
+    "source/worktree/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "publication_adjustments": [],
+      "sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/search_v2.cuh"
+    },
+    "source/worktree/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "b21ac70fa96f6acb82dd004a15116a6e893cc23ccf8ea857caa96a4191e0a3e7",
+      "publication_adjustments": [],
+      "sha256": "b21ac70fa96f6acb82dd004a15116a6e893cc23ccf8ea857caa96a4191e0a3e7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/tree.cuh"
+    },
+    "source/worktree/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "6baaf12be11b39fb1447aa025fda52310e250d3d7dbc3ac16ee2d964a76c14e7",
+      "publication_adjustments": [],
+      "sha256": "6baaf12be11b39fb1447aa025fda52310e250d3d7dbc3ac16ee2d964a76c14e7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/include/update.cuh"
+    },
+    "source/worktree/src/c1_microbench.cu": {
+      "mode": "100644",
+      "original_sha256": "61e1635a7824c716c5b590f9f9f275235f050166bceea83631af7d0878b8d683",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "90ee6539bb7d2a9c47f38443e41377d621b5ff4cd7efc1ae88d988e60b7cc095",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/src/c1_microbench.cu"
+    },
+    "source/worktree/src/main.cu": {
+      "mode": "100644",
+      "original_sha256": "72f2db4db8e2d0211460107fc06c55196727853bee8654baa806249a2f7ad0d9",
+      "publication_adjustments": [],
+      "sha256": "72f2db4db8e2d0211460107fc06c55196727853bee8654baa806249a2f7ad0d9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight/worktree/src/main.cu"
+    }
+  },
+  "payload_sha256": "43614f6624505adc7982e8e000c660432eb528e4c7bce582899c13d5f4e1f98b",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
