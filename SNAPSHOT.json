@@ -1,0 +1,52 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/svc_f0_20260905T150653Z",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_f0_20260905T150653Z"
+    }
+  ],
+  "files": {
+    "source/src/export_readback.py": {
+      "mode": "100644",
+      "original_sha256": "e2040a550b62f07d53f64be9275d7dc8a1f3301a304afd136d5cbfff70b5bf95",
+      "publication_adjustments": [],
+      "sha256": "e2040a550b62f07d53f64be9275d7dc8a1f3301a304afd136d5cbfff70b5bf95",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_f0_20260905T150653Z/src/export_readback.py"
+    },
+    "source/src/gate.py": {
+      "mode": "100644",
+      "original_sha256": "74155754b107415505711ab46feb6719ff730d5099e624edacaae8d2182413d6",
+      "publication_adjustments": [],
+      "sha256": "74155754b107415505711ab46feb6719ff730d5099e624edacaae8d2182413d6",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_f0_20260905T150653Z/src/gate.py"
+    },
+    "source/src/remote_job.sh": {
+      "mode": "100644",
+      "original_sha256": "b15d65abe32eff92d42e207823ed2d47d889929704a30717ea82a8a1372795ef",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 1,
+          "reason": "owner-label"
+        }
+      ],
+      "sha256": "3a0093c051b2e1bd640d3c4fccb19bd97ad72b328c3fdd9aca05cb6a965e797c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_f0_20260905T150653Z/src/remote_job.sh"
+    }
+  },
+  "payload_sha256": "2ba0e3248ec63314e645cf4bb587036564025c353c865e23b161bd4e14a97e6c",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
