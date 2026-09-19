@@ -1,0 +1,92 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1"
+    }
+  ],
+  "files": {
+    "source/reference/gts_c3_native_direct_insert_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "7a38656a5c2e3a2fa1ae84c2aefcbf055f8831fad7bbffa18fedea0df35e423a",
+      "publication_adjustments": [],
+      "sha256": "7a38656a5c2e3a2fa1ae84c2aefcbf055f8831fad7bbffa18fedea0df35e423a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/reference/gts_c3_native_direct_insert_probe.cu"
+    },
+    "source/reference/gts_safe_c3_ancestor_fence.precompilefix.cudaMemGetAddressRange.cu": {
+      "mode": "100644",
+      "original_sha256": "c75cfc4e27026bdb248f825b5392d810eafaed33c7e7a7c69c23e276a9579c45",
+      "publication_adjustments": [],
+      "sha256": "c75cfc4e27026bdb248f825b5392d810eafaed33c7e7a7c69c23e276a9579c45",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/reference/gts_safe_c3_ancestor_fence.precompilefix.cudaMemGetAddressRange.cu"
+    },
+    "source/reference/gts_safe_c3_ancestor_fence.precompilefix2.posixheaders.cu": {
+      "mode": "100644",
+      "original_sha256": "3aa8f980bac98d3e669ffca8963dc57ea030961fcf6ca3620ff4d9776daffef3",
+      "publication_adjustments": [],
+      "sha256": "3aa8f980bac98d3e669ffca8963dc57ea030961fcf6ca3620ff4d9776daffef3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/reference/gts_safe_c3_ancestor_fence.precompilefix2.posixheaders.cu"
+    },
+    "source/src/gts_safe_c3_ancestor_fence.cu": {
+      "mode": "100644",
+      "original_sha256": "68e3a317472c97acd1b50eec064d7db5a15407241d034763ea0b799439df0fe5",
+      "publication_adjustments": [],
+      "sha256": "68e3a317472c97acd1b50eec064d7db5a15407241d034763ea0b799439df0fe5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/src/gts_safe_c3_ancestor_fence.cu"
+    },
+    "source/tools/.nvml_snapshot.py": {
+      "mode": "100755",
+      "original_sha256": "d5d57ccd816f377209f6a4f2709f75cb030e65739423b8967c126197513891c8",
+      "publication_adjustments": [],
+      "sha256": "d5d57ccd816f377209f6a4f2709f75cb030e65739423b8967c126197513891c8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/tools/.nvml_snapshot.py"
+    },
+    "source/tools/audit_safe_c3_static.py": {
+      "mode": "100755",
+      "original_sha256": "7bf2e0525fa91b3f8e252162ab168c01ad5b5cfe3bd635b96e566c69c3e501b5",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "27838270178267efb7f50cc0297fda89551348dbce78833a5f3b7d60523f3782",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/tools/audit_safe_c3_static.py"
+    },
+    "source/tools/issue_safe_c3_gpu_token.sh": {
+      "mode": "100755",
+      "original_sha256": "ebfac5cd26bd3208ddcbe71e359283c5d6b4272305e9ba31dc70f38e48e18828",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "f284dc10d008ca6be1dcc1023df48f95af43920a70d3ccf36681945b958aba68",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/tools/issue_safe_c3_gpu_token.sh"
+    },
+    "source/tools/run_safe_c3_gpu1_once.sh": {
+      "mode": "100755",
+      "original_sha256": "aa8e01010baf58c4cc1a3d77bd8fcbb63b7a23fd9109e30d467719c8d05f961b",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "d80f35ee4e4df926bc6e346239e3b68ae20f85d0ad11110b644071bdf2480741",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/tools/run_safe_c3_gpu1_once.sh"
+    },
+    "source/tools/validate_safe_c3.py": {
+      "mode": "100755",
+      "original_sha256": "4e04e8760ac8c36ae3e7c6c961a89f0d77031f5385c28ff7535ed4787dbc9e2c",
+      "publication_adjustments": [],
+      "sha256": "4e04e8760ac8c36ae3e7c6c961a89f0d77031f5385c28ff7535ed4787dbc9e2c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1/tools/validate_safe_c3.py"
+    }
+  },
+  "payload_sha256": "7c94c4c5d06d4d4771e56ccb6435cccb299be7b7ad0f9fba87d6642943b52735",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
