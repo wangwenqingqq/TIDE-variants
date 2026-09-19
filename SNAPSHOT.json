@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_heldout_gamma_probe",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_heldout_gamma_probe"
+    }
+  ],
+  "files": {
+    "source/run_c1_heldout_gamma_probe.sh": {
+      "mode": "100755",
+      "original_sha256": "2420972ed26cd606965447feb44d0b732e40ad417188e78209e1b949059a63eb",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "31097a5135cf9b33f5a795404ce176fe49bb51b3ff933c67c2ec8c0fc9b434c0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_heldout_gamma_probe/run_c1_heldout_gamma_probe.sh"
+    },
+    "source/src/gts_c1_heldout_gamma_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "6aa1f191a1ee8c70552f4f6b414c31983e03f3f577ae9dbe0fb102de816bb911",
+      "publication_adjustments": [],
+      "sha256": "6aa1f191a1ee8c70552f4f6b414c31983e03f3f577ae9dbe0fb102de816bb911",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_heldout_gamma_probe/src/gts_c1_heldout_gamma_probe.cu"
+    }
+  },
+  "payload_sha256": "d72c656e77b78036c4db7f145e23b0a7cce888dfd1703bc6730c6825e7ea5c90",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
