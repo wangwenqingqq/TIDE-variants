@@ -1,0 +1,187 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c3_native_direct_insert_probe",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe"
+    }
+  ],
+  "files": {
+    "source/audit_c3_native_probe_static.py": {
+      "mode": "100755",
+      "original_sha256": "b2184be45f7b84787d72a1cea90e65428720aa8b0dee5e8de0b400107713a3ca",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "669da5f39b155528b49479364bcf6899e5bc913e528f2b06f024866bfccd7e35",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/audit_c3_native_probe_static.py"
+    },
+    "source/backups/audit_c3_native_probe_static.pre_residual_baseline_mode0.py": {
+      "mode": "100644",
+      "original_sha256": "82529272edde43ad017f4ae5f924f94774373e6fd70700adef60370b8d85b3ab",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "da1062545bdcf8d5868eabdd4acb1b8ab15900a44be623b003e0eba961d9996e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/backups/audit_c3_native_probe_static.pre_residual_baseline_mode0.py"
+    },
+    "source/backups/gts_c3_native_direct_insert_probe.pre_residual_baseline_mode0.cu": {
+      "mode": "100644",
+      "original_sha256": "dc8551b9eeab80c5f6c221a8b3fdea0188ea0ce264a9cb2962961c1fab3db6ee",
+      "publication_adjustments": [],
+      "sha256": "dc8551b9eeab80c5f6c221a8b3fdea0188ea0ce264a9cb2962961c1fab3db6ee",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/backups/gts_c3_native_direct_insert_probe.pre_residual_baseline_mode0.cu"
+    },
+    "source/backups/validate_c3_native_direct_insert.pre_residual_baseline_mode0.py": {
+      "mode": "100644",
+      "original_sha256": "c0447f5f7817ea4fdc7cd05affc44077fab8ee801fe799c4d3704e25620cfc63",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "eae13b8fae43b8d31ab3272627a9cca868b6d44ee3914053b55d489c4a4d2d75",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/backups/validate_c3_native_direct_insert.pre_residual_baseline_mode0.py"
+    },
+    "source/same_leaf_capacity_heldout_v1/audit_c3_same_leaf_capacity_static.py": {
+      "mode": "100755",
+      "original_sha256": "8aca15aafa848e6527552014658072f858986b947e09ebd10437e717aaa097d8",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "89fcc911478972b7558809f9bd0faf0e7da83ae6ff2e7e168e78bab3cf581cdc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/same_leaf_capacity_heldout_v1/audit_c3_same_leaf_capacity_static.py"
+    },
+    "source/same_leaf_capacity_heldout_v1/preflight/select_same_leaf_capacity_trace.py": {
+      "mode": "100755",
+      "original_sha256": "96386de3565811f6bde862a665cab6b6b2df70ef6af893dc63e2218bdabfd93c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "16bf0d4bccbcd6f1a2ff0fa46bebc2af1dcb5db68008cd40fb313f4624c1a1f1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/same_leaf_capacity_heldout_v1/preflight/select_same_leaf_capacity_trace.py"
+    },
+    "source/same_leaf_capacity_heldout_v1/scripts/run_c3_same_leaf_capacity_gpu0_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "459ca7ecaaedb9a8bf0f566bc01a3e35f87c7426f9cd2744b2b1cae745ca9768",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "9c71a0a7106264383478a90db250884d3e2ef4d9e7218e4f0235107e9fba7e99",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/same_leaf_capacity_heldout_v1/scripts/run_c3_same_leaf_capacity_gpu0_guarded.sh"
+    },
+    "source/same_leaf_capacity_heldout_v1/src/gts_c3_same_leaf_capacity_heldout.cu": {
+      "mode": "100644",
+      "original_sha256": "a1bd7c9a41635f98b703919cd324ef14d180c3fffe8f9f645861fdd489291b88",
+      "publication_adjustments": [],
+      "sha256": "a1bd7c9a41635f98b703919cd324ef14d180c3fffe8f9f645861fdd489291b88",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/same_leaf_capacity_heldout_v1/src/gts_c3_same_leaf_capacity_heldout.cu"
+    },
+    "source/same_leaf_capacity_heldout_v1/validate_c3_same_leaf_capacity_heldout.py": {
+      "mode": "100755",
+      "original_sha256": "9bf2c37dd7ba8a38a70591c70413b5322a1654b88d2f9d8dbdd5dc1a705ce750",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "ab84985b7bfe459d87266ed56524c8a9480e3d5b4d7f162294a9dd6767a9f828",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/same_leaf_capacity_heldout_v1/validate_c3_same_leaf_capacity_heldout.py"
+    },
+    "source/scripts/run_c3_native_direct_insert_gpu0_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "f6b3b5699c048d8e09944bcf5c6809126a06150553bada67e81108bcf53f20bf",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "0d84c8d104b0944e9ed88ff0a2760a4dc8fb827fc4e2676eaddeea031545cd64",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/scripts/run_c3_native_direct_insert_gpu0_guarded.sh"
+    },
+    "source/src/gts_c3_native_direct_insert_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "7a38656a5c2e3a2fa1ae84c2aefcbf055f8831fad7bbffa18fedea0df35e423a",
+      "publication_adjustments": [],
+      "sha256": "7a38656a5c2e3a2fa1ae84c2aefcbf055f8831fad7bbffa18fedea0df35e423a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/src/gts_c3_native_direct_insert_probe.cu"
+    },
+    "source/validate_c3_native_direct_insert.py": {
+      "mode": "100755",
+      "original_sha256": "8da3b22ec8beb6d6cfa491c8503a19b8dccb48ba260e3c3bc74605b8a49fb97e",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "49387a898a1c40e1be3eb4fd256634f7be977bae2883a3355576a7a2f65ef1d4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe/validate_c3_native_direct_insert.py"
+    }
+  },
+  "payload_sha256": "d06f01bbd732b6099eaebcf61841871e2138022ffe46e2e23f5d69b2df57b6f4",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
