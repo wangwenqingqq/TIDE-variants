@@ -1,0 +1,46 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v4_projection",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v4_projection"
+    }
+  ],
+  "files": {
+    "source/cpu_projection_ablation.cpp": {
+      "mode": "100644",
+      "original_sha256": "68cd6f08f9ca96b23ba49b61da789b27177e40c0cb29e3057b7bb4823e2773be",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "b5e438e2c7e8675da5813ccc1f635699748a2d3eb5e7eb3de009a0c5ace3a99c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v4_projection/cpu_projection_ablation.cpp"
+    },
+    "source/run_cpu_projection_ablation.sh": {
+      "mode": "100755",
+      "original_sha256": "c217006420aab7a88d542157a0ea6a44cc22011786a5d8e168508b53c980108d",
+      "publication_adjustments": [
+        {
+          "occurrences": 6,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "6ebb5c5441898258a314ff4e06ab5e7c4cd2653611b87f527d67326d94960685",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v4_projection/run_cpu_projection_ablation.sh"
+    }
+  },
+  "payload_sha256": "738049300ecd587f2dc433bfaac19c7eec7f48ee81a65bd79d5285c2fe0cca9f",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
