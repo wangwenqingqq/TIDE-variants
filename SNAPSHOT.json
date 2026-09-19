@@ -1,0 +1,104 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/nvmolkit060_query/nvmolkit060_20260904_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1"
+    }
+  ],
+  "files": {
+    "source/adapter/audit_ratio_domain.py": {
+      "mode": "100755",
+      "original_sha256": "caf9978010b637626656738d0a62fb28fcb8f0d278af40101167933890483f76",
+      "publication_adjustments": [],
+      "sha256": "caf9978010b637626656738d0a62fb28fcb8f0d278af40101167933890483f76",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/audit_ratio_domain.py"
+    },
+    "source/adapter/diagnose_boundary.py": {
+      "mode": "100755",
+      "original_sha256": "9e5343820d6bf3e332173a310e4ab9823b4bd8cda0827433778b672becbdb70a",
+      "publication_adjustments": [],
+      "sha256": "9e5343820d6bf3e332173a310e4ab9823b4bd8cda0827433778b672becbdb70a",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/diagnose_boundary.py"
+    },
+    "source/adapter/diagnose_full_boundary.py": {
+      "mode": "100755",
+      "original_sha256": "b1869bb5784e0af97cc8697529389c48f58e3bd1002a8e45875aeffc77ba5212",
+      "publication_adjustments": [],
+      "sha256": "b1869bb5784e0af97cc8697529389c48f58e3bd1002a8e45875aeffc77ba5212",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/diagnose_full_boundary.py"
+    },
+    "source/adapter/exact_complete_benchmark.py": {
+      "mode": "100755",
+      "original_sha256": "bbc29b4476cb7ab3f4632843c7a3939cd2dd8b3075273a90022cb24e69b647b5",
+      "publication_adjustments": [],
+      "sha256": "bbc29b4476cb7ab3f4632843c7a3939cd2dd8b3075273a90022cb24e69b647b5",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/exact_complete_benchmark.py"
+    },
+    "source/adapter/make_fixture.py": {
+      "mode": "100755",
+      "original_sha256": "e707b13a432e84d23463589ab53194075821eecfe471952858bc9d9c31cce1d4",
+      "publication_adjustments": [],
+      "sha256": "e707b13a432e84d23463589ab53194075821eecfe471952858bc9d9c31cce1d4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/make_fixture.py"
+    },
+    "source/adapter/run_locked.sh": {
+      "mode": "100755",
+      "original_sha256": "8ef1d29373e714c5e8a2923ce8cb2fb34b5647848230aa4f05ca95a64e52e825",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "572137e40493efdefcd53f1d59f9b30f38299228cf2db0ed5283bd579ca876e2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/run_locked.sh"
+    },
+    "source/adapter/run_locked_command.sh": {
+      "mode": "100755",
+      "original_sha256": "adc2a27b12e06d9f9f720c84f03521f73001dc6e4c93ebc83834d9864ddb1010",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "b3034b987441c9a7bb4e697c7adc62e9ec919c0639f0f56e5f3d8a7f25b2b89d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/run_locked_command.sh"
+    },
+    "source/adapter/run_locked_program.sh": {
+      "mode": "100755",
+      "original_sha256": "fbb28531591c0114bc7ce47ca4a53f31a0458207d495d6a2173567ed91c1528c",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "fbcdbea0b6974d1d4db99665d49adae5adde904616cd50fee9dde48db35662b7",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/run_locked_program.sh"
+    },
+    "source/adapter/summarize_exact.py": {
+      "mode": "100755",
+      "original_sha256": "37ac0c30672026c8286204bfcaf40f01fc09d03c4275f35311acad0a0f98e95c",
+      "publication_adjustments": [],
+      "sha256": "37ac0c30672026c8286204bfcaf40f01fc09d03c4275f35311acad0a0f98e95c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1/adapter/summarize_exact.py"
+    }
+  },
+  "payload_sha256": "e91ada6c93e62a5c89961ae252b229fc170da47d85f657656c407c150c612ae9",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
