@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/adapters/page2tile-tide-intent",
+      "role": "TIDE-intent adapter in a separate project, not a TIDE index",
+      "source_label": "project/livsyn/Page2Tile"
+    }
+  ],
+  "files": {
+    "source/scripts/analyze_surechembl_intent.py": {
+      "mode": "100755",
+      "original_sha256": "3f72e24f30d4e5edec6956cbe2a5cb166a0c93f0da936b0487c7d40d59e89f22",
+      "publication_adjustments": [],
+      "sha256": "3f72e24f30d4e5edec6956cbe2a5cb166a0c93f0da936b0487c7d40d59e89f22",
+      "source_label": "project/livsyn/Page2Tile/scripts/analyze_surechembl_intent.py"
+    },
+    "source/src/page2tile/tide_intent.py": {
+      "mode": "100644",
+      "original_sha256": "1882e3667a57d0ae4702d13fa79153c468767c72f859c8d18957eb1b3a2d9a8c",
+      "publication_adjustments": [],
+      "sha256": "1882e3667a57d0ae4702d13fa79153c468767c72f859c8d18957eb1b3a2d9a8c",
+      "source_label": "project/livsyn/Page2Tile/src/page2tile/tide_intent.py"
+    },
+    "source/tests/test_tide_intent.py": {
+      "mode": "100644",
+      "original_sha256": "5eeace17fa8217786e17e6dced9093da8cc90fa564e2671e90eb049358d71005",
+      "publication_adjustments": [],
+      "sha256": "5eeace17fa8217786e17e6dced9093da8cc90fa564e2671e90eb049358d71005",
+      "source_label": "project/livsyn/Page2Tile/tests/test_tide_intent.py"
+    }
+  },
+  "payload_sha256": "da5834f1e5901370529ac4cb261b06856d500725e8bf1ecaf37f9c401eabcb83",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
