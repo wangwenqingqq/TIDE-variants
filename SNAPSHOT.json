@@ -1,0 +1,30 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_aabb_rounding_audit_v1",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_aabb_rounding_audit_v1"
+    }
+  ],
+  "files": {
+    "source/cpu_aabb_rounding_audit.cpp": {
+      "mode": "100644",
+      "original_sha256": "62b42ff86645451e85aa994b37b73c9d73446de5b54cbdadafea289c7c1e1d19",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "771aa576baa9596172942d5527e5e43cecdb4a6d1a37f31553b5060de8a15319",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_aabb_rounding_audit_v1/cpu_aabb_rounding_audit.cpp"
+    }
+  },
+  "payload_sha256": "af16b65c57b3a54c9691cebf292d0a21769f942772e67d880ea35c54f958c73c",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
