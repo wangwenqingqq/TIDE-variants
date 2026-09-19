@@ -1,0 +1,21 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_e1_synthetic_fixture_builder_v1_sourceonly_20260810T025940CST",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v1_sourceonly_20260810T025940CST"
+    }
+  ],
+  "files": {
+    "source/build_synthetic_e1_fixture.py": {
+      "mode": "100755",
+      "original_sha256": "9efd4ce1e41cb0423aa8256066a31a8b2013a49d7373635d2e758d94e497fa78",
+      "publication_adjustments": [],
+      "sha256": "9efd4ce1e41cb0423aa8256066a31a8b2013a49d7373635d2e758d94e497fa78",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v1_sourceonly_20260810T025940CST/build_synthetic_e1_fixture.py"
+    }
+  },
+  "payload_sha256": "e1ee476c59a3da6479a85083d356f440ac42e604a24b95aaf7559f979e8438c9",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
