@@ -1,0 +1,21 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/legacy-hnsw_snapshot_v3",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/hnsw_snapshot_v3"
+    }
+  ],
+  "files": {
+    "source/hnsw_snapshot_baseline_v3.py": {
+      "mode": "100755",
+      "original_sha256": "08705185a07e5aea6d7eb75be55c80c0cc215839488296e35b5a161de5445ec9",
+      "publication_adjustments": [],
+      "sha256": "08705185a07e5aea6d7eb75be55c80c0cc215839488296e35b5a161de5445ec9",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/hnsw_snapshot_v3/hnsw_snapshot_baseline_v3.py"
+    }
+  },
+  "payload_sha256": "363401b3a39807f57e6c3a17cba50c7ceaff41df02e5b1b0d68792e6495556f6",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
