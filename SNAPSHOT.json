@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_search_native_certificate_v2",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_search_native_certificate_v2"
+    }
+  ],
+  "files": {
+    "source/include/safe_c1_search_native_routing_certificate.hpp": {
+      "mode": "100644",
+      "original_sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "publication_adjustments": [],
+      "sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_search_native_certificate_v2/include/safe_c1_search_native_routing_certificate.hpp"
+    },
+    "source/src/routing_certificate_test.cpp": {
+      "mode": "100644",
+      "original_sha256": "71876824c9c351183d3810b2522a668f710c202d5ab36e2349e284fda3cc3523",
+      "publication_adjustments": [],
+      "sha256": "71876824c9c351183d3810b2522a668f710c202d5ab36e2349e284fda3cc3523",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_search_native_certificate_v2/src/routing_certificate_test.cpp"
+    }
+  },
+  "payload_sha256": "e81bc469c928c8209de13d5c0a7faac8e52c6e5b200b1c4fda62957cdb1459aa",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
