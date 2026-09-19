@@ -1,0 +1,620 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260730/safe_c1_fable5_matched_v1",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1"
+    }
+  ],
+  "files": {
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/file.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/residual_pruning.cuh"
+    },
+    "source/include/safe_c1_search_native_routing_certificate.hpp": {
+      "mode": "100644",
+      "original_sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "publication_adjustments": [],
+      "sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/safe_c1_search_native_routing_certificate.hpp"
+    },
+    "source/include/safe_c1_tie_free_witness.hpp": {
+      "mode": "100644",
+      "original_sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "publication_adjustments": [],
+      "sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/safe_c1_tie_free_witness.hpp"
+    },
+    "source/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/safe_search_v2.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/include/tree.cuh"
+    },
+    "source/provenance/audit_fable5_native_snapshot_export_static_v1.before_final_contract_alignment_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "a5af20de25a3bd06dfd60763c3dfd55aac172512f4af4f98298a3998276b9b8a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "bd96e3d19c3a753c2be831f1b9ddc9b53e35db10baf8050a2aadf9c2620ee5a6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/audit_fable5_native_snapshot_export_static_v1.before_final_contract_alignment_20260730.py"
+    },
+    "source/provenance/audit_fable5_native_snapshot_export_static_v1.before_manifest_build_and_canonical_updates_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "e90bdab9548cca2c5bfde179c00a76432974c5972b3f3aff85949abcd3bc932c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "c51dcd1211dc97d633c3c8f58653053dca80e77c5031ac663612cd2cd5995d8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/audit_fable5_native_snapshot_export_static_v1.before_manifest_build_and_canonical_updates_20260730.py"
+    },
+    "source/provenance/audit_fable5_native_snapshot_export_static_v1.before_nvml_binding_guard_alignment_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "ec7ddde9956c73144c1b620e68d82f859e51c8dea51ea53c7124b2b79ee837de",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "df2aab82b14e4876646de006cd4b35dbf4f5d2f7151f077819254eb05ee08a86",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/audit_fable5_native_snapshot_export_static_v1.before_nvml_binding_guard_alignment_20260730.py"
+    },
+    "source/provenance/audit_fable5_native_snapshot_export_static_v1.before_nvml_order_fix_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "49f3d46f141aa5a7d3a04d1fcf3c33287b2bf0bb4c169929491217e97dce18b7",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "ecf6bb34ec2cb553ff8ec75a7da1caaa833d6091bec310fe0c40ef12c511ce56",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/audit_fable5_native_snapshot_export_static_v1.before_nvml_order_fix_20260730.py"
+    },
+    "source/provenance/audit_fable5_native_snapshot_export_static_v1.before_token_alignment_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "cfcb1dc782d7828e4ac26602e99c6795b0b4d7dc4a1e31a398e4361271bbe9a9",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "b1d108245ce481d13286ce7b26b43558dacc60fbccfd2293683267ff05016dad",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/audit_fable5_native_snapshot_export_static_v1.before_token_alignment_20260730.py"
+    },
+    "source/provenance/build_fable5_branch_coverage_witness_v1.before_identity_gate_fix_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "24d63c1a9bdcab8aeba75f2eaf904981bf6fe4248ac25df9904016dba203c929",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "4b0f7a485be075585bcbe36256536fae6d8d72f19b2f9d38537cfca79adfd42c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/build_fable5_branch_coverage_witness_v1.before_identity_gate_fix_20260730.py"
+    },
+    "source/provenance/build_fable5_branch_coverage_witness_v1.before_snapshot_source_and_external_block_fix_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "32fbb66b818f027a11c9b50236f21f3577311daa755b70373bcdd9cc33cb4317",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "47e783a643cfb166731ae9b6e1b8d8daf0593aa5ea80ee82c585cab828605b1a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/build_fable5_branch_coverage_witness_v1.before_snapshot_source_and_external_block_fix_20260730.py"
+    },
+    "source/provenance/fable5_native_snapshot_exporter_v1.before_canonical_live_snapshot_20260730.cu": {
+      "mode": "100644",
+      "original_sha256": "75915e39e3f779fa29848d0bf892a250aa375b9035f162ad355011eae96bfc13",
+      "publication_adjustments": [],
+      "sha256": "75915e39e3f779fa29848d0bf892a250aa375b9035f162ad355011eae96bfc13",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/fable5_native_snapshot_exporter_v1.before_canonical_live_snapshot_20260730.cu"
+    },
+    "source/provenance/run_fable5_branchcov_matched_gpu1_guarded_v1.before_manifest_precheck_20260730.sh": {
+      "mode": "100755",
+      "original_sha256": "ec169da661820e58880b713012dd6855adf03cfbcbfc9b0691fc8f9df81fda45",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "3042928cabba832bf35e524571b53a4c7b128c313605afe20b2eb34e897986c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/run_fable5_branchcov_matched_gpu1_guarded_v1.before_manifest_precheck_20260730.sh"
+    },
+    "source/provenance/run_fable5_branchcov_matched_gpu1_guarded_v1.before_manifest_precheck_applied_20260730.sh": {
+      "mode": "100755",
+      "original_sha256": "ec169da661820e58880b713012dd6855adf03cfbcbfc9b0691fc8f9df81fda45",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "3042928cabba832bf35e524571b53a4c7b128c313605afe20b2eb34e897986c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/run_fable5_branchcov_matched_gpu1_guarded_v1.before_manifest_precheck_applied_20260730.sh"
+    },
+    "source/provenance/run_fable5_native_snapshot_export_guarded_v1.before_machine_c2c3_gate_20260730.sh": {
+      "mode": "100755",
+      "original_sha256": "c6581a42bcc67afad3a68086b85c12c01140b5d4fc2f991707f35ca32914b5de",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "d9d82b39c39469801de936bf77438274e50ec71bde5be39df6559b4fe8fb8213",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/run_fable5_native_snapshot_export_guarded_v1.before_machine_c2c3_gate_20260730.sh"
+    },
+    "source/provenance/run_fable5_native_snapshot_export_guarded_v1.before_nvml_binding_preflight_20260730.sh": {
+      "mode": "100755",
+      "original_sha256": "1970ad94d9042fa723f25bf7006bb48c9f6893d5560d99b5c9c2be65c526c3a6",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "7b5b70dae9b38b0f7143d01237f7b7329f0e60e0396b07933b90c2d33dba00f7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/run_fable5_native_snapshot_export_guarded_v1.before_nvml_binding_preflight_20260730.sh"
+    },
+    "source/provenance/run_fable5_native_snapshot_export_guarded_v1.before_remove_forbidden_tool_word_20260730.sh": {
+      "mode": "100755",
+      "original_sha256": "472728bb223423c980eed7b17e41e24c1e6d947ec67e9af30ac65b1099818722",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "f3c5676bea238a137318a5362c82fcbabee89d212a5b62fedbd3c273aa11449b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/run_fable5_native_snapshot_export_guarded_v1.before_remove_forbidden_tool_word_20260730.sh"
+    },
+    "source/provenance/select_fable5_matched_trace_from_native_snapshot_v1.before_canonical_live_snapshot_20260730.py": {
+      "mode": "100644",
+      "original_sha256": "1ee8e9438f71fc338d7731b6638b7d0797b71cbee3d48689cede17a6d01e3756",
+      "publication_adjustments": [],
+      "sha256": "1ee8e9438f71fc338d7731b6638b7d0797b71cbee3d48689cede17a6d01e3756",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/select_fable5_matched_trace_from_native_snapshot_v1.before_canonical_live_snapshot_20260730.py"
+    },
+    "source/provenance/select_fable5_matched_trace_from_native_snapshot_v1.before_variant_contract_support_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "75750b22c3cabc94fc9403141aaf2a616f849ed40db74d2535f0725ef6389c2d",
+      "publication_adjustments": [],
+      "sha256": "75750b22c3cabc94fc9403141aaf2a616f849ed40db74d2535f0725ef6389c2d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/select_fable5_matched_trace_from_native_snapshot_v1.before_variant_contract_support_20260730.py"
+    },
+    "source/provenance/validate_fable5_matched_gpu_receipts_v1.before_semantic_hardening_20260730.py": {
+      "mode": "100755",
+      "original_sha256": "c1ff48a05c0539ec44c240506cdc24936d1595493f09a002df13247a087d7681",
+      "publication_adjustments": [],
+      "sha256": "c1ff48a05c0539ec44c240506cdc24936d1595493f09a002df13247a087d7681",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/provenance/validate_fable5_matched_gpu_receipts_v1.before_semantic_hardening_20260730.py"
+    },
+    "source/src/fable5_matched_gpu_runner_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "cb298cf23c3a36176c873ce22c2fadc94b61a75e38e67718a4e6f903ec4ff240",
+      "publication_adjustments": [],
+      "sha256": "cb298cf23c3a36176c873ce22c2fadc94b61a75e38e67718a4e6f903ec4ff240",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/src/fable5_matched_gpu_runner_v1.cu"
+    },
+    "source/src/fable5_native_snapshot_exporter_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "8eb3227f4842a31b312bcfbfa61e3b79d2fc456c9244807d498f3b8ccee8ca35",
+      "publication_adjustments": [],
+      "sha256": "8eb3227f4842a31b312bcfbfa61e3b79d2fc456c9244807d498f3b8ccee8ca35",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/src/fable5_native_snapshot_exporter_v1.cu"
+    },
+    "source/src/safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "5d0bfbd56c974855881bd2639f1bc00b50e2157615e23fe9673f53c10078c6d5",
+      "publication_adjustments": [],
+      "sha256": "5d0bfbd56c974855881bd2639f1bc00b50e2157615e23fe9673f53c10078c6d5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/src/safe_c1_dynamic_gts.cu"
+    },
+    "source/tools/artifact_pinning_v5.py": {
+      "mode": "100755",
+      "original_sha256": "e11cfc5cf8b4fed01879b28863b5667b8d266049204015158aabe07ed9ce122e",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "50fc9b1097d28a6e7abd8f196a5de7912888f3d8bc7f648c5f70d9546fcc7b8f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/artifact_pinning_v5.py"
+    },
+    "source/tools/audit_fable5_branchcov_matched_gpu_static_v1.py": {
+      "mode": "100755",
+      "original_sha256": "d6bd693cf365a2afdf9db2fac07d37ce126df14e4a5af023fc95047814512792",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "cd72f4a9daeba4b0c3577aa352a7eb82b3596bdd541a366685a43e6a026f38bc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/audit_fable5_branchcov_matched_gpu_static_v1.py"
+    },
+    "source/tools/audit_fable5_g2_unmodified9_gpu_static_v1.py": {
+      "mode": "100755",
+      "original_sha256": "b80311d5aad601b6679aaa03a412f70ad6080f7e38e2598272e36a4a725581db",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "cd501f8dbe25e732b49ccf605912ef4e9738bc275bfa3e3c34d28da48d392250",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/audit_fable5_g2_unmodified9_gpu_static_v1.py"
+    },
+    "source/tools/audit_fable5_matched_gpu_static_v1.py": {
+      "mode": "100755",
+      "original_sha256": "da898e831f1c5a572f9fbbb7f5262bbbf055f7d806929373e026baa5ffbd07e6",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "6e69d089077544ebffd8049537afc5a0a0ce80fbc8c4289cc71272002ece9551",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/audit_fable5_matched_gpu_static_v1.py"
+    },
+    "source/tools/audit_fable5_native_snapshot_export_static_v1.py": {
+      "mode": "100755",
+      "original_sha256": "2590815b5edad89c408c6cfd794fed16b1ec21589d6ab6515b900ed227890fcb",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "8c168ef65fb646f974c825e6213711abb5d3136ba95a39e9bb0ee5663d8c19cd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/audit_fable5_native_snapshot_export_static_v1.py"
+    },
+    "source/tools/audit_g2_static_contract_v5.py": {
+      "mode": "100755",
+      "original_sha256": "76bb3533d0692048f8c0eba3019c7445a0f6a64eb5fff3ed52402e4a4f3f6105",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "4287963a83b3d8fcb7c9f2dd68b848286c909dc4bb9a3b9bbf5c8452b0a7a8fc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/audit_g2_static_contract_v5.py"
+    },
+    "source/tools/build_fable5_branch_coverage_witness_v1.py": {
+      "mode": "100755",
+      "original_sha256": "e4a4cd3155fe3a80ac51f7375fb9ff88c7439809ce584e5de9486205dc9dea37",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "cb922c03a90e5f39f67ec3cff6bcb84378345715484940c9a47293210a0c1bc8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/build_fable5_branch_coverage_witness_v1.py"
+    },
+    "source/tools/fable5_matched_cpu_contract_v1.py": {
+      "mode": "100755",
+      "original_sha256": "7b46088f46a68837fc518aa8b486bbb6ae0678d5deb04e023fa819ebef7f873a",
+      "publication_adjustments": [],
+      "sha256": "7b46088f46a68837fc518aa8b486bbb6ae0678d5deb04e023fa819ebef7f873a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/fable5_matched_cpu_contract_v1.py"
+    },
+    "source/tools/finalize_g2_rebuild_witness_v5.py": {
+      "mode": "100755",
+      "original_sha256": "f534e0e7858f4faceb815b79dd108ee399c061d2b626c5a8bb2b5b06817f55b3",
+      "publication_adjustments": [],
+      "sha256": "f534e0e7858f4faceb815b79dd108ee399c061d2b626c5a8bb2b5b06817f55b3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/finalize_g2_rebuild_witness_v5.py"
+    },
+    "source/tools/make_g2_rebuild_witness_bundle_v5.py": {
+      "mode": "100755",
+      "original_sha256": "8f9558d9c9871282854257f8cf15739ccc8848000a2a150e07463e9e177b1b77",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "e0613fe088a373d528944e47dc70468903698de4c4d0093a4d41bae8ee51dcef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/make_g2_rebuild_witness_bundle_v5.py"
+    },
+    "source/tools/preflight_fable5_branchcov_matched_trace_v1.py": {
+      "mode": "100755",
+      "original_sha256": "c688424aca037b376ded1025191fed00821020826d5835ac74f49f45bb7a6926",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "e31ed5e4706d2d29160f4169bd02261fadb5fddd776ac941e47511417709a4e9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/preflight_fable5_branchcov_matched_trace_v1.py"
+    },
+    "source/tools/preflight_fable5_g2_unmodified9_trace_v1.py": {
+      "mode": "100755",
+      "original_sha256": "89d64ebabbc9109dd1ecb37f81a93eab278852091cab108cb7f355c473aa0589",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "87ba40894f122a10178ddcb479f0c98b148dcf7e3a7f6743323248ca8608ed2f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/preflight_fable5_g2_unmodified9_trace_v1.py"
+    },
+    "source/tools/preflight_fable5_matched_trace_v1.py": {
+      "mode": "100755",
+      "original_sha256": "b29426e0b9652f365cda85b1a5a2e1a4862be317ec13e559716e9a0d9e762f5a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "db85a62f32793d1d26a27c7f68f5e4a13ed47b512a3e9f40fb4abb0eb63acf8c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/preflight_fable5_matched_trace_v1.py"
+    },
+    "source/tools/preflight_g2_rebuild_witness_v5.py": {
+      "mode": "100755",
+      "original_sha256": "ee46c0d320384054db303df1e4f0739e05c97295af231c369d8b0915bd15f281",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "217f47bb547844e48fa8de35bada5c2fd652f38e8db7ac2b15c65ea313cd6514",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/preflight_g2_rebuild_witness_v5.py"
+    },
+    "source/tools/run_fable5_branchcov_matched_gpu1_guarded_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "80b750664e37b1c9dd467bcd297524276a85c1bf5ebacf2dc1aef5bbdad671b9",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "f9ce073ee99287b570e72940ee45f64e14bdabe6d3e334dcabf4441be322cdcd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/run_fable5_branchcov_matched_gpu1_guarded_v1.sh"
+    },
+    "source/tools/run_fable5_g2_unmodified9_gpu1_guarded_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "a0edc9b4b9c804a78bc22d1238f6e85ff6576cecdcb23f4b7fff73c876754cc6",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "c7eaa6fb6039ad439ae80d5db5ff4857daed43e683d5ade17eace5c9e47d5083",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/run_fable5_g2_unmodified9_gpu1_guarded_v1.sh"
+    },
+    "source/tools/run_fable5_matched_gpu1_guarded_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "e736aa9c6cd589621a8fff310572a5f2c2aacead7dfdf6f75dd17e1606cc60b8",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "381eee84e15a329f0239997719eeaf56e6ec200c96e50f2abf0933fc8fc37b28",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/run_fable5_matched_gpu1_guarded_v1.sh"
+    },
+    "source/tools/run_fable5_native_snapshot_export_guarded_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "ff9f3b0525440497b4e9c2fbf19031e841eb998e8a05808d2ebd6dcccc656e58",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "01756df0b773c8fa85292e08ab406623d44ec2ec6df53a5b900ea4bd88fe0a9c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/run_fable5_native_snapshot_export_guarded_v1.sh"
+    },
+    "source/tools/run_g2_rebuild_witness_guarded_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "94128e7b94f1e90f553c49510b7c3eaf8819e5a21dfb6bf68f29e6da0f2acb76",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "eac2fccefa231460b802e622c8e30fb8173fee3ff6acb149d5829a1499356540",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/run_g2_rebuild_witness_guarded_v5.sh"
+    },
+    "source/tools/safe_c1_v5_rebuild_bundle_contract.py": {
+      "mode": "100755",
+      "original_sha256": "6ec65efb5b5cdc8277113054817b05e562cede2eb90015bd16479d96238f42e2",
+      "publication_adjustments": [],
+      "sha256": "6ec65efb5b5cdc8277113054817b05e562cede2eb90015bd16479d96238f42e2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/safe_c1_v5_rebuild_bundle_contract.py"
+    },
+    "source/tools/select_fable5_matched_trace_from_native_snapshot_v1.py": {
+      "mode": "100755",
+      "original_sha256": "cdd5845db5638397813bfec1e65a12fb72ce1cf274f8e5e5a2ab62e9e676a4cc",
+      "publication_adjustments": [],
+      "sha256": "cdd5845db5638397813bfec1e65a12fb72ce1cf274f8e5e5a2ab62e9e676a4cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/select_fable5_matched_trace_from_native_snapshot_v1.py"
+    },
+    "source/tools/test_fable5_selector_prefix_cache_v1.py": {
+      "mode": "100755",
+      "original_sha256": "b0eb1f9117660f18d703ca6ff535b1c6b4cc52ae5e75d632e5265ead6d62a525",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7afc9eb2fec4d2b33d201dfc4406d7f917cb15fbb20c68d8caa229da9826747d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/test_fable5_selector_prefix_cache_v1.py"
+    },
+    "source/tools/test_fable5_selector_schema_v1.py": {
+      "mode": "100755",
+      "original_sha256": "5ae7309a8e4e1fba4e9e3b1d4949a6bcd340e2041c304431ca3aa8ad75dc4173",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "6adcdffe57423cbeac38eaa0b5aa2d861e240c998f9d93015d47551fb5e52726",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/test_fable5_selector_schema_v1.py"
+    },
+    "source/tools/test_g2_rebuild_witness_pipeline_v5.py": {
+      "mode": "100755",
+      "original_sha256": "9e1039f6100726e3bab07d6fb356d4a34bc563c2533735fb6f521877c64c03ac",
+      "publication_adjustments": [],
+      "sha256": "9e1039f6100726e3bab07d6fb356d4a34bc563c2533735fb6f521877c64c03ac",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/test_g2_rebuild_witness_pipeline_v5.py"
+    },
+    "source/tools/validate_fable5_g2_unmodified9_gpu_receipts_v1.py": {
+      "mode": "100755",
+      "original_sha256": "8968a39a7a8df6816c824f9c4febe2d1f0decb77fa291dbd1ffc5227337e7043",
+      "publication_adjustments": [],
+      "sha256": "8968a39a7a8df6816c824f9c4febe2d1f0decb77fa291dbd1ffc5227337e7043",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/validate_fable5_g2_unmodified9_gpu_receipts_v1.py"
+    },
+    "source/tools/validate_fable5_matched_gpu_receipts_v1.py": {
+      "mode": "100755",
+      "original_sha256": "9ffe2980c0a779cc145fb625e31b70ebb139f49b9d109abc4b4c139d55fffe60",
+      "publication_adjustments": [],
+      "sha256": "9ffe2980c0a779cc145fb625e31b70ebb139f49b9d109abc4b4c139d55fffe60",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1/tools/validate_fable5_matched_gpu_receipts_v1.py"
+    }
+  },
+  "payload_sha256": "5078fc5facc4ee96fb68bea5f254204fd7c74f270514075552e168b7d477313a",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
