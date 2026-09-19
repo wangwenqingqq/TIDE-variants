@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z"
+    }
+  ],
+  "files": {
+    "source/templates/E2E3_CAMPAIGN_PLAN_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "cff0cf8368ec4999d9d6ce8b12c0b3afaef9f2a928b629eec1f2cff18e33d08a",
+      "publication_adjustments": [],
+      "sha256": "cff0cf8368ec4999d9d6ce8b12c0b3afaef9f2a928b629eec1f2cff18e33d08a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z/templates/E2E3_CAMPAIGN_PLAN_TEMPLATE.json"
+    },
+    "source/tools/audit_synthetic_plan.py": {
+      "mode": "100644",
+      "original_sha256": "e29b9486161af448ac0c68d665f3e1850d2d4ab090376c9da660f69a22a33d10",
+      "publication_adjustments": [],
+      "sha256": "e29b9486161af448ac0c68d665f3e1850d2d4ab090376c9da660f69a22a33d10",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z/tools/audit_synthetic_plan.py"
+    },
+    "source/tools/create_package_manifest.py": {
+      "mode": "100644",
+      "original_sha256": "9722270daa92cbc50a243238f6bfd8ec697904d4a1df87aa4adbc75b9b891330",
+      "publication_adjustments": [],
+      "sha256": "9722270daa92cbc50a243238f6bfd8ec697904d4a1df87aa4adbc75b9b891330",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z/tools/create_package_manifest.py"
+    },
+    "source/tools/generate_synthetic_e2e3_plan.py": {
+      "mode": "100644",
+      "original_sha256": "4298d465d47c2c3feb8f22bb9ede7942aa385b9523e777fe5ff5bc08cd82e680",
+      "publication_adjustments": [],
+      "sha256": "4298d465d47c2c3feb8f22bb9ede7942aa385b9523e777fe5ff5bc08cd82e680",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z/tools/generate_synthetic_e2e3_plan.py"
+    }
+  },
+  "payload_sha256": "c788f6720728835a34e71d8e73e922bbce551f279484eeabac0f7780a61ac22e",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
