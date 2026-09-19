@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/hnsw_fair_dynamic_knn",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/hnsw_fair_dynamic_knn"
+    }
+  ],
+  "files": {
+    "source/run_hnsw_fair_cpu.sh": {
+      "mode": "100755",
+      "original_sha256": "c19ebf42b313c345bf27c78d529da849be533a7928195a7c69d1ab5924b9c0bf",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "5504d44b2d5ab555b17e7998f7eea997aa086fcbf289863c7ab87b725fea6990",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/hnsw_fair_dynamic_knn/run_hnsw_fair_cpu.sh"
+    },
+    "source/src/replay_hnsw_dynamic_knn.py": {
+      "mode": "100755",
+      "original_sha256": "2746598ba671943ea6c6a6fc3ccc4b788501a11c963728e678e0cabc83d7054e",
+      "publication_adjustments": [],
+      "sha256": "2746598ba671943ea6c6a6fc3ccc4b788501a11c963728e678e0cabc83d7054e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/hnsw_fair_dynamic_knn/src/replay_hnsw_dynamic_knn.py"
+    }
+  },
+  "payload_sha256": "32a9b013249092a1bb38d63ae009dfc9e9a417d816bb5c096d3906d72287e58e",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
