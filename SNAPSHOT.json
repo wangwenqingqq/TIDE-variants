@@ -1,0 +1,84 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate0_20260827",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827"
+    }
+  ],
+  "files": {
+    "source/src/certificate_count.cu": {
+      "mode": "100644",
+      "original_sha256": "835cb8764261f2a5d99f7d154d6396c86c6722da633f3d86d7bc9b24791f22d1",
+      "publication_adjustments": [],
+      "sha256": "835cb8764261f2a5d99f7d154d6396c86c6722da633f3d86d7bc9b24791f22d1",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/certificate_count.cu"
+    },
+    "source/src/certificate_count_tight.cu": {
+      "mode": "100644",
+      "original_sha256": "1318f1e887aa510b14647dd1645a113057976e286ee0a8269cf94d96eb8aca27",
+      "publication_adjustments": [],
+      "sha256": "1318f1e887aa510b14647dd1645a113057976e286ee0a8269cf94d96eb8aca27",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/certificate_count_tight.cu"
+    },
+    "source/src/cpu_exact_scan.cpp": {
+      "mode": "100644",
+      "original_sha256": "91ad9f59bba37d08f49b22a8fe3f9c4aae16c8b3e94b0747a9c3df014e532e12",
+      "publication_adjustments": [],
+      "sha256": "91ad9f59bba37d08f49b22a8fe3f9c4aae16c8b3e94b0747a9c3df014e532e12",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/cpu_exact_scan.cpp"
+    },
+    "source/src/exact_scan.cu": {
+      "mode": "100644",
+      "original_sha256": "b6485c0e2c08899bb60612031730bcc2ae4553029f6d31b959d0ad1f85a61dbd",
+      "publication_adjustments": [],
+      "sha256": "b6485c0e2c08899bb60612031730bcc2ae4553029f6d31b959d0ad1f85a61dbd",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/exact_scan.cu"
+    },
+    "source/src/finalize_gate.py": {
+      "mode": "100644",
+      "original_sha256": "04ff5fad20579c2d42a65d669d28802dab84a01f5c74216f43808d30ed8a86ce",
+      "publication_adjustments": [],
+      "sha256": "04ff5fad20579c2d42a65d669d28802dab84a01f5c74216f43808d30ed8a86ce",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/finalize_gate.py"
+    },
+    "source/src/finalize_gate_tight.py": {
+      "mode": "100644",
+      "original_sha256": "269a7b3c667d2980dd2b3c687ef9eaf0484f2809a9accfa90e8160084a7efec1",
+      "publication_adjustments": [],
+      "sha256": "269a7b3c667d2980dd2b3c687ef9eaf0484f2809a9accfa90e8160084a7efec1",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/finalize_gate_tight.py"
+    },
+    "source/src/prepare_certificates.py": {
+      "mode": "100644",
+      "original_sha256": "a39faa9a0c2e7694db7cc0cf09339b28d196a52dc11e768c9bbbb10d1efc1082",
+      "publication_adjustments": [],
+      "sha256": "a39faa9a0c2e7694db7cc0cf09339b28d196a52dc11e768c9bbbb10d1efc1082",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/prepare_certificates.py"
+    },
+    "source/src/prepare_data.py": {
+      "mode": "100644",
+      "original_sha256": "f87206b8a7456fc2c7f5617245a3d914928764fd51b9d814e5d2e817f6c51fe5",
+      "publication_adjustments": [],
+      "sha256": "f87206b8a7456fc2c7f5617245a3d914928764fd51b9d814e5d2e817f6c51fe5",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/prepare_data.py"
+    },
+    "source/src/verify_certificates.py": {
+      "mode": "100644",
+      "original_sha256": "1b53d7a7d1b863eb537e522983420a0d2cb21734a11cdfec9cd3a9424a29702e",
+      "publication_adjustments": [],
+      "sha256": "1b53d7a7d1b863eb537e522983420a0d2cb21734a11cdfec9cd3a9424a29702e",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/verify_certificates.py"
+    },
+    "source/src/verify_certificates_tight.py": {
+      "mode": "100644",
+      "original_sha256": "1025778764ab3e87882468973feec978f11bc6fc64c4cfb9e6ff7ea63c352151",
+      "publication_adjustments": [],
+      "sha256": "1025778764ab3e87882468973feec978f11bc6fc64c4cfb9e6ff7ea63c352151",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827/src/verify_certificates_tight.py"
+    }
+  },
+  "payload_sha256": "7a2314a07f86a11990aacb3bf888c8302f86c8fe4eb5fa6c2f74d113e427b7a7",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
