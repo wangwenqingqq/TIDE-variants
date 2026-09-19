@@ -1,0 +1,98 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate5_20260827",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827"
+    }
+  ],
+  "files": {
+    "source/scripts/durable_manifest.py": {
+      "mode": "100644",
+      "original_sha256": "c0b57ccc2e8c1009618ca40d3e0b60491520f6f86582300e85a4fefc1699aca7",
+      "publication_adjustments": [],
+      "sha256": "c0b57ccc2e8c1009618ca40d3e0b60491520f6f86582300e85a4fefc1699aca7",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/durable_manifest.py"
+    },
+    "source/scripts/durable_manifest_blocker_closure.py": {
+      "mode": "100644",
+      "original_sha256": "fb9b92d2ddb81b53c6dc3bfd71c33cc65823313c5355675f1aeb7854e61815de",
+      "publication_adjustments": [],
+      "sha256": "fb9b92d2ddb81b53c6dc3bfd71c33cc65823313c5355675f1aeb7854e61815de",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/durable_manifest_blocker_closure.py"
+    },
+    "source/scripts/finalize_blocker_closure.py": {
+      "mode": "100644",
+      "original_sha256": "bdb327ff07876e63d6a0390f898663e563ff69681fcf0d62f5ef671940f7daaf",
+      "publication_adjustments": [],
+      "sha256": "bdb327ff07876e63d6a0390f898663e563ff69681fcf0d62f5ef671940f7daaf",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/finalize_blocker_closure.py"
+    },
+    "source/scripts/finalize_gate5.py": {
+      "mode": "100755",
+      "original_sha256": "de3b8f513be989c7cca6962fe8515162e271881cde17d1334920c9a2560e34fc",
+      "publication_adjustments": [],
+      "sha256": "de3b8f513be989c7cca6962fe8515162e271881cde17d1334920c9a2560e34fc",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/finalize_gate5.py"
+    },
+    "source/scripts/run_blocker_recovery_matrix.py": {
+      "mode": "100644",
+      "original_sha256": "dbdcab5f4d0bc7f7513f7dd458b6e0f362a7cf07d1d09237c50b4d762e9c03c7",
+      "publication_adjustments": [],
+      "sha256": "dbdcab5f4d0bc7f7513f7dd458b6e0f362a7cf07d1d09237c50b4d762e9c03c7",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/run_blocker_recovery_matrix.py"
+    },
+    "source/scripts/summarize_blocker_compaction.py": {
+      "mode": "100644",
+      "original_sha256": "15f103183f3c6e455c474b7c33980f544a8b07babf3a6c5f84ca230224427e2e",
+      "publication_adjustments": [],
+      "sha256": "15f103183f3c6e455c474b7c33980f544a8b07babf3a6c5f84ca230224427e2e",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/summarize_blocker_compaction.py"
+    },
+    "source/scripts/summarize_fragmentation_ab.py": {
+      "mode": "100644",
+      "original_sha256": "6f90122d29fb1c8c39bae422bc7cb5de769b57111f10e46c313655d9fbf4a989",
+      "publication_adjustments": [],
+      "sha256": "6f90122d29fb1c8c39bae422bc7cb5de769b57111f10e46c313655d9fbf4a989",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/summarize_fragmentation_ab.py"
+    },
+    "source/scripts/summarize_sanitizer_amendment.py": {
+      "mode": "100755",
+      "original_sha256": "c727130d95c111d7b859b0240860afcb3c72fea122fa6c8f4aa92d3f40ef683d",
+      "publication_adjustments": [],
+      "sha256": "c727130d95c111d7b859b0240860afcb3c72fea122fa6c8f4aa92d3f40ef683d",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/summarize_sanitizer_amendment.py"
+    },
+    "source/scripts/validate_logical_pruning.py": {
+      "mode": "100644",
+      "original_sha256": "fcf9202df4ede6af19a3c2091b95aca32b2a932b7e9d61cb8cb7a271e8541c93",
+      "publication_adjustments": [],
+      "sha256": "fcf9202df4ede6af19a3c2091b95aca32b2a932b7e9d61cb8cb7a271e8541c93",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/scripts/validate_logical_pruning.py"
+    },
+    "source/src/gate5_blocker_closure.cu": {
+      "mode": "100644",
+      "original_sha256": "c887d643e2f30378bfcc58521909e10569d23e639352d9ba92572cd0b668ccf8",
+      "publication_adjustments": [],
+      "sha256": "c887d643e2f30378bfcc58521909e10569d23e639352d9ba92572cd0b668ccf8",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/src/gate5_blocker_closure.cu"
+    },
+    "source/src/gate5_logical_runs.cu": {
+      "mode": "100644",
+      "original_sha256": "35ec6872e9aebfc193cc27c4528deb9f2a3f9697689870ccc9c7af28ea68e80f",
+      "publication_adjustments": [],
+      "sha256": "35ec6872e9aebfc193cc27c4528deb9f2a3f9697689870ccc9c7af28ea68e80f",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/src/gate5_logical_runs.cu"
+    },
+    "source/src/gate5_snapshot_tsan.cpp": {
+      "mode": "100644",
+      "original_sha256": "817888a5771c8881511df2c158135cf0770b5f3803d251ccd33c2e3ff8c34d84",
+      "publication_adjustments": [],
+      "sha256": "817888a5771c8881511df2c158135cf0770b5f3803d251ccd33c2e3ff8c34d84",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827/src/gate5_snapshot_tsan.cpp"
+    }
+  },
+  "payload_sha256": "63145bcc0231db5cf350824abaded5d84cf5f7af69bfa79b6acc40502d1fb60d",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
