@@ -1,0 +1,98 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/harness",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness"
+    }
+  ],
+  "files": {
+    "source/e1g0_cuda_smoke.cu": {
+      "mode": "100644",
+      "original_sha256": "764f29d2e48f88fb00052d60caa94f130d949d3b1e642b131331e3c871b515a7",
+      "publication_adjustments": [],
+      "sha256": "764f29d2e48f88fb00052d60caa94f130d949d3b1e642b131331e3c871b515a7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/e1g0_cuda_smoke.cu"
+    },
+    "source/run_c1_heldout_gamma_gate.sh": {
+      "mode": "100755",
+      "original_sha256": "e8caaf992c763d9c35d7565515f6f0a99a001234215c684fafdd32f4c02cb999",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "542fe9d56b95fc4b91640255d2668bb22e68a97f8c338e631490312ce024fad8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/run_c1_heldout_gamma_gate.sh"
+    },
+    "source/run_e1g0_cuda_smoke.sh": {
+      "mode": "100755",
+      "original_sha256": "fdd880770618924489700657db4d757fecd4b64a466790688b330a261d327e1f",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "1c8c0615997a1f572836cf019fd987b431b8270c6175b09781d7468546a0fdb3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/run_e1g0_cuda_smoke.sh"
+    },
+    "source/run_e1gi_b_safe_gts_trace.sh": {
+      "mode": "100755",
+      "original_sha256": "71830fdef05c750ec0a3253fcedd94b1adc4dee50aa9484268448830c7be633f",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "c5be526a128a0940c0500e33c9883c717b5a5d407d2228ca8e8cda3253057017",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/run_e1gi_b_safe_gts_trace.sh"
+    },
+    "source/run_sift_slice_safe_c1.py": {
+      "mode": "100644",
+      "original_sha256": "47672e39e04c38cada5be28d8adff4cb0c574afacc88d9fffaa684b159de006f",
+      "publication_adjustments": [],
+      "sha256": "47672e39e04c38cada5be28d8adff4cb0c574afacc88d9fffaa684b159de006f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/run_sift_slice_safe_c1.py"
+    },
+    "source/safe_c1_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "a5acbc61dd1679003ff8df69960dc250be7f1ba437fd83012ddd932eb5380299",
+      "publication_adjustments": [],
+      "sha256": "a5acbc61dd1679003ff8df69960dc250be7f1ba437fd83012ddd932eb5380299",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/safe_c1_oracle.py"
+    },
+    "source/verify_safe_c1_outputs.py": {
+      "mode": "100644",
+      "original_sha256": "0ebcda799d6425cd7e34566b808015354b5b56b9f4d6db753d5f08667ecc1fb9",
+      "publication_adjustments": [],
+      "sha256": "0ebcda799d6425cd7e34566b808015354b5b56b9f4d6db753d5f08667ecc1fb9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness/verify_safe_c1_outputs.py"
+    }
+  },
+  "payload_sha256": "ce73d911bb98d73714ed959378a8421ead40a2e1ea3c11e25402618449446d00",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
