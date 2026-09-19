@@ -1,0 +1,84 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate4_20260827",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827"
+    }
+  ],
+  "files": {
+    "source/scripts/analyze_popcount_headroom.py": {
+      "mode": "100644",
+      "original_sha256": "82914b890e2ece35b9690c07649e974f8fc07c9cae03425212c35c503a33b4c1",
+      "publication_adjustments": [],
+      "sha256": "82914b890e2ece35b9690c07649e974f8fc07c9cae03425212c35c503a33b4c1",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/analyze_popcount_headroom.py"
+    },
+    "source/scripts/audit_gate4_sass.py": {
+      "mode": "100644",
+      "original_sha256": "98ffe7e1bbdcd6659b006150589829b8197f0eaefbb502accf4f58ce1dcf54ed",
+      "publication_adjustments": [],
+      "sha256": "98ffe7e1bbdcd6659b006150589829b8197f0eaefbb502accf4f58ce1dcf54ed",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/audit_gate4_sass.py"
+    },
+    "source/scripts/finalize_gate4.py": {
+      "mode": "100644",
+      "original_sha256": "973ffd1737d0921c18ecd4742876ded7b5f7874d579b9adec65bfe0fcf9fc2f8",
+      "publication_adjustments": [],
+      "sha256": "973ffd1737d0921c18ecd4742876ded7b5f7874d579b9adec65bfe0fcf9fc2f8",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/finalize_gate4.py"
+    },
+    "source/scripts/measure_exact_cardinality.py": {
+      "mode": "100755",
+      "original_sha256": "eac2cd372dbd09b1c0d6e7e00bcd3b25fd6c827d7b9908e0da1ca84a5b49e958",
+      "publication_adjustments": [],
+      "sha256": "eac2cd372dbd09b1c0d6e7e00bcd3b25fd6c827d7b9908e0da1ca84a5b49e958",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/measure_exact_cardinality.py"
+    },
+    "source/scripts/summarize_gpu_timing.py": {
+      "mode": "100644",
+      "original_sha256": "ae9545595e43fa74fb84c575e4b47afd7a2752213474d0d335683c859bd18501",
+      "publication_adjustments": [],
+      "sha256": "ae9545595e43fa74fb84c575e4b47afd7a2752213474d0d335683c859bd18501",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/summarize_gpu_timing.py"
+    },
+    "source/scripts/validate_segmented_lifecycle.py": {
+      "mode": "100755",
+      "original_sha256": "26883df1d42bab98cf0abfb251d2791a21c598962bab4d6f452c74e472df10bc",
+      "publication_adjustments": [],
+      "sha256": "26883df1d42bab98cf0abfb251d2791a21c598962bab4d6f452c74e472df10bc",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/validate_segmented_lifecycle.py"
+    },
+    "source/scripts/verify_gpu_correctness.py": {
+      "mode": "100644",
+      "original_sha256": "5fecde09a2ca033511c69af1293f20bd5725530b1d9ff219af0e6449e0e79ad0",
+      "publication_adjustments": [],
+      "sha256": "5fecde09a2ca033511c69af1293f20bd5725530b1d9ff219af0e6449e0e79ad0",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/scripts/verify_gpu_correctness.py"
+    },
+    "source/src/gate4_sustained_bench.cu": {
+      "mode": "100644",
+      "original_sha256": "5dac776156f3773e0c9e64018c3cc72a734b7bfdc3da6465a7cc5c3ec73b7fbc",
+      "publication_adjustments": [],
+      "sha256": "5dac776156f3773e0c9e64018c3cc72a734b7bfdc3da6465a7cc5c3ec73b7fbc",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/src/gate4_sustained_bench.cu"
+    },
+    "source/src/gate4_threshold_bench.cu": {
+      "mode": "100644",
+      "original_sha256": "b72fe29ad167ff7abbb1cef45c5ec7b499a2e0d3569ea99b45fbfa8b65361f2c",
+      "publication_adjustments": [],
+      "sha256": "b72fe29ad167ff7abbb1cef45c5ec7b499a2e0d3569ea99b45fbfa8b65361f2c",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/src/gate4_threshold_bench.cu"
+    },
+    "source/src/gate4_threshold_bench_timing_frozen.cu": {
+      "mode": "100644",
+      "original_sha256": "b72fe29ad167ff7abbb1cef45c5ec7b499a2e0d3569ea99b45fbfa8b65361f2c",
+      "publication_adjustments": [],
+      "sha256": "b72fe29ad167ff7abbb1cef45c5ec7b499a2e0d3569ea99b45fbfa8b65361f2c",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827/src/gate4_threshold_bench_timing_frozen.cu"
+    }
+  },
+  "payload_sha256": "c0849529840a07585da2e7d79daade50f66a800026bb87ac7a5988e38f3e332a",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
