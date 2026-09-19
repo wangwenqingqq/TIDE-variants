@@ -1,0 +1,888 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_static_aabb_v1",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1"
+    }
+  ],
+  "files": {
+    "source/include/aabb_static_bound_v1.cuh": {
+      "mode": "100644",
+      "original_sha256": "a609cbe258a8d2503387a80b68a3f494cd870c9bd3c63d42fbc6311cfebdc15a",
+      "publication_adjustments": [],
+      "sha256": "a609cbe258a8d2503387a80b68a3f494cd870c9bd3c63d42fbc6311cfebdc15a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/aabb_static_bound_v1.cuh"
+    },
+    "source/include/aabb_static_bound_v2_diskguard.cuh": {
+      "mode": "100644",
+      "original_sha256": "1747b53494ab9f9ed6632a528e9a7da17edba2b2f2846c9192b5c4347eb69626",
+      "publication_adjustments": [],
+      "sha256": "1747b53494ab9f9ed6632a528e9a7da17edba2b2f2846c9192b5c4347eb69626",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/aabb_static_bound_v2_diskguard.cuh"
+    },
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/file.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "publication_adjustments": [],
+      "sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/residual_pruning.cuh"
+    },
+    "source/include/search_static_aabb_v1.cuh": {
+      "mode": "100644",
+      "original_sha256": "f28bb22373686b880878afa14feabd4999e7dbda533a22314f7ecc3c5bd2ed81",
+      "publication_adjustments": [],
+      "sha256": "f28bb22373686b880878afa14feabd4999e7dbda533a22314f7ecc3c5bd2ed81",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/search_static_aabb_v1.cuh"
+    },
+    "source/include/search_static_aabb_v2_diskguard.cuh": {
+      "mode": "100644",
+      "original_sha256": "3ed53b958b2611c6419376c69741f27fd7f6763b9d41bf1fb96daba98341da7f",
+      "publication_adjustments": [],
+      "sha256": "3ed53b958b2611c6419376c69741f27fd7f6763b9d41bf1fb96daba98341da7f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/search_static_aabb_v2_diskguard.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/include/tree.cuh"
+    },
+    "source/src/aabb_device_canary_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "074cc7d14c452ea133d2dd50aa15d00e904e7ba84a70967eceb79b56eebc6f07",
+      "publication_adjustments": [],
+      "sha256": "074cc7d14c452ea133d2dd50aa15d00e904e7ba84a70967eceb79b56eebc6f07",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/aabb_device_canary_v1.cu"
+    },
+    "source/src/cuda_directed_rounding_compile_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "41264396c14d3ea1aee1f967b698375112acccb15aad10c502eb709c597b1486",
+      "publication_adjustments": [],
+      "sha256": "41264396c14d3ea1aee1f967b698375112acccb15aad10c502eb709c597b1486",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/cuda_directed_rounding_compile_v1.cu"
+    },
+    "source/src/static_aabb_perf_probe_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "be16c5c1c6b767a8c49f70cc523a361eedc7c69d994be4096ce954955fcfde7a",
+      "publication_adjustments": [],
+      "sha256": "be16c5c1c6b767a8c49f70cc523a361eedc7c69d994be4096ce954955fcfde7a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_perf_probe_v1.cu"
+    },
+    "source/src/static_aabb_perf_probe_v2_1_diskguard.cu": {
+      "mode": "100644",
+      "original_sha256": "5dc92a9660bc168e1325edae7a1c9d41f59a93e036e83f57f2ccd9d55fa6819f",
+      "publication_adjustments": [],
+      "sha256": "5dc92a9660bc168e1325edae7a1c9d41f59a93e036e83f57f2ccd9d55fa6819f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_perf_probe_v2_1_diskguard.cu"
+    },
+    "source/src/static_aabb_perf_probe_v2_diskguard.cu": {
+      "mode": "100644",
+      "original_sha256": "5dc92a9660bc168e1325edae7a1c9d41f59a93e036e83f57f2ccd9d55fa6819f",
+      "publication_adjustments": [],
+      "sha256": "5dc92a9660bc168e1325edae7a1c9d41f59a93e036e83f57f2ccd9d55fa6819f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_perf_probe_v2_diskguard.cu"
+    },
+    "source/src/static_aabb_perf_probe_v3_timeline.cu": {
+      "mode": "100644",
+      "original_sha256": "3f8396566500ea22dcfd02fb9437565d5f7df614a693426301de84bcb8424059",
+      "publication_adjustments": [],
+      "sha256": "3f8396566500ea22dcfd02fb9437565d5f7df614a693426301de84bcb8424059",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_perf_probe_v3_timeline.cu"
+    },
+    "source/src/static_aabb_topk_canary_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "ebe14ff9440cff16da12c3807873380df377dc4c6dde4e66c65ec67eec80690e",
+      "publication_adjustments": [],
+      "sha256": "ebe14ff9440cff16da12c3807873380df377dc4c6dde4e66c65ec67eec80690e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_topk_canary_v1.cu"
+    },
+    "source/src/static_aabb_topk_canary_v2_1_diskguard.cu": {
+      "mode": "100644",
+      "original_sha256": "42398aa18e34091dcc96c05cc4c7edea23c85ae6dd3dc830da22877186729af3",
+      "publication_adjustments": [],
+      "sha256": "42398aa18e34091dcc96c05cc4c7edea23c85ae6dd3dc830da22877186729af3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_topk_canary_v2_1_diskguard.cu"
+    },
+    "source/src/static_aabb_topk_canary_v2_diskguard.cu": {
+      "mode": "100644",
+      "original_sha256": "97984390aaac071ec69988591a37bfca23ac1fa0c2a8b0bd6643547b3e9db320",
+      "publication_adjustments": [],
+      "sha256": "97984390aaac071ec69988591a37bfca23ac1fa0c2a8b0bd6643547b3e9db320",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_topk_canary_v2_diskguard.cu"
+    },
+    "source/src/static_aabb_topk_heldout_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "ff807e47189337520439c1b7f9996111d5104f693af020f3f1418b07dc2e4c88",
+      "publication_adjustments": [],
+      "sha256": "ff807e47189337520439c1b7f9996111d5104f693af020f3f1418b07dc2e4c88",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/src/static_aabb_topk_heldout_v1.cu"
+    },
+    "source/tools/audit_device_canary_source_v1.py": {
+      "mode": "100755",
+      "original_sha256": "8d7121f8ed4de285903f60cc30200adc7fa58c17ddbba2937bf74a1db0f88225",
+      "publication_adjustments": [],
+      "sha256": "8d7121f8ed4de285903f60cc30200adc7fa58c17ddbba2937bf74a1db0f88225",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_device_canary_source_v1.py"
+    },
+    "source/tools/audit_directed_rounding_source_v1.py": {
+      "mode": "100755",
+      "original_sha256": "7e340938d26ed2983b0e28988b4a9bf3d25e861ba2cdbea1422abe12a6e8c87c",
+      "publication_adjustments": [],
+      "sha256": "7e340938d26ed2983b0e28988b4a9bf3d25e861ba2cdbea1422abe12a6e8c87c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_directed_rounding_source_v1.py"
+    },
+    "source/tools/audit_diskguard_v2_1_sources.py": {
+      "mode": "100755",
+      "original_sha256": "eca5d8932fe0dd14a91778be87a13f961852d297074434fba2767ad071affa7a",
+      "publication_adjustments": [],
+      "sha256": "eca5d8932fe0dd14a91778be87a13f961852d297074434fba2767ad071affa7a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_diskguard_v2_1_sources.py"
+    },
+    "source/tools/audit_diskguard_v2_sources.py": {
+      "mode": "100755",
+      "original_sha256": "954bed563d9a71e0f4c4e650f39831810398402f5594b11098e1e8111e6a3c59",
+      "publication_adjustments": [],
+      "sha256": "954bed563d9a71e0f4c4e650f39831810398402f5594b11098e1e8111e6a3c59",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_diskguard_v2_sources.py"
+    },
+    "source/tools/audit_perf_probe_source_v1.py": {
+      "mode": "100755",
+      "original_sha256": "38350b821d5b6476ae0cf7b0cd9e244d72c1aeb0e246cf242dd6ff42fe21e884",
+      "publication_adjustments": [],
+      "sha256": "38350b821d5b6476ae0cf7b0cd9e244d72c1aeb0e246cf242dd6ff42fe21e884",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_perf_probe_source_v1.py"
+    },
+    "source/tools/audit_sift_integer_contract_v1.py": {
+      "mode": "100755",
+      "original_sha256": "397d2852c9aca683b5df1918c7eeec626dd67563c7cbd40b25f5560979ee1ee2",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "972fc9cdf192c0a6dd6b3bc5150eb9847049689ff1f419f16f1019f734708fb3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_sift_integer_contract_v1.py"
+    },
+    "source/tools/audit_static_aabb_heldout_correctness_runner_v1.py": {
+      "mode": "100755",
+      "original_sha256": "cfdc3d8fa3dcca805f23f60a339112ec2784377a1cffbc6453a910c73515464c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "bb1ccc07b18221e290f3084487df322352b474c826df62f74073a1206b83c736",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_heldout_correctness_runner_v1.py"
+    },
+    "source/tools/audit_static_aabb_heldout_correctness_source_v1.py": {
+      "mode": "100755",
+      "original_sha256": "41b554fd86c96d3cc9a35f9827fbecfadd421808ccc9586215b2c08ff255aa84",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "cea8ab76429d7c037d8925fc2ba754e4b225aa2c11612a3830b7613e8debd5fa",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_heldout_correctness_source_v1.py"
+    },
+    "source/tools/audit_static_aabb_heldout_correctness_v1.py": {
+      "mode": "100755",
+      "original_sha256": "234004d39836aace8531e68dbf08f9991f5537a2b645b9b0c489957f71f0537e",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ac0173243427bad9cbd5bb05e89473db57d378726d081673b5db7e3cab899520",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_heldout_correctness_v1.py"
+    },
+    "source/tools/audit_static_aabb_heldout_perf_result_v3.py": {
+      "mode": "100644",
+      "original_sha256": "ceeece94951a96ae6f928f014ba8b4c50f1a4cec0c462ec2e70d81080a357be4",
+      "publication_adjustments": [],
+      "sha256": "ceeece94951a96ae6f928f014ba8b4c50f1a4cec0c462ec2e70d81080a357be4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_heldout_perf_result_v3.py"
+    },
+    "source/tools/audit_static_aabb_heldout_perf_runner_v1.py": {
+      "mode": "100755",
+      "original_sha256": "a159cb93b948bfd7e726aa0d620ae6b08c0c3a4daefad25c17a3558d3521d420",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7076e6d0c88832a3800386af9b99cc34e5eb5d68b63618b66c30c11bb2545b16",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_heldout_perf_runner_v1.py"
+    },
+    "source/tools/audit_static_aabb_heldout_perf_runner_v2.py": {
+      "mode": "100755",
+      "original_sha256": "1112a15982ae61b84cc27e2f86d16ec8d22e4580fee938757928d53ff961afb3",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "d5cd98eb2eac6251fe07d8e2f8a6646fa23627ae39f5c493a9708a45959ae2bd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_heldout_perf_runner_v2.py"
+    },
+    "source/tools/audit_static_aabb_perf_evidence_v1.py": {
+      "mode": "100755",
+      "original_sha256": "9585003499612b99274343b136ba8b4de6e5b23cdc5f09dbb1a531713293c0af",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "1b78318bc7b66c1f8a76e405f1ab9755bbbc198fd62d1e883a4d4c83b44c33a4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_perf_evidence_v1.py"
+    },
+    "source/tools/audit_static_aabb_perf_probe_v3_timeline.py": {
+      "mode": "100755",
+      "original_sha256": "b7db883912e61af23dd79ac5fd10f66e5a676b70a6e1d65b99dac6aea06a23bf",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "c3fea155cca6c197dac41f1f1df143d4abe23867b04d1a151240277773517df4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_static_aabb_perf_probe_v3_timeline.py"
+    },
+    "source/tools/audit_topk_canary_source_v1.py": {
+      "mode": "100755",
+      "original_sha256": "daf0f496f0b4bd04d347b82d1ceb4e197a00e341e81843acb75172a5b29dced0",
+      "publication_adjustments": [],
+      "sha256": "daf0f496f0b4bd04d347b82d1ceb4e197a00e341e81843acb75172a5b29dced0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/audit_topk_canary_source_v1.py"
+    },
+    "source/tools/build_device_canary_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "bb2ac329f51d42011de47cebf80fe9c3de7ca2f90f73a691d3d6eb532eec1907",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "9ee71706bccc9179c2b25e866e650c2f592eef5ecd5f8a6b5d2fd695bfd1883f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_device_canary_v1.sh"
+    },
+    "source/tools/build_directed_rounding_compile_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "e8d19fe8ba0a05a7678bbfc82597be9b09446da5eb92a5b6912e6cd8c8e98132",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "6c39f277cab276611316c6529516b1d6d0c120bf288aeebf18f19502985c47b7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_directed_rounding_compile_v1.sh"
+    },
+    "source/tools/build_diskguard_v2.sh": {
+      "mode": "100755",
+      "original_sha256": "6b60be083543906f0444e70560444e4cc2d6448ff5a2ac245da2cd0499ce666c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "91f7e322f37c95a070903c78cd9a82f21abc4d6ecbf535a6025abf6906bb13be",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_diskguard_v2.sh"
+    },
+    "source/tools/build_diskguard_v2_1.sh": {
+      "mode": "100755",
+      "original_sha256": "f575be4a2cd2b2a69adde718a27b263197f57aa46a65da899ec803e1ce374d62",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "17a24ed8fe3bfdf44e6c85f35fc8fd4d1736d23d5417da7be6485f8df7b1f062",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_diskguard_v2_1.sh"
+    },
+    "source/tools/build_diskguard_v2_rebuild.sh": {
+      "mode": "100755",
+      "original_sha256": "2be639360c6b2c269ae06e122baadb92bda2c42d123f272aab2b502d500f9b1a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "95b7faef20a96b96a00b689b6f0ce1d732ce5351fdf0e8eb1d8b40785d22d3dd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_diskguard_v2_rebuild.sh"
+    },
+    "source/tools/build_perf_probe_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "f15872e4c12eb8cde38acd0226637a9c528b7ed0dbd5b097ebf15a907563fdfa",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5a8d2675599c48b471b7d463d1c257783746293d52febf9e32e985bd670e03f4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_perf_probe_v1.sh"
+    },
+    "source/tools/build_topk_canary_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "8a8785f73105979e6c89c4d0359bd810afc8f724059133adbc03a24b1d5dfa59",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "20b239d9b7e8286495909c38dc3acc4e6ad5c3f8c1ba8acc218b044e7cd5ccd8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/build_topk_canary_v1.sh"
+    },
+    "source/tools/freeze_static_aabb_heldout_correctness_buildbound_v1.py": {
+      "mode": "100755",
+      "original_sha256": "24eff26e1c0484ca3fc55ef45952cf8f583f80f97ea3d230188ca4ddd3197271",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "b3c68bdec60828e60f7d0a3c9b5d7b981fd2dd5a249eea8edb28a103aff201be",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_heldout_correctness_buildbound_v1.py"
+    },
+    "source/tools/freeze_static_aabb_heldout_correctness_execution_v1.py": {
+      "mode": "100755",
+      "original_sha256": "710b9066007f32da329e917b4518185f64ec692b0ad4c1ad940e905f10ceabb0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "965af2bef4a6dc976ff6fbd2e99d5c05eb34847d50b9cd50069b7af47897877d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_heldout_correctness_execution_v1.py"
+    },
+    "source/tools/freeze_static_aabb_heldout_perf_evidence_protocol_v1.py": {
+      "mode": "100755",
+      "original_sha256": "6558ee4f5c1d5d24db55e9321ad635af6772ba7dd0f1cae7e640ea494f1d6953",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7cdc7df7e646b9c05ecd0c9af37ba7f6cd3675f11d6d9605e2ca02b37f827de8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_heldout_perf_evidence_protocol_v1.py"
+    },
+    "source/tools/freeze_static_aabb_heldout_perf_evidence_protocol_v2.py": {
+      "mode": "100755",
+      "original_sha256": "617b1cdce56dc1cf7574b805a7fc908c6391adb9d9e600efc9f024ad4a2dd0a3",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "d45f13233a683a38e57f8cf2684326e5d3788db58b26b11bc021f67554004076",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_heldout_perf_evidence_protocol_v2.py"
+    },
+    "source/tools/freeze_static_aabb_heldout_protocol_v1.py": {
+      "mode": "100755",
+      "original_sha256": "c0072d9683150d3fae960ba4efdaebe0f0cf0282a1762b1d90b8c22848fa6c26",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7ff8125d0701202e36edf3267c5a8ecaa97e7aac74d80016230c88c1eff55b0e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_heldout_protocol_v1.py"
+    },
+    "source/tools/freeze_static_aabb_timeline_perf_protocol_v3.py": {
+      "mode": "100755",
+      "original_sha256": "a4d1b5ddc06cbecf064d2d13e64eae292ed320b5812bc9e8bd27f1817cc945ae",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "5bece579c7e7070bcafa1cd9fd164575960738d36d7b597771de57790b4fe0f9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_timeline_perf_protocol_v3.py"
+    },
+    "source/tools/freeze_static_aabb_timeline_perf_runner_v1.py": {
+      "mode": "100755",
+      "original_sha256": "6ac70321d90d7531b61557f651951d9611b9461626f3108442e01e7838b0d37c",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "5c5319650b14f152fc6b42e0760cd33240bd4ebc8daf9a874662d2ec9bbdc789",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/freeze_static_aabb_timeline_perf_runner_v1.py"
+    },
+    "source/tools/preflight_device_canary_v1.py": {
+      "mode": "100755",
+      "original_sha256": "8767f162c5fdf2cf03d8c6b0e4ca405683ee2b65cd31fa641e5a3587301064a5",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "5568b6717042c656eab0d4344875c4df09e743742bd70bd992b4a6434af29dfc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_device_canary_v1.py"
+    },
+    "source/tools/preflight_diskguard_v2.py": {
+      "mode": "100755",
+      "original_sha256": "af62b7d53ffcc55779585429347813902aca6e7052c972683f1f21db2f28a922",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "59121b9b0b6c004ffda1cb074e74d58efab057fb80187060f9768633b38d9eef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_diskguard_v2.py"
+    },
+    "source/tools/preflight_diskguard_v2_1.py": {
+      "mode": "100755",
+      "original_sha256": "7ff98c47469f128ea84d1e3a59b2c2fb25a4539e70347cce4d6d654b649513e4",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "715a3ff79521fafaeeb13c46417970261ed63b36b085296b563f2d9858514d28",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_diskguard_v2_1.py"
+    },
+    "source/tools/preflight_perf_probe_v1.py": {
+      "mode": "100755",
+      "original_sha256": "836cbca1ce0cb151a82540391488ef0b1ae089e98d9fe99c8d74315eb8a88a47",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "6e389993bb49eed7db2d1479ecfcad5cc329ff631c6818a4886a775c8b378d02",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_perf_probe_v1.py"
+    },
+    "source/tools/preflight_static_aabb_heldout_correctness_buildbound_v1.py": {
+      "mode": "100755",
+      "original_sha256": "2cbd3c67d2353affc900e81db5f5232ea8748623d6a0dae99fa8f6dcb40a1cd8",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "f3641aa1c4e5ef71261fefd2f2f9832fdf49239500225d7b53aca8797adbf52f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_static_aabb_heldout_correctness_buildbound_v1.py"
+    },
+    "source/tools/preflight_static_aabb_heldout_correctness_execution_v1.py": {
+      "mode": "100755",
+      "original_sha256": "042c9be00326e766b23364a053f04b383a05444176ada91103ce34e9164761d5",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ab10428390473d62a1ff7e0f3d85854e6137e52c2a944053d1a212ba12584bcb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_static_aabb_heldout_correctness_execution_v1.py"
+    },
+    "source/tools/preflight_static_aabb_heldout_protocol_v1.py": {
+      "mode": "100755",
+      "original_sha256": "ea1c754233bec48c658ab20c5119ffb305e935f06991bbd7707595e561c48cd8",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "1c3f8ea45c8566cbe34bfedd5ec28bd6118a9955c5b603a596928d278fee582c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_static_aabb_heldout_protocol_v1.py"
+    },
+    "source/tools/preflight_topk_canary_v1.py": {
+      "mode": "100755",
+      "original_sha256": "b44b9afc03c14499f5fa61f4fd9662ebe16677331b3c844782ebffa52f626652",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "69db3f6a2b7a224bc203aac24e85883c5b362908dc1e46aa83cc417503af138e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/preflight_topk_canary_v1.py"
+    },
+    "source/tools/run_device_canary_dimension_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "fe4bb47d147e46629aa755f0fa9f6d5ff2e9cebde7b131ca326d97f1d875979b",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "e375f75ec2d0014f279fcbff59da7797c9c8a63ed459d7c51244843fc220ff8d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_device_canary_dimension_v1.sh"
+    },
+    "source/tools/run_device_canary_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "668447171131388b08827040b96606b155914db62eb47c2a498f7f641dcd51cc",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "72115b865c09df5ecee1d3b10185bb31c1da35cdbfdb3d42ec05a22b87d68fbc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_device_canary_v1.sh"
+    },
+    "source/tools/run_diskguard_v2_1_m128.sh": {
+      "mode": "100755",
+      "original_sha256": "fd15cbeb4ff3cade6de2dd2cb8dd0d31273766ea5b78258f3d6c186c7d321ca4",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "da8e1c6ade7cfdc5491ec702bdd51157566c79fe7b7adcf3e5e1b08324c50283",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_diskguard_v2_1_m128.sh"
+    },
+    "source/tools/run_diskguard_v2_perf_m128.sh": {
+      "mode": "100755",
+      "original_sha256": "859b27a0f5ae1e4d36556bcf1e0bffc6d63ae34cc9b9af47067ca28824458951",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "01ae77d85c34095b8baf6bf9a56c1a37ec637efa403cac04543a452b8bd0bd8c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_diskguard_v2_perf_m128.sh"
+    },
+    "source/tools/run_diskguard_v2_topk_m128.sh": {
+      "mode": "100755",
+      "original_sha256": "4f9026fc8ea873b3e1e133d678c025b53e7c8d6070e5892f8cf174a6c1c767a0",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "ba877bfbc913b833f5d4207da9d55e4146363f76a318e56f521a5ff4d7caa8f9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_diskguard_v2_topk_m128.sh"
+    },
+    "source/tools/run_perf_probe_dimension_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "0550293f61096c0a998b11c8ab7614bf96adff110a8cbda482507fe249a39dae",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "0c4771cfce8eedd43e4ceadda1d5b0ee838074f7c70a5afeaccacea2b9c849b5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_perf_probe_dimension_v1.sh"
+    },
+    "source/tools/run_perf_probe_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "ae4c7f0227a0f063b165c091c216f9ffedb358cde618112ece771910d7d0737b",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "0582b3e1f4dd139878902d8167c9d4c00ae1ed7bd4ef5f21f8176c4565f7b0b5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_perf_probe_v1.sh"
+    },
+    "source/tools/run_static_aabb_heldout_correctness_v1.py": {
+      "mode": "100755",
+      "original_sha256": "fe018b9b17c5f0f5b5bc4aae5d03761e3649d17a7dea4d52881456a1626325cc",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "b73735164927b49af9cc0be7836ffa21c46dc2c9fe9473da2a9788d8c434c10b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_static_aabb_heldout_correctness_v1.py"
+    },
+    "source/tools/run_static_aabb_heldout_perf_evidence_v1.py": {
+      "mode": "100755",
+      "original_sha256": "6e07c164276016fd20663301b6d1021e1c36ef5c5a4582b7f1c548311c29c16b",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "7f92228783cf6a84e30c1f88a2a54e2b400440ab966e4f47e683fc44c527383c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_static_aabb_heldout_perf_evidence_v1.py"
+    },
+    "source/tools/run_static_aabb_heldout_perf_evidence_v2.py": {
+      "mode": "100755",
+      "original_sha256": "3d604e91afac4dd611ccb5341c30c21a69d5297c7ef0be96f9262d666e7810c1",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "f1ba1f347335c55d2032db0540721f914b1d65f00200b78afd6f0e1518e1bcc2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_static_aabb_heldout_perf_evidence_v2.py"
+    },
+    "source/tools/run_static_aabb_timeline_perf_v3.py": {
+      "mode": "100755",
+      "original_sha256": "39f065e3a169a95a3810a8f20bce8b8675e5f50d3b5e2e8de5e51dd7d473a610",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "a76091a91f46480540ede6bbecce153b023076871d79f17454e5693cd37a4802",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_static_aabb_timeline_perf_v3.py"
+    },
+    "source/tools/run_topk_canary_dimension_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "500fec05b4620d504db3069e2bddaf592e8b6f6f7d265b9d1d3e326313daa8d6",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "23e158683bba16429783855e5b6d8fa15d0825ef1ead271eea7bf77fda7f6b49",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_topk_canary_dimension_v1.sh"
+    },
+    "source/tools/run_topk_canary_v1.sh": {
+      "mode": "100755",
+      "original_sha256": "67811c71a483e278fe8b818d6fa7e38880852284b0e5c61f9543fb4a505e919a",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "4fae0689a6c20625ea50400573ecc1aea9faa170f9df296ae7f0196e1633535f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/run_topk_canary_v1.sh"
+    },
+    "source/tools/select_standard_sift_static_aabb_heldout_v1.py": {
+      "mode": "100755",
+      "original_sha256": "4968182baf7389e82043fb2e89c60a0d9fe34498755d600f0c9a22a9d42f3fa3",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "d1f6fd51fb8160538c7683c965a4ddb3330c5b565300aef682563b72e1618dd9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/select_standard_sift_static_aabb_heldout_v1.py"
+    },
+    "source/tools/select_standard_sift_static_aabb_perfheldout_v2.py": {
+      "mode": "100755",
+      "original_sha256": "1bc5154e88e1b138ec0c5afab7a31eed8d529fe90738843f53306db385c0c224",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "d9562dbbe01d192274ece9511804a6fbefc8ae54994fa2fe3119a8292fee116c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/select_standard_sift_static_aabb_perfheldout_v2.py"
+    },
+    "source/tools/select_standard_sift_tiefree_perf256_v1.py": {
+      "mode": "100755",
+      "original_sha256": "5b4d357e3668af0ae544b9fbc027d749161304f14af2cd419be18cca235211bc",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "aa67edfdab14ecc078d34aed0f7f303d5ee2620277fbe41bd98550df4c10950d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/select_standard_sift_tiefree_perf256_v1.py"
+    },
+    "source/tools/select_standard_sift_tiefree_smoke_v1.py": {
+      "mode": "100755",
+      "original_sha256": "a2e5bfc000bf0cf69743b257a58ed35fd9d22ad55871785f6b8cf5b120597919",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "c5e78a8378cc629e62c268b279ac33fcbb387a6af7ba948fa5445255d74568e1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1/tools/select_standard_sift_tiefree_smoke_v1.py"
+    }
+  },
+  "payload_sha256": "9b5e4c5e46cb3cc1b61c86daaaa94f4125c619a949763a0b8405809fdddce74d",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
