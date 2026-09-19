@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_gts_integration",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_gts_integration"
+    }
+  ],
+  "files": {
+    "source/run_gts_safe_c1_trace.sh": {
+      "mode": "100755",
+      "original_sha256": "0a82a0fbd6f72e55abc6aa1f1db4b5785401b1f6c2663038e57216d19928cde6",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "a6e3173579f8bad92cd89ab72f788479eb99af0a1be2c72e4a8b8ca160496f68",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_gts_integration/run_gts_safe_c1_trace.sh"
+    },
+    "source/src/gts_safe_c1_trace.cu": {
+      "mode": "100644",
+      "original_sha256": "9f1871c595953458be64667e33624301e1b368808973e048493f80d4738af9b8",
+      "publication_adjustments": [],
+      "sha256": "9f1871c595953458be64667e33624301e1b368808973e048493f80d4738af9b8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_gts_integration/src/gts_safe_c1_trace.cu"
+    }
+  },
+  "payload_sha256": "26cee8123e3cd13dab15d09296d07aedbb7bbea5a3d052a47d07d86f7cbbdaac",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
