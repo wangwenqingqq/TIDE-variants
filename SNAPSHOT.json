@@ -1,0 +1,134 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/query_study_p1_20260905_v2",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2"
+    }
+  ],
+  "files": {
+    "source/analysis/analyze.py": {
+      "mode": "100644",
+      "original_sha256": "876da3f48e3164bee4eead41f1ea3a932ef2c2d200f68a6b1eaaf85950a57c81",
+      "publication_adjustments": [],
+      "sha256": "876da3f48e3164bee4eead41f1ea3a932ef2c2d200f68a6b1eaaf85950a57c81",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/analysis/analyze.py"
+    },
+    "source/analysis/test_analyze.py": {
+      "mode": "100644",
+      "original_sha256": "f8ad828fd64d7ed86113e3c3f7c94659a005c20e79a3b41315fe3ebf0a873405",
+      "publication_adjustments": [],
+      "sha256": "f8ad828fd64d7ed86113e3c3f7c94659a005c20e79a3b41315fe3ebf0a873405",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/analysis/test_analyze.py"
+    },
+    "source/keeper/gpusim_adapter_keeper.cpp": {
+      "mode": "100644",
+      "original_sha256": "1a7e92944c4744022a949a7be737527df9a7a19067a1e6b519633f0fcb992c36",
+      "publication_adjustments": [],
+      "sha256": "1a7e92944c4744022a949a7be737527df9a7a19067a1e6b519633f0fcb992c36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/keeper/gpusim_adapter_keeper.cpp"
+    },
+    "source/keeper/tide_query_keeper.cu": {
+      "mode": "100644",
+      "original_sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "publication_adjustments": [],
+      "sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/keeper/tide_query_keeper.cu"
+    },
+    "source/src/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "087c5a5c2b826418b2429b5921f00136b1b9b3358f75de66f241204ab6bb0222",
+      "publication_adjustments": [],
+      "sha256": "087c5a5c2b826418b2429b5921f00136b1b9b3358f75de66f241204ab6bb0222",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/CMakeLists.txt"
+    },
+    "source/src/gpusim_bridge.cpp": {
+      "mode": "100644",
+      "original_sha256": "4440b68ca24fb5e519c4ee9c37095f1b09bf6aefbc4b9f051779b79f644a4c28",
+      "publication_adjustments": [],
+      "sha256": "4440b68ca24fb5e519c4ee9c37095f1b09bf6aefbc4b9f051779b79f644a4c28",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/gpusim_bridge.cpp"
+    },
+    "source/src/guarded_run.py": {
+      "mode": "100644",
+      "original_sha256": "4edcecc027ae5a0ca340f8e0dbbc81b7af2c900baf856022a4e6e2678631141c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "ddda085feba3a397337df4bdb1beb03f08612d710b87a988d02f9cd023c7e701",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/guarded_run.py"
+    },
+    "source/src/make_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "b91d79611dbae4c7911aead0237d982d3eba1aab69d02f863906d2d5f6d28b7d",
+      "publication_adjustments": [],
+      "sha256": "b91d79611dbae4c7911aead0237d982d3eba1aab69d02f863906d2d5f6d28b7d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/make_oracle.py"
+    },
+    "source/src/oracle.cpp": {
+      "mode": "100644",
+      "original_sha256": "b6ff734a544a1cb15cecadb7d4e2a1f36ae319e796848d9ffb4194bbd8bf69b1",
+      "publication_adjustments": [],
+      "sha256": "b6ff734a544a1cb15cecadb7d4e2a1f36ae319e796848d9ffb4194bbd8bf69b1",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/oracle.cpp"
+    },
+    "source/src/prepare.py": {
+      "mode": "100644",
+      "original_sha256": "d3a85e632fb2909eff3f35973408dea735a26b4a25be36c7f4d33cb5787b6b77",
+      "publication_adjustments": [],
+      "sha256": "d3a85e632fb2909eff3f35973408dea735a26b4a25be36c7f4d33cb5787b6b77",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/prepare.py"
+    },
+    "source/src/run_backend.py": {
+      "mode": "100644",
+      "original_sha256": "019b4c4dc1abd1041f59a6e5fa096ce3fa1e8414f425610e2c3c91167cd5a6b4",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "030152770adfae375973d7778101b3ecd0381550dc9d181c23095fe589c8367b",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/run_backend.py"
+    },
+    "source/src/run_campaign.py": {
+      "mode": "100644",
+      "original_sha256": "568d70fdda2335ce4a8a510a96d33f83641faebf5d02ab599428ad676cc63095",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5f0416193f9e84f3092ad27e6564da4da72172d7dd59b39814878bf08e5c6e27",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/run_campaign.py"
+    },
+    "source/src/tide_bridge.cu": {
+      "mode": "100644",
+      "original_sha256": "40641b4a0e158c1bc819d29c0b57c47129217e8e89c7f0487ea7916f943f0095",
+      "publication_adjustments": [],
+      "sha256": "40641b4a0e158c1bc819d29c0b57c47129217e8e89c7f0487ea7916f943f0095",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/src/tide_bridge.cu"
+    },
+    "source/tests/test_contract.py": {
+      "mode": "100644",
+      "original_sha256": "ca2413119aff3954202bb3649772efda39ef3cf419ff5b70e9ec75959f0550c9",
+      "publication_adjustments": [],
+      "sha256": "ca2413119aff3954202bb3649772efda39ef3cf419ff5b70e9ec75959f0550c9",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/tests/test_contract.py"
+    },
+    "source/tests/test_prepare.py": {
+      "mode": "100644",
+      "original_sha256": "12944d2fda97e0fd10bf45b5abafb5c194a6d2ded5e18d76b9d70778db081710",
+      "publication_adjustments": [],
+      "sha256": "12944d2fda97e0fd10bf45b5abafb5c194a6d2ded5e18d76b9d70778db081710",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2/tests/test_prepare.py"
+    }
+  },
+  "payload_sha256": "f352e452cea77016772f7ae2ca7e821a05ce886b13d77d7b6ae9b727140c007b",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
