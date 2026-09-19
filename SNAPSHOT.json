@@ -1,0 +1,75 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/e1g_adapter",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter"
+    }
+  ],
+  "files": {
+    "source/audit_legacy_e1g.py": {
+      "mode": "100755",
+      "original_sha256": "6720a76847a8b7ad959144a1e5a56a07e1655cd0dadab96fed12a67280712abf",
+      "publication_adjustments": [],
+      "sha256": "6720a76847a8b7ad959144a1e5a56a07e1655cd0dadab96fed12a67280712abf",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/audit_legacy_e1g.py"
+    },
+    "source/make_e1g_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "c1bb4307f1310ea5cbacfc4bf59ae1d20da1139d4663fac5d9033ba56d33b057",
+      "publication_adjustments": [],
+      "sha256": "c1bb4307f1310ea5cbacfc4bf59ae1d20da1139d4663fac5d9033ba56d33b057",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/make_e1g_bundle.py"
+    },
+    "source/prepare_cuda_trace.py": {
+      "mode": "100755",
+      "original_sha256": "3782f595525b6a2e886096818d72f92e5d6559be2ba56498512dc39f6f3a912c",
+      "publication_adjustments": [],
+      "sha256": "3782f595525b6a2e886096818d72f92e5d6559be2ba56498512dc39f6f3a912c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/prepare_cuda_trace.py"
+    },
+    "source/prepare_quantized_gts_integration_bundles.py": {
+      "mode": "100755",
+      "original_sha256": "3c206eceb1a5f64cbfa3bfccf7fb27053c5af12293a3ea46b738c7f82cb70cc3",
+      "publication_adjustments": [],
+      "sha256": "3c206eceb1a5f64cbfa3bfccf7fb27053c5af12293a3ea46b738c7f82cb70cc3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/prepare_quantized_gts_integration_bundles.py"
+    },
+    "source/validate_e1gi_b_guarded.py": {
+      "mode": "100755",
+      "original_sha256": "eacc9531d523ceb6a21a0609912b2c635795e22d005b2b44350a3f25928b2aaa",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "4010a9d7dcf9dcc70a8aac85ffb5cfcf4e95e998a94f0944fe4db1061ddceba2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/validate_e1gi_b_guarded.py"
+    },
+    "source/verify_cuda_reference_export.py": {
+      "mode": "100755",
+      "original_sha256": "6d82cbbbdfaff1c1c38be903e3f37f82c7e4bdfb2f38a2a58689c5116beb9ff5",
+      "publication_adjustments": [],
+      "sha256": "6d82cbbbdfaff1c1c38be903e3f37f82c7e4bdfb2f38a2a58689c5116beb9ff5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/verify_cuda_reference_export.py"
+    },
+    "source/verify_e1g_export.py": {
+      "mode": "100755",
+      "original_sha256": "1d8b304e11e0a85350aa2e90f7c887e5f01d5ff3bce8e7147ef028702177a878",
+      "publication_adjustments": [],
+      "sha256": "1d8b304e11e0a85350aa2e90f7c887e5f01d5ff3bce8e7147ef028702177a878",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/verify_e1g_export.py"
+    },
+    "source/verify_quantized_gts_integration_export.py": {
+      "mode": "100755",
+      "original_sha256": "d03e783e2c62fa2b576a8aa2c99c1179e31afc1b8ffc8b028d430b21f7a6a90a",
+      "publication_adjustments": [],
+      "sha256": "d03e783e2c62fa2b576a8aa2c99c1179e31afc1b8ffc8b028d430b21f7a6a90a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter/verify_quantized_gts_integration_export.py"
+    }
+  },
+  "payload_sha256": "a5158c3c0f7ce3fb8b7bade3d23983eb537609657a7c0074cc23dc5f0d1ab565",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
