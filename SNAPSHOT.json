@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z"
+    }
+  ],
+  "files": {
+    "source/tools/create_source_manifest.py": {
+      "mode": "100644",
+      "original_sha256": "03bd02e9d79c04ec2637c75f591797ea5e07dd8557cbb59fdb0b14a403ebcee6",
+      "publication_adjustments": [],
+      "sha256": "03bd02e9d79c04ec2637c75f591797ea5e07dd8557cbb59fdb0b14a403ebcee6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z/tools/create_source_manifest.py"
+    },
+    "source/tools/run_synthetic_campaign.py": {
+      "mode": "100644",
+      "original_sha256": "4bc597b8628d6689969818b272a0efe8242b33383957790cb8578584960f03ca",
+      "publication_adjustments": [],
+      "sha256": "4bc597b8628d6689969818b272a0efe8242b33383957790cb8578584960f03ca",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z/tools/run_synthetic_campaign.py"
+    },
+    "source/tools/static_audit.py": {
+      "mode": "100644",
+      "original_sha256": "2195e126f196038b026b382f8b43cc64f0f8717a0ceceb76cd6437e4f77c8343",
+      "publication_adjustments": [],
+      "sha256": "2195e126f196038b026b382f8b43cc64f0f8717a0ceceb76cd6437e4f77c8343",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z/tools/static_audit.py"
+    }
+  },
+  "payload_sha256": "e5bc8763a1cfc541dfecd77c427f99521f8ab49313376c323f5120fba009e42d",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
