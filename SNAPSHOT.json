@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate3_20260827",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate3_20260827"
+    }
+  ],
+  "files": {
+    "source/scripts/fpsim2_official_update_lifecycle.py": {
+      "mode": "100644",
+      "original_sha256": "ed2fe6c5a955e5569972519aee2303cd5c92f3c5efeb7bb75bc20e559b51c62f",
+      "publication_adjustments": [],
+      "sha256": "ed2fe6c5a955e5569972519aee2303cd5c92f3c5efeb7bb75bc20e559b51c62f",
+      "source_label": "TIDE/active/tide_surechembl_gate3_20260827/scripts/fpsim2_official_update_lifecycle.py"
+    },
+    "source/scripts/fpsim2_update_semantics_probe.py": {
+      "mode": "100644",
+      "original_sha256": "f1ec64d88b8bebf3c8d664bbfe86a2728f9e3a952f0b331e927299c46d298376",
+      "publication_adjustments": [],
+      "sha256": "f1ec64d88b8bebf3c8d664bbfe86a2728f9e3a952f0b331e927299c46d298376",
+      "source_label": "TIDE/active/tide_surechembl_gate3_20260827/scripts/fpsim2_update_semantics_probe.py"
+    }
+  },
+  "payload_sha256": "35a81b72cb36d0901b2e4325ce946cfd91b92686fed48bf26d8128aab5e04977",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
