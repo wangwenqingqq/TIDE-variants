@@ -1,0 +1,2365 @@
+// Safe-C1 G3 native correctness-matrix implementation.
+//
+// This translation unit is deliberately a library, not a trace executable.  It
+// is intended for compile-only closure checks first.  No build/run result is
+// evidence of correctness or performance until a later, permitted native gate
+// binds each fixture to an actual frozen GTS tree and an independent oracle.
+//
+// Production candidate flow is intentionally narrow:
+//   GTS base traversal receipt -> sidecars of exactly received leaves ->
+//   complete global delta.
+// The production code below has no whole-live-set answer path.
+
+#include <algorithm>
+#include <array>
+#include <cmath>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
+#include <iomanip>
+#include <limits>
+#include <map>
+#include <memory>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <unordered_map>
+#include <utility>
+#include <vector>
+
+#define RP_DEFINE_CONSTANTS
+// Include tree first: its archive include order must load Thrust before config.cuh
+// defines the legacy `short` alias.  The receipt header then reuses that guard.
+#include "tree.cuh"
+#include "g3_safe_search_v2.cuh"
+
+// mlp_constant.cuh provides archive extern declarations.  G3 uses only the
+// mode-0 residual path; no learned-pruning or MLP constant upload is called.
+
+namespace safe_c1_g3 {
+
+using StableId = int;
+using LocalRow = int;
+using DistanceSq = std::uint64_t;
+
+constexpr float kStrictEpsilon = 1.0e-5F;
+constexpr int kRangeRadiusSafetyUlps = 128;
+constexpr int kResidualPruningMode = 0;
+constexpr bool G3_NATIVE_TOPK_RECEIPT_REUSED_FROM_G1 = true;
+// The legacy range entrypoint is ID-query only.  G3 therefore exposes a
+// separately named, branch-aligned vector predicate mirror; it is not a claim
+// that searchIndexRnnV2 itself ran for vector queries.
+constexpr bool G3_NATIVE_RANGE_RECEIPT_IMPLEMENTED = false;
+constexpr bool G3_RANGE_BRANCH_ALIGNED_VECTOR_PREDICATE_MIRROR_IMPLEMENTED = true;
+constexpr bool G3_NATIVE_FRESH_STABLE_ID_REBUILD_IMPLEMENTED = true;
+// Direct sidecars remain fail-closed until a future runner has bound this exact
+// source closure to device-mode/readback, KNN disk behavior, receipts and an
+// independent oracle.  This static/compile-only phase never opens the gate.
+constexpr bool G3_DIRECT_SIDECAR_RUNTIME_GUARD_OPEN = false;
+constexpr bool G3_DIRECT_CERTIFICATE_KNN_VISIBILITY_ONLY = true;
+constexpr bool G3_KNN_DISK_MONOTONIC_ASSUMPTION_RUNTIME_UNVERIFIED = true;
+// This TU intentionally has no main and is never a launchable benchmark by
+// itself.  A later trace runner must produce its own build/run attestation.
+constexpr bool G3_NATIVE_ENGINE_EXECUTABLE = false;
+constexpr bool G3_NATIVE_ENGINE_EXECUTED = false;
+
+[[noreturn]] inline void fail(const std::string& message) {
+  throw std::runtime_error("Safe-C1 G3 invariant failure: " + message);
+}
+
+inline void cuda_check(cudaError_t status, const char* expression,
+                       const char* file, int line) {
+  if (status != cudaSuccess) {
+    std::ostringstream out;
+    out << expression << " failed at " << file << ':' << line << ": "
+        << cudaGetErrorString(status);
+    fail(out.str());
+  }
+}
+
+#define G3_CUDA(call) ::safe_c1_g3::cuda_check((call), #call, __FILE__, __LINE__)
+
+// Minimal in-tree SHA-256 implementation.  The output encodings are part of
+// the fixture contract; do not replace them with std::hash or pointer hashes.
+class Sha256 {
+ public:
+  Sha256() { reset(); }
+
+  void reset() {
+    state_ = {0x6a09e667U, 0xbb67ae85U, 0x3c6ef372U, 0xa54ff53aU,
+              0x510e527fU, 0x9b05688cU, 0x1f83d9abU, 0x5be0cd19U};
+    block_.fill(0);
+    block_size_ = 0;
+    bit_length_ = 0;
+  }
+
+  void update(const void* address, std::size_t bytes) {
+    const auto* input = static_cast<const std::uint8_t*>(address);
+    for (std::size_t index = 0; index < bytes; ++index) {
+      block_[block_size_++] = input[index];
+      if (block_size_ == block_.size()) {
+        transform(block_.data());
+        bit_length_ += 512;
+        block_size_ = 0;
+      }
+    }
+  }
+
+  void update(const std::string& text) { update(text.data(), text.size()); }
+
+  [[nodiscard]] std::string final_hex() {
+    std::array<std::uint8_t, 64> tail = block_;
+    std::size_t index = block_size_;
+    tail[index++] = 0x80U;
+    if (index > 56U) {
+      while (index < 64U) tail[index++] = 0;
+      transform(tail.data());
+      tail.fill(0);
+      index = 0;
+    }
+    while (index < 56U) tail[index++] = 0;
+    const std::uint64_t total_bits = bit_length_ + static_cast<std::uint64_t>(block_size_) * 8ULL;
+    for (int shift = 7; shift >= 0; --shift) {
+      tail[56 + (7 - shift)] = static_cast<std::uint8_t>((total_bits >> (shift * 8)) & 0xffU);
+    }
+    transform(tail.data());
+    std::ostringstream out;
+    out << std::hex << std::setfill('0');
+    for (std::uint32_t value : state_) out << std::setw(8) << value;
+    return out.str();
+  }
+
+ private:
+  static constexpr std::array<std::uint32_t, 64> kConstants = {
+      0x428a2f98U,0x71374491U,0xb5c0fbcfU,0xe9b5dba5U,0x3956c25bU,0x59f111f1U,0x923f82a4U,0xab1c5ed5U,
+      0xd807aa98U,0x12835b01U,0x243185beU,0x550c7dc3U,0x72be5d74U,0x80deb1feU,0x9bdc06a7U,0xc19bf174U,
+      0xe49b69c1U,0xefbe4786U,0x0fc19dc6U,0x240ca1ccU,0x2de92c6fU,0x4a7484aaU,0x5cb0a9dcU,0x76f988daU,
+      0x983e5152U,0xa831c66dU,0xb00327c8U,0xbf597fc7U,0xc6e00bf3U,0xd5a79147U,0x06ca6351U,0x14292967U,
+      0x27b70a85U,0x2e1b2138U,0x4d2c6dfcU,0x53380d13U,0x650a7354U,0x766a0abbU,0x81c2c92eU,0x92722c85U,
+      0xa2bfe8a1U,0xa81a664bU,0xc24b8b70U,0xc76c51a3U,0xd192e819U,0xd6990624U,0xf40e3585U,0x106aa070U,
+      0x19a4c116U,0x1e376c08U,0x2748774cU,0x34b0bcb5U,0x391c0cb3U,0x4ed8aa4aU,0x5b9cca4fU,0x682e6ff3U,
+      0x748f82eeU,0x78a5636fU,0x84c87814U,0x8cc70208U,0x90befffaU,0xa4506cebU,0xbef9a3f7U,0xc67178f2U};
+
+  static constexpr std::uint32_t rotr(std::uint32_t value, std::uint32_t bits) {
+    return (value >> bits) | (value << (32U - bits));
+  }
+  static constexpr std::uint32_t choose(std::uint32_t x, std::uint32_t y, std::uint32_t z) {
+    return (x & y) ^ (~x & z);
+  }
+  static constexpr std::uint32_t majority(std::uint32_t x, std::uint32_t y, std::uint32_t z) {
+    return (x & y) ^ (x & z) ^ (y & z);
+  }
+  static constexpr std::uint32_t big0(std::uint32_t x) { return rotr(x, 2) ^ rotr(x, 13) ^ rotr(x, 22); }
+  static constexpr std::uint32_t big1(std::uint32_t x) { return rotr(x, 6) ^ rotr(x, 11) ^ rotr(x, 25); }
+  static constexpr std::uint32_t small0(std::uint32_t x) { return rotr(x, 7) ^ rotr(x, 18) ^ (x >> 3); }
+  static constexpr std::uint32_t small1(std::uint32_t x) { return rotr(x, 17) ^ rotr(x, 19) ^ (x >> 10); }
+
+  void transform(const std::uint8_t* input) {
+    std::array<std::uint32_t, 64> words{};
+    for (int index = 0; index < 16; ++index) {
+      words[index] = (static_cast<std::uint32_t>(input[index * 4]) << 24) |
+                     (static_cast<std::uint32_t>(input[index * 4 + 1]) << 16) |
+                     (static_cast<std::uint32_t>(input[index * 4 + 2]) << 8) |
+                     static_cast<std::uint32_t>(input[index * 4 + 3]);
+    }
+    for (int index = 16; index < 64; ++index) {
+      words[index] = small1(words[index - 2]) + words[index - 7] +
+                     small0(words[index - 15]) + words[index - 16];
+    }
+    std::uint32_t a = state_[0], b = state_[1], c = state_[2], d = state_[3];
+    std::uint32_t e = state_[4], f = state_[5], g = state_[6], h = state_[7];
+    for (int index = 0; index < 64; ++index) {
+      const std::uint32_t t1 = h + big1(e) + choose(e, f, g) + kConstants[index] + words[index];
+      const std::uint32_t t2 = big0(a) + majority(a, b, c);
+      h = g; g = f; f = e; e = d + t1;
+      d = c; c = b; b = a; a = t1 + t2;
+    }
+    state_[0] += a; state_[1] += b; state_[2] += c; state_[3] += d;
+    state_[4] += e; state_[5] += f; state_[6] += g; state_[7] += h;
+  }
+
+  std::array<std::uint32_t, 8> state_{};
+  std::array<std::uint8_t, 64> block_{};
+  std::size_t block_size_ = 0;
+  std::uint64_t bit_length_ = 0;
+};
+
+inline std::string sha256_text(const std::string& text) {
+  Sha256 hash;
+  hash.update(text);
+  return hash.final_hex();
+}
+
+template <typename T>
+inline std::string sha256_raw_vector(const std::vector<T>& values,
+                                     const std::string& domain) {
+  Sha256 hash;
+  hash.update(domain);
+  if (!values.empty()) hash.update(values.data(), values.size() * sizeof(T));
+  return hash.final_hex();
+}
+
+inline std::string stable_set_sha256(const std::vector<StableId>& ids) {
+  std::vector<StableId> canonical = ids;
+  std::sort(canonical.begin(), canonical.end());
+  if (std::adjacent_find(canonical.begin(), canonical.end()) != canonical.end()) {
+    fail("stable_set_sha256 received duplicate stable ID");
+  }
+  std::ostringstream bytes;
+  for (StableId id : canonical) bytes << id << '\n';
+  return sha256_text(bytes.str());
+}
+
+inline std::string local_to_stable_sha256(const std::vector<StableId>& local_to_stable) {
+  std::ostringstream bytes;
+  bytes << "safe-c1-g3-local-to-stable-v1\n";
+  for (std::size_t local = 0; local < local_to_stable.size(); ++local) {
+    bytes << local << ':' << local_to_stable[local] << '\n';
+  }
+  return sha256_text(bytes.str());
+}
+
+struct StableDistance {
+  StableId stable_id = -1;
+  DistanceSq distance_sq = 0;
+  [[nodiscard]] bool operator==(const StableDistance& other) const {
+    return stable_id == other.stable_id && distance_sq == other.distance_sq;
+  }
+};
+
+inline bool distance_then_stable(const StableDistance& left,
+                                 const StableDistance& right) {
+  return left.distance_sq != right.distance_sq
+             ? left.distance_sq < right.distance_sq
+             : left.stable_id < right.stable_id;
+}
+
+inline void sort_and_require_unique(std::vector<StableDistance>* rows,
+                                    const char* label) {
+  std::sort(rows->begin(), rows->end(), distance_then_stable);
+  std::set<StableId> seen;
+  for (const StableDistance& row : *rows) {
+    if (row.stable_id < 0) fail(std::string(label) + " contains invalid stable ID");
+    if (!seen.insert(row.stable_id).second) {
+      fail(std::string(label) + " contains duplicate stable ID");
+    }
+  }
+}
+
+class ImmutablePool {
+ public:
+  // `values` is physical immutable-pool row major int16 data.  Stable IDs are
+  // deliberately translated through stable_to_pool_row: current fixtures are
+  // identity but the production contract must not assume it.
+  void initialize(int dimension, std::vector<std::int16_t> values,
+                  std::vector<int> stable_to_pool_row) {
+    if (dimension <= 0 || values.empty() || values.size() % static_cast<std::size_t>(dimension) != 0) {
+      fail("invalid immutable pool shape");
+    }
+    const int rows = static_cast<int>(values.size() / static_cast<std::size_t>(dimension));
+    if (stable_to_pool_row.empty()) fail("stable_to_pool_row is empty");
+    std::vector<int> seen(rows, 0);
+    for (int row : stable_to_pool_row) {
+      if (row < 0 || row >= rows) fail("stable_to_pool_row points outside immutable pool");
+      if (++seen[row] > 1) fail("stable_to_pool_row is not injective");
+    }
+    dimension_ = dimension;
+    values_ = std::move(values);
+    stable_to_pool_row_ = std::move(stable_to_pool_row);
+    std::vector<float> device_values(values_.size());
+    for (std::size_t index = 0; index < values_.size(); ++index) {
+      device_values[index] = static_cast<float>(values_[index]);
+    }
+    G3_CUDA(cudaMalloc(reinterpret_cast<void**>(&device_values_), device_values.size() * sizeof(float)));
+    G3_CUDA(cudaMemcpy(device_values_, device_values.data(),
+                       device_values.size() * sizeof(float), cudaMemcpyHostToDevice));
+    G3_CUDA(cudaMalloc(reinterpret_cast<void**>(&device_stable_to_pool_row_),
+                       stable_to_pool_row_.size() * sizeof(int)));
+    G3_CUDA(cudaMemcpy(device_stable_to_pool_row_, stable_to_pool_row_.data(),
+                       stable_to_pool_row_.size() * sizeof(int), cudaMemcpyHostToDevice));
+  }
+
+  void release() noexcept {
+    if (device_values_) cudaFree(device_values_);
+    if (device_stable_to_pool_row_) cudaFree(device_stable_to_pool_row_);
+    device_values_ = nullptr;
+    device_stable_to_pool_row_ = nullptr;
+    values_.clear();
+    stable_to_pool_row_.clear();
+    dimension_ = 0;
+  }
+
+  ~ImmutablePool() { release(); }
+  ImmutablePool() = default;
+  ImmutablePool(const ImmutablePool&) = delete;
+  ImmutablePool& operator=(const ImmutablePool&) = delete;
+
+  [[nodiscard]] int dimension() const { return dimension_; }
+  [[nodiscard]] int stable_capacity() const { return static_cast<int>(stable_to_pool_row_.size()); }
+  [[nodiscard]] int pool_rows() const { return dimension_ == 0 ? 0 : static_cast<int>(values_.size() / dimension_); }
+  [[nodiscard]] const float* device_values() const { return device_values_; }
+  [[nodiscard]] const int* device_stable_to_pool_row() const { return device_stable_to_pool_row_; }
+  [[nodiscard]] const std::int16_t* vector_for_stable(StableId stable_id) const {
+    if (stable_id < 0 || stable_id >= stable_capacity()) fail("stable ID outside immutable mapping");
+    return values_.data() + static_cast<std::size_t>(stable_to_pool_row_[stable_id]) * dimension_;
+  }
+  [[nodiscard]] std::string stable_mapping_sha256() const {
+    return sha256_raw_vector(stable_to_pool_row_, "safe-c1-g3-stable-to-pool-row-v1\n");
+  }
+
+ private:
+  int dimension_ = 0;
+  std::vector<std::int16_t> values_;
+  std::vector<int> stable_to_pool_row_;
+  float* device_values_ = nullptr;
+  int* device_stable_to_pool_row_ = nullptr;
+};
+
+struct BaseTreeRuntime {
+  int* data_info = nullptr;
+  // config.cuh aliases archive `short` to float.  Keep the explicit type here
+  // so the compact GTS rows cannot accidentally be filled with raw i16 bytes.
+  float* data_d = nullptr;
+  char* data_s = nullptr;
+  int* size_s = nullptr;
+  int* id_list = nullptr;
+  TN* node_list = nullptr;
+  int* max_node_num = nullptr;
+  int* empty_list = nullptr;
+  // max_dis_d is file-global in tree.cuh.  It is captured into this owner as a
+  // snapshot generation marker; all rebuilds run under the single-engine
+  // barrier and release the old generation before indexConstru can replace it.
+  float* owned_max_dis_d = nullptr;
+  int tree_height = 0;
+  int base_count = 0;
+  // tree.cuh may repack leaves into a padded id_list; TN.lid is a physical
+  // allocation offset, not a compact [0,base_count) row offset.
+  int id_list_capacity = 0;
+  std::vector<StableId> local_to_stable;
+  std::vector<LocalRow> stable_to_local;
+
+  [[nodiscard]] bool ready() const {
+    return data_info != nullptr && data_d != nullptr && id_list != nullptr &&
+           node_list != nullptr && max_node_num != nullptr && empty_list != nullptr &&
+           owned_max_dis_d != nullptr && base_count > 0 && id_list_capacity > 0;
+  }
+};
+
+enum class GtsKnnPruningBranch {
+  kAllIncludeOnly,
+  kPredicateNonLastSibling,
+  kPredicateLastSibling,
+};
+
+inline const char* gts_knn_pruning_branch_name(GtsKnnPruningBranch branch) {
+  switch (branch) {
+    case GtsKnnPruningBranch::kAllIncludeOnly: return "all_include";
+    case GtsKnnPruningBranch::kPredicateNonLastSibling: return "predicate_nonlast_sibling";
+    case GtsKnnPruningBranch::kPredicateLastSibling: return "predicate_last_sibling";
+  }
+  return "unknown";
+}
+
+struct CertificateLevel {
+  int parent_leaf_or_internal = -1;
+  int child = -1;
+  int next_sibling = -1;
+  LocalRow pivot_local_row = -1;
+  StableId pivot_stable_id = -1;
+  float lower = 0.0F;
+  float upper = std::numeric_limits<float>::infinity();
+  float pivot_distance = 0.0F;
+  bool last_child = false;
+  // The production KNN header has an optional all-include branch
+  // (`labelCNode`).  This certificate never relies on that branch: it proves
+  // the stricter predicate branch at every ancestor, so all-include can only
+  // enlarge a future receipt.
+  bool all_include_branch_not_relied_on = true;
+  GtsKnnPruningBranch predicate_branch = GtsKnnPruningBranch::kAllIncludeOnly;
+};
+
+struct StrictCertificate {
+  bool ok = false;
+  int sidecar_leaf_id = -1;
+  std::string failure_reason;
+  int failure_level = -1;
+  int matching_children = 0;
+  bool all_include_branch_not_relied_on = true;
+  bool every_predicate_branch_mirrored = false;
+  // This is deliberately a KNN predicate-visibility certificate only.  It
+  // does not establish a direct-sidecar range correctness claim.
+  bool knn_visibility_only = true;
+  bool range_correctness_not_claimed = true;
+  std::vector<CertificateLevel> levels;
+};
+
+struct FrozenTreeSnapshot {
+  int tree_height = 0;
+  int fanout = 0;
+  int node_count = 0;
+  int logical_leaf_row_count = 0;
+  int base_dimension = 0;
+  int metric_code = -1;
+  std::vector<TN> nodes;
+  std::vector<int> empty;
+  std::vector<float> max_distance;
+  // These are the immutable base ownership facts.  They deliberately exclude
+  // SafeC1State::active_ (base + sidecars + delta); mutable rows are not native
+  // GTS tree bytes until an explicit rebuild creates a new generation.
+  std::vector<StableId> immutable_base_stable_ids;
+  std::string immutable_base_stable_ids_sha256;
+  std::string immutable_base_payload_sha256;
+  std::string local_to_stable_sha256_value;
+  std::string logical_leaf_local_rows_sha256;
+  std::string logical_leaf_stable_ids_sha256;
+  std::string native_tree_bytes_sha256;
+  std::string tree_payload_sha256;
+
+  [[nodiscard]] bool initialized() const { return node_count > 0 && !nodes.empty(); }
+
+  void validate_pruning_topology() const {
+    if (fanout != TREE_ORDER || fanout <= 1) {
+      fail("frozen GTS fanout does not match the native KNN predicate");
+    }
+    for (int parent = 0; parent < node_count; ++parent) {
+      if (empty[parent] != 0 || nodes[parent].is_leaf == 1) continue;
+      const int first_child = parent * fanout + 1;
+      if (first_child < 0 || first_child + fanout > node_count) {
+        fail("frozen GTS parent lacks a full contiguous sibling family");
+      }
+      int shared_pivot = -1;
+      float previous_min = -std::numeric_limits<float>::infinity();
+      for (int slot = 0; slot < fanout; ++slot) {
+        const int child = first_child + slot;
+        if (empty[child] != 0) {
+          fail("frozen GTS sibling family has an empty child: fail-close to delta");
+        }
+        const TN& node = nodes[child];
+        if (node.pid < 0 || !std::isfinite(node.min_dis)) {
+          fail("frozen GTS child pivot/min distance is not a finite native predicate input");
+        }
+        if (shared_pivot < 0) shared_pivot = node.pid;
+        if (node.pid != shared_pivot) {
+          fail("frozen GTS sibling family does not share the native pivot");
+        }
+        if (slot > 0 && node.min_dis + kStrictEpsilon < previous_min) {
+          fail("frozen GTS sibling min_dis bridge is nonmonotone");
+        }
+        previous_min = node.min_dis;
+        if (!std::isfinite(max_distance[child]) ||
+            max_distance[child] + kStrictEpsilon < node.min_dis) {
+          fail("frozen GTS max-distance diagnostic is inconsistent with min_dis");
+        }
+        // This is exactly the native branch test: a last child has
+        // child % TREE_ORDER == 0 and reads no right sibling.  Every other
+        // child reads node_list[child + 1].min_dis, regardless of any
+        // next-sibling emptiness predicate (there is none in nodeProcessKnn).
+        const bool native_last = (child % fanout) == 0;
+        if (native_last != (slot == fanout - 1)) {
+          fail("frozen GTS heap slot does not match native last-child predicate");
+        }
+        if (!native_last) {
+          const int next = child + 1;
+          if (next >= node_count || empty[next] != 0 ||
+              !std::isfinite(nodes[next].min_dis)) {
+            fail("frozen GTS native next-sibling predicate input is unavailable");
+          }
+          if (nodes[next].min_dis + kStrictEpsilon < node.min_dis) {
+            fail("frozen GTS native next-sibling min_dis bridge is invalid");
+          }
+          // Diagnostic only: the certificate below uses next.min_dis, never
+          // max_dis_d.  Requiring this ordered-tree property prevents an
+          // unverified bridge from silently becoming a direct placement.
+          if (max_distance[child] > nodes[next].min_dis + kStrictEpsilon) {
+            fail("frozen GTS max-distance crosses native next-sibling bridge");
+          }
+        }
+      }
+    }
+  }
+
+  void capture(const BaseTreeRuntime& runtime) {
+    if (!runtime.ready()) fail("cannot capture incomplete GTS runtime");
+    const int count = runtime.max_node_num[0];
+    if (count <= 0) fail("GTS reports nonpositive node capacity");
+    if (runtime.owned_max_dis_d != max_dis_d) {
+      fail("tree global max_dis_d ownership changed outside destructive rebuild barrier");
+    }
+    std::array<int, 3> data_info_values{};
+    G3_CUDA(cudaMemcpy(data_info_values.data(), runtime.data_info,
+                       data_info_values.size() * sizeof(int), cudaMemcpyDeviceToHost));
+    if (data_info_values[0] <= 0 || data_info_values[1] != runtime.base_count ||
+        data_info_values[2] != 2) {
+      fail("immutable native base payload has invalid dimension/count/L2 contract");
+    }
+    tree_height = runtime.tree_height;
+    fanout = TREE_ORDER;
+    node_count = count;
+    base_dimension = data_info_values[0];
+    metric_code = data_info_values[2];
+    nodes.assign(static_cast<std::size_t>(count), TN{});
+    empty.assign(static_cast<std::size_t>(count), 1);
+    max_distance.assign(static_cast<std::size_t>(count), 0.0F);
+    G3_CUDA(cudaMemcpy(nodes.data(), runtime.node_list, nodes.size() * sizeof(TN), cudaMemcpyDeviceToHost));
+    G3_CUDA(cudaMemcpy(empty.data(), runtime.empty_list, empty.size() * sizeof(int), cudaMemcpyDeviceToHost));
+    G3_CUDA(cudaMemcpy(max_distance.data(), runtime.owned_max_dis_d,
+                       max_distance.size() * sizeof(float), cudaMemcpyDeviceToHost));
+    std::vector<float> immutable_base_values(
+        static_cast<std::size_t>(runtime.base_count) * static_cast<std::size_t>(base_dimension));
+    if (!immutable_base_values.empty()) {
+      G3_CUDA(cudaMemcpy(immutable_base_values.data(), runtime.data_d,
+                         immutable_base_values.size() * sizeof(float), cudaMemcpyDeviceToHost));
+    }
+
+    if (static_cast<int>(runtime.local_to_stable.size()) != runtime.base_count) {
+      fail("local_to_stable count differs from immutable base count");
+    }
+    immutable_base_stable_ids = runtime.local_to_stable;
+    std::sort(immutable_base_stable_ids.begin(), immutable_base_stable_ids.end());
+    if (std::adjacent_find(immutable_base_stable_ids.begin(), immutable_base_stable_ids.end()) !=
+        immutable_base_stable_ids.end()) {
+      fail("immutable compact mapping has duplicate stable IDs");
+    }
+
+    std::vector<int> raw_seen(static_cast<std::size_t>(runtime.base_count), 0);
+    std::vector<StableId> stable_seen;
+    stable_seen.reserve(static_cast<std::size_t>(runtime.base_count));
+    std::ostringstream local_leaf_layout;
+    std::ostringstream stable_leaf_layout;
+    local_leaf_layout << "safe-c1-g3-logical-leaf-local-layout-v2\n";
+    stable_leaf_layout << "safe-c1-g3-logical-leaf-stable-layout-v2\n";
+    logical_leaf_row_count = 0;
+    for (int node_id = 0; node_id < count; ++node_id) {
+      if (empty[node_id] != 0 || nodes[node_id].is_leaf != 1) continue;
+      const TN& node = nodes[node_id];
+      if (node.lid < 0 || node.size < 0 ||
+          static_cast<std::uint64_t>(node.lid) + static_cast<std::uint64_t>(node.size) >
+              static_cast<std::uint64_t>(runtime.id_list_capacity)) {
+        fail("immutable GTS leaf lid/size exceeds physical padded id_list capacity");
+      }
+      std::vector<LocalRow> local_rows(static_cast<std::size_t>(node.size));
+      if (!local_rows.empty()) {
+        G3_CUDA(cudaMemcpy(local_rows.data(), runtime.id_list + node.lid,
+                           local_rows.size() * sizeof(int), cudaMemcpyDeviceToHost));
+      }
+      local_leaf_layout << "leaf=" << node_id << ";lid=" << node.lid << ";size=" << node.size << ';';
+      stable_leaf_layout << "leaf=" << node_id << ";lid=" << node.lid << ";size=" << node.size << ';';
+      for (LocalRow local : local_rows) {
+        if (local < 0 || local >= runtime.base_count) {
+          fail("immutable GTS leaf contains local row outside compact range");
+        }
+        if (++raw_seen[local] != 1) fail("immutable GTS leaf raw local rows are not a permutation");
+        const StableId stable = runtime.local_to_stable[local];
+        if (stable < 0 || stable >= static_cast<int>(runtime.stable_to_local.size()) ||
+            runtime.stable_to_local[stable] != local) {
+          fail("local_to_stable/stable_to_local immutable bijection violation");
+        }
+        stable_seen.push_back(stable);
+        local_leaf_layout << local << ',';
+        stable_leaf_layout << local << ':' << stable << ',';
+      }
+      local_leaf_layout << '\n';
+      stable_leaf_layout << '\n';
+      logical_leaf_row_count += node.size;
+    }
+    if (logical_leaf_row_count != runtime.base_count) {
+      fail("immutable GTS leaves do not contain exactly base_count rows");
+    }
+    for (int count_seen : raw_seen) {
+      if (count_seen != 1) fail("immutable GTS raw row coverage is not exactly [0,N)");
+    }
+    std::sort(stable_seen.begin(), stable_seen.end());
+    if (stable_seen != immutable_base_stable_ids) {
+      fail("immutable GTS leaf stable IDs do not equal all-and-only immutable base IDs");
+    }
+    validate_pruning_topology();
+
+    immutable_base_stable_ids_sha256 = stable_set_sha256(immutable_base_stable_ids);
+    local_to_stable_sha256_value = local_to_stable_sha256(runtime.local_to_stable);
+    logical_leaf_local_rows_sha256 = sha256_text(local_leaf_layout.str());
+    logical_leaf_stable_ids_sha256 = sha256_text(stable_leaf_layout.str());
+    Sha256 base_payload;
+    base_payload.update("safe-c1-g3-immutable-native-base-payload-v2\n");
+    base_payload.update(data_info_values.data(), data_info_values.size() * sizeof(int));
+    if (!immutable_base_values.empty()) {
+      base_payload.update(immutable_base_values.data(), immutable_base_values.size() * sizeof(float));
+    }
+    if (!runtime.local_to_stable.empty()) {
+      base_payload.update(runtime.local_to_stable.data(),
+                          runtime.local_to_stable.size() * sizeof(StableId));
+    }
+    immutable_base_payload_sha256 = base_payload.final_hex();
+
+    Sha256 native_tree;
+    native_tree.update("safe-c1-g3-immutable-native-tree-bytes-v2\n");
+    native_tree.update(nodes.data(), nodes.size() * sizeof(TN));
+    native_tree.update(empty.data(), empty.size() * sizeof(int));
+    native_tree.update(max_distance.data(), max_distance.size() * sizeof(float));
+    native_tree.update(local_leaf_layout.str());
+    native_tree_bytes_sha256 = native_tree.final_hex();
+
+    Sha256 payload;
+    payload.update("safe-c1-g3-tree-payload-v2\n");
+    payload.update(native_tree_bytes_sha256);
+    payload.update(immutable_base_payload_sha256);
+    payload.update(immutable_base_stable_ids_sha256);
+    payload.update(local_to_stable_sha256_value);
+    payload.update(logical_leaf_local_rows_sha256);
+    payload.update(logical_leaf_stable_ids_sha256);
+    tree_payload_sha256 = payload.final_hex();
+  }
+
+  void assert_unchanged(const BaseTreeRuntime& runtime) const {
+    if (!initialized()) fail("cannot verify an uninitialized frozen GTS snapshot");
+    FrozenTreeSnapshot current;
+    current.capture(runtime);
+    if (current.tree_payload_sha256 != tree_payload_sha256 ||
+        current.native_tree_bytes_sha256 != native_tree_bytes_sha256 ||
+        current.immutable_base_payload_sha256 != immutable_base_payload_sha256 ||
+        current.logical_leaf_local_rows_sha256 != logical_leaf_local_rows_sha256 ||
+        current.logical_leaf_stable_ids_sha256 != logical_leaf_stable_ids_sha256 ||
+        current.local_to_stable_sha256_value != local_to_stable_sha256_value ||
+        current.immutable_base_stable_ids_sha256 != immutable_base_stable_ids_sha256) {
+      fail("immutable native GTS tree/base payload changed outside explicit destructive rebuild");
+    }
+  }
+
+  [[nodiscard]] StrictCertificate certify_leaf(const ImmutablePool& pool,
+                                                const BaseTreeRuntime& runtime,
+                                                StableId inserted) const {
+    StrictCertificate output;
+    output.all_include_branch_not_relied_on = true;
+    if (!initialized() || tree_height <= 0 || fanout <= 1 ||
+        kResidualPruningMode != 0) {
+      output.failure_reason = "uninitialized_or_nonzero_residual_pruning";
+      return output;
+    }
+    int current = 0;
+    if (empty[current] != 0) {
+      output.failure_reason = "empty_root";
+      return output;
+    }
+    if (nodes[current].is_leaf == 1) {
+      if (tree_height != 1) {
+        output.failure_reason = "root_leaf_is_not_final_native_payload_depth";
+        return output;
+      }
+      output.ok = true;
+      output.every_predicate_branch_mirrored = true;
+      output.sidecar_leaf_id = current;
+      return output;
+    }
+    for (int level = 0; level < tree_height - 1; ++level) {
+      if (current < 0 || current >= node_count || empty[current] != 0 ||
+          nodes[current].is_leaf == 1) {
+        output.failure_reason = "invalid_nonleaf_certificate_parent";
+        output.failure_level = level;
+        return output;
+      }
+      const int first_child = current * fanout + 1;
+      if (first_child < 0 || first_child + fanout > node_count) {
+        output.failure_reason = "incomplete_native_sibling_family";
+        output.failure_level = level;
+        return output;
+      }
+      const LocalRow pivot_local = nodes[first_child].pid;
+      if (pivot_local < 0 || pivot_local >= runtime.base_count) {
+        output.failure_reason = "invalid_pivot_local_row";
+        output.failure_level = level;
+        return output;
+      }
+      const StableId pivot_stable = runtime.local_to_stable[pivot_local];
+      float sum = 0.0F;
+      const std::int16_t* point = pool.vector_for_stable(inserted);
+      const std::int16_t* pivot = pool.vector_for_stable(pivot_stable);
+      for (int dim = 0; dim < pool.dimension(); ++dim) {
+        const float delta = static_cast<float>(point[dim]) - static_cast<float>(pivot[dim]);
+        sum += delta * delta;
+      }
+      const float distance = std::sqrt(sum);
+      if (!std::isfinite(distance)) {
+        output.failure_reason = "nonfinite_inserted_to_native_pivot_distance";
+        output.failure_level = level;
+        return output;
+      }
+      std::vector<CertificateLevel> matches;
+      for (int slot = 0; slot < fanout; ++slot) {
+        const int child = first_child + slot;
+        if (empty[child] != 0 || nodes[child].pid != pivot_local ||
+            !std::isfinite(nodes[child].min_dis)) {
+          output.failure_reason = "native_sibling_topology_not_certifiable";
+          output.failure_level = level;
+          return output;
+        }
+        // This is deliberately the exact branch spelling from nodeProcessKnn:
+        // non-last iff child % TREE_ORDER != 0; last children have no right
+        // fence.  max_dis_d is never an acceptance bound.
+        const bool last_child = (child % fanout) == 0;
+        if (last_child != (slot == fanout - 1)) {
+          output.failure_reason = "native_last_child_branch_mismatch";
+          output.failure_level = level;
+          return output;
+        }
+        int next_sibling = -1;
+        float upper = std::numeric_limits<float>::infinity();
+        if (!last_child) {
+          next_sibling = child + 1;
+          if (next_sibling >= node_count || empty[next_sibling] != 0 ||
+              !std::isfinite(nodes[next_sibling].min_dis)) {
+            output.failure_reason = "native_next_sibling_branch_unavailable";
+            output.failure_level = level;
+            return output;
+          }
+          upper = nodes[next_sibling].min_dis;
+          if (upper + kStrictEpsilon < nodes[child].min_dis) {
+            output.failure_reason = "native_next_sibling_bridge_nonmonotone";
+            output.failure_level = level;
+            return output;
+          }
+        }
+        const bool matches_native_predicate_interval =
+            distance > nodes[child].min_dis + kStrictEpsilon &&
+            (last_child || distance < upper - kStrictEpsilon);
+        if (matches_native_predicate_interval) {
+          matches.push_back(CertificateLevel{
+              current, child, next_sibling, pivot_local, pivot_stable,
+              nodes[child].min_dis, upper, distance, last_child, true,
+              last_child ? GtsKnnPruningBranch::kPredicateLastSibling
+                         : GtsKnnPruningBranch::kPredicateNonLastSibling});
+        }
+      }
+      output.matching_children = static_cast<int>(matches.size());
+      if (matches.size() != 1U) {
+        output.failure_reason = matches.empty() ? "native_sibling_gap_or_boundary"
+                                                : "native_sibling_overlap_or_ambiguous";
+        output.failure_level = level;
+        return output;
+      }
+      const CertificateLevel chosen = matches.front();
+      output.levels.push_back(chosen);
+      current = chosen.child;
+      if (nodes[current].is_leaf == 1) {
+        if (level + 1 != tree_height - 1) {
+          output.failure_reason = "leaf_is_not_at_final_native_knn_payload_depth";
+          output.failure_level = level;
+          return output;
+        }
+        output.ok = true;
+        output.every_predicate_branch_mirrored = true;
+        output.sidecar_leaf_id = current;
+        return output;
+      }
+    }
+    output.failure_reason = "depth_exhausted_without_final_native_leaf";
+    output.failure_level = tree_height - 1;
+    return output;
+  }
+};
+
+enum class PlacementKind { kBase, kDirect, kDelta, kDeleted, kUnknown };
+
+inline const char* placement_name(PlacementKind kind) {
+  switch (kind) {
+    case PlacementKind::kBase: return "base";
+    case PlacementKind::kDirect: return "direct";
+    case PlacementKind::kDelta: return "delta";
+    case PlacementKind::kDeleted: return "deleted";
+    default: return "unknown";
+  }
+}
+
+struct Placement {
+  PlacementKind kind = PlacementKind::kUnknown;
+  int sidecar_leaf_id = -1;
+  StrictCertificate certificate;
+  std::string fallback_reason;
+  int sidecar_size_before = -1;
+  // Direct placements bind to the frozen generation that certified their
+  // sibling-min path; a later rebuild clears them rather than reusing it.
+  std::uint64_t frozen_tree_version = 0;
+  std::string frozen_tree_payload_sha256;
+};
+
+class SafeC1State {
+ public:
+  SafeC1State() = default;
+  SafeC1State(int stable_capacity, int leaf_capacity) { reset(stable_capacity, leaf_capacity); }
+
+  void reset(int stable_capacity, int leaf_capacity) {
+    if (stable_capacity <= 0 || leaf_capacity <= 0) fail("invalid Safe-C1 state capacity");
+    active_.assign(static_cast<std::size_t>(stable_capacity), 0);
+    placement_.assign(static_cast<std::size_t>(stable_capacity), Placement{});
+    sidecars_.clear();
+    delta_.clear();
+    leaf_capacity_ = leaf_capacity;
+  }
+
+  void initialize_base(const std::vector<StableId>& base_ids) {
+    for (StableId stable : base_ids) {
+      check_stable(stable);
+      if (active_[stable] != 0) fail("duplicate immutable base stable ID when initializing state");
+      active_[stable] = 1;
+      placement_[stable] = Placement{PlacementKind::kBase, -1, StrictCertificate{}, "", -1};
+    }
+  }
+
+  // This method mutates only a caller-owned draft.  NativeSafeC1Matrix commits
+  // that draft with swap_noexcept only after frozen-tree and partition checks
+  // pass, so a failed postcheck cannot leave a partial public state.
+  [[nodiscard]] Placement insert(StableId stable, const FrozenTreeSnapshot& frozen,
+                                 const BaseTreeRuntime& runtime, const ImmutablePool& pool,
+                                 std::uint64_t tree_version,
+                                 bool direct_visibility_runtime_gate_open) {
+    check_stable(stable);
+    if (active_[stable] != 0) fail("inserted stable ID is already live");
+    const StrictCertificate certificate = frozen.certify_leaf(pool, runtime, stable);
+    Placement next;
+    next.certificate = certificate;
+    next.frozen_tree_version = tree_version;
+    next.frozen_tree_payload_sha256 = frozen.tree_payload_sha256;
+    if (certificate.ok && direct_visibility_runtime_gate_open) {
+      auto& values = sidecars_[certificate.sidecar_leaf_id];
+      next.sidecar_size_before = static_cast<int>(values.size());
+      if (next.sidecar_size_before < leaf_capacity_) {
+        values.push_back(stable);
+        next.kind = PlacementKind::kDirect;
+        next.sidecar_leaf_id = certificate.sidecar_leaf_id;
+        active_[stable] = 1;
+        placement_[stable] = next;
+        return next;
+      }
+      next.kind = PlacementKind::kDelta;
+      next.fallback_reason = "capacity";
+    } else {
+      next.kind = PlacementKind::kDelta;
+      if (!certificate.ok) {
+        next.fallback_reason = certificate.failure_reason.empty()
+                                   ? "native_predicate_certificate"
+                                   : certificate.failure_reason;
+      } else {
+        // Safe default for this static phase: no direct placement becomes live
+        // until a future runtime guard has independently bound predicate/
+        // receipt/oracle evidence for this exact source closure.
+        next.fallback_reason = "direct_visibility_runtime_guard_closed";
+      }
+    }
+    delta_.push_back(stable);
+    active_[stable] = 1;
+    placement_[stable] = next;
+    return next;
+  }
+
+  [[nodiscard]] Placement erase_mutable(StableId stable) {
+    check_stable(stable);
+    if (active_[stable] == 0) fail("delete targets inactive stable ID");
+    Placement prior = placement_[stable];
+    if (prior.kind == PlacementKind::kBase) {
+      fail("immutable base deletion requires an explicit fresh destructive rebuild plan");
+    }
+    if (prior.kind == PlacementKind::kDirect) {
+      auto sidecar = sidecars_.find(prior.sidecar_leaf_id);
+      if (sidecar == sidecars_.end()) fail("direct placement has no sidecar");
+      auto& values = sidecar->second;
+      const auto erase_at = std::find(values.begin(), values.end(), stable);
+      if (erase_at == values.end()) fail("direct stable ID missing from recorded sidecar");
+      values.erase(erase_at);
+      if (values.empty()) sidecars_.erase(sidecar);
+    } else if (prior.kind == PlacementKind::kDelta) {
+      const auto erase_at = std::find(delta_.begin(), delta_.end(), stable);
+      if (erase_at == delta_.end()) fail("delta stable ID missing from global delta");
+      delta_.erase(erase_at);
+    } else {
+      fail("active stable ID has invalid nonmutable placement");
+    }
+    active_[stable] = 0;
+    placement_[stable] = Placement{PlacementKind::kDeleted, -1, StrictCertificate{}, "", -1};
+    return prior;
+  }
+
+  // Called only on a prevalidated replacement state before it is published as
+  // the new destructive generation.  It intentionally does not mutate the
+  // old dynamic state in place.
+  void after_successful_rebuild(const std::vector<StableId>& immutable_base_ids) {
+    std::fill(active_.begin(), active_.end(), 0);
+    std::fill(placement_.begin(), placement_.end(), Placement{});
+    sidecars_.clear();
+    delta_.clear();
+    initialize_base(immutable_base_ids);
+  }
+
+  // Exact control-plane invariant: active == immutable-base disjoint-union
+  // sidecars disjoint-union delta.  It is never an answer path and never scans
+  // vector data; query execution still scans only receipt leaves + global delta.
+  void assert_partition(const FrozenTreeSnapshot& frozen,
+                        std::uint64_t current_tree_version) const {
+    if (static_cast<int>(active_.size()) != static_cast<int>(placement_.size())) {
+      fail("Safe-C1 active/placement capacity mismatch");
+    }
+    std::vector<std::uint8_t> owner(active_.size(), 0);
+    for (StableId stable : frozen.immutable_base_stable_ids) {
+      check_stable(stable);
+      if (owner[stable] != 0) fail("duplicate stable ID in immutable base partition");
+      owner[stable] = 1;
+      if (active_[stable] == 0 || placement_[stable].kind != PlacementKind::kBase) {
+        fail("immutable base stable ID is not active/base in Safe-C1 partition");
+      }
+    }
+    for (const auto& sidecar : sidecars_) {
+      const int leaf = sidecar.first;
+      const std::vector<StableId>& values = sidecar.second;
+      if (leaf < 0 || leaf >= frozen.node_count || frozen.empty[leaf] != 0 ||
+          frozen.nodes[leaf].is_leaf != 1 || values.empty() ||
+          static_cast<int>(values.size()) > leaf_capacity_) {
+        fail("sidecar partition has invalid frozen leaf/capacity");
+      }
+      for (StableId stable : values) {
+        check_stable(stable);
+        if (owner[stable] != 0) fail("base/sidecar/delta partitions are not pairwise disjoint");
+        owner[stable] = 2;
+        const Placement& placement = placement_[stable];
+        if (active_[stable] == 0 || placement.kind != PlacementKind::kDirect ||
+            placement.sidecar_leaf_id != leaf || !placement.certificate.ok ||
+            placement.certificate.sidecar_leaf_id != leaf ||
+            !placement.certificate.every_predicate_branch_mirrored ||
+            placement.frozen_tree_version != current_tree_version ||
+            placement.frozen_tree_payload_sha256 != frozen.tree_payload_sha256) {
+          fail("direct sidecar placement does not bind to current frozen certificate");
+        }
+      }
+    }
+    for (StableId stable : delta_) {
+      check_stable(stable);
+      if (owner[stable] != 0) fail("base/sidecar/delta partitions are not pairwise disjoint");
+      owner[stable] = 3;
+      if (active_[stable] == 0 || placement_[stable].kind != PlacementKind::kDelta) {
+        fail("delta placement does not match active partition");
+      }
+    }
+    for (StableId stable = 0; stable < static_cast<StableId>(active_.size()); ++stable) {
+      if (active_[stable] != 0) {
+        if (owner[stable] == 0) fail("active stable ID is absent from base/sidecar/delta partition");
+      } else if (owner[stable] != 0) {
+        fail("inactive stable ID appears in base/sidecar/delta partition");
+      }
+    }
+  }
+
+  void swap_noexcept(SafeC1State& other) noexcept {
+    using std::swap;
+    swap(active_, other.active_);
+    swap(placement_, other.placement_);
+    swap(sidecars_, other.sidecars_);
+    swap(delta_, other.delta_);
+    swap(leaf_capacity_, other.leaf_capacity_);
+  }
+
+  [[nodiscard]] std::vector<StableId> sidecar_candidates_for(
+      const std::vector<int>& visited_leaf_ids) const {
+    std::set<int> visited(visited_leaf_ids.begin(), visited_leaf_ids.end());
+    std::vector<StableId> output;
+    for (int leaf : visited) {
+      const auto it = sidecars_.find(leaf);
+      if (it == sidecars_.end()) continue;
+      output.insert(output.end(), it->second.begin(), it->second.end());
+    }
+    std::sort(output.begin(), output.end());
+    if (std::adjacent_find(output.begin(), output.end()) != output.end()) {
+      fail("a live direct stable ID appears in more than one receipt sidecar");
+    }
+    return output;
+  }
+
+  [[nodiscard]] std::vector<std::pair<int, StableId>> sidecar_leaf_pairs_for(
+      const std::vector<int>& visited_leaf_ids) const {
+    std::set<int> visited(visited_leaf_ids.begin(), visited_leaf_ids.end());
+    std::vector<std::pair<int, StableId>> output;
+    for (int leaf : visited) {
+      const auto it = sidecars_.find(leaf);
+      if (it == sidecars_.end()) continue;
+      for (StableId stable : it->second) output.emplace_back(leaf, stable);
+    }
+    std::sort(output.begin(), output.end());
+    return output;
+  }
+
+  [[nodiscard]] std::vector<StableId> delta_ids() const {
+    std::vector<StableId> output = delta_;
+    std::sort(output.begin(), output.end());
+    if (std::adjacent_find(output.begin(), output.end()) != output.end()) {
+      fail("global delta contains duplicate stable ID");
+    }
+    return output;
+  }
+
+  [[nodiscard]] std::vector<StableId> live_ids() const {
+    std::vector<StableId> output;
+    for (StableId stable = 0; stable < static_cast<StableId>(active_.size()); ++stable) {
+      if (active_[stable] != 0) output.push_back(stable);
+    }
+    return output;
+  }
+
+  [[nodiscard]] const Placement& placement(StableId stable) const {
+    check_stable(stable);
+    return placement_[stable];
+  }
+  [[nodiscard]] bool is_active(StableId stable) const { check_stable(stable); return active_[stable] != 0; }
+  [[nodiscard]] int sidecar_live() const {
+    int total = 0;
+    for (const auto& row : sidecars_) total += static_cast<int>(row.second.size());
+    return total;
+  }
+  [[nodiscard]] int delta_live() const { return static_cast<int>(delta_.size()); }
+
+ private:
+  void check_stable(StableId stable) const {
+    if (stable < 0 || stable >= static_cast<StableId>(active_.size())) {
+      fail("stable ID outside configured immutable mapping");
+    }
+  }
+
+  std::vector<std::uint8_t> active_;
+  std::vector<Placement> placement_;
+  std::map<int, std::vector<StableId>> sidecars_;
+  std::vector<StableId> delta_;
+  int leaf_capacity_ = 0;
+};
+
+template <typename T>
+class DeviceBuffer {
+ public:
+  DeviceBuffer() = default;
+  explicit DeviceBuffer(std::size_t count) { allocate(count); }
+  ~DeviceBuffer() { reset(); }
+  DeviceBuffer(const DeviceBuffer&) = delete;
+  DeviceBuffer& operator=(const DeviceBuffer&) = delete;
+  DeviceBuffer(DeviceBuffer&& other) noexcept { swap(other); }
+  DeviceBuffer& operator=(DeviceBuffer&& other) noexcept { if (this != &other) { reset(); swap(other); } return *this; }
+
+  void allocate(std::size_t count) {
+    reset();
+    if (count == 0) return;
+    G3_CUDA(cudaMalloc(reinterpret_cast<void**>(&data_), count * sizeof(T)));
+    count_ = count;
+  }
+  void reset() noexcept {
+    if (data_) cudaFree(data_);
+    data_ = nullptr;
+    count_ = 0;
+  }
+  void copy_from_host(const std::vector<T>& input) {
+    allocate(input.size());
+    if (!input.empty()) G3_CUDA(cudaMemcpy(data_, input.data(), input.size() * sizeof(T), cudaMemcpyHostToDevice));
+  }
+  [[nodiscard]] std::vector<T> copy_to_host() const {
+    std::vector<T> output(count_);
+    if (!output.empty()) G3_CUDA(cudaMemcpy(output.data(), data_, output.size() * sizeof(T), cudaMemcpyDeviceToHost));
+    return output;
+  }
+  [[nodiscard]] T* data() { return data_; }
+  [[nodiscard]] const T* data() const { return data_; }
+  [[nodiscard]] std::size_t size() const { return count_; }
+
+ private:
+  void swap(DeviceBuffer& other) noexcept { std::swap(data_, other.data_); std::swap(count_, other.count_); }
+  T* data_ = nullptr;
+  std::size_t count_ = 0;
+};
+
+struct RangeLeafPair { int query_id; int leaf_id; };
+// Audit identity for one physical native id_list slot materialized only after
+// a traversal receipt selected its leaf.  `id_list_slot` is intentionally
+// physical/padded; it is not a compact local-row index.
+struct ReceiptBaseRow {
+  int leaf_id = -1;
+  int id_list_slot = -1;
+  LocalRow local_row = -1;
+  StableId stable_id = -1;
+};
+
+// One exact physical span selected by the traversal receipt.  Exporting this
+// together with every ReceiptBaseRow lets a future CPU validator establish
+// that rows cover [lid,lid+size) without a MAX_SIZE truncation or an N-sized
+// id_list assumption.
+struct ReceiptLeafSpan {
+  int leaf_id = -1;
+  int id_list_lid = -1;
+  int size = -1;
+};
+
+__device__ __forceinline__ unsigned long long g3_exact_l2sq(const float* left,
+                                                              const float* right,
+                                                              int dimension) {
+  unsigned long long sum = 0ULL;
+  for (int dim = 0; dim < dimension; ++dim) {
+    const long long a = llrintf(left[dim]);
+    const long long b = llrintf(right[dim]);
+    const long long delta = a - b;
+    sum += static_cast<unsigned long long>(delta * delta);
+  }
+  return sum;
+}
+
+__global__ void g3_set_range_root(unsigned char* flags, int qnum, int node_count) {
+  const int query = blockIdx.x * blockDim.x + threadIdx.x;
+  if (query < qnum) flags[query * node_count] = 1U;
+}
+
+__global__ void g3_mark_range_level(const TN* nodes, const int* empty_list,
+                                    const float* base_data, const float* query_data,
+                                    int dimension, int fanout, int node_count,
+                                    int level_start, int level_count, int qnum,
+                                    float conservative_radius,
+                                    unsigned char* flags) {
+  const int work = blockIdx.x * blockDim.x + threadIdx.x;
+  const int total = qnum * level_count;
+  if (work >= total) return;
+  const int query = work / level_count;
+  const int node_id = level_start + (work % level_count);
+  if (node_id <= 0 || node_id >= node_count || empty_list[node_id] != 0) return;
+  const int parent = (node_id - 1) / fanout;
+  if (parent < 0 || parent >= node_count || flags[query * node_count + parent] == 0U) return;
+  const TN child = nodes[node_id];
+  if (child.pid < 0) return;
+  const float* pivot = base_data + static_cast<std::size_t>(child.pid) * dimension;
+  const float* q = query_data + static_cast<std::size_t>(query) * dimension;
+  float squared = 0.0F;
+  for (int dim = 0; dim < dimension; ++dim) {
+    const float delta = pivot[dim] - q[dim];
+    squared += delta * delta;
+  }
+  const float distance = sqrtf(squared);
+  float lower_bound = fmaxf(child.min_dis - distance, 0.0F);
+  // Exact branch mirror of nodeProcessRnn/nodeProcessKnn in the pinned GTS
+  // source: non-last is `nid % TREE_ORDER != 0`, and that branch reads the
+  // next sibling's min_dis without an empty-list exception.  Snapshot capture
+  // rejects a topology for which that read would be unavailable; do not weaken
+  // the branch here, because weakening would no longer be the same predicate.
+  const bool native_last_child = (node_id % fanout) == 0;
+  if (!native_last_child) {
+    const int next = node_id + 1;
+    if (next >= node_count) return;  // snapshot validation fail-closes first.
+    lower_bound = fmaxf(lower_bound, distance - nodes[next].min_dis);
+  }
+  if (lower_bound <= conservative_radius) {
+    flags[query * node_count + node_id] = 1U;
+  }
+}
+
+__global__ void g3_scan_local_candidates(const float* base_data, const int* local_rows,
+                                         int count, const float* query, int dimension,
+                                         unsigned long long* distances) {
+  const int index = blockIdx.x * blockDim.x + threadIdx.x;
+  if (index >= count) return;
+  const int local = local_rows[index];
+  distances[index] = g3_exact_l2sq(base_data + static_cast<std::size_t>(local) * dimension,
+                                    query, dimension);
+}
+
+__global__ void g3_scan_stable_candidates(const float* pool_data,
+                                          const int* stable_to_pool_row,
+                                          const int* stable_ids, int count,
+                                          const float* query, int dimension,
+                                          unsigned long long* distances) {
+  const int index = blockIdx.x * blockDim.x + threadIdx.x;
+  if (index >= count) return;
+  const int stable = stable_ids[index];
+  const int pool_row = stable_to_pool_row[stable];
+  distances[index] = g3_exact_l2sq(pool_data + static_cast<std::size_t>(pool_row) * dimension,
+                                    query, dimension);
+}
+
+struct TraversalReceipt {
+  std::vector<StableDistance> base_results;
+  std::vector<int> visited_leaf_ids;
+  std::vector<ReceiptBaseRow> base_receipt_rows;
+  int raw_receipt_leaf_pair_count = 0;
+  int unique_receipt_leaf_count = 0;
+  // KNN res_ids are diagnostics only.  They must be attributable to an
+  // already materialized receipt row and never define the candidate set.
+  std::vector<LocalRow> native_final_res_ids;
+  bool native_final_res_ids_cross_checked = false;
+  std::uint64_t tree_version = 0;
+  std::string tree_payload_sha256;
+  std::string native_tree_bytes_sha256;
+  std::string immutable_base_stable_ids_sha256;
+  std::string immutable_base_payload_sha256;
+  std::string local_to_stable_sha256_value;
+  bool receipt_before_leaf_materialization = false;
+  bool range_predicate_mirror_branch_aligned = false;
+  int id_list_capacity = 0;
+  std::vector<ReceiptLeafSpan> receipt_leaf_spans;
+  std::string base_path;
+};
+
+inline int level_start_for(int depth, int fanout) {
+  int start = 0;
+  int width = 1;
+  for (int level = 0; level < depth; ++level) {
+    start += width;
+    if (width > std::numeric_limits<int>::max() / fanout) fail("tree level offset overflow");
+    width *= fanout;
+  }
+  return start;
+}
+
+inline float conservative_range_radius(DistanceSq radius_sq) {
+  const double exact = std::sqrt(static_cast<double>(radius_sq));
+  float output = static_cast<float>(exact);
+  for (int step = 0; step < kRangeRadiusSafetyUlps; ++step) {
+    output = std::nextafter(output, std::numeric_limits<float>::infinity());
+  }
+  return output;
+}
+
+inline std::vector<int> normalized_local_rows(const std::vector<int>& rows, int upper) {
+  std::vector<int> output = rows;
+  for (int local : output) {
+    if (local < 0 || local >= upper) fail("GTS traversal returned local row outside compact map");
+  }
+  std::sort(output.begin(), output.end());
+  output.erase(std::unique(output.begin(), output.end()), output.end());
+  return output;
+}
+
+inline std::vector<StableDistance> scan_local_rows_exact(const BaseTreeRuntime& runtime,
+                                                          const float* query_device,
+                                                          const std::vector<int>& input_rows) {
+  const std::vector<int> rows = normalized_local_rows(input_rows, runtime.base_count);
+  if (rows.empty()) return {};
+  DeviceBuffer<int> rows_device;
+  rows_device.copy_from_host(rows);
+  DeviceBuffer<unsigned long long> distances_device(rows.size());
+  constexpr int threads = 256;
+  const int blocks = static_cast<int>((rows.size() + threads - 1U) / threads);
+  g3_scan_local_candidates<<<blocks, threads>>>(runtime.data_d, rows_device.data(),
+                                                 static_cast<int>(rows.size()), query_device,
+                                                 runtime.data_info[0], distances_device.data());
+  G3_CUDA(cudaGetLastError());
+  G3_CUDA(cudaDeviceSynchronize());
+  const std::vector<unsigned long long> distances = distances_device.copy_to_host();
+  std::vector<StableDistance> output;
+  output.reserve(rows.size());
+  for (std::size_t index = 0; index < rows.size(); ++index) {
+    output.push_back(StableDistance{runtime.local_to_stable[rows[index]], distances[index]});
+  }
+  sort_and_require_unique(&output, "local GTS candidate export");
+  return output;
+}
+
+inline std::vector<StableDistance> scan_stable_rows_exact(const ImmutablePool& pool,
+                                                           const float* query_device,
+                                                           const std::vector<StableId>& input_ids) {
+  std::vector<StableId> ids = input_ids;
+  for (StableId stable : ids) {
+    if (stable < 0 || stable >= pool.stable_capacity()) fail("candidate stable ID outside immutable mapping");
+  }
+  std::sort(ids.begin(), ids.end());
+  if (std::adjacent_find(ids.begin(), ids.end()) != ids.end()) {
+    fail("stable candidate scan received duplicate ID");
+  }
+  if (ids.empty()) return {};
+  DeviceBuffer<int> ids_device;
+  ids_device.copy_from_host(ids);
+  DeviceBuffer<unsigned long long> distances_device(ids.size());
+  constexpr int threads = 256;
+  const int blocks = static_cast<int>((ids.size() + threads - 1U) / threads);
+  g3_scan_stable_candidates<<<blocks, threads>>>(pool.device_values(), pool.device_stable_to_pool_row(),
+                                                  ids_device.data(), static_cast<int>(ids.size()),
+                                                  query_device, pool.dimension(), distances_device.data());
+  G3_CUDA(cudaGetLastError());
+  G3_CUDA(cudaDeviceSynchronize());
+  const std::vector<unsigned long long> distances = distances_device.copy_to_host();
+  std::vector<StableDistance> output;
+  output.reserve(ids.size());
+  for (std::size_t index = 0; index < ids.size(); ++index) {
+    output.push_back(StableDistance{ids[index], distances[index]});
+  }
+  sort_and_require_unique(&output, "stable candidate export");
+  return output;
+}
+
+
+// Materialize all physical rows of receipt-selected leaves after the receipt
+// exists.  This is deliberately not derived from res_ids and not capped by
+// MAX_SIZE: tree.cuh can repack padded id_list slots and can leave a leaf with
+// a true size greater than the legacy leaf kernel's fixed bound.
+inline std::vector<ReceiptLeafSpan> receipt_leaf_spans(
+    const BaseTreeRuntime& runtime, const FrozenTreeSnapshot& snapshot,
+    const std::vector<int>& receipt_leaf_ids) {
+  std::vector<int> leaves = receipt_leaf_ids;
+  std::sort(leaves.begin(), leaves.end());
+  leaves.erase(std::unique(leaves.begin(), leaves.end()), leaves.end());
+  std::vector<ReceiptLeafSpan> output;
+  output.reserve(leaves.size());
+  for (int leaf_id : leaves) {
+    if (leaf_id < 0 || leaf_id >= snapshot.node_count || snapshot.empty[leaf_id] != 0 ||
+        snapshot.nodes[leaf_id].is_leaf != 1) {
+      fail("receipt contains a non-leaf or absent native GTS node");
+    }
+    const TN& leaf = snapshot.nodes[leaf_id];
+    if (leaf.lid < 0 || leaf.size < 0 ||
+        static_cast<std::uint64_t>(leaf.lid) + static_cast<std::uint64_t>(leaf.size) >
+            static_cast<std::uint64_t>(runtime.id_list_capacity)) {
+      fail("receipt leaf exceeds the physical padded id_list allocation");
+    }
+    output.push_back(ReceiptLeafSpan{leaf_id, leaf.lid, leaf.size});
+  }
+  return output;
+}
+
+inline std::vector<ReceiptBaseRow> materialize_receipt_leaf_rows(
+    const BaseTreeRuntime& runtime, const FrozenTreeSnapshot& snapshot,
+    const std::vector<int>& receipt_leaf_ids) {
+  const std::vector<ReceiptLeafSpan> spans =
+      receipt_leaf_spans(runtime, snapshot, receipt_leaf_ids);
+  std::set<LocalRow> seen_local_rows;
+  std::vector<ReceiptBaseRow> output;
+  for (const ReceiptLeafSpan& span : spans) {
+    std::vector<LocalRow> local_rows(static_cast<std::size_t>(span.size));
+    if (!local_rows.empty()) {
+      // This D2H copy is intentionally after receipt capture.  It reads the
+      // exact native physical payload [lid,lid+size), not a compact-row guess.
+      G3_CUDA(cudaMemcpy(local_rows.data(), runtime.id_list + span.id_list_lid,
+                         local_rows.size() * sizeof(LocalRow), cudaMemcpyDeviceToHost));
+    }
+    for (int offset = 0; offset < span.size; ++offset) {
+      const LocalRow local = local_rows[static_cast<std::size_t>(offset)];
+      if (local < 0 || local >= runtime.base_count) {
+        fail("receipt leaf native id_list payload has an invalid compact local row");
+      }
+      if (!seen_local_rows.insert(local).second) {
+        fail("receipt-selected leaves share a native local row; cannot silently deduplicate");
+      }
+      const StableId stable = runtime.local_to_stable[local];
+      if (stable < 0 || stable >= static_cast<int>(runtime.stable_to_local.size()) ||
+          runtime.stable_to_local[stable] != local) {
+        fail("receipt leaf local-to-stable mapping is not an immutable bijection");
+      }
+      output.push_back(ReceiptBaseRow{span.leaf_id, span.id_list_lid + offset, local, stable});
+    }
+  }
+  return output;
+}
+
+inline TraversalReceipt run_gts_base_topk_with_receipt(
+    BaseTreeRuntime& runtime, const float* query_device, int qnum, int k,
+    std::uint64_t tree_version, const FrozenTreeSnapshot& snapshot) {
+  if (!runtime.ready() || query_device == nullptr || qnum != 1 || k <= 0) {
+    fail("G3 top-k adapter requires one valid external vector query and positive k");
+  }
+  int* local_result_ids = nullptr;
+  G3_CUDA(cudaMallocManaged(reinterpret_cast<void**>(&local_result_ids),
+                            static_cast<std::size_t>(qnum) * k * sizeof(int)));
+  for (int index = 0; index < qnum * k; ++index) local_result_ids[index] = -1;
+  try {
+    // c_rp_mode is configured to zero by NativeSafeC1Matrix.  The copied GTS
+    // traversal itself produces this receipt before it scans GTS base leaves.
+    update_disk = false;
+    searchIndexKnnV2(runtime.data_d, runtime.node_list, runtime.id_list,
+                      runtime.max_node_num, const_cast<float*>(query_device), local_result_ids,
+                      qnum, k, runtime.tree_height, runtime.data_info,
+                      runtime.empty_list, runtime.data_s, runtime.size_s);
+    G3_CUDA(cudaDeviceSynchronize());
+    G3_CUDA(cudaGetLastError());
+
+    TraversalReceipt output;
+    output.raw_receipt_leaf_pair_count =
+        static_cast<int>(safe_c1_last_visited_leaf_pairs.size());
+    for (const SafeC1VisitedLeafPair& pair : safe_c1_last_visited_leaf_pairs) {
+      if (pair.query_id != 0 || pair.leaf_id < 0 || pair.leaf_id >= snapshot.node_count ||
+          snapshot.empty[pair.leaf_id] != 0 || snapshot.nodes[pair.leaf_id].is_leaf != 1) {
+        fail("real GTS top-k receipt emitted invalid leaf/query pair");
+      }
+      output.visited_leaf_ids.push_back(pair.leaf_id);
+    }
+    std::sort(output.visited_leaf_ids.begin(), output.visited_leaf_ids.end());
+    output.visited_leaf_ids.erase(
+        std::unique(output.visited_leaf_ids.begin(), output.visited_leaf_ids.end()),
+        output.visited_leaf_ids.end());
+    output.unique_receipt_leaf_count = static_cast<int>(output.visited_leaf_ids.size());
+
+    // Receipt boundary: the actual GTS traversal has selected the leaf pairs;
+    // only now may G3 materialize every physical id_list row of those leaves.
+    output.receipt_before_leaf_materialization = true;
+    output.id_list_capacity = runtime.id_list_capacity;
+    output.receipt_leaf_spans =
+        receipt_leaf_spans(runtime, snapshot, output.visited_leaf_ids);
+    output.base_receipt_rows =
+        materialize_receipt_leaf_rows(runtime, snapshot, output.visited_leaf_ids);
+    std::vector<LocalRow> receipt_locals;
+    receipt_locals.reserve(output.base_receipt_rows.size());
+    std::set<LocalRow> receipt_local_set;
+    for (const ReceiptBaseRow& row : output.base_receipt_rows) {
+      receipt_locals.push_back(row.local_row);
+      if (!receipt_local_set.insert(row.local_row).second) {
+        fail("top-k receipt materialization did not preserve one owner per native local row");
+      }
+    }
+    // All base candidates come from the full receipt leaf payload.  Native
+    // res_ids are deliberately not an input to this exact scan.
+    output.base_results = scan_local_rows_exact(runtime, query_device, receipt_locals);
+
+    // res_ids are retained only as a diagnostic cross-check.  A non-sentinel
+    // result not attributable to a receipt leaf is a fail-close mismatch.
+    for (int index = 0; index < qnum * k; ++index) {
+      const LocalRow local = local_result_ids[index];
+      output.native_final_res_ids.push_back(local);
+      if (local == -1) continue;
+      if (local < 0 || local >= runtime.base_count) {
+        fail("native top-k res_ids contains an invalid non-sentinel local row");
+      }
+      if (receipt_local_set.find(local) == receipt_local_set.end()) {
+        fail("native top-k res_ids is not attributable to a receipt leaf payload");
+      }
+    }
+    output.native_final_res_ids_cross_checked = true;
+    output.tree_version = tree_version;
+    output.tree_payload_sha256 = snapshot.tree_payload_sha256;
+    output.native_tree_bytes_sha256 = snapshot.native_tree_bytes_sha256;
+    output.immutable_base_stable_ids_sha256 = snapshot.immutable_base_stable_ids_sha256;
+    output.immutable_base_payload_sha256 = snapshot.immutable_base_payload_sha256;
+    output.local_to_stable_sha256_value = snapshot.local_to_stable_sha256_value;
+    output.base_path = "real_gts_vector_topk_receipt_all_native_leaf_rows";
+    if (res_dis) { G3_CUDA(cudaFree(res_dis)); res_dis = nullptr; }
+    G3_CUDA(cudaFree(local_result_ids));
+    return output;
+  } catch (...) {
+    if (res_dis) { cudaFree(res_dis); res_dis = nullptr; }
+    cudaFree(local_result_ids);
+    throw;
+  }
+}
+
+inline TraversalReceipt run_gts_base_range_with_receipt(
+    BaseTreeRuntime& runtime, const float* query_device, int qnum, DistanceSq radius_sq,
+    std::uint64_t tree_version, const FrozenTreeSnapshot& snapshot) {
+  if (!runtime.ready() || query_device == nullptr || qnum != 1 || !snapshot.initialized()) {
+    fail("G3 vector range adapter requires one valid frozen GTS runtime");
+  }
+  const int node_count = snapshot.node_count;
+  if (node_count <= 0 || snapshot.fanout <= 1) fail("invalid frozen GTS node topology for range");
+  DeviceBuffer<unsigned char> flags(static_cast<std::size_t>(qnum) * node_count);
+  G3_CUDA(cudaMemset(flags.data(), 0, flags.size() * sizeof(unsigned char)));
+  constexpr int threads = 256;
+  g3_set_range_root<<<(qnum + threads - 1) / threads>>>(flags.data(), qnum, node_count);
+  G3_CUDA(cudaGetLastError());
+  for (int depth = 1; depth < runtime.tree_height; ++depth) {
+    const int start = level_start_for(depth, snapshot.fanout);
+    if (start >= node_count) break;
+    const int next = level_start_for(depth + 1, snapshot.fanout);
+    const int count = std::min(node_count, next) - start;
+    if (count <= 0) continue;
+    const int work = qnum * count;
+    g3_mark_range_level<<<(work + threads - 1) / threads>>>(
+        runtime.node_list, runtime.empty_list, runtime.data_d, query_device,
+        runtime.data_info[0], snapshot.fanout, node_count, start, count, qnum,
+        conservative_range_radius(radius_sq), flags.data());
+    G3_CUDA(cudaGetLastError());
+  }
+  G3_CUDA(cudaDeviceSynchronize());
+  const std::vector<unsigned char> host_flags = flags.copy_to_host();
+  std::vector<RangeLeafPair> selected;
+  for (int query = 0; query < qnum; ++query) {
+    for (int node = 0; node < node_count; ++node) {
+      if (host_flags[static_cast<std::size_t>(query) * node_count + node] == 0U ||
+          snapshot.empty[node] != 0 || snapshot.nodes[node].is_leaf != 1) {
+        continue;
+      }
+      selected.push_back(RangeLeafPair{query, node});
+    }
+  }
+  std::sort(selected.begin(), selected.end(), [](const RangeLeafPair& left, const RangeLeafPair& right) {
+    return left.query_id != right.query_id ? left.query_id < right.query_id : left.leaf_id < right.leaf_id;
+  });
+  selected.erase(std::unique(selected.begin(), selected.end(), [](const RangeLeafPair& left, const RangeLeafPair& right) {
+    return left.query_id == right.query_id && left.leaf_id == right.leaf_id;
+  }), selected.end());
+
+  TraversalReceipt output;
+  // This is a branch-aligned vector predicate mirror, not an invocation of
+  // legacy searchIndexRnnV2 (which accepts only ID queries).  The selected
+  // leaves are the receipt boundary; no leaf payload is read before this flag.
+  output.raw_receipt_leaf_pair_count = static_cast<int>(selected.size());
+  for (const RangeLeafPair& pair : selected) {
+    if (pair.query_id == 0) output.visited_leaf_ids.push_back(pair.leaf_id);
+  }
+  std::sort(output.visited_leaf_ids.begin(), output.visited_leaf_ids.end());
+  output.visited_leaf_ids.erase(
+      std::unique(output.visited_leaf_ids.begin(), output.visited_leaf_ids.end()),
+      output.visited_leaf_ids.end());
+  output.unique_receipt_leaf_count = static_cast<int>(output.visited_leaf_ids.size());
+  output.receipt_before_leaf_materialization = true;
+  output.range_predicate_mirror_branch_aligned = true;
+  output.id_list_capacity = runtime.id_list_capacity;
+  output.receipt_leaf_spans =
+      receipt_leaf_spans(runtime, snapshot, output.visited_leaf_ids);
+  output.base_receipt_rows =
+      materialize_receipt_leaf_rows(runtime, snapshot, output.visited_leaf_ids);
+  std::vector<LocalRow> receipt_locals;
+  receipt_locals.reserve(output.base_receipt_rows.size());
+  for (const ReceiptBaseRow& row : output.base_receipt_rows) receipt_locals.push_back(row.local_row);
+  output.base_results = scan_local_rows_exact(runtime, query_device, receipt_locals);
+  output.base_results.erase(
+      std::remove_if(output.base_results.begin(), output.base_results.end(),
+                     [radius_sq](const StableDistance& row) { return row.distance_sq > radius_sq; }),
+      output.base_results.end());
+  output.tree_version = tree_version;
+  output.tree_payload_sha256 = snapshot.tree_payload_sha256;
+  output.native_tree_bytes_sha256 = snapshot.native_tree_bytes_sha256;
+  output.immutable_base_stable_ids_sha256 = snapshot.immutable_base_stable_ids_sha256;
+  output.immutable_base_payload_sha256 = snapshot.immutable_base_payload_sha256;
+  output.local_to_stable_sha256_value = snapshot.local_to_stable_sha256_value;
+  output.base_path = "gts_vector_range_branch_aligned_predicate_mirror_receipt";
+  return output;
+}
+
+struct RebuildReceipt {
+  std::uint64_t tree_version = 0;
+  // Kept for trace compatibility: after a successful rebuild this equals the
+  // new immutable-base set, never the mutable pre-rebuild active assertion.
+  std::string live_ids_sha256;
+  std::string immutable_base_stable_ids_sha256;
+  std::string immutable_base_payload_sha256;
+  std::string native_tree_bytes_sha256;
+  std::string local_to_stable_sha256_value;
+  std::string logical_leaf_stable_ids_sha256;
+  std::string tree_payload_sha256;
+  int base_count = 0;
+  int sidecar_live = -1;
+  int delta_live = -1;
+  bool compact_mapping_bijection_ok = false;
+  bool raw_leaf_rows_cover_compact_range = false;
+  // The legacy max_dis_d global prevents a concurrent old/candidate tree.
+  // Rebuild is intentionally destructive; candidate failure latches FailedStop.
+  bool destructive_fail_stop_contract = true;
+  bool old_generation_retired_before_candidate_build = true;
+  bool dynamic_tiers_replaced_after_generation_publish = false;
+  bool post_rebuild_knn_oracle_required = true;
+  bool post_rebuild_range_oracle_required = true;
+};
+
+struct QueryExport {
+  std::string kind;
+  int query_id = -1;
+  DistanceSq radius_sq = 0;
+  std::uint64_t tree_version = 0;
+  std::string tree_payload_sha256;
+  std::string native_tree_bytes_sha256;
+  std::string immutable_base_stable_ids_sha256;
+  std::string immutable_base_payload_sha256;
+  std::string local_to_stable_sha256_value;
+  std::string base_path;
+  bool receipt_before_leaf_materialization = false;
+  bool range_receipt_before_leaf_materialization = false;
+  bool range_predicate_mirror_branch_aligned = false;
+  int id_list_capacity = 0;
+  bool native_final_res_ids_cross_checked = false;
+  // Range sidecars are independently exact-filtered by d^2 <= r^2.  This
+  // marker is not a claim that the KNN direct certificate proves range.
+  bool direct_sidecars_exact_range_filtered = false;
+  bool production_full_live_scan = false;
+  bool post_rebuild_oracle_required = false;
+  int raw_receipt_leaf_pair_count = 0;
+  int unique_receipt_leaf_count = 0;
+  std::vector<int> gts_visited_leaf_ids;
+  std::vector<ReceiptLeafSpan> receipt_leaf_spans;
+  std::vector<ReceiptBaseRow> base_receipt_rows;
+  std::vector<LocalRow> native_final_res_ids;
+  std::vector<std::pair<int, StableId>> sidecar_source_leaf_pairs;
+  std::vector<StableId> sidecar_candidate_ids;
+  std::vector<StableId> delta_candidate_ids;
+  std::vector<StableDistance> base_results;
+  std::vector<StableDistance> sidecar_results;
+  std::vector<StableDistance> delta_results;
+  std::vector<StableDistance> results;
+};
+
+enum class EngineMode {
+  kUninitialized,
+  kReady,
+  kAwaitingPostRebuildOracle,
+  kRebuildDestructive,
+  kFailedStop,
+  kDestroyed,
+};
+
+inline const char* engine_mode_name(EngineMode mode) {
+  switch (mode) {
+    case EngineMode::kUninitialized: return "uninitialized";
+    case EngineMode::kReady: return "ready";
+    case EngineMode::kAwaitingPostRebuildOracle: return "awaiting_post_rebuild_oracle";
+    case EngineMode::kRebuildDestructive: return "rebuild_destructive";
+    case EngineMode::kFailedStop: return "failed_stop";
+    case EngineMode::kDestroyed: return "destroyed";
+  }
+  return "unknown";
+}
+
+class PostRebuildOracleGate {
+ public:
+  void reset(std::uint64_t tree_version) {
+    tree_version_ = tree_version;
+    needs_knn_ = true;
+    needs_range_ = true;
+    knn_issued_ = false;
+    range_issued_ = false;
+  }
+
+  [[nodiscard]] bool requires(const std::string& kind) const {
+    if (kind == "knn") return needs_knn_;
+    if (kind == "range") return needs_range_;
+    fail("unknown query kind in post-rebuild gate");
+  }
+
+  void mark_query_issued(const std::string& kind) {
+    if (kind == "knn") {
+      if (!needs_knn_ || knn_issued_) fail("post-rebuild KNN must be independently verified before another KNN");
+      knn_issued_ = true;
+      return;
+    }
+    if (kind == "range") {
+      if (!needs_range_ || range_issued_) fail("post-rebuild range must be independently verified before another range");
+      range_issued_ = true;
+      return;
+    }
+    fail("unknown query kind in post-rebuild gate");
+  }
+
+  // The caller supplies an independent externally generated oracle; this gate
+  // deliberately never derives an answer by enumerating all live rows.
+  void verify_first_after_rebuild(const QueryExport& actual,
+                                  const std::vector<StableDistance>& independent_expected) {
+    if (actual.tree_version != tree_version_) fail("post-rebuild oracle used wrong tree version");
+    if (actual.kind == "knn" && (!needs_knn_ || !knn_issued_)) {
+      fail("post-rebuild KNN oracle verification has no issued pending query");
+    }
+    if (actual.kind == "range" && (!needs_range_ || !range_issued_)) {
+      fail("post-rebuild range oracle verification has no issued pending query");
+    }
+    if (actual.results != independent_expected) {
+      fail("post-rebuild stable-ID result differs from independent oracle");
+    }
+    if (actual.kind == "knn") needs_knn_ = false;
+    else if (actual.kind == "range") needs_range_ = false;
+    else fail("unknown query kind in post-rebuild gate");
+  }
+
+  [[nodiscard]] bool complete() const { return !needs_knn_ && !needs_range_; }
+  [[nodiscard]] bool needs_knn() const { return needs_knn_; }
+  [[nodiscard]] bool needs_range() const { return needs_range_; }
+
+ private:
+  std::uint64_t tree_version_ = 0;
+  bool needs_knn_ = false;
+  bool needs_range_ = false;
+  bool knn_issued_ = false;
+  bool range_issued_ = false;
+};
+
+inline std::vector<StableDistance> merge_partition_results(
+    const std::vector<StableDistance>& base,
+    const std::vector<StableDistance>& sidecar,
+    const std::vector<StableDistance>& delta) {
+  std::vector<StableDistance> merged;
+  merged.reserve(base.size() + sidecar.size() + delta.size());
+  merged.insert(merged.end(), base.begin(), base.end());
+  merged.insert(merged.end(), sidecar.begin(), sidecar.end());
+  merged.insert(merged.end(), delta.begin(), delta.end());
+  sort_and_require_unique(&merged, "production receipt candidate partitions");
+  return merged;
+}
+
+class FreshStableIdRebuild;
+
+class NativeSafeC1Matrix {
+ public:
+  NativeSafeC1Matrix(int sidecar_leaf_capacity, int requested_k)
+      : sidecar_leaf_capacity_(sidecar_leaf_capacity), requested_k_(requested_k) {
+    if (sidecar_leaf_capacity_ <= 0 || requested_k_ <= 0) {
+      fail("invalid native Safe-C1 matrix configuration");
+    }
+  }
+
+  ~NativeSafeC1Matrix() {
+    release_runtime(&runtime_);
+    mode_ = EngineMode::kDestroyed;
+  }
+  NativeSafeC1Matrix(const NativeSafeC1Matrix&) = delete;
+  NativeSafeC1Matrix& operator=(const NativeSafeC1Matrix&) = delete;
+
+  void initialize_immutable_pool(int dimension, std::vector<std::int16_t> values,
+                                 std::vector<int> stable_to_pool_row) {
+    if (mode_ != EngineMode::kUninitialized || runtime_.ready()) {
+      fail("cannot replace immutable pool after engine initialization or fail-stop");
+    }
+    pool_.initialize(dimension, std::move(values), std::move(stable_to_pool_row));
+    state_.reset(pool_.stable_capacity(), sidecar_leaf_capacity_);
+    configure_no_residual_pruning();
+  }
+
+  RebuildReceipt build_initial_base(const std::vector<StableId>& base_ids) {
+    if (pool_.dimension() == 0) fail("initialize immutable pool before building base");
+    if (mode_ != EngineMode::kUninitialized || runtime_.ready()) {
+      fail("initial base requires an uninitialized engine");
+    }
+    return rebuild_from_live_stable_ids(base_ids);
+  }
+
+  Placement insert(StableId stable) {
+    require_ready_for_mutation();
+    frozen_.assert_unchanged(runtime_);
+    state_.assert_partition(frozen_, tree_version_);
+    SafeC1State draft = state_;
+    try {
+      Placement placed = draft.insert(stable, frozen_, runtime_, pool_, tree_version_,
+                                      G3_DIRECT_SIDECAR_RUNTIME_GUARD_OPEN);
+      frozen_.assert_unchanged(runtime_);
+      draft.assert_partition(frozen_, tree_version_);
+      state_.swap_noexcept(draft);
+      ++state_epoch_;
+      return placed;
+    } catch (...) {
+      // Public state_ was never written; this is an all-or-nothing mutation.
+      throw;
+    }
+  }
+
+  Placement erase_mutable(StableId stable) {
+    require_ready_for_mutation();
+    frozen_.assert_unchanged(runtime_);
+    state_.assert_partition(frozen_, tree_version_);
+    SafeC1State draft = state_;
+    try {
+      Placement prior = draft.erase_mutable(stable);
+      frozen_.assert_unchanged(runtime_);
+      draft.assert_partition(frozen_, tree_version_);
+      state_.swap_noexcept(draft);
+      ++state_epoch_;
+      return prior;
+    } catch (...) {
+      // Public state_ was never written; this is an all-or-nothing mutation.
+      throw;
+    }
+  }
+
+  // Only the current partition state may request a public rebuild.  Raw custom
+  // live-ID vectors are private to FreshStableIdRebuild and still enter the
+  // same destructive fail-stop transition.
+  RebuildReceipt rebuild_from_current_live() {
+    require_ready_for_mutation();
+    return rebuild_from_live_stable_ids(state_.live_ids());
+  }
+
+  QueryExport query_knn(int query_id, const std::int16_t* query_values, int k = -1) {
+    if (k < 0) k = requested_k_;
+    if (k <= 0) fail("KNN requires positive k");
+    require_ready_for_query("knn");
+    frozen_.assert_unchanged(runtime_);
+    state_.assert_partition(frozen_, tree_version_);
+    const bool oracle_required = mode_ == EngineMode::kAwaitingPostRebuildOracle &&
+                                 post_rebuild_gate_.requires("knn");
+    if (oracle_required) post_rebuild_gate_.mark_query_issued("knn");
+    DeviceBuffer<float> query_device;
+    upload_external_query(query_values, &query_device);
+    TraversalReceipt base = run_gts_base_topk_with_receipt(runtime_, query_device.data(), 1, k,
+                                                            tree_version_, frozen_);
+    QueryExport output = merge_query_partitions("knn", query_id, 0, base, query_device.data(), false);
+    output.post_rebuild_oracle_required = oracle_required;
+    if (static_cast<int>(output.results.size()) > k) output.results.resize(static_cast<std::size_t>(k));
+    frozen_.assert_unchanged(runtime_);
+    state_.assert_partition(frozen_, tree_version_);
+    return output;
+  }
+
+  QueryExport query_range(int query_id, const std::int16_t* query_values, DistanceSq radius_sq) {
+    require_ready_for_query("range");
+    frozen_.assert_unchanged(runtime_);
+    state_.assert_partition(frozen_, tree_version_);
+    const bool oracle_required = mode_ == EngineMode::kAwaitingPostRebuildOracle &&
+                                 post_rebuild_gate_.requires("range");
+    if (oracle_required) post_rebuild_gate_.mark_query_issued("range");
+    DeviceBuffer<float> query_device;
+    upload_external_query(query_values, &query_device);
+    TraversalReceipt base = run_gts_base_range_with_receipt(runtime_, query_device.data(), 1, radius_sq,
+                                                             tree_version_, frozen_);
+    QueryExport output = merge_query_partitions("range", query_id, radius_sq, base, query_device.data(), true);
+    output.post_rebuild_oracle_required = oracle_required;
+    frozen_.assert_unchanged(runtime_);
+    state_.assert_partition(frozen_, tree_version_);
+    return output;
+  }
+
+  // Required runner action.  A mismatch latches FailedStop; both independent
+  // KNN/range oracle checks are required before mutations/rebuild are enabled.
+  void verify_first_post_rebuild_query(const QueryExport& actual,
+                                       const std::vector<StableDistance>& expected) {
+    if (mode_ != EngineMode::kAwaitingPostRebuildOracle) {
+      fail("post-rebuild oracle verification is not pending");
+    }
+    try {
+      post_rebuild_gate_.verify_first_after_rebuild(actual, expected);
+      if (post_rebuild_gate_.complete()) mode_ = EngineMode::kReady;
+    } catch (...) {
+      enter_failed_stop_noexcept();
+      throw;
+    }
+  }
+
+  [[nodiscard]] const PostRebuildOracleGate& post_rebuild_gate() const { return post_rebuild_gate_; }
+  [[nodiscard]] const FrozenTreeSnapshot& frozen_snapshot() const { return frozen_; }
+  [[nodiscard]] const SafeC1State& state() const { return state_; }
+  [[nodiscard]] std::uint64_t tree_version() const { return tree_version_; }
+  [[nodiscard]] EngineMode mode() const { return mode_; }
+  [[nodiscard]] bool post_rebuild_oracle_pending() const {
+    return mode_ == EngineMode::kAwaitingPostRebuildOracle && !post_rebuild_gate_.complete();
+  }
+
+ private:
+  friend class FreshStableIdRebuild;
+
+  RebuildReceipt rebuild_from_live_stable_ids(const std::vector<StableId>& requested_live_ids) {
+    if (pool_.dimension() == 0) fail("immutable pool is not initialized");
+    if (mode_ == EngineMode::kFailedStop || mode_ == EngineMode::kDestroyed ||
+        mode_ == EngineMode::kRebuildDestructive) {
+      fail("destructive rebuild fail-stop/state barrier rejects this operation");
+    }
+    if (mode_ == EngineMode::kAwaitingPostRebuildOracle) {
+      fail("post-rebuild KNN and range independent oracle checks must complete before another rebuild");
+    }
+    if (mode_ != EngineMode::kUninitialized && mode_ != EngineMode::kReady) {
+      fail("rebuild entered from an invalid engine state");
+    }
+    if (mode_ == EngineMode::kReady) {
+      frozen_.assert_unchanged(runtime_);
+      state_.assert_partition(frozen_, tree_version_);
+    }
+
+    std::vector<StableId> live = requested_live_ids;
+    std::sort(live.begin(), live.end());
+    if (live.empty()) fail("fresh destructive rebuild refuses an empty GTS base");
+    if (std::adjacent_find(live.begin(), live.end()) != live.end()) {
+      fail("fresh destructive rebuild has duplicate live stable ID");
+    }
+    for (StableId stable : live) {
+      if (stable < 0 || stable >= pool_.stable_capacity()) {
+        fail("fresh destructive rebuild stable ID outside immutable map");
+      }
+    }
+
+    // Host-only replacement state is fully prepared before the destructive
+    // barrier.  No mutation of current state_ has occurred yet.
+    SafeC1State replacement(pool_.stable_capacity(), sidecar_leaf_capacity_);
+    replacement.initialize_base(live);
+
+    // tree.cuh owns max_dis_d globally, so an old and candidate tree cannot
+    // coexist.  This is intentionally a single-engine destructive fail-stop:
+    // once old bytes are retired, any candidate failure latches FailedStop.
+    mode_ = EngineMode::kRebuildDestructive;
+    BaseTreeRuntime candidate;
+    try {
+      release_runtime(&runtime_);
+      frozen_ = FrozenTreeSnapshot{};
+      build_compact_runtime(live, &candidate);
+      FrozenTreeSnapshot candidate_snapshot;
+      candidate_snapshot.capture(candidate);
+      if (candidate_snapshot.logical_leaf_row_count != static_cast<int>(live.size()) ||
+          candidate_snapshot.immutable_base_stable_ids_sha256 != stable_set_sha256(live)) {
+        fail("candidate immutable base/leaf payload does not equal requested live IDs");
+      }
+      const std::uint64_t next_version = tree_version_ + 1;
+      replacement.assert_partition(candidate_snapshot, next_version);
+      PostRebuildOracleGate candidate_gate;
+      candidate_gate.reset(next_version);
+      RebuildReceipt prepared;
+      prepared.tree_version = next_version;
+      prepared.live_ids_sha256 = candidate_snapshot.immutable_base_stable_ids_sha256;
+      prepared.immutable_base_stable_ids_sha256 = candidate_snapshot.immutable_base_stable_ids_sha256;
+      prepared.immutable_base_payload_sha256 = candidate_snapshot.immutable_base_payload_sha256;
+      prepared.native_tree_bytes_sha256 = candidate_snapshot.native_tree_bytes_sha256;
+      prepared.local_to_stable_sha256_value = candidate_snapshot.local_to_stable_sha256_value;
+      prepared.logical_leaf_stable_ids_sha256 = candidate_snapshot.logical_leaf_stable_ids_sha256;
+      prepared.tree_payload_sha256 = candidate_snapshot.tree_payload_sha256;
+      prepared.base_count = candidate.base_count;
+      prepared.sidecar_live = replacement.sidecar_live();
+      prepared.delta_live = replacement.delta_live();
+      prepared.compact_mapping_bijection_ok = true;
+      prepared.raw_leaf_rows_cover_compact_range = true;
+      prepared.destructive_fail_stop_contract = true;
+      prepared.old_generation_retired_before_candidate_build = true;
+      prepared.dynamic_tiers_replaced_after_generation_publish =
+          prepared.sidecar_live == 0 && prepared.delta_live == 0;
+      if (!prepared.dynamic_tiers_replaced_after_generation_publish) {
+        fail("replacement state retained dynamic tiers before generation publish");
+      }
+
+      // All fallible validation/allocation/string construction is above.  An
+      // unexpected publish fault is caught below and latches FailedStop; the
+      // retired generation is never revived.
+      commit_generation_noexcept(&candidate, &candidate_snapshot, &replacement,
+                                 next_version, candidate_gate);
+      return prepared;
+    } catch (...) {
+      release_runtime(&candidate);
+      enter_failed_stop_noexcept();
+      throw;
+    }
+  }
+
+  static void take_runtime_noexcept(BaseTreeRuntime* destination, BaseTreeRuntime* source) noexcept {
+    destination->data_info = source->data_info;
+    destination->data_d = source->data_d;
+    destination->data_s = source->data_s;
+    destination->size_s = source->size_s;
+    destination->id_list = source->id_list;
+    destination->node_list = source->node_list;
+    destination->max_node_num = source->max_node_num;
+    destination->empty_list = source->empty_list;
+    destination->owned_max_dis_d = source->owned_max_dis_d;
+    destination->tree_height = source->tree_height;
+    destination->base_count = source->base_count;
+    destination->id_list_capacity = source->id_list_capacity;
+    destination->local_to_stable.swap(source->local_to_stable);
+    destination->stable_to_local.swap(source->stable_to_local);
+    source->data_info = nullptr;
+    source->data_d = nullptr;
+    source->data_s = nullptr;
+    source->size_s = nullptr;
+    source->id_list = nullptr;
+    source->node_list = nullptr;
+    source->max_node_num = nullptr;
+    source->empty_list = nullptr;
+    source->owned_max_dis_d = nullptr;
+    source->tree_height = 0;
+    source->base_count = 0;
+    source->id_list_capacity = 0;
+  }
+
+  void commit_generation_noexcept(BaseTreeRuntime* candidate,
+                                  FrozenTreeSnapshot* candidate_snapshot,
+                                  SafeC1State* replacement,
+                                  std::uint64_t next_version,
+                                  const PostRebuildOracleGate& candidate_gate) noexcept {
+    take_runtime_noexcept(&runtime_, candidate);
+    using std::swap;
+    swap(frozen_, *candidate_snapshot);
+    state_.swap_noexcept(*replacement);
+    tree_version_ = next_version;
+    post_rebuild_gate_ = candidate_gate;
+    ++state_epoch_;
+    mode_ = EngineMode::kAwaitingPostRebuildOracle;
+  }
+
+  static void release_runtime(BaseTreeRuntime* runtime) noexcept {
+    if (!runtime) return;
+    if (runtime->id_list) cudaFree(runtime->id_list);
+    if (runtime->node_list) cudaFree(runtime->node_list);
+    if (runtime->max_node_num) cudaFree(runtime->max_node_num);
+    if (runtime->empty_list) cudaFree(runtime->empty_list);
+    if (runtime->data_d) cudaFree(runtime->data_d);
+    if (runtime->data_info) cudaFree(runtime->data_info);
+    // Single-engine ownership: if indexConstru failed before ownership was
+    // copied into candidate->owned_max_dis_d, max_dis_d still belongs to this
+    // destructive generation and must be released rather than leaked.
+    float* global_to_free = runtime->owned_max_dis_d ? runtime->owned_max_dis_d : max_dis_d;
+    if (global_to_free && max_dis_d == global_to_free) cudaFree(max_dis_d);
+    runtime->data_info = nullptr;
+    runtime->data_d = nullptr;
+    runtime->data_s = nullptr;
+    runtime->size_s = nullptr;
+    runtime->id_list = nullptr;
+    runtime->node_list = nullptr;
+    runtime->max_node_num = nullptr;
+    runtime->empty_list = nullptr;
+    runtime->owned_max_dis_d = nullptr;
+    runtime->tree_height = 0;
+    runtime->base_count = 0;
+    runtime->id_list_capacity = 0;
+    runtime->local_to_stable.clear();
+    runtime->stable_to_local.clear();
+    max_dis_d = nullptr;
+    split_list = nullptr;
+    pid_list = nullptr;
+    dis_list = nullptr;
+    split_num = nullptr;
+  }
+
+  void enter_failed_stop_noexcept() noexcept {
+    release_runtime(&runtime_);
+    frozen_ = FrozenTreeSnapshot{};
+    mode_ = EngineMode::kFailedStop;
+  }
+
+  void build_compact_runtime(const std::vector<StableId>& live, BaseTreeRuntime* candidate) {
+    candidate->base_count = static_cast<int>(live.size());
+    candidate->local_to_stable = live;  // deterministic compact physical-row order
+    candidate->stable_to_local.assign(static_cast<std::size_t>(pool_.stable_capacity()), -1);
+    for (LocalRow local = 0; local < candidate->base_count; ++local) {
+      const StableId stable = candidate->local_to_stable[local];
+      if (candidate->stable_to_local[stable] != -1) fail("nonbijective compact mapping before GTS build");
+      candidate->stable_to_local[stable] = local;
+    }
+    G3_CUDA(cudaMallocManaged(reinterpret_cast<void**>(&candidate->data_info), 3 * sizeof(int)));
+    candidate->data_info[0] = pool_.dimension();
+    candidate->data_info[1] = candidate->base_count;
+    candidate->data_info[2] = 2;  // L2; G3 never uses C2 residual calibration here.
+    G3_CUDA(cudaMallocManaged(reinterpret_cast<void**>(&candidate->data_d),
+                              static_cast<std::size_t>(candidate->base_count) * pool_.dimension() * sizeof(float)));
+    for (LocalRow local = 0; local < candidate->base_count; ++local) {
+      const std::int16_t* source = pool_.vector_for_stable(candidate->local_to_stable[local]);
+      float* target = candidate->data_d + static_cast<std::size_t>(local) * pool_.dimension();
+      for (int dim = 0; dim < pool_.dimension(); ++dim) target[dim] = static_cast<float>(source[dim]);
+    }
+    indexConstru(candidate->data_d, nullptr, nullptr, candidate->data_info,
+                 candidate->id_list, candidate->node_list, candidate->max_node_num,
+                 candidate->tree_height, candidate->empty_list);
+    G3_CUDA(cudaDeviceSynchronize());
+    G3_CUDA(cudaGetLastError());
+    // The pinned tree.cuh repacks id_list as exactly
+    // base_count + leaf_count * LEAF_PAD_SLOTS physical int entries.  CUDA 13
+    // no longer exposes the old runtime address-range query, so derive the
+    // allocation contract from the same isolated builder source and verify all
+    // leaf [lid,lid+size) spans against it in FrozenTreeSnapshot::capture.
+    const int native_node_count = candidate->max_node_num[0];
+    if (native_node_count <= 0) fail("native tree reports invalid node capacity for padded id_list");
+    std::vector<TN> host_nodes(static_cast<std::size_t>(native_node_count));
+    std::vector<int> host_empty(static_cast<std::size_t>(native_node_count));
+    G3_CUDA(cudaMemcpy(host_nodes.data(), candidate->node_list,
+                       host_nodes.size() * sizeof(TN), cudaMemcpyDeviceToHost));
+    G3_CUDA(cudaMemcpy(host_empty.data(), candidate->empty_list,
+                       host_empty.size() * sizeof(int), cudaMemcpyDeviceToHost));
+    int native_leaf_count = 0;
+    for (int node = 0; node < native_node_count; ++node) {
+      if (host_empty[node] == 0 && host_nodes[node].is_leaf == 1) ++native_leaf_count;
+    }
+    const std::uint64_t padded_capacity =
+        static_cast<std::uint64_t>(candidate->base_count) +
+        static_cast<std::uint64_t>(native_leaf_count) * static_cast<std::uint64_t>(LEAF_PAD_SLOTS);
+    if (native_leaf_count <= 0 || padded_capacity > static_cast<std::uint64_t>(std::numeric_limits<int>::max())) {
+      fail("cannot establish physical padded id_list capacity from pinned builder contract");
+    }
+    candidate->id_list_capacity = static_cast<int>(padded_capacity);
+    candidate->owned_max_dis_d = max_dis_d;
+    if (!candidate->ready()) fail("indexConstru did not produce a complete compact GTS runtime");
+    // The constructor frees these temporaries itself.  Ensure subsequent release
+    // cannot double-free dangling archive aliases.
+    split_list = nullptr;
+    pid_list = nullptr;
+    dis_list = nullptr;
+    split_num = nullptr;
+  }
+
+  void configure_no_residual_pruning() {
+    float alpha[RP_MAX_LEVELS]{};
+    float beta[RP_MAX_LEVELS]{};
+    float gamma[RP_MAX_LEVELS];
+    std::fill(std::begin(gamma), std::end(gamma), 1.0F);
+    upload_rp_constants(alpha, beta, gamma, RP_MAX_LEVELS,
+                        nullptr, nullptr, nullptr, 0, kResidualPruningMode);
+    int device_mode = -1;
+    G3_CUDA(cudaMemcpyFromSymbol(&device_mode, c_rp_mode, sizeof(int), 0,
+                                  cudaMemcpyDeviceToHost));
+    if (device_mode != kResidualPruningMode) {
+      fail("device residual pruning mode readback is not zero");
+    }
+    residual_pruning_mode_zero_attested_ = true;
+  }
+
+  void upload_external_query(const std::int16_t* query_values, DeviceBuffer<float>* target) const {
+    if (!query_values) fail("null external vector query");
+    std::vector<float> converted(static_cast<std::size_t>(pool_.dimension()));
+    for (int dim = 0; dim < pool_.dimension(); ++dim) {
+      converted[static_cast<std::size_t>(dim)] = static_cast<float>(query_values[dim]);
+    }
+    target->copy_from_host(converted);
+  }
+
+  QueryExport merge_query_partitions(const std::string& kind, int query_id, DistanceSq radius_sq,
+                                     const TraversalReceipt& base, const float* query_device,
+                                     bool is_range) const {
+    QueryExport output;
+    output.kind = kind;
+    output.query_id = query_id;
+    output.radius_sq = radius_sq;
+    output.tree_version = base.tree_version;
+    output.tree_payload_sha256 = base.tree_payload_sha256;
+    output.native_tree_bytes_sha256 = base.native_tree_bytes_sha256;
+    output.immutable_base_stable_ids_sha256 = base.immutable_base_stable_ids_sha256;
+    output.immutable_base_payload_sha256 = base.immutable_base_payload_sha256;
+    output.local_to_stable_sha256_value = base.local_to_stable_sha256_value;
+    output.base_path = base.base_path;
+    output.receipt_before_leaf_materialization = base.receipt_before_leaf_materialization;
+    output.range_receipt_before_leaf_materialization = is_range && base.receipt_before_leaf_materialization;
+    output.range_predicate_mirror_branch_aligned = base.range_predicate_mirror_branch_aligned;
+    output.id_list_capacity = base.id_list_capacity;
+    output.native_final_res_ids_cross_checked = base.native_final_res_ids_cross_checked;
+    output.direct_sidecars_exact_range_filtered = is_range;
+    output.production_full_live_scan = false;
+    output.raw_receipt_leaf_pair_count = base.raw_receipt_leaf_pair_count;
+    output.unique_receipt_leaf_count = base.unique_receipt_leaf_count;
+    output.gts_visited_leaf_ids = base.visited_leaf_ids;
+    output.receipt_leaf_spans = base.receipt_leaf_spans;
+    output.base_receipt_rows = base.base_receipt_rows;
+    output.native_final_res_ids = base.native_final_res_ids;
+    output.sidecar_source_leaf_pairs = state_.sidecar_leaf_pairs_for(base.visited_leaf_ids);
+    output.sidecar_candidate_ids = state_.sidecar_candidates_for(base.visited_leaf_ids);
+    output.delta_candidate_ids = state_.delta_ids();
+    output.base_results = base.base_results;
+    output.sidecar_results = scan_stable_rows_exact(pool_, query_device, output.sidecar_candidate_ids);
+    output.delta_results = scan_stable_rows_exact(pool_, query_device, output.delta_candidate_ids);
+    if (is_range) {
+      const auto keep = [radius_sq](const StableDistance& row) { return row.distance_sq <= radius_sq; };
+      output.sidecar_results.erase(std::remove_if(output.sidecar_results.begin(), output.sidecar_results.end(),
+                                                   [&keep](const StableDistance& row) { return !keep(row); }),
+                                   output.sidecar_results.end());
+      output.delta_results.erase(std::remove_if(output.delta_results.begin(), output.delta_results.end(),
+                                                 [&keep](const StableDistance& row) { return !keep(row); }),
+                                 output.delta_results.end());
+    }
+    output.results = merge_partition_results(output.base_results, output.sidecar_results, output.delta_results);
+    return output;
+  }
+
+  void require_ready_for_mutation() const {
+    if (!residual_pruning_mode_zero_attested_) {
+      fail("device residual pruning mode has not been read back as zero");
+    }
+    if (mode_ != EngineMode::kReady || !runtime_.ready() || !frozen_.initialized()) {
+      fail("mutation requires Ready engine after post-rebuild independent oracle completion");
+    }
+  }
+
+  void require_ready_for_query(const std::string& kind) const {
+    if (!residual_pruning_mode_zero_attested_) {
+      fail("device residual pruning mode has not been read back as zero");
+    }
+    if ((mode_ != EngineMode::kReady && mode_ != EngineMode::kAwaitingPostRebuildOracle) ||
+        !runtime_.ready() || !frozen_.initialized()) {
+      fail("query requires a ready frozen base; failed-stop/rebuild modes are forbidden");
+    }
+    if (mode_ == EngineMode::kAwaitingPostRebuildOracle && !post_rebuild_gate_.requires(kind)) {
+      fail("this post-rebuild query kind is already verified or not pending");
+    }
+  }
+
+  int sidecar_leaf_capacity_ = 0;
+  int requested_k_ = 0;
+  ImmutablePool pool_;
+  SafeC1State state_;
+  BaseTreeRuntime runtime_;
+  FrozenTreeSnapshot frozen_;
+  std::uint64_t tree_version_ = 0;
+  std::uint64_t state_epoch_ = 0;
+  bool residual_pruning_mode_zero_attested_ = false;
+  EngineMode mode_ = EngineMode::kUninitialized;
+  PostRebuildOracleGate post_rebuild_gate_;
+};
+
+class FreshStableIdRebuild {
+ public:
+  explicit FreshStableIdRebuild(NativeSafeC1Matrix* owner) : owner_(owner) {
+    if (!owner_) fail("FreshStableIdRebuild requires an owning G3 matrix");
+  }
+  [[nodiscard]] RebuildReceipt rebuild_from_live_stable_ids(const std::vector<StableId>& live_ids) {
+    return owner_->rebuild_from_live_stable_ids(live_ids);
+  }
+ private:
+  NativeSafeC1Matrix* owner_ = nullptr;
+};
+
+// JSONL serializers are intentionally data-only.  A future trace runner owns
+// trace parsing and may set post_rebuild_oracle_match only after it calls the
+// independent PostRebuildOracleGate; serialization itself cannot attest truth.
+inline void json_int_array(std::ostringstream* out, const std::vector<int>& values) {
+  *out << '[';
+  for (std::size_t index = 0; index < values.size(); ++index) {
+    if (index) *out << ',';
+    *out << values[index];
+  }
+  *out << ']';
+}
+
+inline void json_stable_array(std::ostringstream* out, const std::vector<StableId>& values) {
+  *out << '[';
+  for (std::size_t index = 0; index < values.size(); ++index) {
+    if (index) *out << ',';
+    *out << values[index];
+  }
+  *out << ']';
+}
+
+inline void json_stable_distance_array(std::ostringstream* out,
+                                       const std::vector<StableDistance>& values) {
+  *out << '[';
+  for (std::size_t index = 0; index < values.size(); ++index) {
+    if (index) *out << ',';
+    *out << '[' << values[index].stable_id << ','
+         << static_cast<unsigned long long>(values[index].distance_sq) << ']';
+  }
+  *out << ']';
+}
+
+inline void json_sidecar_leaf_pairs(std::ostringstream* out,
+                                    const std::vector<std::pair<int, StableId>>& values) {
+  *out << '[';
+  for (std::size_t index = 0; index < values.size(); ++index) {
+    if (index) *out << ',';
+    *out << '[' << values[index].first << ',' << values[index].second << ']';
+  }
+  *out << ']';
+}
+
+inline void json_receipt_leaf_spans(std::ostringstream* out,
+                                    const std::vector<ReceiptLeafSpan>& values) {
+  *out << '[';
+  for (std::size_t index = 0; index < values.size(); ++index) {
+    if (index) *out << ',';
+    const ReceiptLeafSpan& span = values[index];
+    *out << '[' << span.leaf_id << ',' << span.id_list_lid << ',' << span.size << ']';
+  }
+  *out << ']';
+}
+
+inline void json_receipt_base_rows(std::ostringstream* out,
+                                   const std::vector<ReceiptBaseRow>& values) {
+  *out << '[';
+  for (std::size_t index = 0; index < values.size(); ++index) {
+    if (index) *out << ',';
+    const ReceiptBaseRow& row = values[index];
+    *out << '[' << row.leaf_id << ',' << row.id_list_slot << ','
+         << row.local_row << ',' << row.stable_id << ']';
+  }
+  *out << ']';
+}
+
+inline std::string serialize_query_jsonl_record(int op_index, const QueryExport& row,
+                                                 bool post_rebuild_oracle_match) {
+  std::ostringstream out;
+  out << "{\"record\":\"query\",\"op_index\":" << op_index
+      << ",\"kind\":\"" << row.kind << "\",\"query_id\":" << row.query_id
+      << ",\"radius_sq\":";
+  if (row.kind == "range") out << static_cast<unsigned long long>(row.radius_sq); else out << "null";
+  out << ",\"tree_version\":" << row.tree_version
+      << ",\"tree_payload_sha256\":\"" << row.tree_payload_sha256 << "\""
+      << ",\"native_tree_bytes_sha256\":\"" << row.native_tree_bytes_sha256 << "\""
+      << ",\"immutable_base_stable_ids_sha256\":\"" << row.immutable_base_stable_ids_sha256 << "\""
+      << ",\"immutable_base_payload_sha256\":\"" << row.immutable_base_payload_sha256 << "\""
+      << ",\"local_to_stable_sha256\":\"" << row.local_to_stable_sha256_value << "\""
+      << ",\"base_path\":\"" << row.base_path << "\""
+      << ",\"receipt_before_leaf_materialization\":"
+      << (row.receipt_before_leaf_materialization ? "true" : "false")
+      << ",\"range_receipt_before_leaf_materialization\":"
+      << (row.range_receipt_before_leaf_materialization ? "true" : "false")
+      << ",\"id_list_capacity\":" << row.id_list_capacity
+      << ",\"range_predicate_mirror_branch_aligned\":"
+      << (row.range_predicate_mirror_branch_aligned ? "true" : "false")
+      << ",\"native_final_res_ids_cross_checked\":"
+      << (row.native_final_res_ids_cross_checked ? "true" : "false")
+      << ",\"direct_sidecars_exact_range_filtered\":"
+      << (row.direct_sidecars_exact_range_filtered ? "true" : "false")
+      << ",\"production_full_live_scan\":"
+      << (row.production_full_live_scan ? "true" : "false")
+      << ",\"post_rebuild_oracle_required\":"
+      << (row.post_rebuild_oracle_required ? "true" : "false")
+      << ",\"raw_receipt_leaf_pair_count\":" << row.raw_receipt_leaf_pair_count
+      << ",\"unique_receipt_leaf_count\":" << row.unique_receipt_leaf_count
+      << ",\"gts_visited_leaf_ids\":";
+  json_int_array(&out, row.gts_visited_leaf_ids);
+  out << ",\"receipt_leaf_spans\":";
+  json_receipt_leaf_spans(&out, row.receipt_leaf_spans);
+  out << ",\"base_receipt_rows\":";
+  json_receipt_base_rows(&out, row.base_receipt_rows);
+  out << ",\"native_final_res_ids\":";
+  json_int_array(&out, row.native_final_res_ids);
+  out << ",\"sidecar_source_leaf_pairs\":";
+  json_sidecar_leaf_pairs(&out, row.sidecar_source_leaf_pairs);
+  out << ",\"sidecar_candidate_ids\":";
+  json_stable_array(&out, row.sidecar_candidate_ids);
+  out << ",\"delta_candidate_ids\":";
+  json_stable_array(&out, row.delta_candidate_ids);
+  out << ",\"base_results\":";
+  json_stable_distance_array(&out, row.base_results);
+  out << ",\"sidecar_results\":";
+  json_stable_distance_array(&out, row.sidecar_results);
+  out << ",\"delta_results\":";
+  json_stable_distance_array(&out, row.delta_results);
+  out << ",\"results\":";
+  json_stable_distance_array(&out, row.results);
+  out << ",\"post_rebuild_oracle_match\":"
+      << (post_rebuild_oracle_match ? "true" : "false") << "}";
+  return out.str();
+}
+
+inline std::string serialize_rebuild_jsonl_record(int op_index, const RebuildReceipt& row) {
+  std::ostringstream out;
+  out << "{\"record\":\"rebuild\",\"op_index\":" << op_index
+      << ",\"tree_version\":" << row.tree_version
+      << ",\"live_ids_sha256\":\"" << row.live_ids_sha256 << "\""
+      << ",\"immutable_base_stable_ids_sha256\":\"" << row.immutable_base_stable_ids_sha256 << "\""
+      << ",\"immutable_base_payload_sha256\":\"" << row.immutable_base_payload_sha256 << "\""
+      << ",\"native_tree_bytes_sha256\":\"" << row.native_tree_bytes_sha256 << "\""
+      << ",\"local_to_stable_sha256\":\"" << row.local_to_stable_sha256_value << "\""
+      << ",\"logical_leaf_stable_ids_sha256\":\"" << row.logical_leaf_stable_ids_sha256 << "\""
+      << ",\"tree_payload_sha256\":\"" << row.tree_payload_sha256 << "\""
+      << ",\"base_count\":" << row.base_count
+      << ",\"sidecar_live\":" << row.sidecar_live
+      << ",\"delta_live\":" << row.delta_live
+      << ",\"compact_mapping_bijection_ok\":" << (row.compact_mapping_bijection_ok ? "true" : "false")
+      << ",\"raw_leaf_rows_cover_compact_range\":" << (row.raw_leaf_rows_cover_compact_range ? "true" : "false")
+      << ",\"destructive_fail_stop_contract\":" << (row.destructive_fail_stop_contract ? "true" : "false")
+      << ",\"old_generation_retired_before_candidate_build\":" << (row.old_generation_retired_before_candidate_build ? "true" : "false")
+      << ",\"dynamic_tiers_replaced_after_generation_publish\":" << (row.dynamic_tiers_replaced_after_generation_publish ? "true" : "false")
+      << ",\"post_rebuild_knn_oracle_required\":" << (row.post_rebuild_knn_oracle_required ? "true" : "false")
+      << ",\"post_rebuild_range_oracle_required\":" << (row.post_rebuild_range_oracle_required ? "true" : "false")
+      << "}";
+  return out.str();
+}
+
+// Compile-only/audit schema strings.  A later runner must turn QueryExport and
+// RebuildReceipt into JSONL under this exact field contract; it must not claim
+// runtime results until native fixture execution actually occurs.
+constexpr const char* kG3QueryReceiptSchema =
+    "kind,query_id,tree_version,tree_payload_sha256,native_tree_bytes_sha256,"
+    "immutable_base_stable_ids_sha256,immutable_base_payload_sha256,local_to_stable_sha256,"
+    "base_path,receipt_before_leaf_materialization,range_receipt_before_leaf_materialization,"
+    "range_predicate_mirror_branch_aligned,id_list_capacity,native_final_res_ids_cross_checked,"
+    "direct_sidecars_exact_range_filtered,production_full_live_scan,post_rebuild_oracle_required,"
+    "raw_receipt_leaf_pair_count,unique_receipt_leaf_count,gts_visited_leaf_ids,"
+    "receipt_leaf_spans,base_receipt_rows,native_final_res_ids,"
+    "sidecar_source_leaf_pairs,sidecar_candidate_ids,delta_candidate_ids,base_results,"
+    "sidecar_results,delta_results,results";
+constexpr const char* kG3RebuildReceiptSchema =
+    "tree_version,live_ids_sha256,immutable_base_stable_ids_sha256,"
+    "immutable_base_payload_sha256,native_tree_bytes_sha256,local_to_stable_sha256,"
+    "logical_leaf_stable_ids_sha256,tree_payload_sha256,base_count,sidecar_live,delta_live,"
+    "compact_mapping_bijection_ok,raw_leaf_rows_cover_compact_range,"
+    "destructive_fail_stop_contract,old_generation_retired_before_candidate_build,"
+    "dynamic_tiers_replaced_after_generation_publish,post_rebuild_knn_oracle_required,"
+    "post_rebuild_range_oracle_required";
+
+}  // namespace safe_c1_g3
+
+void upload_rp_constants(float* h_alpha, float* h_beta, float* h_gamma,
+                         int /*num_levels*/, float* h_lut_breaks,
+                         float* h_lut_slopes, float* h_lut_intercepts,
+                         int lut_size, int mode) {
+  G3_CUDA(cudaMemcpyToSymbol(c_rp_alpha, h_alpha, RP_MAX_LEVELS * sizeof(float), 0,
+                             cudaMemcpyHostToDevice));
+  G3_CUDA(cudaMemcpyToSymbol(c_rp_beta, h_beta, RP_MAX_LEVELS * sizeof(float), 0,
+                             cudaMemcpyHostToDevice));
+  G3_CUDA(cudaMemcpyToSymbol(c_rp_gamma, h_gamma, RP_MAX_LEVELS * sizeof(float), 0,
+                             cudaMemcpyHostToDevice));
+  if (h_lut_breaks && h_lut_slopes && h_lut_intercepts) {
+    G3_CUDA(cudaMemcpyToSymbol(c_lut_breaks, h_lut_breaks, RP_LUT_SIZE * sizeof(float), 0,
+                               cudaMemcpyHostToDevice));
+    G3_CUDA(cudaMemcpyToSymbol(c_lut_slopes, h_lut_slopes, RP_LUT_SIZE * sizeof(float), 0,
+                               cudaMemcpyHostToDevice));
+    G3_CUDA(cudaMemcpyToSymbol(c_lut_intercepts, h_lut_intercepts, RP_LUT_SIZE * sizeof(float), 0,
+                               cudaMemcpyHostToDevice));
+  }
+  G3_CUDA(cudaMemcpyToSymbol(c_lut_num_segments, &lut_size, sizeof(int), 0,
+                             cudaMemcpyHostToDevice));
+  G3_CUDA(cudaMemcpyToSymbol(c_rp_mode, &mode, sizeof(int), 0,
+                             cudaMemcpyHostToDevice));
+}
