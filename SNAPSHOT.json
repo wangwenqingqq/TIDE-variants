@@ -1,0 +1,203 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/source_gts_incremental",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental"
+    }
+  ],
+  "files": {
+    "source/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "83a0cb17a0d8970fcbe2f021216d3e3123a8cfc1333f42a4a650119087aba35f",
+      "publication_adjustments": [],
+      "sha256": "83a0cb17a0d8970fcbe2f021216d3e3123a8cfc1333f42a4a650119087aba35f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/CMakeLists.txt"
+    },
+    "source/build_c3.sh": {
+      "mode": "100755",
+      "original_sha256": "7ff3a254d7abf2f1f2843aac34a4ef51c5bdbcebad4670ba819d14e2d72fba05",
+      "publication_adjustments": [],
+      "sha256": "7ff3a254d7abf2f1f2843aac34a4ef51c5bdbcebad4670ba819d14e2d72fba05",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/build_c3.sh"
+    },
+    "source/compare_performance.py": {
+      "mode": "100755",
+      "original_sha256": "286df59457bfde2f8ef4eca7c05690116cb412d72cb821a1a73ad39ec93434bd",
+      "publication_adjustments": [],
+      "sha256": "286df59457bfde2f8ef4eca7c05690116cb412d72cb821a1a73ad39ec93434bd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/compare_performance.py"
+    },
+    "source/compare_results.py": {
+      "mode": "100644",
+      "original_sha256": "4ee48c8634cdce4293b25980d1a5e80d4c2b91e578e21098dc9528354e2ecaf7",
+      "publication_adjustments": [],
+      "sha256": "4ee48c8634cdce4293b25980d1a5e80d4c2b91e578e21098dc9528354e2ecaf7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/compare_results.py"
+    },
+    "source/examples/gpu_timing_example.cu": {
+      "mode": "100644",
+      "original_sha256": "62e7cbe114dd61f180170bd9696008f3662dd54835f7f6a21b8a283ed4cefcf4",
+      "publication_adjustments": [],
+      "sha256": "62e7cbe114dd61f180170bd9696008f3662dd54835f7f6a21b8a283ed4cefcf4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/examples/gpu_timing_example.cu"
+    },
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/file.cuh"
+    },
+    "source/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/gpu_timer.cuh"
+    },
+    "source/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/incremental_insert.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/residual_pruning.cuh"
+    },
+    "source/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/residual_tuner.cuh"
+    },
+    "source/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/search.cuh"
+    },
+    "source/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/search_naive.cuh"
+    },
+    "source/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "publication_adjustments": [],
+      "sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/search_v2.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/tree.cuh"
+    },
+    "source/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "483a4386d7f8f858f2bae7e4eab55e6bd8c4951add433ca093c4e5b15bd30596",
+      "publication_adjustments": [],
+      "sha256": "483a4386d7f8f858f2bae7e4eab55e6bd8c4951add433ca093c4e5b15bd30596",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/update.cuh"
+    },
+    "source/include/update_optimized.cuh": {
+      "mode": "100644",
+      "original_sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "publication_adjustments": [],
+      "sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/update_optimized.cuh"
+    },
+    "source/include/update_user_modified.cuh": {
+      "mode": "100644",
+      "original_sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "publication_adjustments": [],
+      "sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/include/update_user_modified.cuh"
+    },
+    "source/integration_example.cpp": {
+      "mode": "100644",
+      "original_sha256": "d8f80bfd4a475d26af9376223acda72e3d2a16ef50d42e2d86752df566b070f3",
+      "publication_adjustments": [],
+      "sha256": "d8f80bfd4a475d26af9376223acda72e3d2a16ef50d42e2d86752df566b070f3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/integration_example.cpp"
+    },
+    "source/rebuild.sh": {
+      "mode": "100755",
+      "original_sha256": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+      "publication_adjustments": [],
+      "sha256": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/rebuild.sh"
+    },
+    "source/src/main.cu": {
+      "mode": "100644",
+      "original_sha256": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+      "publication_adjustments": [],
+      "sha256": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/src/main.cu"
+    },
+    "source/src/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "publication_adjustments": [],
+      "sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/src/mlp_constant.cuh"
+    },
+    "source/test_c3.sh": {
+      "mode": "100755",
+      "original_sha256": "df3cce5903ee58994a843bfee210156d06fd0a66337a8348308043bb5f507e08",
+      "publication_adjustments": [],
+      "sha256": "df3cce5903ee58994a843bfee210156d06fd0a66337a8348308043bb5f507e08",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/test_c3.sh"
+    },
+    "source/test_cuda.cu": {
+      "mode": "100644",
+      "original_sha256": "9b92a746e4d1a816f9c40bc7298234430c93563bbc932315e079f520f68782d7",
+      "publication_adjustments": [],
+      "sha256": "9b92a746e4d1a816f9c40bc7298234430c93563bbc932315e079f520f68782d7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/test_cuda.cu"
+    },
+    "source/test_pytorch.py": {
+      "mode": "100644",
+      "original_sha256": "d6ae8b0f5f768a547a79b0185b0d5685840da01f999327bbaba44cd2542e9196",
+      "publication_adjustments": [],
+      "sha256": "d6ae8b0f5f768a547a79b0185b0d5685840da01f999327bbaba44cd2542e9196",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/test_pytorch.py"
+    },
+    "source/train.py": {
+      "mode": "100644",
+      "original_sha256": "e9fa9862f074bebb8b6f01e9c571b8fb9118af57a98ce863fa38255428bfa3e5",
+      "publication_adjustments": [],
+      "sha256": "e9fa9862f074bebb8b6f01e9c571b8fb9118af57a98ce863fa38255428bfa3e5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental/train.py"
+    }
+  },
+  "payload_sha256": "d3b50dddc4619b0bd505b84502679a44aa75658886a9b1d7933f253318b02de5",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
