@@ -1,0 +1,69 @@
+{
+  "schema": "tide.native-gts-e2e3-campaign.v1",
+  "template_only": true,
+  "status": "SOURCE_ONLY_NOT_EXECUTED",
+  "campaign_id": "UNALLOCATED_AFTER_GATE1_AND_DATA_SEAL",
+  "baseline": {
+    "git_commit": "b589f0c163b20e5344c9984eb58a3d84c37061d6",
+    "dirty_original_gts_permitted": false,
+    "isolated_clean_derivative_required": true
+  },
+  "native_gate1": {
+    "status": "UNQUALIFIED",
+    "gate1_report_sha256": "UNALLOCATED",
+    "topology_capture_sha256": "UNALLOCATED",
+    "source_sha256": "UNALLOCATED",
+    "binary_sha256": "UNALLOCATED"
+  },
+  "metric": {
+    "contract": "integer_l2_squared_v1",
+    "coordinate_domain": "integer_0_to_255_inclusive",
+    "tie_order": ["distance_key", "stable_id"],
+    "k": "UNALLOCATED"
+  },
+  "external_data": {
+    "kind": "external_integer_vector_catalog",
+    "dataset_manifest_sha256": "UNALLOCATED",
+    "catalog_sha256": "UNALLOCATED",
+    "trace_sha256": "UNALLOCATED",
+    "query_manifest_sha256": "UNALLOCATED",
+    "forbid_prior_synthetic_or_local_cell_lineage": true
+  },
+  "common_policy": {
+    "overlay_accounting_expression": "live_sidecars + live_delta",
+    "C_ov": "UNALLOCATED",
+    "sidecar_cap_L": "UNALLOCATED",
+    "base_delete_barrier": "synchronous_rebuild_or_fail_stop",
+    "predeclared_trigger_ordering": "UNALLOCATED",
+    "delta_only_B_forbidden": true,
+    "native_envelopes_immutable_online": true
+  },
+  "variants": ["certified_sidecar", "exact_delta"],
+  "certified_sidecar_contract": {
+    "strict_all_actual_ancestor_envelopes": true,
+    "same_native_predicate_as_capture": true,
+    "actual_receipt_indexed_sidecar_scan": true,
+    "no_nearest_leaf_fallback": true,
+    "certificate_rejection_routes_to_exact_delta_or_fail_stop": true
+  },
+  "e2": {
+    "trace_id": "UNALLOCATED",
+    "repetitions": "UNALLOCATED_FIVE_BALANCED_ALTERNATING_STATE_RESET_REPETITIONS",
+    "raw_per_operation_records_required": true,
+    "full_live_oracle_coverage": "every_query"
+  },
+  "e3": {
+    "required_initial_object_counts": ["correctness_sized", 100000, 1000000],
+    "required_turnover_snapshots": ["initial", "insert_turnover", "mixed_overlay_turnover", "post_base_delete_rebuild"],
+    "minimum_queries_per_snapshot": 1000,
+    "repetitions": "UNALLOCATED_FIVE_BALANCED_ALTERNATING_STATE_RESET_REPETITIONS",
+    "full_live_oracle_coverage": "every_query"
+  },
+  "independent_validation": {
+    "raw_vector_oracle_source_sha256": "UNALLOCATED",
+    "topology_certificate_replayer_source_sha256": "UNALLOCATED",
+    "receipt_overlay_auditor_source_sha256": "UNALLOCATED",
+    "independent_reproduction_required": true
+  },
+  "nonclaim": "Template only. No native host, GPU, data, trace, run, timing, exactness, or reproduction has occurred."
+}

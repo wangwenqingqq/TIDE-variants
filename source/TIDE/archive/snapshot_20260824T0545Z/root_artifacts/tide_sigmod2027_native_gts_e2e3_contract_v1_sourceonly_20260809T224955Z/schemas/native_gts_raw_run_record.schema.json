@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tide.native-gts-e2e3-raw-operation.v1",
+  "title": "Required raw operation record fields",
+  "type": "object",
+  "required": [
+    "schema", "campaign_id", "run_id", "variant", "seq", "op", "epoch",
+    "active_set_digest_before", "active_set_digest_after", "tree_checksum",
+    "source_sha256", "binary_sha256", "topology_capture_sha256",
+    "wall_elapsed_ns", "sync_before", "sync_after", "overlay_accounting",
+    "terminal_status"
+  ],
+  "properties": {
+    "schema": {"const": "tide.native-gts-e2e3-raw-operation.v1"},
+    "variant": {"enum": ["certified_sidecar", "exact_delta"]},
+    "op": {"enum": ["insert", "overlay_delete", "base_delete", "rebuild", "query", "fail_stop"]},
+    "terminal_status": {"enum": ["OK", "FAIL_STOP"]},
+    "query_fields": {
+      "description": "For query: ordered native receipt, sidecar/delta scan IDs and multiplicities, base/sidecar/delta candidate keys, answer IDs, oracle digest, CUDA timings and transfer timings."
+    },
+    "certificate_fields": {
+      "description": "For direct attempt: current tree checksum, actual leaf, ordered physical-child path, strict radial checks, reason if rejected, and publication binding."
+    },
+    "rebuild_fields": {
+      "description": "For rebuild: pre/post maps and active digests, materialized-set digest, old/new topology digests, publication status, first-post-rebuild query binding, rebuild wall time."
+    }
+  }
+}
