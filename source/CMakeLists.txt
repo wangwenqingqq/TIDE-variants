@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.27)
+project(CublasExactScan LANGUAGES CUDA CXX)
+find_package(CUDAToolkit REQUIRED)
+add_executable(cublas_exact_scan_probe cublas_exact_scan_probe.cu)
+set_target_properties(cublas_exact_scan_probe PROPERTIES CUDA_ARCHITECTURES 120 CUDA_SEPARABLE_COMPILATION ON)
+target_compile_features(cublas_exact_scan_probe PRIVATE cxx_std_17 cuda_std_17)
+target_compile_options(cublas_exact_scan_probe PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:--use_fast_math>)
+target_link_libraries(cublas_exact_scan_probe PRIVATE CUDA::cudart CUDA::cublas)
