@@ -1,0 +1,149 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native"
+    }
+  ],
+  "files": {
+    "source/include/safe_c1_search_native_routing_certificate.hpp": {
+      "mode": "100644",
+      "original_sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "publication_adjustments": [],
+      "sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/include/safe_c1_search_native_routing_certificate.hpp"
+    },
+    "source/include/safe_c1_tie_free_witness.hpp": {
+      "mode": "100644",
+      "original_sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "publication_adjustments": [],
+      "sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/include/safe_c1_tie_free_witness.hpp"
+    },
+    "source/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/include/safe_search_v2.cuh"
+    },
+    "source/src/safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "0f097bc16660e0903841a85da273b9a6f4a4c8599da8e9d12bc2549e670bebd9",
+      "publication_adjustments": [],
+      "sha256": "0f097bc16660e0903841a85da273b9a6f4a4c8599da8e9d12bc2549e670bebd9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/src/safe_c1_dynamic_gts.cu"
+    },
+    "source/tools/audit_g1_static_contract.py": {
+      "mode": "100755",
+      "original_sha256": "2a32210f675009a06a7a1ddadb24ad1273aeaa2469b95c9c3f9fa831a1384adb",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ab222e18065efc7c581256944f2a4c79741460df7dbe9c016c10e2e97ee4f824",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/audit_g1_static_contract.py"
+    },
+    "source/tools/finalize_g1_v2_candidate_selection.py": {
+      "mode": "100755",
+      "original_sha256": "1f5f1fe3954249ef0f4cafa161d0c30684619f671139463b07b1fec7a36494ba",
+      "publication_adjustments": [],
+      "sha256": "1f5f1fe3954249ef0f4cafa161d0c30684619f671139463b07b1fec7a36494ba",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/finalize_g1_v2_candidate_selection.py"
+    },
+    "source/tools/make_g1_v2_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "be8348540ade3381b6f848aab4f6b4dd6378bfa9b07d353b1dfa63a77d745cbe",
+      "publication_adjustments": [],
+      "sha256": "be8348540ade3381b6f848aab4f6b4dd6378bfa9b07d353b1dfa63a77d745cbe",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/make_g1_v2_bundle.py"
+    },
+    "source/tools/make_g1_v2_certificate_selection_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "f93e4aadb7d6ce59b51700d80c4e9bcf19cc3d5706aaab9b1ae04e83ebaa2ecb",
+      "publication_adjustments": [],
+      "sha256": "f93e4aadb7d6ce59b51700d80c4e9bcf19cc3d5706aaab9b1ae04e83ebaa2ecb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/make_g1_v2_certificate_selection_bundle.py"
+    },
+    "source/tools/preflight_g1_v2_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "9ad48635a642032ea8827a11dbb9c67b9e39749f2ebd5a7ca50905d344487842",
+      "publication_adjustments": [],
+      "sha256": "9ad48635a642032ea8827a11dbb9c67b9e39749f2ebd5a7ca50905d344487842",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/preflight_g1_v2_bundle.py"
+    },
+    "source/tools/prepare_g1_v2_guarded_run.sh": {
+      "mode": "100755",
+      "original_sha256": "bbe3787e65e31d9ccd6e0ace1c60e6d9330972b5491a2b2849e45af1b139bc66",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "6b16bfbe3b27b6b76dfaea3462f755400a2d550c089607132730ff3b28287b76",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/prepare_g1_v2_guarded_run.sh"
+    },
+    "source/tools/routing_certificate_test.cpp": {
+      "mode": "100644",
+      "original_sha256": "c5706b2cd52d9d77ab0686c79b3c900bc4b1db3dfd23a7d0ef17d6a9b434d527",
+      "publication_adjustments": [],
+      "sha256": "c5706b2cd52d9d77ab0686c79b3c900bc4b1db3dfd23a7d0ef17d6a9b434d527",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/routing_certificate_test.cpp"
+    },
+    "source/tools/run_g1_v2_certificate_selection_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "bdd5c7656edc50ac0895d578ad2300652265a54848ed2a4e952900621c6b729d",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "61e606108f3649b32ee706616b3823340008eb438debe35d7d2f31637cb0e7cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/run_g1_v2_certificate_selection_guarded.sh"
+    },
+    "source/tools/safe_c1_v2_bundle_contract.py": {
+      "mode": "100644",
+      "original_sha256": "a64897a0a66a053ba43d3abd8546b40200006fd14f12fc88b6427f528412dca2",
+      "publication_adjustments": [],
+      "sha256": "a64897a0a66a053ba43d3abd8546b40200006fd14f12fc88b6427f528412dca2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/safe_c1_v2_bundle_contract.py"
+    },
+    "source/tools/test_v2_bundle_preflight.py": {
+      "mode": "100755",
+      "original_sha256": "6a656914910a39a720eb3ff6487fb1c96c13614270bc0a08f02435a37359d9a9",
+      "publication_adjustments": [],
+      "sha256": "6a656914910a39a720eb3ff6487fb1c96c13614270bc0a08f02435a37359d9a9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/test_v2_bundle_preflight.py"
+    },
+    "source/tools/test_v2_certificate_selection_pipeline.py": {
+      "mode": "100755",
+      "original_sha256": "a7550e048033f9f79db5d473becbdf70b11836f7a9724cda6212d8c450079823",
+      "publication_adjustments": [],
+      "sha256": "a7550e048033f9f79db5d473becbdf70b11836f7a9724cda6212d8c450079823",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/test_v2_certificate_selection_pipeline.py"
+    },
+    "source/tools/tie_free_witness_test.cpp": {
+      "mode": "100644",
+      "original_sha256": "3e9d7068655911c4a0c0e072e1cec16fbaeb383fbdf18d8b5bcf26745f8ed3e3",
+      "publication_adjustments": [],
+      "sha256": "3e9d7068655911c4a0c0e072e1cec16fbaeb383fbdf18d8b5bcf26745f8ed3e3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native/tools/tie_free_witness_test.cpp"
+    }
+  },
+  "payload_sha256": "e5a021bc72593868a230dbd4f01927c1758720364ffc0729026addaf585d5f80",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
