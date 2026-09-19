@@ -1,0 +1,80 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/svc_q0_20260905T154651Z",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z"
+    }
+  ],
+  "files": {
+    "source/keeper/tide_query_keeper.cu": {
+      "mode": "100644",
+      "original_sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "publication_adjustments": [],
+      "sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/keeper/tide_query_keeper.cu"
+    },
+    "source/src/monitor_q0.py": {
+      "mode": "100644",
+      "original_sha256": "0430db8442a9290c142c3679110339f6127104f515ac71af513bb3166c2ca43d",
+      "publication_adjustments": [],
+      "sha256": "0430db8442a9290c142c3679110339f6127104f515ac71af513bb3166c2ca43d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/src/monitor_q0.py"
+    },
+    "source/src/prepare_q0.py": {
+      "mode": "100644",
+      "original_sha256": "059805d0da1f2ad4831d6587382a9df25aa8894e6b28aa4abf420fd1777c876e",
+      "publication_adjustments": [],
+      "sha256": "059805d0da1f2ad4831d6587382a9df25aa8894e6b28aa4abf420fd1777c876e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/src/prepare_q0.py"
+    },
+    "source/src/remote_q0.sh": {
+      "mode": "100644",
+      "original_sha256": "5e27baae26ccab6ee38befef800a8732ed0023805e9ae6f9bcd296077c814c0c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 1,
+          "reason": "owner-label"
+        }
+      ],
+      "sha256": "6539d3f6e24361d5e179975b25c81982958b4b9476a769b4143e3d9464506a13",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/src/remote_q0.sh"
+    },
+    "source/src/run_q0.py": {
+      "mode": "100644",
+      "original_sha256": "d968cce04818bd8d674a58f7c5dd0806f5a18f66a076b117440af8bf27c04274",
+      "publication_adjustments": [],
+      "sha256": "d968cce04818bd8d674a58f7c5dd0806f5a18f66a076b117440af8bf27c04274",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/src/run_q0.py"
+    },
+    "source/src/svc_q0_bridge.cu": {
+      "mode": "100644",
+      "original_sha256": "183d3bc548a4247b02fd0d740a978e134ae747ed7630a24628c072d8156b05ff",
+      "publication_adjustments": [],
+      "sha256": "183d3bc548a4247b02fd0d740a978e134ae747ed7630a24628c072d8156b05ff",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/src/svc_q0_bridge.cu"
+    },
+    "source/src/svc_q0_data.py": {
+      "mode": "100644",
+      "original_sha256": "b70a5e7b7af2354ab23d267288593b8b2673bbbbcef5f02f72fda649efb3f1d3",
+      "publication_adjustments": [],
+      "sha256": "b70a5e7b7af2354ab23d267288593b8b2673bbbbcef5f02f72fda649efb3f1d3",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z/src/svc_q0_data.py"
+    }
+  },
+  "payload_sha256": "e622cf83c0cdb62d4066da68141713371a17379503630d3b5642c55267b073e9",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
