@@ -1,0 +1,238 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/companions/gts_c1_minimal_closure",
+      "role": "Related GTS/CertiGraph comparison, not a TIDE contribution",
+      "source_label": "TIDE/active/gts_c1_minimal_closure"
+    }
+  ],
+  "files": {
+    "source/GTSPP/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "883700215031607aaaab35144b6a985344d93a2d77b4426c4cd9aa5da46fc4ab",
+      "publication_adjustments": [],
+      "sha256": "883700215031607aaaab35144b6a985344d93a2d77b4426c4cd9aa5da46fc4ab",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/CMakeLists.txt"
+    },
+    "source/GTSPP/build_c3.sh": {
+      "mode": "100755",
+      "original_sha256": "7ff3a254d7abf2f1f2843aac34a4ef51c5bdbcebad4670ba819d14e2d72fba05",
+      "publication_adjustments": [],
+      "sha256": "7ff3a254d7abf2f1f2843aac34a4ef51c5bdbcebad4670ba819d14e2d72fba05",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/build_c3.sh"
+    },
+    "source/GTSPP/compare_performance.py": {
+      "mode": "100755",
+      "original_sha256": "286df59457bfde2f8ef4eca7c05690116cb412d72cb821a1a73ad39ec93434bd",
+      "publication_adjustments": [],
+      "sha256": "286df59457bfde2f8ef4eca7c05690116cb412d72cb821a1a73ad39ec93434bd",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/compare_performance.py"
+    },
+    "source/GTSPP/compare_results.py": {
+      "mode": "100644",
+      "original_sha256": "4ee48c8634cdce4293b25980d1a5e80d4c2b91e578e21098dc9528354e2ecaf7",
+      "publication_adjustments": [],
+      "sha256": "4ee48c8634cdce4293b25980d1a5e80d4c2b91e578e21098dc9528354e2ecaf7",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/compare_results.py"
+    },
+    "source/GTSPP/examples/gpu_timing_example.cu": {
+      "mode": "100644",
+      "original_sha256": "62e7cbe114dd61f180170bd9696008f3662dd54835f7f6a21b8a283ed4cefcf4",
+      "publication_adjustments": [],
+      "sha256": "62e7cbe114dd61f180170bd9696008f3662dd54835f7f6a21b8a283ed4cefcf4",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/examples/gpu_timing_example.cu"
+    },
+    "source/GTSPP/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/config.cuh"
+    },
+    "source/GTSPP/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/file.cuh"
+    },
+    "source/GTSPP/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/gpu_timer.cuh"
+    },
+    "source/GTSPP/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/incremental_insert.cuh"
+    },
+    "source/GTSPP/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/mlp_constant.cuh"
+    },
+    "source/GTSPP/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/residual_pruning.cuh"
+    },
+    "source/GTSPP/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/residual_tuner.cuh"
+    },
+    "source/GTSPP/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/search.cuh"
+    },
+    "source/GTSPP/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/search_naive.cuh"
+    },
+    "source/GTSPP/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "publication_adjustments": [],
+      "sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/search_v2.cuh"
+    },
+    "source/GTSPP/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/tree.cuh"
+    },
+    "source/GTSPP/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "08096fa33f90ee2601a4f32267c04596ff27b58aa0945507b50f74b59db281c3",
+      "publication_adjustments": [],
+      "sha256": "08096fa33f90ee2601a4f32267c04596ff27b58aa0945507b50f74b59db281c3",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/update.cuh"
+    },
+    "source/GTSPP/include/update_optimized.cuh": {
+      "mode": "100644",
+      "original_sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "publication_adjustments": [],
+      "sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/update_optimized.cuh"
+    },
+    "source/GTSPP/include/update_user_modified.cuh": {
+      "mode": "100644",
+      "original_sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "publication_adjustments": [],
+      "sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/include/update_user_modified.cuh"
+    },
+    "source/GTSPP/integration_example.cpp": {
+      "mode": "100644",
+      "original_sha256": "d8f80bfd4a475d26af9376223acda72e3d2a16ef50d42e2d86752df566b070f3",
+      "publication_adjustments": [],
+      "sha256": "d8f80bfd4a475d26af9376223acda72e3d2a16ef50d42e2d86752df566b070f3",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/integration_example.cpp"
+    },
+    "source/GTSPP/rebuild.sh": {
+      "mode": "100755",
+      "original_sha256": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+      "publication_adjustments": [],
+      "sha256": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/rebuild.sh"
+    },
+    "source/GTSPP/src/c1_minimal_closure.cu": {
+      "mode": "100644",
+      "original_sha256": "3897e4399a6be300de9d22fcf5ef9128de6a2a2fea30fc466af686913ce51be8",
+      "publication_adjustments": [],
+      "sha256": "3897e4399a6be300de9d22fcf5ef9128de6a2a2fea30fc466af686913ce51be8",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/src/c1_minimal_closure.cu"
+    },
+    "source/GTSPP/src/main.cu": {
+      "mode": "100644",
+      "original_sha256": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+      "publication_adjustments": [],
+      "sha256": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/src/main.cu"
+    },
+    "source/GTSPP/src/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "publication_adjustments": [],
+      "sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/src/mlp_constant.cuh"
+    },
+    "source/GTSPP/test_c3.sh": {
+      "mode": "100755",
+      "original_sha256": "df3cce5903ee58994a843bfee210156d06fd0a66337a8348308043bb5f507e08",
+      "publication_adjustments": [],
+      "sha256": "df3cce5903ee58994a843bfee210156d06fd0a66337a8348308043bb5f507e08",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/test_c3.sh"
+    },
+    "source/GTSPP/test_cuda.cu": {
+      "mode": "100644",
+      "original_sha256": "9b92a746e4d1a816f9c40bc7298234430c93563bbc932315e079f520f68782d7",
+      "publication_adjustments": [],
+      "sha256": "9b92a746e4d1a816f9c40bc7298234430c93563bbc932315e079f520f68782d7",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/test_cuda.cu"
+    },
+    "source/GTSPP/test_pytorch.py": {
+      "mode": "100644",
+      "original_sha256": "d6ae8b0f5f768a547a79b0185b0d5685840da01f999327bbaba44cd2542e9196",
+      "publication_adjustments": [],
+      "sha256": "d6ae8b0f5f768a547a79b0185b0d5685840da01f999327bbaba44cd2542e9196",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/test_pytorch.py"
+    },
+    "source/GTSPP/tools/audit_native_c1_buffer_only.py": {
+      "mode": "100755",
+      "original_sha256": "d9a72aa9ba5e650302099c4f95d34fc1b7414dd92aafabdce9fcd7ae25d8d2b3",
+      "publication_adjustments": [],
+      "sha256": "d9a72aa9ba5e650302099c4f95d34fc1b7414dd92aafabdce9fcd7ae25d8d2b3",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/tools/audit_native_c1_buffer_only.py"
+    },
+    "source/GTSPP/tools/audit_native_trace_binding.py": {
+      "mode": "100755",
+      "original_sha256": "5fbfd013e4860fbef03c86ada164a2a7824202d6fe08f088f3360fda40906b38",
+      "publication_adjustments": [],
+      "sha256": "5fbfd013e4860fbef03c86ada164a2a7824202d6fe08f088f3360fda40906b38",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/tools/audit_native_trace_binding.py"
+    },
+    "source/GTSPP/tools/run_c1_minimal_closure.sh": {
+      "mode": "100755",
+      "original_sha256": "01a7326032d5cc5319d25640b812f31ad48a5aaf07c381be21188d9879895694",
+      "publication_adjustments": [],
+      "sha256": "01a7326032d5cc5319d25640b812f31ad48a5aaf07c381be21188d9879895694",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/tools/run_c1_minimal_closure.sh"
+    },
+    "source/GTSPP/tools/validate_c1_minimal_receipt.py": {
+      "mode": "100755",
+      "original_sha256": "f71c048d65d9e3eb449bd1a50ce3d1b71b97a0c9a1d5d6f1aa4d4e7decde5f1b",
+      "publication_adjustments": [],
+      "sha256": "f71c048d65d9e3eb449bd1a50ce3d1b71b97a0c9a1d5d6f1aa4d4e7decde5f1b",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/tools/validate_c1_minimal_receipt.py"
+    },
+    "source/GTSPP/train.py": {
+      "mode": "100644",
+      "original_sha256": "e9fa9862f074bebb8b6f01e9c571b8fb9118af57a98ce863fa38255428bfa3e5",
+      "publication_adjustments": [],
+      "sha256": "e9fa9862f074bebb8b6f01e9c571b8fb9118af57a98ce863fa38255428bfa3e5",
+      "source_label": "TIDE/active/gts_c1_minimal_closure/GTSPP/train.py"
+    }
+  },
+  "payload_sha256": "4c07c8d21d4bff5824e3e1b793d93c3b1fa7e00162faac522f48705176420171",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
