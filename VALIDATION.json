@@ -1,0 +1,104 @@
+{
+  "commit": "34b1f901c30d294ae8c82e099ff17c0d50d86d68",
+  "scope": "committed git archive; syntax and compile-only; zero GPU execution",
+  "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_Dec_16_07:23:41_PM_PST_2025\nCuda compilation tools, release 13.1, V13.1.115\nBuild cuda_13.1.r13.1/compiler.37061995_0\n",
+  "bash": "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)",
+  "counts": {
+    "files_hash_checked": 2068,
+    "python_ast_pass": 634,
+    "bash_syntax_pass": 321,
+    "json_parse_pass": 10
+  },
+  "compiles": [
+    {
+      "source": "source/TIDE/active/tide_surechembl_gate0_20260827/src/exact_scan.cu",
+      "argv": [
+        "/usr/local/cuda-13.1/bin/nvcc",
+        "-std=c++17",
+        "-O2",
+        "-arch=sm_120",
+        "-Xcompiler=-fopenmp,-pthread",
+        "-c",
+        "source/TIDE/active/tide_surechembl_gate0_20260827/src/exact_scan.cu",
+        "-o",
+        "archive_check_outputs/check_0.o"
+      ],
+      "returncode": 0,
+      "wall_seconds": 3.572,
+      "log_sha256": "0d7fcfccd907f539e6c12e8dec84084692df7a5038d3ed5d5dfda4e090752ab3",
+      "object_sha256": "898a8c0556b8cd33c312aae34e03ceabd056d5306c56d4cc13e1874ee16207dc"
+    },
+    {
+      "source": "source/TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign_sustained_unbounded_v1.cu",
+      "argv": [
+        "/usr/local/cuda-13.1/bin/nvcc",
+        "-std=c++17",
+        "-O2",
+        "-arch=sm_120",
+        "-Xcompiler=-fopenmp,-pthread",
+        "-c",
+        "source/TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign_sustained_unbounded_v1.cu",
+        "-o",
+        "archive_check_outputs/check_1.o"
+      ],
+      "returncode": 0,
+      "wall_seconds": 6.78,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "object_sha256": "6666aba5ce7bb75957babf3dd410dca86d58033a04d92a0763dcc4cc0491088b"
+    },
+    {
+      "source": "source/GTSPP-TIDEpro_20260915_gate2/experiments/gate2/replay.cu",
+      "argv": [
+        "/usr/local/cuda-13.1/bin/nvcc",
+        "-std=c++17",
+        "-O2",
+        "-arch=sm_120",
+        "-Xcompiler=-fopenmp,-pthread",
+        "-c",
+        "source/GTSPP-TIDEpro_20260915_gate2/experiments/gate2/replay.cu",
+        "-o",
+        "archive_check_outputs/check_2.o"
+      ],
+      "returncode": 0,
+      "wall_seconds": 6.845,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "object_sha256": "b768779197e5d7f56379cae6d6aa808e63e9bee536e43194cfe5f1ece2b41d7d"
+    },
+    {
+      "source": "source/RT-TIDE/experiments/large_batch_20260825/cublas_exact_scan_probe.cu",
+      "argv": [
+        "/usr/local/cuda-13.1/bin/nvcc",
+        "-std=c++17",
+        "-O2",
+        "-arch=sm_120",
+        "-Xcompiler=-fopenmp,-pthread",
+        "-c",
+        "source/RT-TIDE/experiments/large_batch_20260825/cublas_exact_scan_probe.cu",
+        "-o",
+        "archive_check_outputs/check_3.o"
+      ],
+      "returncode": 0,
+      "wall_seconds": 2.723,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "object_sha256": "d02094fa0de29a1fc0aedc2b4e869f5b7a134119874e4eef898b0263ab9db993"
+    },
+    {
+      "source": "source/TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p2_20260905_v1/src/tide_batch_bridge.cu",
+      "argv": [
+        "/usr/local/cuda-13.1/bin/nvcc",
+        "-std=c++17",
+        "-O2",
+        "-arch=sm_120",
+        "-Xcompiler=-fopenmp,-pthread",
+        "-c",
+        "source/TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p2_20260905_v1/src/tide_batch_bridge.cu",
+        "-o",
+        "archive_check_outputs/check_4.o"
+      ],
+      "returncode": 0,
+      "wall_seconds": 5.55,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "object_sha256": "99a83b5710117878b7961e534c8649953e6a2d9d6794db0dd1ae20d8d010c7c1"
+    }
+  ]
+}
