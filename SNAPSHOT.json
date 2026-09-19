@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_dynamic_e1_binding_preflight_v2_sourceonly_20260810T032000CST",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v2_sourceonly_20260810T032000CST"
+    }
+  ],
+  "files": {
+    "source/templates/DYNAMIC_V2_BINDING_TEMPLATE.json": {
+      "mode": "100644",
+      "original_sha256": "856adf731856dba4ffc8ac7bd15c14e9117dbaf2dc50295635eb514850b1a3dd",
+      "publication_adjustments": [],
+      "sha256": "856adf731856dba4ffc8ac7bd15c14e9117dbaf2dc50295635eb514850b1a3dd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v2_sourceonly_20260810T032000CST/templates/DYNAMIC_V2_BINDING_TEMPLATE.json"
+    },
+    "source/tools/validate_dynamic_v2_binding.py": {
+      "mode": "100755",
+      "original_sha256": "b9829db5ad71c33edf703386a11863b8069a8b1dcac28edbcf22c1d8e5cfd05d",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "f8eab65dcd4550517fc5bba59bfe29eb592427792588528d063f44903f4956d5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v2_sourceonly_20260810T032000CST/tools/validate_dynamic_v2_binding.py"
+    }
+  },
+  "payload_sha256": "fe97f4629bea58cd4173937fb7c5a1d5c72cf61b73c5810a5bd9893a5d07ecf6",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
