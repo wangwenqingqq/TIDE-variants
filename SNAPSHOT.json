@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/read_while_update/read_while_update_20260903_v2",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v2"
+    }
+  ],
+  "files": {
+    "source/src/gate6_epoch_id_oracle_v1.cpp": {
+      "mode": "100644",
+      "original_sha256": "dba90dd8ac686da9df56c85be49d19acb223e4f6d289047bd0bd9d73ff3c42d7",
+      "publication_adjustments": [],
+      "sha256": "dba90dd8ac686da9df56c85be49d19acb223e4f6d289047bd0bd9d73ff3c42d7",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v2/src/gate6_epoch_id_oracle_v1.cpp"
+    },
+    "source/src/gate6_overlap_campaign_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "199f4b231eaafc5aa4e5f8c3ee22920e40963246cd6526ab7a89b35abd48044b",
+      "publication_adjustments": [],
+      "sha256": "199f4b231eaafc5aa4e5f8c3ee22920e40963246cd6526ab7a89b35abd48044b",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v2/src/gate6_overlap_campaign_v1.cu"
+    },
+    "source/src/remote_read_while_update_job.sh": {
+      "mode": "100755",
+      "original_sha256": "a37e4de15880701e40d805794cbb0228263307291a7ce0ac2e2f545db064b7ad",
+      "publication_adjustments": [],
+      "sha256": "a37e4de15880701e40d805794cbb0228263307291a7ce0ac2e2f545db064b7ad",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v2/src/remote_read_while_update_job.sh"
+    }
+  },
+  "payload_sha256": "41dd800e2ba90329af632f25f491d924a007f0457fdd6302b4b8ec07d3baacf3",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
