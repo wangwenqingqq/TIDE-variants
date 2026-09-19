@@ -1,0 +1,124 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness"
+    }
+  ],
+  "files": {
+    "source/include/safe_c1_search_native_routing_certificate.hpp": {
+      "mode": "100644",
+      "original_sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "publication_adjustments": [],
+      "sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/include/safe_c1_search_native_routing_certificate.hpp"
+    },
+    "source/include/safe_c1_tie_free_witness.hpp": {
+      "mode": "100644",
+      "original_sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "publication_adjustments": [],
+      "sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/include/safe_c1_tie_free_witness.hpp"
+    },
+    "source/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/include/safe_search_v2.cuh"
+    },
+    "source/src/safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "72b7de9539a2c8404c24e813a4c540e4d6f38753bab5c040e299937d17a3eaba",
+      "publication_adjustments": [],
+      "sha256": "72b7de9539a2c8404c24e813a4c540e4d6f38753bab5c040e299937d17a3eaba",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/src/safe_c1_dynamic_gts.cu"
+    },
+    "source/tools/audit_g1b_static_contract.py": {
+      "mode": "100755",
+      "original_sha256": "a923a90f9f893fb96d252f19882f6c0923c5e616a3c16719771a730f0981e087",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "bdbd3578780af897be4c6f65e4c331bb289c3443da73eb61a30794481846d2eb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/audit_g1b_static_contract.py"
+    },
+    "source/tools/finalize_g1b_capacity_witness.py": {
+      "mode": "100755",
+      "original_sha256": "285ec591ce192555bb533558626f7c83c8e78b856331854d2c9ed5a0c19c0e6c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "0fcf29f5aa6710a8ba1525c09a683692ce03a6b58c410ccc99a9da5757b15f53",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/finalize_g1b_capacity_witness.py"
+    },
+    "source/tools/make_g1b_capacity_witness_bundle.py": {
+      "mode": "100755",
+      "original_sha256": "b8bfadab1ce14be1f561c41ff5de64ab76cd37fe209b884f85f29cd9894d073d",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5466bbaba7fee8efd877a63896e43fcefcfdaf6904832cd5cd9e05f07962b6f1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/make_g1b_capacity_witness_bundle.py"
+    },
+    "source/tools/preflight_g1b_capacity_witness.py": {
+      "mode": "100755",
+      "original_sha256": "0d1e54ec343549d7d375ee634764a93876638845dfbd728554eb521653bc1cb2",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "cf9284699ba8e689c52d9d8a7f9ac058a991c1ec4e41805c7b6abe6bf480f9bb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/preflight_g1b_capacity_witness.py"
+    },
+    "source/tools/run_g1b_capacity_witness_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "6a03d9b83630464924b7001720568592b2d83ddc1202671e33b069d3b172d713",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "091e0cedae6a8b302085ef3795c33892aa865e200fd95b7bf6d0abadcb9dc152",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/run_g1b_capacity_witness_guarded.sh"
+    },
+    "source/tools/safe_c1_v3_bundle_contract.py": {
+      "mode": "100644",
+      "original_sha256": "7c033f29b5fc9319ec2c8c689951b0eb44b791f0509c1c246f9313c0923dfd22",
+      "publication_adjustments": [],
+      "sha256": "7c033f29b5fc9319ec2c8c689951b0eb44b791f0509c1c246f9313c0923dfd22",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/safe_c1_v3_bundle_contract.py"
+    },
+    "source/tools/test_g1b_capacity_witness_pipeline.py": {
+      "mode": "100755",
+      "original_sha256": "27487cab01c468d8b948723671b7b6b3a4e2bdfeaf03663d9aeae05e575b7f95",
+      "publication_adjustments": [],
+      "sha256": "27487cab01c468d8b948723671b7b6b3a4e2bdfeaf03663d9aeae05e575b7f95",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness/tools/test_g1b_capacity_witness_pipeline.py"
+    }
+  },
+  "payload_sha256": "fabdbcf55230f2098d77b570ad4b8ba35c3a4a68be51d612c00bcd49b7860334",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
