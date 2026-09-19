@@ -1,0 +1,436 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/gpusimilarity/latest_exact_20260903_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1"
+    }
+  ],
+  "files": {
+    "source/adapter/scripts/build_direct_exact.sh": {
+      "mode": "100755",
+      "original_sha256": "e7a9837e5a760dca2bef1b80025e2b6a40050535dea6747db06501d38828fc0d",
+      "publication_adjustments": [],
+      "sha256": "e7a9837e5a760dca2bef1b80025e2b6a40050535dea6747db06501d38828fc0d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/scripts/build_direct_exact.sh"
+    },
+    "source/adapter/scripts/fetch_upstream.sh": {
+      "mode": "100755",
+      "original_sha256": "9489a5141883f162269542ad7b79d4f728b80d174c5dbe456bf9bdc280691dba",
+      "publication_adjustments": [],
+      "sha256": "9489a5141883f162269542ad7b79d4f728b80d174c5dbe456bf9bdc280691dba",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/scripts/fetch_upstream.sh"
+    },
+    "source/adapter/scripts/run_locked_fixture.sh": {
+      "mode": "100755",
+      "original_sha256": "e7eee041b2c2fe619d0382f746e0896d366048fa4b272326205a95acecb7fa73",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "f3fabf15c2c73e1c723a9a2b1188df7701087fbad8191af7fc3d6da5af408a50",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/scripts/run_locked_fixture.sh"
+    },
+    "source/adapter/scripts/run_locked_full.sh": {
+      "mode": "100755",
+      "original_sha256": "e73b9085f908b7eadf47f353173c49dd2aa9231417b2e8b8afc7dadb230b935b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "aac796574eae3d412477c095d1f1e38b55cb331b9f298a9aef6bee96b20c7169",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/scripts/run_locked_full.sh"
+    },
+    "source/adapter/scripts/run_locked_pilot.sh": {
+      "mode": "100755",
+      "original_sha256": "e6aaa74f70edcff6baa1b0617f24758c91f6d9669ed1901237aac672d5ced641",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "a6ec868a7a471e7511fee3aa3237a1be399c8f7682343eb963a81381b23360bb",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/scripts/run_locked_pilot.sh"
+    },
+    "source/adapter/tests/make_fixture.py": {
+      "mode": "100755",
+      "original_sha256": "d8545acfe5fa8627392ace5cc7d8ead768113904919ab47c7e0ebbef7f926cfd",
+      "publication_adjustments": [],
+      "sha256": "d8545acfe5fa8627392ace5cc7d8ead768113904919ab47c7e0ebbef7f926cfd",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/tests/make_fixture.py"
+    },
+    "source/adapter/tools/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "58b760dc3d2af503b6e72cac46ddbb2bea600c927e437c56a96d9c11a48f019d",
+      "publication_adjustments": [],
+      "sha256": "58b760dc3d2af503b6e72cac46ddbb2bea600c927e437c56a96d9c11a48f019d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/tools/CMakeLists.txt"
+    },
+    "source/adapter/tools/direct_exact_benchmark.cpp": {
+      "mode": "100644",
+      "original_sha256": "1a7e92944c4744022a949a7be737527df9a7a19067a1e6b519633f0fcb992c36",
+      "publication_adjustments": [],
+      "sha256": "1a7e92944c4744022a949a7be737527df9a7a19067a1e6b519633f0fcb992c36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/tools/direct_exact_benchmark.cpp"
+    },
+    "source/adapter/tools/summarize_exact.py": {
+      "mode": "100755",
+      "original_sha256": "e2ca69964a17e6e0d77ac8d31d01d52b6b77abb3e188eb7c04380ce0539e1bf2",
+      "publication_adjustments": [],
+      "sha256": "e2ca69964a17e6e0d77ac8d31d01d52b6b77abb3e188eb7c04380ce0539e1bf2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/adapter/tools/summarize_exact.py"
+    },
+    "source/upstream_pinned_archive/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "4402cd838463c198d535f5784d510bd31a49bb63f9f5f944b5c8bc8baed66afc",
+      "publication_adjustments": [],
+      "sha256": "4402cd838463c198d535f5784d510bd31a49bb63f9f5f944b5c8bc8baed66afc",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/CMakeLists.txt"
+    },
+    "source/upstream_pinned_archive/Doxyfile.in": {
+      "mode": "100644",
+      "original_sha256": "5542a8303e14ead9f06117be800a891226029e4df61423f53bbe1d87aa78dbc4",
+      "publication_adjustments": [],
+      "sha256": "5542a8303e14ead9f06117be800a891226029e4df61423f53bbe1d87aa78dbc4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/Doxyfile.in"
+    },
+    "source/upstream_pinned_archive/LICENSE": {
+      "mode": "100644",
+      "original_sha256": "26abc74ac42a2afb02e191a47b8500a0a2011d86f8688a43474a22666c0a806a",
+      "publication_adjustments": [],
+      "sha256": "26abc74ac42a2afb02e191a47b8500a0a2011d86f8688a43474a22666c0a806a",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/LICENSE"
+    },
+    "source/upstream_pinned_archive/calculation_functors.cpp": {
+      "mode": "100644",
+      "original_sha256": "3dc5c21c57dc53f0b5802c21e9d937cf30fcb323031c1fd6c59c9a42a208bbc1",
+      "publication_adjustments": [],
+      "sha256": "3dc5c21c57dc53f0b5802c21e9d937cf30fcb323031c1fd6c59c9a42a208bbc1",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/calculation_functors.cpp"
+    },
+    "source/upstream_pinned_archive/calculation_functors.h": {
+      "mode": "100644",
+      "original_sha256": "8f6093dfedbc67653d934150e6b1abd681c0a6f7e4b86373ae0ed94588cc0f9b",
+      "publication_adjustments": [],
+      "sha256": "8f6093dfedbc67653d934150e6b1abd681c0a6f7e4b86373ae0ed94588cc0f9b",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/calculation_functors.h"
+    },
+    "source/upstream_pinned_archive/fdw/gpusim_fdw/__init__.py": {
+      "mode": "100644",
+      "original_sha256": "035ef93b79cc75db10862cd18bd27c3d7a2444aece2fdb1f728e03f17484651d",
+      "publication_adjustments": [],
+      "sha256": "035ef93b79cc75db10862cd18bd27c3d7a2444aece2fdb1f728e03f17484651d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/fdw/gpusim_fdw/__init__.py"
+    },
+    "source/upstream_pinned_archive/fdw/setup.py": {
+      "mode": "100644",
+      "original_sha256": "f30837a86045bbc7543657602f4e3939a606fab1104662cc7b27957245e0983e",
+      "publication_adjustments": [],
+      "sha256": "f30837a86045bbc7543657602f4e3939a606fab1104662cc7b27957245e0983e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/fdw/setup.py"
+    },
+    "source/upstream_pinned_archive/fingerprintdb_cuda.cpp": {
+      "mode": "100644",
+      "original_sha256": "0037d64be91bee49e945d078df988b388355f6302c1605870cfb58cb37658426",
+      "publication_adjustments": [],
+      "sha256": "0037d64be91bee49e945d078df988b388355f6302c1605870cfb58cb37658426",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/fingerprintdb_cuda.cpp"
+    },
+    "source/upstream_pinned_archive/fingerprintdb_cuda.cu": {
+      "mode": "100644",
+      "original_sha256": "ece1df84a66a3dba066e870507b6f339b47b0978c06d600f78941cbeca2a8478",
+      "publication_adjustments": [],
+      "sha256": "ece1df84a66a3dba066e870507b6f339b47b0978c06d600f78941cbeca2a8478",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/fingerprintdb_cuda.cu"
+    },
+    "source/upstream_pinned_archive/fingerprintdb_cuda.h": {
+      "mode": "100644",
+      "original_sha256": "bbce788edfe3dab4096cad8fd19c13e892fc2c6406847cccba365f7208bee935",
+      "publication_adjustments": [],
+      "sha256": "bbce788edfe3dab4096cad8fd19c13e892fc2c6406847cccba365f7208bee935",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/fingerprintdb_cuda.h"
+    },
+    "source/upstream_pinned_archive/gpusim.cpp": {
+      "mode": "100644",
+      "original_sha256": "1ec12e24c7ef65908f9aaf5c7f54995289b6ec112c32fa34d41a1b7752d53031",
+      "publication_adjustments": [],
+      "sha256": "1ec12e24c7ef65908f9aaf5c7f54995289b6ec112c32fa34d41a1b7752d53031",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/gpusim.cpp"
+    },
+    "source/upstream_pinned_archive/gpusim.h": {
+      "mode": "100644",
+      "original_sha256": "cef69f71219b633cc4610778c9c399f942cbfbc640c1edd75debf28c4362e51d",
+      "publication_adjustments": [],
+      "sha256": "cef69f71219b633cc4610778c9c399f942cbfbc640c1edd75debf28c4362e51d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/gpusim.h"
+    },
+    "source/upstream_pinned_archive/local_qinfo.h": {
+      "mode": "100644",
+      "original_sha256": "d9fb164b5f86f244639b18486225ac94dacae7a0b254d876c6bf276dce9226f3",
+      "publication_adjustments": [],
+      "sha256": "d9fb164b5f86f244639b18486225ac94dacae7a0b254d876c6bf276dce9226f3",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/local_qinfo.h"
+    },
+    "source/upstream_pinned_archive/main.cpp": {
+      "mode": "100644",
+      "original_sha256": "ad873ed77a9206c44a16f0768421f695332599c69c1c4d4c75dfa6c567e08ed5",
+      "publication_adjustments": [],
+      "sha256": "ad873ed77a9206c44a16f0768421f695332599c69c1c4d4c75dfa6c567e08ed5",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/main.cpp"
+    },
+    "source/upstream_pinned_archive/python/gpusim_createdb.py": {
+      "mode": "100644",
+      "original_sha256": "5094306f2d2b46fe6a48b6191c6a4bcf70a8dff2262a5b82db61160cbfd8e75d",
+      "publication_adjustments": [],
+      "sha256": "5094306f2d2b46fe6a48b6191c6a4bcf70a8dff2262a5b82db61160cbfd8e75d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/python/gpusim_createdb.py"
+    },
+    "source/upstream_pinned_archive/python/gpusim_mergedb.py": {
+      "mode": "100644",
+      "original_sha256": "1a8242a7630d99bd783673aeee51482a8856fdf1dc97d7d80d1041a487deab37",
+      "publication_adjustments": [],
+      "sha256": "1a8242a7630d99bd783673aeee51482a8856fdf1dc97d7d80d1041a487deab37",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/python/gpusim_mergedb.py"
+    },
+    "source/upstream_pinned_archive/python/gpusim_search.py": {
+      "mode": "100644",
+      "original_sha256": "ef466ce054fcf4fc8f4b1c292dd4f99e1d8f096be853996047805515822c67e7",
+      "publication_adjustments": [],
+      "sha256": "ef466ce054fcf4fc8f4b1c292dd4f99e1d8f096be853996047805515822c67e7",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/python/gpusim_search.py"
+    },
+    "source/upstream_pinned_archive/python/gpusim_server.py": {
+      "mode": "100644",
+      "original_sha256": "0552a1cef0b4378e52e2ac47ea441442ccb7b77900fb7942af43743e7d796644",
+      "publication_adjustments": [],
+      "sha256": "0552a1cef0b4378e52e2ac47ea441442ccb7b77900fb7942af43743e7d796644",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/python/gpusim_server.py"
+    },
+    "source/upstream_pinned_archive/python/gpusim_utils.py": {
+      "mode": "100644",
+      "original_sha256": "c4f2190cb48f5a9a0452b691a05e9d16c54f5323e9197c8db146d09782d9d13f",
+      "publication_adjustments": [],
+      "sha256": "c4f2190cb48f5a9a0452b691a05e9d16c54f5323e9197c8db146d09782d9d13f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/python/gpusim_utils.py"
+    },
+    "source/upstream_pinned_archive/qstring_hash.h": {
+      "mode": "100644",
+      "original_sha256": "ce1e4758b441134dc02fa97ddb9ce4d08d46d03af5604e3135b49cd0c9a07fb1",
+      "publication_adjustments": [],
+      "sha256": "ce1e4758b441134dc02fa97ddb9ce4d08d46d03af5604e3135b49cd0c9a07fb1",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/qstring_hash.h"
+    },
+    "source/upstream_pinned_archive/test/BoostUnitTest.cmake": {
+      "mode": "100644",
+      "original_sha256": "7dd1da19ca40037a22a63979615097cd382a650d6db3799cbea5b9c8ead85c53",
+      "publication_adjustments": [],
+      "sha256": "7dd1da19ca40037a22a63979615097cd382a650d6db3799cbea5b9c8ead85c53",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/test/BoostUnitTest.cmake"
+    },
+    "source/upstream_pinned_archive/test/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "b3e6eeb9f825270671d9d20467241c9587ffc0647e0cb0592b8324d3cc9b49f2",
+      "publication_adjustments": [],
+      "sha256": "b3e6eeb9f825270671d9d20467241c9587ffc0647e0cb0592b8324d3cc9b49f2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/test/CMakeLists.txt"
+    },
+    "source/upstream_pinned_archive/test/test_gpusim.cpp": {
+      "mode": "100644",
+      "original_sha256": "1794239fad9b256de149549a671fc2eaead8a4179e7e89b04f140b52b62ed0e2",
+      "publication_adjustments": [],
+      "sha256": "1794239fad9b256de149549a671fc2eaead8a4179e7e89b04f140b52b62ed0e2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/test/test_gpusim.cpp"
+    },
+    "source/upstream_pinned_archive/types.h": {
+      "mode": "100644",
+      "original_sha256": "6ffe546b472d9c4a4dff8ca77ea2500400afc1bdaedd1a025fd4a016452e190a",
+      "publication_adjustments": [],
+      "sha256": "6ffe546b472d9c4a4dff8ca77ea2500400afc1bdaedd1a025fd4a016452e190a",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_archive/types.h"
+    },
+    "source/upstream_pinned_bundle_v1/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "4402cd838463c198d535f5784d510bd31a49bb63f9f5f944b5c8bc8baed66afc",
+      "publication_adjustments": [],
+      "sha256": "4402cd838463c198d535f5784d510bd31a49bb63f9f5f944b5c8bc8baed66afc",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/CMakeLists.txt"
+    },
+    "source/upstream_pinned_bundle_v1/Doxyfile.in": {
+      "mode": "100644",
+      "original_sha256": "5542a8303e14ead9f06117be800a891226029e4df61423f53bbe1d87aa78dbc4",
+      "publication_adjustments": [],
+      "sha256": "5542a8303e14ead9f06117be800a891226029e4df61423f53bbe1d87aa78dbc4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/Doxyfile.in"
+    },
+    "source/upstream_pinned_bundle_v1/LICENSE": {
+      "mode": "100644",
+      "original_sha256": "26abc74ac42a2afb02e191a47b8500a0a2011d86f8688a43474a22666c0a806a",
+      "publication_adjustments": [],
+      "sha256": "26abc74ac42a2afb02e191a47b8500a0a2011d86f8688a43474a22666c0a806a",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/LICENSE"
+    },
+    "source/upstream_pinned_bundle_v1/calculation_functors.cpp": {
+      "mode": "100644",
+      "original_sha256": "3dc5c21c57dc53f0b5802c21e9d937cf30fcb323031c1fd6c59c9a42a208bbc1",
+      "publication_adjustments": [],
+      "sha256": "3dc5c21c57dc53f0b5802c21e9d937cf30fcb323031c1fd6c59c9a42a208bbc1",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/calculation_functors.cpp"
+    },
+    "source/upstream_pinned_bundle_v1/calculation_functors.h": {
+      "mode": "100644",
+      "original_sha256": "8f6093dfedbc67653d934150e6b1abd681c0a6f7e4b86373ae0ed94588cc0f9b",
+      "publication_adjustments": [],
+      "sha256": "8f6093dfedbc67653d934150e6b1abd681c0a6f7e4b86373ae0ed94588cc0f9b",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/calculation_functors.h"
+    },
+    "source/upstream_pinned_bundle_v1/fdw/gpusim_fdw/__init__.py": {
+      "mode": "100644",
+      "original_sha256": "035ef93b79cc75db10862cd18bd27c3d7a2444aece2fdb1f728e03f17484651d",
+      "publication_adjustments": [],
+      "sha256": "035ef93b79cc75db10862cd18bd27c3d7a2444aece2fdb1f728e03f17484651d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/fdw/gpusim_fdw/__init__.py"
+    },
+    "source/upstream_pinned_bundle_v1/fdw/setup.py": {
+      "mode": "100644",
+      "original_sha256": "f30837a86045bbc7543657602f4e3939a606fab1104662cc7b27957245e0983e",
+      "publication_adjustments": [],
+      "sha256": "f30837a86045bbc7543657602f4e3939a606fab1104662cc7b27957245e0983e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/fdw/setup.py"
+    },
+    "source/upstream_pinned_bundle_v1/fingerprintdb_cuda.cpp": {
+      "mode": "100644",
+      "original_sha256": "0037d64be91bee49e945d078df988b388355f6302c1605870cfb58cb37658426",
+      "publication_adjustments": [],
+      "sha256": "0037d64be91bee49e945d078df988b388355f6302c1605870cfb58cb37658426",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/fingerprintdb_cuda.cpp"
+    },
+    "source/upstream_pinned_bundle_v1/fingerprintdb_cuda.cu": {
+      "mode": "100644",
+      "original_sha256": "ece1df84a66a3dba066e870507b6f339b47b0978c06d600f78941cbeca2a8478",
+      "publication_adjustments": [],
+      "sha256": "ece1df84a66a3dba066e870507b6f339b47b0978c06d600f78941cbeca2a8478",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/fingerprintdb_cuda.cu"
+    },
+    "source/upstream_pinned_bundle_v1/fingerprintdb_cuda.h": {
+      "mode": "100644",
+      "original_sha256": "bbce788edfe3dab4096cad8fd19c13e892fc2c6406847cccba365f7208bee935",
+      "publication_adjustments": [],
+      "sha256": "bbce788edfe3dab4096cad8fd19c13e892fc2c6406847cccba365f7208bee935",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/fingerprintdb_cuda.h"
+    },
+    "source/upstream_pinned_bundle_v1/gpusim.cpp": {
+      "mode": "100644",
+      "original_sha256": "1ec12e24c7ef65908f9aaf5c7f54995289b6ec112c32fa34d41a1b7752d53031",
+      "publication_adjustments": [],
+      "sha256": "1ec12e24c7ef65908f9aaf5c7f54995289b6ec112c32fa34d41a1b7752d53031",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/gpusim.cpp"
+    },
+    "source/upstream_pinned_bundle_v1/gpusim.h": {
+      "mode": "100644",
+      "original_sha256": "cef69f71219b633cc4610778c9c399f942cbfbc640c1edd75debf28c4362e51d",
+      "publication_adjustments": [],
+      "sha256": "cef69f71219b633cc4610778c9c399f942cbfbc640c1edd75debf28c4362e51d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/gpusim.h"
+    },
+    "source/upstream_pinned_bundle_v1/local_qinfo.h": {
+      "mode": "100644",
+      "original_sha256": "d9fb164b5f86f244639b18486225ac94dacae7a0b254d876c6bf276dce9226f3",
+      "publication_adjustments": [],
+      "sha256": "d9fb164b5f86f244639b18486225ac94dacae7a0b254d876c6bf276dce9226f3",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/local_qinfo.h"
+    },
+    "source/upstream_pinned_bundle_v1/main.cpp": {
+      "mode": "100644",
+      "original_sha256": "ad873ed77a9206c44a16f0768421f695332599c69c1c4d4c75dfa6c567e08ed5",
+      "publication_adjustments": [],
+      "sha256": "ad873ed77a9206c44a16f0768421f695332599c69c1c4d4c75dfa6c567e08ed5",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/main.cpp"
+    },
+    "source/upstream_pinned_bundle_v1/python/gpusim_createdb.py": {
+      "mode": "100644",
+      "original_sha256": "5094306f2d2b46fe6a48b6191c6a4bcf70a8dff2262a5b82db61160cbfd8e75d",
+      "publication_adjustments": [],
+      "sha256": "5094306f2d2b46fe6a48b6191c6a4bcf70a8dff2262a5b82db61160cbfd8e75d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/python/gpusim_createdb.py"
+    },
+    "source/upstream_pinned_bundle_v1/python/gpusim_mergedb.py": {
+      "mode": "100644",
+      "original_sha256": "1a8242a7630d99bd783673aeee51482a8856fdf1dc97d7d80d1041a487deab37",
+      "publication_adjustments": [],
+      "sha256": "1a8242a7630d99bd783673aeee51482a8856fdf1dc97d7d80d1041a487deab37",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/python/gpusim_mergedb.py"
+    },
+    "source/upstream_pinned_bundle_v1/python/gpusim_search.py": {
+      "mode": "100644",
+      "original_sha256": "ef466ce054fcf4fc8f4b1c292dd4f99e1d8f096be853996047805515822c67e7",
+      "publication_adjustments": [],
+      "sha256": "ef466ce054fcf4fc8f4b1c292dd4f99e1d8f096be853996047805515822c67e7",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/python/gpusim_search.py"
+    },
+    "source/upstream_pinned_bundle_v1/python/gpusim_server.py": {
+      "mode": "100644",
+      "original_sha256": "0552a1cef0b4378e52e2ac47ea441442ccb7b77900fb7942af43743e7d796644",
+      "publication_adjustments": [],
+      "sha256": "0552a1cef0b4378e52e2ac47ea441442ccb7b77900fb7942af43743e7d796644",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/python/gpusim_server.py"
+    },
+    "source/upstream_pinned_bundle_v1/python/gpusim_utils.py": {
+      "mode": "100644",
+      "original_sha256": "c4f2190cb48f5a9a0452b691a05e9d16c54f5323e9197c8db146d09782d9d13f",
+      "publication_adjustments": [],
+      "sha256": "c4f2190cb48f5a9a0452b691a05e9d16c54f5323e9197c8db146d09782d9d13f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/python/gpusim_utils.py"
+    },
+    "source/upstream_pinned_bundle_v1/qstring_hash.h": {
+      "mode": "100644",
+      "original_sha256": "ce1e4758b441134dc02fa97ddb9ce4d08d46d03af5604e3135b49cd0c9a07fb1",
+      "publication_adjustments": [],
+      "sha256": "ce1e4758b441134dc02fa97ddb9ce4d08d46d03af5604e3135b49cd0c9a07fb1",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/qstring_hash.h"
+    },
+    "source/upstream_pinned_bundle_v1/test/BoostUnitTest.cmake": {
+      "mode": "100644",
+      "original_sha256": "7dd1da19ca40037a22a63979615097cd382a650d6db3799cbea5b9c8ead85c53",
+      "publication_adjustments": [],
+      "sha256": "7dd1da19ca40037a22a63979615097cd382a650d6db3799cbea5b9c8ead85c53",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/test/BoostUnitTest.cmake"
+    },
+    "source/upstream_pinned_bundle_v1/test/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "b3e6eeb9f825270671d9d20467241c9587ffc0647e0cb0592b8324d3cc9b49f2",
+      "publication_adjustments": [],
+      "sha256": "b3e6eeb9f825270671d9d20467241c9587ffc0647e0cb0592b8324d3cc9b49f2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/test/CMakeLists.txt"
+    },
+    "source/upstream_pinned_bundle_v1/test/test_gpusim.cpp": {
+      "mode": "100644",
+      "original_sha256": "1794239fad9b256de149549a671fc2eaead8a4179e7e89b04f140b52b62ed0e2",
+      "publication_adjustments": [],
+      "sha256": "1794239fad9b256de149549a671fc2eaead8a4179e7e89b04f140b52b62ed0e2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/test/test_gpusim.cpp"
+    },
+    "source/upstream_pinned_bundle_v1/types.h": {
+      "mode": "100644",
+      "original_sha256": "6ffe546b472d9c4a4dff8ca77ea2500400afc1bdaedd1a025fd4a016452e190a",
+      "publication_adjustments": [],
+      "sha256": "6ffe546b472d9c4a4dff8ca77ea2500400afc1bdaedd1a025fd4a016452e190a",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1/types.h"
+    }
+  },
+  "payload_sha256": "e4e4c5056f2e991679c49ed5c23edf90f2eecb627aaba49a7d9168233beb9afd",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
