@@ -1,0 +1,21 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/legacy-safe_c1_reference_mirror_v1",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/safe_c1_reference_mirror_v1"
+    }
+  ],
+  "files": {
+    "source/safe_c1_reference_mirror_v1.py": {
+      "mode": "100755",
+      "original_sha256": "ea45ee5db2021128b33a52b871b84895f238bd18bf60962cf1bb60f3884af2e0",
+      "publication_adjustments": [],
+      "sha256": "ea45ee5db2021128b33a52b871b84895f238bd18bf60962cf1bb60f3884af2e0",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/safe_c1_reference_mirror_v1/safe_c1_reference_mirror_v1.py"
+    }
+  },
+  "payload_sha256": "b87c0eefd901fe6855b4db182b123f398cb504153ef9fea7ce2b3534dd553d4e",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
