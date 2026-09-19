@@ -1,0 +1,107 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_interval_bound_safe",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe"
+    }
+  ],
+  "files": {
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/include/file.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "publication_adjustments": [],
+      "sha256": "729dc9c3452e25427d4f7c2f873c82efd1008b1c501ce71285a85b715596d9c1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/include/residual_pruning.cuh"
+    },
+    "source/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "493c35ad379d2bbcc46bc9c8932bcd9dbd0cfadcf3d7947a1135d63d22933eae",
+      "publication_adjustments": [],
+      "sha256": "493c35ad379d2bbcc46bc9c8932bcd9dbd0cfadcf3d7947a1135d63d22933eae",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/include/search_v2.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/include/tree.cuh"
+    },
+    "source/src/gts_safe_c2_interval_sift1m.cu": {
+      "mode": "100644",
+      "original_sha256": "9950dd2d3543393b555860216ec115611dbca08b1036c655ebf813cdc4fd1097",
+      "publication_adjustments": [],
+      "sha256": "9950dd2d3543393b555860216ec115611dbca08b1036c655ebf813cdc4fd1097",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/src/gts_safe_c2_interval_sift1m.cu"
+    },
+    "source/tools/audit_safe_c2_static.py": {
+      "mode": "100755",
+      "original_sha256": "9bb35a30a4b83d50be6b4567e618361bc6545b5f866f49afee500d37645e7bf0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "2027f1ab901864c8367c918a1ec9cb82fc185183d14d1e833fa407273bbca5d4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/tools/audit_safe_c2_static.py"
+    },
+    "source/tools/build_safe_c2_interval_runner.sh": {
+      "mode": "100755",
+      "original_sha256": "c0d0ea9fa9343ec1fed2c84d6ab638ef13403c8bd245d84ac1854852a65e9557",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5f5e93629c2d0de59170cf4a65c6075dac78f011f30b27d40448745ebafc96a6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/tools/build_safe_c2_interval_runner.sh"
+    },
+    "source/tools/run_safe_c2_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "6336fa9ecc9a681c7a06a56b4c5fbdf4eba7b10878d9562e6f1cd0f14fdca6af",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 4,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "cf5beda27c07fa4547b5d4d296b343c93680f20ba50a1b432e225758a7f19b19",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe/tools/run_safe_c2_guarded.sh"
+    }
+  },
+  "payload_sha256": "5f451079430faf3414467d00e44343ae1e588f6b502aca31c179644660e65aa8",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
