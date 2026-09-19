@@ -1,0 +1,82 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/chembl37_static_2048/chembl37_static_20260903_v1",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1"
+    }
+  ],
+  "files": {
+    "source/run_02_exactness/src/gate6_exact_tuple_oracle_width.cpp": {
+      "mode": "100644",
+      "original_sha256": "eea7c2b3d6033660be4c8c74eeb16d37ea8f6a1fc4560e01f1af4904fd3fd1d2",
+      "publication_adjustments": [],
+      "sha256": "eea7c2b3d6033660be4c8c74eeb16d37ea8f6a1fc4560e01f1af4904fd3fd1d2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/run_02_exactness/src/gate6_exact_tuple_oracle_width.cpp"
+    },
+    "source/run_02_exactness/src/gate6_query_campaign.cu": {
+      "mode": "100644",
+      "original_sha256": "0d0a00450020f0067a61b8d8fd2d57a463480bac547b64d75ba93dc93b41f154",
+      "publication_adjustments": [],
+      "sha256": "0d0a00450020f0067a61b8d8fd2d57a463480bac547b64d75ba93dc93b41f154",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/run_02_exactness/src/gate6_query_campaign.cu"
+    },
+    "source/run_03_exactness/src/gate6_exact_tuple_oracle_width.cpp": {
+      "mode": "100644",
+      "original_sha256": "eea7c2b3d6033660be4c8c74eeb16d37ea8f6a1fc4560e01f1af4904fd3fd1d2",
+      "publication_adjustments": [],
+      "sha256": "eea7c2b3d6033660be4c8c74eeb16d37ea8f6a1fc4560e01f1af4904fd3fd1d2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/run_03_exactness/src/gate6_exact_tuple_oracle_width.cpp"
+    },
+    "source/run_03_exactness/src/gate6_query_campaign.cu": {
+      "mode": "100644",
+      "original_sha256": "0d0a00450020f0067a61b8d8fd2d57a463480bac547b64d75ba93dc93b41f154",
+      "publication_adjustments": [],
+      "sha256": "0d0a00450020f0067a61b8d8fd2d57a463480bac547b64d75ba93dc93b41f154",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/run_03_exactness/src/gate6_query_campaign.cu"
+    },
+    "source/src/audit_chembl37_static_preparation.py": {
+      "mode": "100644",
+      "original_sha256": "0a35589fe2dec95aec2ef6dd9b6d2d714c23646542af155eb6c3a043a0f697f4",
+      "publication_adjustments": [],
+      "sha256": "0a35589fe2dec95aec2ef6dd9b6d2d714c23646542af155eb6c3a043a0f697f4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/src/audit_chembl37_static_preparation.py"
+    },
+    "source/src/gate6_exact_tuple_oracle_width.cpp": {
+      "mode": "100644",
+      "original_sha256": "eea7c2b3d6033660be4c8c74eeb16d37ea8f6a1fc4560e01f1af4904fd3fd1d2",
+      "publication_adjustments": [],
+      "sha256": "eea7c2b3d6033660be4c8c74eeb16d37ea8f6a1fc4560e01f1af4904fd3fd1d2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/src/gate6_exact_tuple_oracle_width.cpp"
+    },
+    "source/src/gate6_query_campaign.cu": {
+      "mode": "100644",
+      "original_sha256": "0d0a00450020f0067a61b8d8fd2d57a463480bac547b64d75ba93dc93b41f154",
+      "publication_adjustments": [],
+      "sha256": "0d0a00450020f0067a61b8d8fd2d57a463480bac547b64d75ba93dc93b41f154",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/src/gate6_query_campaign.cu"
+    },
+    "source/src/prepare_chembl37_fps_static.py": {
+      "mode": "100644",
+      "original_sha256": "47c74faa5f31be8c8276d0d8433984b2756ab7a624d5f1a1025198514a363568",
+      "publication_adjustments": [],
+      "sha256": "47c74faa5f31be8c8276d0d8433984b2756ab7a624d5f1a1025198514a363568",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/src/prepare_chembl37_fps_static.py"
+    },
+    "source/src/remote_chembl37_static_exactness_job.sh": {
+      "mode": "100755",
+      "original_sha256": "b809d7e9026070e567ad53498c7da859259210771c144e6c86b4a3404c61ac8f",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "1a632e5df533dca54c18bda989ac489131587272758de5d417212a63854102af",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1/src/remote_chembl37_static_exactness_job.sh"
+    }
+  },
+  "payload_sha256": "97ab5e7165e2b88094e1fe5bd0171f5ff518de6d28d66181b50165033ae80387",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
