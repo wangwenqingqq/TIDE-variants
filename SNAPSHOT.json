@@ -1,0 +1,375 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal"
+    }
+  ],
+  "files": {
+    "source/aggregate_c1_formal_evidence_v5.py": {
+      "mode": "100755",
+      "original_sha256": "9b69350eafeba623b33011e6a3a49a783ddd9145c4abf90eb7b11e28acb231cc",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "15de7161e0c024c77971c16e9b09edf2f45dbd1b4bd7abe571f7755bbc77f7f1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/aggregate_c1_formal_evidence_v5.py"
+    },
+    "source/analyze_c1_microbenchmark_v5.py": {
+      "mode": "100755",
+      "original_sha256": "6f077c29bba28286beca424642f70594ab061f291f716499a98b9e31d3f4a268",
+      "publication_adjustments": [],
+      "sha256": "6f077c29bba28286beca424642f70594ab061f291f716499a98b9e31d3f4a268",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/analyze_c1_microbenchmark_v5.py"
+    },
+    "source/build_v5_variants.sh": {
+      "mode": "100755",
+      "original_sha256": "be54c6dd622ca10315063ecfea1ba228ddcee7d9c8115f352f1d05ecfb46ff4a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        }
+      ],
+      "sha256": "e515ca3c0fab8253d51399154fa82ac77d651f0743095f3a7b536f49280f46a2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/build_v5_variants.sh"
+    },
+    "source/c1_v5_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "43fd03768b83d573866fa8e6c970315246f54452be44ffb592223721e6d64dc5",
+      "publication_adjustments": [],
+      "sha256": "43fd03768b83d573866fa8e6c970315246f54452be44ffb592223721e6d64dc5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/c1_v5_manifest.py"
+    },
+    "source/c1_v5_profile_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "7716358430a4c0759cb041edae3c1bc29393ee3a57a04691305382bc0f453f44",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "f82d28905c8b2f8a4c663ab805a2209b8797b1ee108b2f89adda282dd24c19ab",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/c1_v5_profile_manifest.py"
+    },
+    "source/create_v5_build_manifest.py": {
+      "mode": "100755",
+      "original_sha256": "fa7c957aceefbab337cc1a4b0281424cec3b0e8c73c3fb325660cdb025a38556",
+      "publication_adjustments": [],
+      "sha256": "fa7c957aceefbab337cc1a4b0281424cec3b0e8c73c3fb325660cdb025a38556",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/create_v5_build_manifest.py"
+    },
+    "source/create_v5_pins.py": {
+      "mode": "100755",
+      "original_sha256": "759dd9427d3ca36a03f9a94c259c9b8c3b4e8f32c94c4c050eeabcd265b2ff12",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "b97041509be4ee06c21d195a9752290aecee47bd4a0ff1816dc3cc24d4042b1f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/create_v5_pins.py"
+    },
+    "source/finalize_c1_evidence_v5.py": {
+      "mode": "100755",
+      "original_sha256": "f0fc4f949a45ccd835fbd0283cf6467ac53621bc7b4a0b32d9f35d0f9255a54e",
+      "publication_adjustments": [],
+      "sha256": "f0fc4f949a45ccd835fbd0283cf6467ac53621bc7b4a0b32d9f35d0f9255a54e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/finalize_c1_evidence_v5.py"
+    },
+    "source/launch_c1_profile_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "85e1b80970ac06fc20aa718a8ab6fc2c8827e42c2c2b423fee74a4365bf22478",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "9fe914c6004d6f71e3463f1281e18a0af4539e7d7d2259cb9606021d17aae255",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/launch_c1_profile_v5.sh"
+    },
+    "source/launch_c1_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "e938f913b22d5e98d7ef16d5c9671d4153d3fdb0f9455cf1ac08c707d696e096",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "c80d4fe03a094eb48e94f6c93a4e0c1d3866e3cb5bac01b5b6782a19906f9345",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/launch_c1_v5.sh"
+    },
+    "source/run_c1_four_variants_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "a0627fbcc86a6a98db7d92eb31b743a65d1b5e30d6fee32a67c2fc0ac43e6ff0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ea2daf9bf4e800f793ceeefca964ad116d8c00bf14f297f1e62c5b96e6c98099",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/run_c1_four_variants_v5.sh"
+    },
+    "source/run_c1_profile_guard_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "78e0ef743ab307aa697f48793e384d06843cba6baa919189eb27d34040036a60",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "e24a75c0aae4f09116d0b4374ea6450a602c96c6964432bb7bb6a0f3235d7064",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/run_c1_profile_guard_v5.sh"
+    },
+    "source/run_c1_profile_primary_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "ae08bf399ee91bc59f9b988fe56433d40d079ab05e52e8a85b5911f5c4fb1179",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "9d37c2ec9bcbab1b90ede81b5a1e2080eec7d2a23c6408e6d60c5a0847596f69",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/run_c1_profile_primary_v5.sh"
+    },
+    "source/run_c1_workspace_microbenchmark_guard_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "ce3d6fa76c2a96a98337d701f6df645ebc72505fc082bf268a6cad33dacff692",
+      "publication_adjustments": [
+        {
+          "occurrences": 4,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 2,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "6addcffaede12375ee4634918c1502e0e8ec6050f367e894fb017b9643a1cf84",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/run_c1_workspace_microbenchmark_guard_v5.sh"
+    },
+    "source/tools/canonical_inspect_v5.cpp": {
+      "mode": "100644",
+      "original_sha256": "5222863bb8e5be868db7297cd632ed0088357ac5d563b7851f067bf5ca4472c4",
+      "publication_adjustments": [],
+      "sha256": "5222863bb8e5be868db7297cd632ed0088357ac5d563b7851f067bf5ca4472c4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/tools/canonical_inspect_v5.cpp"
+    },
+    "source/verify_c1_profile_artifacts_v5.py": {
+      "mode": "100755",
+      "original_sha256": "e6c81719b9d250b2c0aff3695506b1fafa58848a1da80f95a60f21d95e387c5b",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "2a4ca95ce4cb9d00d5402ace6a8195fe2159cfa0e46207ff75ab3d7d6ac38aa3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/verify_c1_profile_artifacts_v5.py"
+    },
+    "source/verify_c1_semantics_v5.py": {
+      "mode": "100755",
+      "original_sha256": "7da2f2dbf44f04948d7c426ac8d71a6f623cae964f181bc474665af0cfd71b4b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7b99570036e9ed8510fe7660ac0a017ee3c9e571979bf05ab6edf4e90c27659d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/verify_c1_semantics_v5.py"
+    },
+    "source/verify_v5_pins.py": {
+      "mode": "100755",
+      "original_sha256": "266e2ee21cb3f1f8de52b574df700cc4d78ea6f96c8e90cdb2bb90db6605132b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5802ff5c5e4a41a055f5de7e92ac60a4af4f680e0361a6f665c3db93318a8a6e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/verify_v5_pins.py"
+    },
+    "source/worktree/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "c3904e2c3e5306ed426acb03b517234df7617278dc70678899858f7827b8908b",
+      "publication_adjustments": [],
+      "sha256": "c3904e2c3e5306ed426acb03b517234df7617278dc70678899858f7827b8908b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/CMakeLists.txt"
+    },
+    "source/worktree/include/c1_alloc_counter.cuh": {
+      "mode": "100644",
+      "original_sha256": "ac689cee7413cf25c16756a656136c2bda0cbbf37719becc99d3a03330c80c62",
+      "publication_adjustments": [],
+      "sha256": "ac689cee7413cf25c16756a656136c2bda0cbbf37719becc99d3a03330c80c62",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/c1_alloc_counter.cuh"
+    },
+    "source/worktree/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/config.cuh"
+    },
+    "source/worktree/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/file.cuh"
+    },
+    "source/worktree/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/gpu_timer.cuh"
+    },
+    "source/worktree/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/incremental_insert.cuh"
+    },
+    "source/worktree/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/mlp_constant.cuh"
+    },
+    "source/worktree/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/residual_pruning.cuh"
+    },
+    "source/worktree/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/residual_tuner.cuh"
+    },
+    "source/worktree/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/search.cuh"
+    },
+    "source/worktree/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/search_naive.cuh"
+    },
+    "source/worktree/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "publication_adjustments": [],
+      "sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/search_v2.cuh"
+    },
+    "source/worktree/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "b21ac70fa96f6acb82dd004a15116a6e893cc23ccf8ea857caa96a4191e0a3e7",
+      "publication_adjustments": [],
+      "sha256": "b21ac70fa96f6acb82dd004a15116a6e893cc23ccf8ea857caa96a4191e0a3e7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/tree.cuh"
+    },
+    "source/worktree/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "6baaf12be11b39fb1447aa025fda52310e250d3d7dbc3ac16ee2d964a76c14e7",
+      "publication_adjustments": [],
+      "sha256": "6baaf12be11b39fb1447aa025fda52310e250d3d7dbc3ac16ee2d964a76c14e7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/update.cuh"
+    },
+    "source/worktree/include/update_optimized.cuh": {
+      "mode": "100644",
+      "original_sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "publication_adjustments": [],
+      "sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/update_optimized.cuh"
+    },
+    "source/worktree/include/update_user_modified.cuh": {
+      "mode": "100644",
+      "original_sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "publication_adjustments": [],
+      "sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/include/update_user_modified.cuh"
+    },
+    "source/worktree/src/c1_microbench.cu": {
+      "mode": "100644",
+      "original_sha256": "8b24b87e47316378163de13b84b1ccbc1d8a2216a22d9088f58dc77297a0d6d1",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "0cd71469fef6037b21c9e3709aa23cc0439ff7c001d0bbdea1c7a4b704693105",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/src/c1_microbench.cu"
+    },
+    "source/worktree/src/main.cu": {
+      "mode": "100644",
+      "original_sha256": "72f2db4db8e2d0211460107fc06c55196727853bee8654baa806249a2f7ad0d9",
+      "publication_adjustments": [],
+      "sha256": "72f2db4db8e2d0211460107fc06c55196727853bee8654baa806249a2f7ad0d9",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/src/main.cu"
+    },
+    "source/worktree/src/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "publication_adjustments": [],
+      "sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal/worktree/src/mlp_constant.cuh"
+    }
+  },
+  "payload_sha256": "cc42ac567582cf3f666aa7e0d7e8ea0afcfda0b7c20b108c75ffda6b76afec95",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
