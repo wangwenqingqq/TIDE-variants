@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/les3_same_data/sample_1m_20260902_v2",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v2"
+    }
+  ],
+  "files": {
+    "source/input/dense_to_les3.cpp": {
+      "mode": "100644",
+      "original_sha256": "ab0d01d8c941b751fcddeabfe3c03a5c9ac3f89c3613d93d2ff6da7bc182ff1f",
+      "publication_adjustments": [],
+      "sha256": "ab0d01d8c941b751fcddeabfe3c03a5c9ac3f89c3613d93d2ff6da7bc182ff1f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v2/input/dense_to_les3.cpp"
+    },
+    "source/input/make_contiguous_groups.py": {
+      "mode": "100755",
+      "original_sha256": "b786d389689ff426144606780e70b947c497883abc01c22ffb92b745d0dae992",
+      "publication_adjustments": [],
+      "sha256": "b786d389689ff426144606780e70b947c497883abc01c22ffb92b745d0dae992",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v2/input/make_contiguous_groups.py"
+    },
+    "source/input/measure_command.py": {
+      "mode": "100755",
+      "original_sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "publication_adjustments": [],
+      "sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v2/input/measure_command.py"
+    },
+    "source/input/same_data_sample_smoke.cpp": {
+      "mode": "100644",
+      "original_sha256": "7a9088903ce47b504d17dd550b23a3a5d4146ed9426173264b59e66a45cc0f55",
+      "publication_adjustments": [],
+      "sha256": "7a9088903ce47b504d17dd550b23a3a5d4146ed9426173264b59e66a45cc0f55",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v2/input/same_data_sample_smoke.cpp"
+    }
+  },
+  "payload_sha256": "545f843ccdb41fa904f8d2b8d14a8ba1a99a01298d2acdf7e82e52670e65287d",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
