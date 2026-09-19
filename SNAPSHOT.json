@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_d0_control_plane_v3_claimterminalwording_sourceonly_20260809T120000CST",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_d0_control_plane_v3_claimterminalwording_sourceonly_20260809T120000CST"
+    }
+  ],
+  "files": {
+    "source/src/tide_d0_local_ext4_control_plane_v3.py": {
+      "mode": "100644",
+      "original_sha256": "723f38e129dbf172067d231edc7b036a00fee7e68422da9db0e029d271058d26",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 3,
+          "reason": "network-storage-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "admin-path"
+        },
+        {
+          "occurrences": 1,
+          "reason": "owner-name"
+        },
+        {
+          "occurrences": 3,
+          "reason": "owner-label"
+        }
+      ],
+      "sha256": "567cc2ede96b701dda7d355dab1cad5e88129e06f5e16c3e9cdcc66ff61dd74c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_d0_control_plane_v3_claimterminalwording_sourceonly_20260809T120000CST/src/tide_d0_local_ext4_control_plane_v3.py"
+    }
+  },
+  "payload_sha256": "fddd0277d49c0dc0ebf708244db8747ff033cca7ab3a99b26298986f566769fe",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
