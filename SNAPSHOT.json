@@ -1,0 +1,33 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_cuda_skeleton",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_skeleton"
+    }
+  ],
+  "files": {
+    "source/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "4b6b935fce9433ad6332c061478ea3c95d4db5f141c0888efeeeee69bbab08a2",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "947c016a1d496666bed0eef07c212788beeaaf9ec753ba8312888a0291bb2d5c",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_skeleton/CMakeLists.txt"
+    },
+    "source/src/safe_c1_trace.cu": {
+      "mode": "100644",
+      "original_sha256": "dd70104b1995b7b471dfa7442f8aefecd5f3c9567d1b53e9b7945e795f8653d1",
+      "publication_adjustments": [],
+      "sha256": "dd70104b1995b7b471dfa7442f8aefecd5f3c9567d1b53e9b7945e795f8653d1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_skeleton/src/safe_c1_trace.cu"
+    }
+  },
+  "payload_sha256": "5a60d8359f53ee692697f9ec80859765544365aed2a2cba8431f2e7e5dba0e54",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
