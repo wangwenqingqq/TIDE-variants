@@ -1,0 +1,853 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/rt-tide/bottleneck_20260824",
+      "role": "RT-TIDE experiment",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824"
+    }
+  ],
+  "files": {
+    "context/src/GTSPP/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "883700215031607aaaab35144b6a985344d93a2d77b4426c4cd9aa5da46fc4ab",
+      "publication_adjustments": [],
+      "sha256": "883700215031607aaaab35144b6a985344d93a2d77b4426c4cd9aa5da46fc4ab",
+      "source_label": "RT-TIDE/src/GTSPP/CMakeLists.txt"
+    },
+    "context/src/GTSPP/build_c3.sh": {
+      "mode": "100755",
+      "original_sha256": "7ff3a254d7abf2f1f2843aac34a4ef51c5bdbcebad4670ba819d14e2d72fba05",
+      "publication_adjustments": [],
+      "sha256": "7ff3a254d7abf2f1f2843aac34a4ef51c5bdbcebad4670ba819d14e2d72fba05",
+      "source_label": "RT-TIDE/src/GTSPP/build_c3.sh"
+    },
+    "context/src/GTSPP/compare_performance.py": {
+      "mode": "100755",
+      "original_sha256": "286df59457bfde2f8ef4eca7c05690116cb412d72cb821a1a73ad39ec93434bd",
+      "publication_adjustments": [],
+      "sha256": "286df59457bfde2f8ef4eca7c05690116cb412d72cb821a1a73ad39ec93434bd",
+      "source_label": "RT-TIDE/src/GTSPP/compare_performance.py"
+    },
+    "context/src/GTSPP/compare_results.py": {
+      "mode": "100644",
+      "original_sha256": "4ee48c8634cdce4293b25980d1a5e80d4c2b91e578e21098dc9528354e2ecaf7",
+      "publication_adjustments": [],
+      "sha256": "4ee48c8634cdce4293b25980d1a5e80d4c2b91e578e21098dc9528354e2ecaf7",
+      "source_label": "RT-TIDE/src/GTSPP/compare_results.py"
+    },
+    "context/src/GTSPP/examples/gpu_timing_example.cu": {
+      "mode": "100644",
+      "original_sha256": "62e7cbe114dd61f180170bd9696008f3662dd54835f7f6a21b8a283ed4cefcf4",
+      "publication_adjustments": [],
+      "sha256": "62e7cbe114dd61f180170bd9696008f3662dd54835f7f6a21b8a283ed4cefcf4",
+      "source_label": "RT-TIDE/src/GTSPP/examples/gpu_timing_example.cu"
+    },
+    "context/src/GTSPP/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "RT-TIDE/src/GTSPP/include/config.cuh"
+    },
+    "context/src/GTSPP/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "RT-TIDE/src/GTSPP/include/file.cuh"
+    },
+    "context/src/GTSPP/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "RT-TIDE/src/GTSPP/include/gpu_timer.cuh"
+    },
+    "context/src/GTSPP/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "RT-TIDE/src/GTSPP/include/incremental_insert.cuh"
+    },
+    "context/src/GTSPP/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "RT-TIDE/src/GTSPP/include/mlp_constant.cuh"
+    },
+    "context/src/GTSPP/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "RT-TIDE/src/GTSPP/include/residual_pruning.cuh"
+    },
+    "context/src/GTSPP/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "RT-TIDE/src/GTSPP/include/residual_tuner.cuh"
+    },
+    "context/src/GTSPP/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "RT-TIDE/src/GTSPP/include/search.cuh"
+    },
+    "context/src/GTSPP/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "RT-TIDE/src/GTSPP/include/search_naive.cuh"
+    },
+    "context/src/GTSPP/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "publication_adjustments": [],
+      "sha256": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+      "source_label": "RT-TIDE/src/GTSPP/include/search_v2.cuh"
+    },
+    "context/src/GTSPP/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "RT-TIDE/src/GTSPP/include/tree.cuh"
+    },
+    "context/src/GTSPP/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "08096fa33f90ee2601a4f32267c04596ff27b58aa0945507b50f74b59db281c3",
+      "publication_adjustments": [],
+      "sha256": "08096fa33f90ee2601a4f32267c04596ff27b58aa0945507b50f74b59db281c3",
+      "source_label": "RT-TIDE/src/GTSPP/include/update.cuh"
+    },
+    "context/src/GTSPP/include/update_optimized.cuh": {
+      "mode": "100644",
+      "original_sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "publication_adjustments": [],
+      "sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "source_label": "RT-TIDE/src/GTSPP/include/update_optimized.cuh"
+    },
+    "context/src/GTSPP/include/update_user_modified.cuh": {
+      "mode": "100644",
+      "original_sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "publication_adjustments": [],
+      "sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "source_label": "RT-TIDE/src/GTSPP/include/update_user_modified.cuh"
+    },
+    "context/src/GTSPP/integration_example.cpp": {
+      "mode": "100644",
+      "original_sha256": "d8f80bfd4a475d26af9376223acda72e3d2a16ef50d42e2d86752df566b070f3",
+      "publication_adjustments": [],
+      "sha256": "d8f80bfd4a475d26af9376223acda72e3d2a16ef50d42e2d86752df566b070f3",
+      "source_label": "RT-TIDE/src/GTSPP/integration_example.cpp"
+    },
+    "context/src/GTSPP/rebuild.sh": {
+      "mode": "100755",
+      "original_sha256": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+      "publication_adjustments": [],
+      "sha256": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+      "source_label": "RT-TIDE/src/GTSPP/rebuild.sh"
+    },
+    "context/src/GTSPP/src/c1_minimal_closure.cu": {
+      "mode": "100644",
+      "original_sha256": "3897e4399a6be300de9d22fcf5ef9128de6a2a2fea30fc466af686913ce51be8",
+      "publication_adjustments": [],
+      "sha256": "3897e4399a6be300de9d22fcf5ef9128de6a2a2fea30fc466af686913ce51be8",
+      "source_label": "RT-TIDE/src/GTSPP/src/c1_minimal_closure.cu"
+    },
+    "context/src/GTSPP/src/main.cu": {
+      "mode": "100644",
+      "original_sha256": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+      "publication_adjustments": [],
+      "sha256": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+      "source_label": "RT-TIDE/src/GTSPP/src/main.cu"
+    },
+    "context/src/GTSPP/src/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "publication_adjustments": [],
+      "sha256": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551",
+      "source_label": "RT-TIDE/src/GTSPP/src/mlp_constant.cuh"
+    },
+    "context/src/GTSPP/test_c3.sh": {
+      "mode": "100755",
+      "original_sha256": "df3cce5903ee58994a843bfee210156d06fd0a66337a8348308043bb5f507e08",
+      "publication_adjustments": [],
+      "sha256": "df3cce5903ee58994a843bfee210156d06fd0a66337a8348308043bb5f507e08",
+      "source_label": "RT-TIDE/src/GTSPP/test_c3.sh"
+    },
+    "context/src/GTSPP/test_cuda.cu": {
+      "mode": "100644",
+      "original_sha256": "9b92a746e4d1a816f9c40bc7298234430c93563bbc932315e079f520f68782d7",
+      "publication_adjustments": [],
+      "sha256": "9b92a746e4d1a816f9c40bc7298234430c93563bbc932315e079f520f68782d7",
+      "source_label": "RT-TIDE/src/GTSPP/test_cuda.cu"
+    },
+    "context/src/GTSPP/test_pytorch.py": {
+      "mode": "100644",
+      "original_sha256": "d6ae8b0f5f768a547a79b0185b0d5685840da01f999327bbaba44cd2542e9196",
+      "publication_adjustments": [],
+      "sha256": "d6ae8b0f5f768a547a79b0185b0d5685840da01f999327bbaba44cd2542e9196",
+      "source_label": "RT-TIDE/src/GTSPP/test_pytorch.py"
+    },
+    "context/src/GTSPP/tools/audit_native_c1_buffer_only.py": {
+      "mode": "100755",
+      "original_sha256": "d9a72aa9ba5e650302099c4f95d34fc1b7414dd92aafabdce9fcd7ae25d8d2b3",
+      "publication_adjustments": [],
+      "sha256": "d9a72aa9ba5e650302099c4f95d34fc1b7414dd92aafabdce9fcd7ae25d8d2b3",
+      "source_label": "RT-TIDE/src/GTSPP/tools/audit_native_c1_buffer_only.py"
+    },
+    "context/src/GTSPP/tools/audit_native_trace_binding.py": {
+      "mode": "100755",
+      "original_sha256": "5fbfd013e4860fbef03c86ada164a2a7824202d6fe08f088f3360fda40906b38",
+      "publication_adjustments": [],
+      "sha256": "5fbfd013e4860fbef03c86ada164a2a7824202d6fe08f088f3360fda40906b38",
+      "source_label": "RT-TIDE/src/GTSPP/tools/audit_native_trace_binding.py"
+    },
+    "context/src/GTSPP/tools/run_c1_minimal_closure.sh": {
+      "mode": "100755",
+      "original_sha256": "01a7326032d5cc5319d25640b812f31ad48a5aaf07c381be21188d9879895694",
+      "publication_adjustments": [],
+      "sha256": "01a7326032d5cc5319d25640b812f31ad48a5aaf07c381be21188d9879895694",
+      "source_label": "RT-TIDE/src/GTSPP/tools/run_c1_minimal_closure.sh"
+    },
+    "context/src/GTSPP/tools/validate_c1_minimal_receipt.py": {
+      "mode": "100755",
+      "original_sha256": "f71c048d65d9e3eb449bd1a50ce3d1b71b97a0c9a1d5d6f1aa4d4e7decde5f1b",
+      "publication_adjustments": [],
+      "sha256": "f71c048d65d9e3eb449bd1a50ce3d1b71b97a0c9a1d5d6f1aa4d4e7decde5f1b",
+      "source_label": "RT-TIDE/src/GTSPP/tools/validate_c1_minimal_receipt.py"
+    },
+    "context/src/GTSPP/train.py": {
+      "mode": "100644",
+      "original_sha256": "e9fa9862f074bebb8b6f01e9c571b8fb9118af57a98ce863fa38255428bfa3e5",
+      "publication_adjustments": [],
+      "sha256": "e9fa9862f074bebb8b6f01e9c571b8fb9118af57a98ce863fa38255428bfa3e5",
+      "source_label": "RT-TIDE/src/GTSPP/train.py"
+    },
+    "context/src/RTSpatial/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "6721e7e00403c2fc10ea92a40f3aeebd17bfe750312ed0bc979a064e4bd70e64",
+      "publication_adjustments": [],
+      "sha256": "6721e7e00403c2fc10ea92a40f3aeebd17bfe750312ed0bc979a064e4bd70e64",
+      "source_label": "RT-TIDE/src/RTSpatial/CMakeLists.txt"
+    },
+    "context/src/RTSpatial/LICENSE": {
+      "mode": "100644",
+      "original_sha256": "f06d182909a91551149d70fd504a1c79529f064aa3d39a0ebe1e694af626a89e",
+      "publication_adjustments": [],
+      "sha256": "f06d182909a91551149d70fd504a1c79529f064aa3d39a0ebe1e694af626a89e",
+      "source_label": "RT-TIDE/src/RTSpatial/LICENSE"
+    },
+    "context/src/RTSpatial/cmake/FindOptiX.cmake": {
+      "mode": "100644",
+      "original_sha256": "88371695fa36575828d3aa39f9a089f435ab11f46f96934a6b9bfb99016c9237",
+      "publication_adjustments": [],
+      "sha256": "88371695fa36575828d3aa39f9a089f435ab11f46f96934a6b9bfb99016c9237",
+      "source_label": "RT-TIDE/src/RTSpatial/cmake/FindOptiX.cmake"
+    },
+    "context/src/RTSpatial/cmake/configure_build_type.cmake": {
+      "mode": "100644",
+      "original_sha256": "38804d0f0b9c249b35e6154a417f9926cf867c468df0dec4a9f4b9ed7cd4f8a7",
+      "publication_adjustments": [],
+      "sha256": "38804d0f0b9c249b35e6154a417f9926cf867c468df0dec4a9f4b9ed7cd4f8a7",
+      "source_label": "RT-TIDE/src/RTSpatial/cmake/configure_build_type.cmake"
+    },
+    "context/src/RTSpatial/cmake/nvcuda_compile_module.cmake": {
+      "mode": "100644",
+      "original_sha256": "ae199dde75d15099197e590d3826dccdbcb4d0107e8669f8696b7da68e895235",
+      "publication_adjustments": [],
+      "sha256": "ae199dde75d15099197e590d3826dccdbcb4d0107e8669f8696b7da68e895235",
+      "source_label": "RT-TIDE/src/RTSpatial/cmake/nvcuda_compile_module.cmake"
+    },
+    "context/src/RTSpatial/dataset/gen_data.sh": {
+      "mode": "100755",
+      "original_sha256": "d28e71c80419afa93fc8c0e544582b88ae82a3d3e9811b2a802853817376edcd",
+      "publication_adjustments": [],
+      "sha256": "d28e71c80419afa93fc8c0e544582b88ae82a3d3e9811b2a802853817376edcd",
+      "source_label": "RT-TIDE/src/RTSpatial/dataset/gen_data.sh"
+    },
+    "context/src/RTSpatial/dataset/generator.py": {
+      "mode": "100755",
+      "original_sha256": "8cb23da6654810ab927087d8e4019c84983cb024d188e7a08d663be45871d85b",
+      "publication_adjustments": [],
+      "sha256": "8cb23da6654810ab927087d8e4019c84983cb024d188e7a08d663be45871d85b",
+      "source_label": "RT-TIDE/src/RTSpatial/dataset/generator.py"
+    },
+    "context/src/RTSpatial/examples/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "6bde2fbf66d7bf8e31c3769dc00ccae2711449f445178c8ea6ff594017673a12",
+      "publication_adjustments": [],
+      "sha256": "6bde2fbf66d7bf8e31c3769dc00ccae2711449f445178c8ea6ff594017673a12",
+      "source_label": "RT-TIDE/src/RTSpatial/examples/CMakeLists.txt"
+    },
+    "context/src/RTSpatial/examples/cmake/FindGFlags.cmake": {
+      "mode": "100644",
+      "original_sha256": "ffb6b96d0676fe37490c89707b1e63a017bf95f907f5671a87626a6999756500",
+      "publication_adjustments": [],
+      "sha256": "ffb6b96d0676fe37490c89707b1e63a017bf95f907f5671a87626a6999756500",
+      "source_label": "RT-TIDE/src/RTSpatial/examples/cmake/FindGFlags.cmake"
+    },
+    "context/src/RTSpatial/examples/flags.cpp": {
+      "mode": "100644",
+      "original_sha256": "c76f2a2c7ebd0226cc866bcc65642b0f94e452ec9ca729ae278d9325417aeb09",
+      "publication_adjustments": [],
+      "sha256": "c76f2a2c7ebd0226cc866bcc65642b0f94e452ec9ca729ae278d9325417aeb09",
+      "source_label": "RT-TIDE/src/RTSpatial/examples/flags.cpp"
+    },
+    "context/src/RTSpatial/examples/flags.h": {
+      "mode": "100644",
+      "original_sha256": "59d77b4ef48fbb92607b402adce02e773d60165c636e81ee126c4a95a0de3578",
+      "publication_adjustments": [],
+      "sha256": "59d77b4ef48fbb92607b402adce02e773d60165c636e81ee126c4a95a0de3578",
+      "source_label": "RT-TIDE/src/RTSpatial/examples/flags.h"
+    },
+    "context/src/RTSpatial/examples/spatial_index.cu": {
+      "mode": "100644",
+      "original_sha256": "641d2c14ab2d3d99d4a579745680d0366962531d1ff3d73b12aac458949e7493",
+      "publication_adjustments": [],
+      "sha256": "641d2c14ab2d3d99d4a579745680d0366962531d1ff3d73b12aac458949e7493",
+      "source_label": "RT-TIDE/src/RTSpatial/examples/spatial_index.cu"
+    },
+    "context/src/RTSpatial/examples/wkt_loader.h": {
+      "mode": "100644",
+      "original_sha256": "149d520567646a696341347eb875aa992e5cb79b5134644edc915d2b53dcf3c5",
+      "publication_adjustments": [],
+      "sha256": "149d520567646a696341347eb875aa992e5cb79b5134644edc915d2b53dcf3c5",
+      "source_label": "RT-TIDE/src/RTSpatial/examples/wkt_loader.h"
+    },
+    "context/src/RTSpatial/expr/run_synthetic.sh": {
+      "mode": "100644",
+      "original_sha256": "88b2df6bfe4d3119fa0f0df0bee4b764f126b4ecf8ae2c6791447e43f790d5ce",
+      "publication_adjustments": [],
+      "sha256": "88b2df6bfe4d3119fa0f0df0bee4b764f126b4ecf8ae2c6791447e43f790d5ce",
+      "source_label": "RT-TIDE/src/RTSpatial/expr/run_synthetic.sh"
+    },
+    "context/src/RTSpatial/include/rtspatial/default_handlers/collecting_handlers.h": {
+      "mode": "100644",
+      "original_sha256": "3c8ec38366ea3487c582bb990f6a96c788033ca92c203966f15b508a10d23c23",
+      "publication_adjustments": [],
+      "sha256": "3c8ec38366ea3487c582bb990f6a96c788033ca92c203966f15b508a10d23c23",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/default_handlers/collecting_handlers.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/default_handlers/counting_handlers.h": {
+      "mode": "100644",
+      "original_sha256": "ba7472755b5acb148772c8bce495bc5289c21a90a8456713822c1e61fcd47391",
+      "publication_adjustments": [],
+      "sha256": "ba7472755b5acb148772c8bce495bc5289c21a90a8456713822c1e61fcd47391",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/default_handlers/counting_handlers.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/config.h": {
+      "mode": "100644",
+      "original_sha256": "3b1268ffa6dac79dfcccf6241e4476d757525919d937fc4d109d7ab04ddcb8c0",
+      "publication_adjustments": [],
+      "sha256": "3b1268ffa6dac79dfcccf6241e4476d757525919d937fc4d109d7ab04ddcb8c0",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/config.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/launch_parameters.h": {
+      "mode": "100644",
+      "original_sha256": "15e389c4e5d3165b1ee151f6b4255d5b622c6c82c318d3b475a9ad1b523f7c4e",
+      "publication_adjustments": [],
+      "sha256": "15e389c4e5d3165b1ee151f6b4255d5b622c6c82c318d3b475a9ad1b523f7c4e",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/launch_parameters.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/ray_params.h": {
+      "mode": "100644",
+      "original_sha256": "85d7cd787ff296810a2c5cfd368d65f977272b984d1c804593e16dc14092598a",
+      "publication_adjustments": [],
+      "sha256": "85d7cd787ff296810a2c5cfd368d65f977272b984d1c804593e16dc14092598a",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/ray_params.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/reusable_buffer.h": {
+      "mode": "100644",
+      "original_sha256": "a5be4a7b32627d5f68df08887f897eada1b90f735016b5b5036e66380badc613",
+      "publication_adjustments": [],
+      "sha256": "a5be4a7b32627d5f68df08887f897eada1b90f735016b5b5036e66380badc613",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/reusable_buffer.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/rt_engine.h": {
+      "mode": "100644",
+      "original_sha256": "57af74e492a321b19098f3ad8b0d27320f1b4cfa3fd21f8ed724dd790680f150",
+      "publication_adjustments": [],
+      "sha256": "57af74e492a321b19098f3ad8b0d27320f1b4cfa3fd21f8ed724dd790680f150",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/rt_engine.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/sampler.h": {
+      "mode": "100644",
+      "original_sha256": "f2dd1fd923809f7f3e8bd8b7ccdd64a8d45fc88059da911c034801d8886d54a2",
+      "publication_adjustments": [],
+      "sha256": "f2dd1fd923809f7f3e8bd8b7ccdd64a8d45fc88059da911c034801d8886d54a2",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/sampler.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/details/sbt_record.h": {
+      "mode": "100644",
+      "original_sha256": "8d040afea30f42877ef1a6c8ad4f8fb0317b12cac9630c22e22198253f37d2f3",
+      "publication_adjustments": [],
+      "sha256": "8d040afea30f42877ef1a6c8ad4f8fb0317b12cac9630c22e22198253f37d2f3",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/details/sbt_record.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/geom/envelope.cuh": {
+      "mode": "100644",
+      "original_sha256": "515116d3635ef16b5dfd5201b9991dc7b6aecd770d61d83def6fc8138f3d4a37",
+      "publication_adjustments": [],
+      "sha256": "515116d3635ef16b5dfd5201b9991dc7b6aecd770d61d83def6fc8138f3d4a37",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/geom/envelope.cuh"
+    },
+    "context/src/RTSpatial/include/rtspatial/geom/line.cuh": {
+      "mode": "100644",
+      "original_sha256": "0b8ab477a3a7da3bab7d2a632e847ffef6842fd5f930edb50c4d759b0d3e7e73",
+      "publication_adjustments": [],
+      "sha256": "0b8ab477a3a7da3bab7d2a632e847ffef6842fd5f930edb50c4d759b0d3e7e73",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/geom/line.cuh"
+    },
+    "context/src/RTSpatial/include/rtspatial/geom/point.cuh": {
+      "mode": "100644",
+      "original_sha256": "2e2ad57b9cea87feed7470f4fdaa40f901d945164e2b8dea6f061ead27dbe20a",
+      "publication_adjustments": [],
+      "sha256": "2e2ad57b9cea87feed7470f4fdaa40f901d945164e2b8dea6f061ead27dbe20a",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/geom/point.cuh"
+    },
+    "context/src/RTSpatial/include/rtspatial/geom/predicates.h": {
+      "mode": "100644",
+      "original_sha256": "98ed9ef1ae888e2a2d94ee527d43f07a38dd92434cc1166339d1aa76f52163f5",
+      "publication_adjustments": [],
+      "sha256": "98ed9ef1ae888e2a2d94ee527d43f07a38dd92434cc1166339d1aa76f52163f5",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/geom/predicates.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/rtspatial.h": {
+      "mode": "100644",
+      "original_sha256": "0ea3b685ae8cecfac4099bfa719192568f336a82012fa532bf94f0143dc471ec",
+      "publication_adjustments": [],
+      "sha256": "0ea3b685ae8cecfac4099bfa719192568f336a82012fa532bf94f0143dc471ec",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/rtspatial.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/spatial_index.cuh": {
+      "mode": "100644",
+      "original_sha256": "74a744a1edf486ef62431e21bbef2f458b03e38c08e28b59d55a785417d62e2e",
+      "publication_adjustments": [],
+      "sha256": "74a744a1edf486ef62431e21bbef2f458b03e38c08e28b59d55a785417d62e2e",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/spatial_index.cuh"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/array_view.h": {
+      "mode": "100644",
+      "original_sha256": "2d1956f61d39b1dcaa8085b7a7a9f76ad59f69ff575e1adc3e09e3e09d55f9ed",
+      "publication_adjustments": [],
+      "sha256": "2d1956f61d39b1dcaa8085b7a7a9f76ad59f69ff575e1adc3e09e3e09d55f9ed",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/array_view.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/bitset.h": {
+      "mode": "100644",
+      "original_sha256": "27d1b7e21845a014e29564b6c34b5266c6367576db8c75487a6337cc68f02bf0",
+      "publication_adjustments": [],
+      "sha256": "27d1b7e21845a014e29564b6c34b5266c6367576db8c75487a6337cc68f02bf0",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/bitset.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/exception.h": {
+      "mode": "100644",
+      "original_sha256": "422390bfa85befbdeedca385eaaf9536a44ed4be087154e1c7c31035669d9909",
+      "publication_adjustments": [],
+      "sha256": "422390bfa85befbdeedca385eaaf9536a44ed4be087154e1c7c31035669d9909",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/exception.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/helpers.h": {
+      "mode": "100644",
+      "original_sha256": "4b8c01c42392f8ab96c62ed2648e3188d2daa08e60b642ff4fe83ac4a7e06b79",
+      "publication_adjustments": [],
+      "sha256": "4b8c01c42392f8ab96c62ed2648e3188d2daa08e60b642ff4fe83ac4a7e06b79",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/helpers.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/queue.h": {
+      "mode": "100644",
+      "original_sha256": "c927ef50279e4f4bbd6b3f0c6c600e6fd2763bd3fdeec760ff4765cb3bd78978",
+      "publication_adjustments": [],
+      "sha256": "c927ef50279e4f4bbd6b3f0c6c600e6fd2763bd3fdeec760ff4765cb3bd78978",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/queue.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/shared_value.h": {
+      "mode": "100644",
+      "original_sha256": "f62b425f658ba64286e8b2e885ae754384af1b352a0dc439ba5ed593846ea983",
+      "publication_adjustments": [],
+      "sha256": "f62b425f658ba64286e8b2e885ae754384af1b352a0dc439ba5ed593846ea983",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/shared_value.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/stopwatch.h": {
+      "mode": "100644",
+      "original_sha256": "f30b4b7c73fb6b52205ef1c5402609a609b92d965b1a9f9b72a8c8d3ae359b58",
+      "publication_adjustments": [],
+      "sha256": "f30b4b7c73fb6b52205ef1c5402609a609b92d965b1a9f9b72a8c8d3ae359b58",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/stopwatch.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/stream.h": {
+      "mode": "100644",
+      "original_sha256": "4c99613e3e9334bdbd3d406f6e55e7da07ca11dcce14a69aba967e5130523a43",
+      "publication_adjustments": [],
+      "sha256": "4c99613e3e9334bdbd3d406f6e55e7da07ca11dcce14a69aba967e5130523a43",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/stream.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/type_traits.h": {
+      "mode": "100644",
+      "original_sha256": "25e6778b7b91ffa3f51df4aede2ae318ed233430b8d124b310c621896a81d23d",
+      "publication_adjustments": [],
+      "sha256": "25e6778b7b91ffa3f51df4aede2ae318ed233430b8d124b310c621896a81d23d",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/type_traits.h"
+    },
+    "context/src/RTSpatial/include/rtspatial/utils/util.h": {
+      "mode": "100644",
+      "original_sha256": "44076a78d63d5ab4baf81019265dc5ad606ec82c491a54d8ea18e5400810a329",
+      "publication_adjustments": [],
+      "sha256": "44076a78d63d5ab4baf81019265dc5ad606ec82c491a54d8ea18e5400810a329",
+      "source_label": "RT-TIDE/src/RTSpatial/include/rtspatial/utils/util.h"
+    },
+    "context/src/RTSpatial/misc/shp2wkt.py": {
+      "mode": "100755",
+      "original_sha256": "a5c05fdd917c75dc73a663c6532ed75a7f18c45e879796a5b21cda955148d729",
+      "publication_adjustments": [],
+      "sha256": "a5c05fdd917c75dc73a663c6532ed75a7f18c45e879796a5b21cda955148d729",
+      "source_label": "RT-TIDE/src/RTSpatial/misc/shp2wkt.py"
+    },
+    "context/src/RTSpatial/rtspatial-config-version.in.cmake": {
+      "mode": "100644",
+      "original_sha256": "43a878165c9cfcf3e65bd5b366030c9b4e5804d0a35dbf5bca69f294b210eb44",
+      "publication_adjustments": [],
+      "sha256": "43a878165c9cfcf3e65bd5b366030c9b4e5804d0a35dbf5bca69f294b210eb44",
+      "source_label": "RT-TIDE/src/RTSpatial/rtspatial-config-version.in.cmake"
+    },
+    "context/src/RTSpatial/rtspatial-config.in.cmake": {
+      "mode": "100644",
+      "original_sha256": "914a47cc0c27a67c040820bd2b3bc896845e5bcc29ab11a7d6dd9af0e08af5df",
+      "publication_adjustments": [],
+      "sha256": "914a47cc0c27a67c040820bd2b3bc896845e5bcc29ab11a7d6dd9af0e08af5df",
+      "source_label": "RT-TIDE/src/RTSpatial/rtspatial-config.in.cmake"
+    },
+    "context/src/RTSpatial/src/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "14aeb0560a2cdd58a8e6a8747aa906a89a5423ab09e066aa83282766126efbf7",
+      "publication_adjustments": [],
+      "sha256": "14aeb0560a2cdd58a8e6a8747aa906a89a5423ab09e066aa83282766126efbf7",
+      "source_label": "RT-TIDE/src/RTSpatial/src/CMakeLists.txt"
+    },
+    "context/src/RTSpatial/src/shaders/shaders_contains_envelope_query_2d.cu": {
+      "mode": "100644",
+      "original_sha256": "f5200603839e6c714bfc6ce9d085a04f2ca17aa44f9961cd4abc36c0b6caae5f",
+      "publication_adjustments": [],
+      "sha256": "f5200603839e6c714bfc6ce9d085a04f2ca17aa44f9961cd4abc36c0b6caae5f",
+      "source_label": "RT-TIDE/src/RTSpatial/src/shaders/shaders_contains_envelope_query_2d.cu"
+    },
+    "context/src/RTSpatial/src/shaders/shaders_contains_point_query_2d.cu": {
+      "mode": "100644",
+      "original_sha256": "c5ebbea64f5096fc524d4588d79c1d7d8a3594776de965ad82106b92021796b9",
+      "publication_adjustments": [],
+      "sha256": "c5ebbea64f5096fc524d4588d79c1d7d8a3594776de965ad82106b92021796b9",
+      "source_label": "RT-TIDE/src/RTSpatial/src/shaders/shaders_contains_point_query_2d.cu"
+    },
+    "context/src/RTSpatial/src/shaders/shaders_intersects_envelope_query_2d.cu": {
+      "mode": "100644",
+      "original_sha256": "1f1dc0507bfc2abb813d17c23ae39914f358b466caf4a3e9ced52354c91faea2",
+      "publication_adjustments": [],
+      "sha256": "1f1dc0507bfc2abb813d17c23ae39914f358b466caf4a3e9ced52354c91faea2",
+      "source_label": "RT-TIDE/src/RTSpatial/src/shaders/shaders_intersects_envelope_query_2d.cu"
+    },
+    "context/src/RTSpatial/src/shaders/shaders_intersects_line_query_2d.cu": {
+      "mode": "100644",
+      "original_sha256": "41b9a2797fba59e3d58686b7ece7046f29ac62beb0eb2f8ffd19a96711467693",
+      "publication_adjustments": [],
+      "sha256": "41b9a2797fba59e3d58686b7ece7046f29ac62beb0eb2f8ffd19a96711467693",
+      "source_label": "RT-TIDE/src/RTSpatial/src/shaders/shaders_intersects_line_query_2d.cu"
+    },
+    "context/src/RTSpatial/test/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "ccf85913c4aabb1b34486871a8b6672f697043f59b8270cbc78809442c11e54a",
+      "publication_adjustments": [],
+      "sha256": "ccf85913c4aabb1b34486871a8b6672f697043f59b8270cbc78809442c11e54a",
+      "source_label": "RT-TIDE/src/RTSpatial/test/CMakeLists.txt"
+    },
+    "context/src/RTSpatial/test/rtspatial_tests.cu": {
+      "mode": "100644",
+      "original_sha256": "9a2ab9c8d708af7b403d9da46f54b2f218fbe16e31ac944dc3b1bc29fe3cfaf7",
+      "publication_adjustments": [],
+      "sha256": "9a2ab9c8d708af7b403d9da46f54b2f218fbe16e31ac944dc3b1bc29fe3cfaf7",
+      "source_label": "RT-TIDE/src/RTSpatial/test/rtspatial_tests.cu"
+    },
+    "context/src/RTSpatial/test/test_commons.h": {
+      "mode": "100644",
+      "original_sha256": "d4fc49105d6a6d6a0d44845f835ea5f4a0f7e1e23806289080112ebf720a952a",
+      "publication_adjustments": [],
+      "sha256": "d4fc49105d6a6d6a0d44845f835ea5f4a0f7e1e23806289080112ebf720a952a",
+      "source_label": "RT-TIDE/src/RTSpatial/test/test_commons.h"
+    },
+    "context/src/RTSpatial/test/test_envelope_queries.h": {
+      "mode": "100644",
+      "original_sha256": "7d88fc127e39892bbc6b6efccc6b4163a4c96491a8604a2f225946f0059e8c5a",
+      "publication_adjustments": [],
+      "sha256": "7d88fc127e39892bbc6b6efccc6b4163a4c96491a8604a2f225946f0059e8c5a",
+      "source_label": "RT-TIDE/src/RTSpatial/test/test_envelope_queries.h"
+    },
+    "context/src/RTSpatial/test/test_line_queries.h": {
+      "mode": "100644",
+      "original_sha256": "13f9e7119bd09a5df82c911c11fe7aa18e161bcf0b635c602636a5c7a1a244f3",
+      "publication_adjustments": [],
+      "sha256": "13f9e7119bd09a5df82c911c11fe7aa18e161bcf0b635c602636a5c7a1a244f3",
+      "source_label": "RT-TIDE/src/RTSpatial/test/test_line_queries.h"
+    },
+    "context/src/RTSpatial/test/test_point_queries.h": {
+      "mode": "100644",
+      "original_sha256": "de0cf56d5533b59a7d58045efc1a35071c7e83647ad204558a5d5d6bc64ea206",
+      "publication_adjustments": [],
+      "sha256": "de0cf56d5533b59a7d58045efc1a35071c7e83647ad204558a5d5d6bc64ea206",
+      "source_label": "RT-TIDE/src/RTSpatial/test/test_point_queries.h"
+    },
+    "source/RTSpatial-fixed/LICENSE": {
+      "mode": "100644",
+      "original_sha256": "f06d182909a91551149d70fd504a1c79529f064aa3d39a0ebe1e694af626a89e",
+      "publication_adjustments": [],
+      "sha256": "f06d182909a91551149d70fd504a1c79529f064aa3d39a0ebe1e694af626a89e",
+      "source_label": "RT-TIDE/src/RTSpatial/LICENSE"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/default_handlers/collecting_handlers.h": {
+      "mode": "100644",
+      "original_sha256": "3c8ec38366ea3487c582bb990f6a96c788033ca92c203966f15b508a10d23c23",
+      "publication_adjustments": [],
+      "sha256": "3c8ec38366ea3487c582bb990f6a96c788033ca92c203966f15b508a10d23c23",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/default_handlers/collecting_handlers.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/default_handlers/counting_handlers.h": {
+      "mode": "100644",
+      "original_sha256": "ba7472755b5acb148772c8bce495bc5289c21a90a8456713822c1e61fcd47391",
+      "publication_adjustments": [],
+      "sha256": "ba7472755b5acb148772c8bce495bc5289c21a90a8456713822c1e61fcd47391",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/default_handlers/counting_handlers.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/config.h": {
+      "mode": "100644",
+      "original_sha256": "3b1268ffa6dac79dfcccf6241e4476d757525919d937fc4d109d7ab04ddcb8c0",
+      "publication_adjustments": [],
+      "sha256": "3b1268ffa6dac79dfcccf6241e4476d757525919d937fc4d109d7ab04ddcb8c0",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/config.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/launch_parameters.h": {
+      "mode": "100644",
+      "original_sha256": "15e389c4e5d3165b1ee151f6b4255d5b622c6c82c318d3b475a9ad1b523f7c4e",
+      "publication_adjustments": [],
+      "sha256": "15e389c4e5d3165b1ee151f6b4255d5b622c6c82c318d3b475a9ad1b523f7c4e",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/launch_parameters.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/ray_params.h": {
+      "mode": "100644",
+      "original_sha256": "85d7cd787ff296810a2c5cfd368d65f977272b984d1c804593e16dc14092598a",
+      "publication_adjustments": [],
+      "sha256": "85d7cd787ff296810a2c5cfd368d65f977272b984d1c804593e16dc14092598a",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/ray_params.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/reusable_buffer.h": {
+      "mode": "100644",
+      "original_sha256": "a5be4a7b32627d5f68df08887f897eada1b90f735016b5b5036e66380badc613",
+      "publication_adjustments": [],
+      "sha256": "a5be4a7b32627d5f68df08887f897eada1b90f735016b5b5036e66380badc613",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/reusable_buffer.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/rt_engine.h": {
+      "mode": "100644",
+      "original_sha256": "57af74e492a321b19098f3ad8b0d27320f1b4cfa3fd21f8ed724dd790680f150",
+      "publication_adjustments": [],
+      "sha256": "57af74e492a321b19098f3ad8b0d27320f1b4cfa3fd21f8ed724dd790680f150",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/rt_engine.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/sampler.h": {
+      "mode": "100644",
+      "original_sha256": "f2dd1fd923809f7f3e8bd8b7ccdd64a8d45fc88059da911c034801d8886d54a2",
+      "publication_adjustments": [],
+      "sha256": "f2dd1fd923809f7f3e8bd8b7ccdd64a8d45fc88059da911c034801d8886d54a2",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/sampler.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/details/sbt_record.h": {
+      "mode": "100644",
+      "original_sha256": "8d040afea30f42877ef1a6c8ad4f8fb0317b12cac9630c22e22198253f37d2f3",
+      "publication_adjustments": [],
+      "sha256": "8d040afea30f42877ef1a6c8ad4f8fb0317b12cac9630c22e22198253f37d2f3",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/details/sbt_record.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/geom/envelope.cuh": {
+      "mode": "100644",
+      "original_sha256": "515116d3635ef16b5dfd5201b9991dc7b6aecd770d61d83def6fc8138f3d4a37",
+      "publication_adjustments": [],
+      "sha256": "515116d3635ef16b5dfd5201b9991dc7b6aecd770d61d83def6fc8138f3d4a37",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/geom/envelope.cuh"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/geom/line.cuh": {
+      "mode": "100644",
+      "original_sha256": "0b8ab477a3a7da3bab7d2a632e847ffef6842fd5f930edb50c4d759b0d3e7e73",
+      "publication_adjustments": [],
+      "sha256": "0b8ab477a3a7da3bab7d2a632e847ffef6842fd5f930edb50c4d759b0d3e7e73",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/geom/line.cuh"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/geom/point.cuh": {
+      "mode": "100644",
+      "original_sha256": "2e2ad57b9cea87feed7470f4fdaa40f901d945164e2b8dea6f061ead27dbe20a",
+      "publication_adjustments": [],
+      "sha256": "2e2ad57b9cea87feed7470f4fdaa40f901d945164e2b8dea6f061ead27dbe20a",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/geom/point.cuh"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/geom/predicates.h": {
+      "mode": "100644",
+      "original_sha256": "98ed9ef1ae888e2a2d94ee527d43f07a38dd92434cc1166339d1aa76f52163f5",
+      "publication_adjustments": [],
+      "sha256": "98ed9ef1ae888e2a2d94ee527d43f07a38dd92434cc1166339d1aa76f52163f5",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/geom/predicates.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/rtspatial.h": {
+      "mode": "100644",
+      "original_sha256": "0ea3b685ae8cecfac4099bfa719192568f336a82012fa532bf94f0143dc471ec",
+      "publication_adjustments": [],
+      "sha256": "0ea3b685ae8cecfac4099bfa719192568f336a82012fa532bf94f0143dc471ec",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/rtspatial.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/spatial_index.cuh": {
+      "mode": "100644",
+      "original_sha256": "1e7359c20f5016d04eb983029833e5e2b6343e056a9ca73a49ee004c4d365cde",
+      "publication_adjustments": [],
+      "sha256": "1e7359c20f5016d04eb983029833e5e2b6343e056a9ca73a49ee004c4d365cde",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/spatial_index.cuh"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/array_view.h": {
+      "mode": "100644",
+      "original_sha256": "2d1956f61d39b1dcaa8085b7a7a9f76ad59f69ff575e1adc3e09e3e09d55f9ed",
+      "publication_adjustments": [],
+      "sha256": "2d1956f61d39b1dcaa8085b7a7a9f76ad59f69ff575e1adc3e09e3e09d55f9ed",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/array_view.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/bitset.h": {
+      "mode": "100644",
+      "original_sha256": "27d1b7e21845a014e29564b6c34b5266c6367576db8c75487a6337cc68f02bf0",
+      "publication_adjustments": [],
+      "sha256": "27d1b7e21845a014e29564b6c34b5266c6367576db8c75487a6337cc68f02bf0",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/bitset.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/exception.h": {
+      "mode": "100644",
+      "original_sha256": "422390bfa85befbdeedca385eaaf9536a44ed4be087154e1c7c31035669d9909",
+      "publication_adjustments": [],
+      "sha256": "422390bfa85befbdeedca385eaaf9536a44ed4be087154e1c7c31035669d9909",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/exception.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/helpers.h": {
+      "mode": "100644",
+      "original_sha256": "4b8c01c42392f8ab96c62ed2648e3188d2daa08e60b642ff4fe83ac4a7e06b79",
+      "publication_adjustments": [],
+      "sha256": "4b8c01c42392f8ab96c62ed2648e3188d2daa08e60b642ff4fe83ac4a7e06b79",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/helpers.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/queue.h": {
+      "mode": "100644",
+      "original_sha256": "c927ef50279e4f4bbd6b3f0c6c600e6fd2763bd3fdeec760ff4765cb3bd78978",
+      "publication_adjustments": [],
+      "sha256": "c927ef50279e4f4bbd6b3f0c6c600e6fd2763bd3fdeec760ff4765cb3bd78978",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/queue.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/shared_value.h": {
+      "mode": "100644",
+      "original_sha256": "f62b425f658ba64286e8b2e885ae754384af1b352a0dc439ba5ed593846ea983",
+      "publication_adjustments": [],
+      "sha256": "f62b425f658ba64286e8b2e885ae754384af1b352a0dc439ba5ed593846ea983",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/shared_value.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/stopwatch.h": {
+      "mode": "100644",
+      "original_sha256": "f30b4b7c73fb6b52205ef1c5402609a609b92d965b1a9f9b72a8c8d3ae359b58",
+      "publication_adjustments": [],
+      "sha256": "f30b4b7c73fb6b52205ef1c5402609a609b92d965b1a9f9b72a8c8d3ae359b58",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/stopwatch.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/stream.h": {
+      "mode": "100644",
+      "original_sha256": "4c99613e3e9334bdbd3d406f6e55e7da07ca11dcce14a69aba967e5130523a43",
+      "publication_adjustments": [],
+      "sha256": "4c99613e3e9334bdbd3d406f6e55e7da07ca11dcce14a69aba967e5130523a43",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/stream.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/type_traits.h": {
+      "mode": "100644",
+      "original_sha256": "25e6778b7b91ffa3f51df4aede2ae318ed233430b8d124b310c621896a81d23d",
+      "publication_adjustments": [],
+      "sha256": "25e6778b7b91ffa3f51df4aede2ae318ed233430b8d124b310c621896a81d23d",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/type_traits.h"
+    },
+    "source/RTSpatial-fixed/include/rtspatial/utils/util.h": {
+      "mode": "100644",
+      "original_sha256": "44076a78d63d5ab4baf81019265dc5ad606ec82c491a54d8ea18e5400810a329",
+      "publication_adjustments": [],
+      "sha256": "44076a78d63d5ab4baf81019265dc5ad606ec82c491a54d8ea18e5400810a329",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/RTSpatial-fixed/include/rtspatial/utils/util.h"
+    },
+    "source/fixed_probe_src/CMakeLists.txt": {
+      "mode": "100644",
+      "original_sha256": "b46c828e5482ec212841a1d0ce76b83fbe3e3b081a2f8868ee7322e65973f97c",
+      "publication_adjustments": [],
+      "sha256": "b46c828e5482ec212841a1d0ce76b83fbe3e3b081a2f8868ee7322e65973f97c",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/fixed_probe_src/CMakeLists.txt"
+    },
+    "source/fixed_probe_src/rt_tide_fused_probe.cu": {
+      "mode": "100644",
+      "original_sha256": "9ad64938482e123442054c16a1f4881eadeaa477cfcde5d71fea406ecc8fa89e",
+      "publication_adjustments": [],
+      "sha256": "9ad64938482e123442054c16a1f4881eadeaa477cfcde5d71fea406ecc8fa89e",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/fixed_probe_src/rt_tide_fused_probe.cu"
+    },
+    "source/patch_tiled_20260824.py": {
+      "mode": "100644",
+      "original_sha256": "de0bef45e09a07222762a230536a38d30af60369a08ee9e97394f26f278a97e0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "62a7959e38840848ebdcb07da364bbf6b3efe5e87350a429c8c9b17f3c12ec84",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/patch_tiled_20260824.py"
+    },
+    "source/patch_tiled_20260824_v2.py": {
+      "mode": "100644",
+      "original_sha256": "de0bef45e09a07222762a230536a38d30af60369a08ee9e97394f26f278a97e0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "62a7959e38840848ebdcb07da364bbf6b3efe5e87350a429c8c9b17f3c12ec84",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/patch_tiled_20260824_v2.py"
+    },
+    "source/patch_tiled_v3.py": {
+      "mode": "100644",
+      "original_sha256": "33dfbc0cb573ecf125b1f577402acd14401a6a0ec47b87238b4e297d5b3a6628",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7f9e18afe9c3e5b6200b7a313d9f93b1f5c417a121faf5768154643c8e8fb6fb",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/patch_tiled_v3.py"
+    },
+    "source/patch_tiled_verify.py": {
+      "mode": "100644",
+      "original_sha256": "10541c983b45a40c205fff8222e1ea754d5e50001fa0bc67fa84623dd9ba86ad",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7bfd2ac5e2dfceb29e2e0824fccc39fd7747f94382149e6bed3972f81f87ca50",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824/patch_tiled_verify.py"
+    }
+  },
+  "payload_sha256": "1c192b00d0554b2274a4bf578dfca01762ebe04f8f8cb6ef4086a05e19834d96",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
