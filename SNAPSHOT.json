@@ -1,0 +1,44 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/experiments/tide_20260904_fusion_fair_control_gate0",
+      "role": "Fusion fair-control experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/experiments/tide_20260904_fusion_fair_control_gate0"
+    }
+  ],
+  "files": {
+    "source/src/fair_dispatch.cu": {
+      "mode": "100644",
+      "original_sha256": "8c0add9b2204fe75b93786bce6293cc9dea7ce9db146b00b7c2bb9730f5d867d",
+      "publication_adjustments": [],
+      "sha256": "8c0add9b2204fe75b93786bce6293cc9dea7ce9db146b00b7c2bb9730f5d867d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/experiments/tide_20260904_fusion_fair_control_gate0/src/fair_dispatch.cu"
+    },
+    "source/src/prepare_synthetic_fixture.py": {
+      "mode": "100644",
+      "original_sha256": "56add8cb97bcc88ae9c9a93c429b30b65a0e3bfbd20fff4e6c7986f724b236f0",
+      "publication_adjustments": [],
+      "sha256": "56add8cb97bcc88ae9c9a93c429b30b65a0e3bfbd20fff4e6c7986f724b236f0",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/experiments/tide_20260904_fusion_fair_control_gate0/src/prepare_synthetic_fixture.py"
+    },
+    "source/src/run_campaign.py": {
+      "mode": "100644",
+      "original_sha256": "7ddcd95995b5d6ed4426587657986641cae225756b55e90f65d7e0688e7d0e7b",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "70828a9cdfc6bec14e28be61da3bd8828a74a1376137e2c9d737408793e25ccc",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/experiments/tide_20260904_fusion_fair_control_gate0/src/run_campaign.py"
+    }
+  },
+  "payload_sha256": "f345f430aaedf4e5712d23e9a8640793eae58d3f2a6b80f42d0d30c8b00f946b",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
