@@ -1,0 +1,21 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/legacy-faiss_gpu_delete_smoke_v1",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/faiss_gpu_delete_smoke_v1"
+    }
+  ],
+  "files": {
+    "source/faiss_gpu_delete_capability_smoke_v1.py": {
+      "mode": "100755",
+      "original_sha256": "ca40be5d6b3216bec15903a1c3b403e465051f71ab7dc1bc947e1744f2b24d1d",
+      "publication_adjustments": [],
+      "sha256": "ca40be5d6b3216bec15903a1c3b403e465051f71ab7dc1bc947e1744f2b24d1d",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/faiss_gpu_delete_smoke_v1/faiss_gpu_delete_capability_smoke_v1.py"
+    }
+  },
+  "payload_sha256": "02d9faeb2f5fe72931e424f81a899d9d9de73bd521b3fa34acc80dedb6cbaa39",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
