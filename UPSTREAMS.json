@@ -1,0 +1,19 @@
+{
+  "checkouts": [
+    {
+      "commit": "52509e8022abeab722f5a9a89d1917e8b481defe",
+      "dirty": true,
+      "label": "RT-TIDE/src/RTSpatial",
+      "upstream": "https://github.com/RTSpatial/RTSpatial.git"
+    },
+    {
+      "commit": "453149369708e84fb25433c4c9d1d748ecf6afaf",
+      "dirty": false,
+      "label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1/upstream_pinned_bundle_v1"
+    },
+    {
+      "label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_4m_20260902_v1/upstream"
+    }
+  ],
+  "scope": "selected checkout metadata only; per-file hashes identify captured bytes"
+}

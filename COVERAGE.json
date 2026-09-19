@@ -1,0 +1,23 @@
+{
+  "fixture_builder_supplement_files": 3,
+  "generated_build_files_omitted": 48,
+  "initial_exclusions_by_category": {
+    "GTS-only sweep": 2,
+    "Installed or vendored external dependency; adapter sources retained separately": 431,
+    "Non-TIDE-named historical stages or shared controls, outside this archive scope": 2684,
+    "Unrelated project content hit": 3
+  },
+  "initial_source_like_files": 5205,
+  "outside_source_content_hits": 13,
+  "permission_gaps": [
+    "Legacy ANNS native CPU self-test/stage routes",
+    "Legacy ANNS persistent-kNN, turnover and long-stream sources"
+  ],
+  "reviewed_support_supplement_files": 15,
+  "scan_date_utc": "2026-09-19T02:07:32.811760+00:00",
+  "scan_scope": "readable selected user workspace, not the entire host",
+  "scope_details": "COVERAGE.md",
+  "source_file_instances_published": 2068,
+  "source_files_captured_initially": 2098,
+  "whole_host_completeness_claim": false
+}

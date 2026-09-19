@@ -1,0 +1,995 @@
+{
+  "aggregate_branches": 1,
+  "archive_kind": "private source-only scoped preservation",
+  "branch_counts_by_family": {
+    "active": 9,
+    "adapters": 1,
+    "baselines": 21,
+    "companions": 3,
+    "experiments": 16,
+    "legacy": 63,
+    "protocol": 14,
+    "rt-tide": 8,
+    "tidepro": 3
+  },
+  "captured_source_file_instances": 2068,
+  "distinct_stage_payloads": 137,
+  "privacy_adjusted_file_instances": 563,
+  "snapshot_date": "2026-09-19",
+  "stage_branches": 138,
+  "variants": [
+    {
+      "branch": "archive/all-sources",
+      "file_count": 2068,
+      "payload_sha256": "1c978189a49b13cc900e3c1122cb8b50b1c1634500a0198a1cc38b89d137792c",
+      "role": "Aggregate captured source forest; not an additional variant",
+      "source_label": "captured-workspace"
+    },
+    {
+      "branch": "variants/active/tide_decision_repair_20260905_cpu_gate",
+      "file_count": 1,
+      "payload_sha256": "78c495b1ba1046384fcda146a84c71b68236aa8d967d4adbb6702fe036dae2a4",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_decision_repair_20260905_cpu_gate"
+    },
+    {
+      "branch": "variants/active/tide_gate12_20260825",
+      "file_count": 16,
+      "payload_sha256": "bbb29676aae82e6d7bcfaf468e3eef6f31e5bac39923bc277187b1cb1a77e6cc",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_gate12_20260825"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate0_20260827",
+      "file_count": 10,
+      "payload_sha256": "7a2314a07f86a11990aacb3bf888c8302f86c8fe4eb5fa6c2f74d113e427b7a7",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate0_20260827"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate1_20260827",
+      "file_count": 6,
+      "payload_sha256": "c875d98f4ceebdacf5bfc34368f017a801558c31c30665231227925532bb5713",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate1_20260827"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate2_20260827",
+      "file_count": 2,
+      "payload_sha256": "71450bacca198be806b00f3a4a59a36460d0e9360e0c16b43f763e09ff6fb6c8",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate2_20260827"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate3_20260827",
+      "file_count": 2,
+      "payload_sha256": "35a81b72cb36d0901b2e4325ce946cfd91b92686fed48bf26d8128aab5e04977",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate3_20260827"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate4_20260827",
+      "file_count": 10,
+      "payload_sha256": "c0849529840a07585da2e7d79daade50f66a800026bb87ac7a5988e38f3e332a",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate4_20260827"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate5_20260827",
+      "file_count": 12,
+      "payload_sha256": "63145bcc0231db5cf350824abaded5d84cf5f7af69bfa79b6acc40502d1fb60d",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate5_20260827"
+    },
+    {
+      "branch": "variants/active/tide_surechembl_gate6_20260828",
+      "file_count": 28,
+      "payload_sha256": "f9934bdb1fef7afb29b2405d69550a97e772ca2002a63eef8c3b0e9fcbad7d4c",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828"
+    },
+    {
+      "branch": "variants/adapters/page2tile-tide-intent",
+      "file_count": 3,
+      "payload_sha256": "da5834f1e5901370529ac4cb261b06856d500725e8bf1ecaf37f9c401eabcb83",
+      "role": "TIDE-intent adapter in a separate project, not a TIDE index",
+      "source_label": "project/livsyn/Page2Tile"
+    },
+    {
+      "branch": "variants/baselines/chemfp51_gate0/chemfp51_gate0_20260903_v1",
+      "file_count": 4,
+      "payload_sha256": "8b677514a3e80246d4d44a01a43bede3e1052b4f8633db959b9f3313722784ec",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chemfp51_gate0/chemfp51_gate0_20260903_v1"
+    },
+    {
+      "branch": "variants/baselines/gpusimilarity/latest_exact_20260903_v1",
+      "file_count": 57,
+      "payload_sha256": "e4e4c5056f2e991679c49ed5c23edf90f2eecb627aaba49a7d9168233beb9afd",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/gpusimilarity/latest_exact_20260903_v1"
+    },
+    {
+      "branch": "variants/baselines/legacy-faiss_gpu_delete_smoke_v1",
+      "file_count": 1,
+      "payload_sha256": "02d9faeb2f5fe72931e424f81a899d9d9de73bd521b3fa34acc80dedb6cbaa39",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/faiss_gpu_delete_smoke_v1"
+    },
+    {
+      "branch": "variants/baselines/legacy-hnsw_snapshot_v1",
+      "file_count": 1,
+      "payload_sha256": "b54a93e6334e271574a2cc7c69c24d66e2dfa35e0afd867f394c71ff018ba060",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/hnsw_snapshot_v1"
+    },
+    {
+      "branch": "variants/baselines/legacy-hnsw_snapshot_v2",
+      "file_count": 1,
+      "payload_sha256": "4812247a8d5ef749e42db349866e07bc397ccfcb99ea5bd3dda1e5d806a084fa",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/hnsw_snapshot_v2"
+    },
+    {
+      "branch": "variants/baselines/legacy-hnsw_snapshot_v3",
+      "file_count": 1,
+      "payload_sha256": "363401b3a39807f57e6c3a17cba50c7ceaff41df02e5b1b0d68792e6495556f6",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/hnsw_snapshot_v3"
+    },
+    {
+      "branch": "variants/baselines/legacy-safe_c1_reference_mirror_v1",
+      "file_count": 1,
+      "payload_sha256": "b87c0eefd901fe6855b4db182b123f398cb504153ef9fea7ce2b3534dd553d4e",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/safe_c1_reference_mirror_v1"
+    },
+    {
+      "branch": "variants/baselines/legacy-safe_c1_reference_mirror_v2",
+      "file_count": 1,
+      "payload_sha256": "b45f65a69a9fb07bed6ba5f939ca26da35a94198b100799ce13f7a031b58b68f",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/safe_c1_reference_mirror_v2"
+    },
+    {
+      "branch": "variants/baselines/legacy-safe_c1_reference_mirror_v3",
+      "file_count": 1,
+      "payload_sha256": "24241b8a483a8db1b250b32840e9f821c9b3fafd5f4209e268a69d713835e1f7",
+      "role": "Legacy shared dynamic-search baseline adapter",
+      "source_label": "ANNS/shared_safe_c1_mixedstream_v1/baselines/safe_c1_reference_mirror_v3"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/full_20260902_v1",
+      "file_count": 2,
+      "payload_sha256": "8e7410d0e657c9a9ca4b19789dd7bf2604294bfab82b216e3f2c0ea6bfbd3fc9",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/full_20260902_v1"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_level10_20260903_v1",
+      "file_count": 4,
+      "payload_sha256": "a0d9a71b40a4e810c958faf98b649e07e2c68e8dca1025902ccc0600eecf7f91",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v1"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_level10_20260903_v2",
+      "file_count": 7,
+      "payload_sha256": "0644b26193f5f92978727046592575c248dfdc63661b16dceeae15b2c78bb0de",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_level10_20260903_v2"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_update_five_20260903_v1",
+      "file_count": 9,
+      "payload_sha256": "70cfe7eddab04caacb242319271cad5df8e0a7e932600c15dc8965539e7456be",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_update_latest_20260903_v1",
+      "file_count": 7,
+      "payload_sha256": "0ca488b54b8868af2d98f8f3dae59c464afa075a3082cb025b227503ffdcfb78",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_latest_20260903_v1"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/sample_1m_20260902_v1",
+      "file_count": 3,
+      "payload_sha256": "927562cb86b9bfdcc37adceacf906d525e8dbefe23d0a45ba838f8ba09cd639b",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v1"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/sample_1m_20260902_v2",
+      "file_count": 4,
+      "payload_sha256": "545f843ccdb41fa904f8d2b8d14a8ba1a99a01298d2acdf7e82e52670e65287d",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v2"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/sample_1m_20260902_v3",
+      "file_count": 17,
+      "payload_sha256": "186f454f004b00a93cf16d94f683abfa760d081d67d7248a66bb053f99164e68",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_1m_20260902_v3"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/sample_4m_20260902_v1",
+      "file_count": 17,
+      "payload_sha256": "186f454f004b00a93cf16d94f683abfa760d081d67d7248a66bb053f99164e68",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_4m_20260902_v1"
+    },
+    {
+      "branch": "variants/baselines/les3_same_data/sample_4m_move_20260902_v1",
+      "file_count": 17,
+      "payload_sha256": "c942ec03e2c6504daa17d871f2f410b75fee3cdb1bb4a8f718687e25f5c472a9",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/sample_4m_move_20260902_v1"
+    },
+    {
+      "branch": "variants/baselines/nvmolkit060_query/nvmolkit060_20260904_v1",
+      "file_count": 9,
+      "payload_sha256": "e91ada6c93e62a5c89961ae252b229fc170da47d85f657656c407c150c612ae9",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_query/nvmolkit060_20260904_v1"
+    },
+    {
+      "branch": "variants/baselines/nvmolkit060_tide_paired/nvmolkit060_tide_paired_20260904_v1",
+      "file_count": 3,
+      "payload_sha256": "8bd5cc81edbc9f5a2ede2fb416d3c4a1b5a8b9574ec639a38c6c4a1b491862a0",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/nvmolkit060_tide_paired/nvmolkit060_tide_paired_20260904_v1"
+    },
+    {
+      "branch": "variants/companions/certigraph_gate0_20260827",
+      "file_count": 6,
+      "payload_sha256": "bbac7adaf3bfe4b1c0d1d7812a585d714c97609c013ea3625ab581fb5c7dde14",
+      "role": "Related GTS/CertiGraph comparison, not a TIDE contribution",
+      "source_label": "TIDE/active/certigraph_gate0_20260827"
+    },
+    {
+      "branch": "variants/companions/gts_c1_minimal_closure",
+      "file_count": 32,
+      "payload_sha256": "4c07c8d21d4bff5824e3e1b793d93c3b1fa7e00162faac522f48705176420171",
+      "role": "Related GTS/CertiGraph comparison, not a TIDE contribution",
+      "source_label": "TIDE/active/gts_c1_minimal_closure"
+    },
+    {
+      "branch": "variants/companions/gts_gate0_20260825",
+      "file_count": 18,
+      "payload_sha256": "b591a37c163e9b1e23c58d3fc9312660018cb703d58ad6fecbbc4f266d6084f8",
+      "role": "Related GTS/CertiGraph comparison, not a TIDE contribution",
+      "source_label": "TIDE/active/gts_gate0_20260825"
+    },
+    {
+      "branch": "variants/experiments/chembl37_static_2048/chembl37_static_20260903_v1",
+      "file_count": 9,
+      "payload_sha256": "97ab5e7165e2b88094e1fe5bd0171f5ff518de6d28d66181b50165033ae80387",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/chembl37_static_2048/chembl37_static_20260903_v1"
+    },
+    {
+      "branch": "variants/experiments/query_study_p1_20260905_v1",
+      "file_count": 14,
+      "payload_sha256": "45b86b9499fb9ee45fe7dfe8b14fc1b395c4df9377d69e523c06efc71ea89bb1",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v1"
+    },
+    {
+      "branch": "variants/experiments/query_study_p1_20260905_v2",
+      "file_count": 15,
+      "payload_sha256": "f352e452cea77016772f7ae2ca7e821a05ce886b13d77d7b6ae9b727140c007b",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v2"
+    },
+    {
+      "branch": "variants/experiments/query_study_p1_20260905_v3",
+      "file_count": 18,
+      "payload_sha256": "e5d68bec5ba58cefc629cbda6d9a75d7eac4ed7b5d6a5ba5689f76fb8c68c050",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p1_20260905_v3"
+    },
+    {
+      "branch": "variants/experiments/query_study_p2_20260905_v1",
+      "file_count": 15,
+      "payload_sha256": "8bfd85d7457dc4204c6213caa83308abb03bfb55f88468af90d9ce5528e5c849",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/query_study_p2_20260905_v1"
+    },
+    {
+      "branch": "variants/experiments/read_while_update/read_while_update_20260903_v1",
+      "file_count": 3,
+      "payload_sha256": "a8ff2b759b243f0634aa57f5bfd41cec6278eb56498bce961de258ed94be682f",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v1"
+    },
+    {
+      "branch": "variants/experiments/read_while_update/read_while_update_20260903_v2",
+      "file_count": 3,
+      "payload_sha256": "41dd800e2ba90329af632f25f491d924a007f0457fdd6302b4b8ec07d3baacf3",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v2"
+    },
+    {
+      "branch": "variants/experiments/read_while_update/read_while_update_20260903_v3",
+      "file_count": 3,
+      "payload_sha256": "258f277d3f5da29e8a860b39b0fd475880b38fb9063af7df23cf0126dd68546c",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v3"
+    },
+    {
+      "branch": "variants/experiments/read_while_update/read_while_update_20260903_v4",
+      "file_count": 3,
+      "payload_sha256": "e41cab2de529f13b9ce52bade48692c017bfac05a368220f5621d8a60d087141",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update/read_while_update_20260903_v4"
+    },
+    {
+      "branch": "variants/experiments/read_while_update_async/read_while_update_async_20260903_v1",
+      "file_count": 3,
+      "payload_sha256": "ae09e6196c90a26f50ac6a0b04027188442dac01782618effa92ede818920e44",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update_async/read_while_update_async_20260903_v1"
+    },
+    {
+      "branch": "variants/experiments/read_while_update_async/read_while_update_async_20260903_v2",
+      "file_count": 3,
+      "payload_sha256": "173048d1fead4d5ea73b9d5c398d0fb1fb602213fa1020f642a0ebe3b8e2cd8e",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update_async/read_while_update_async_20260903_v2"
+    },
+    {
+      "branch": "variants/experiments/read_while_update_async/read_while_update_async_20260903_v3",
+      "file_count": 3,
+      "payload_sha256": "f943afbdaf81b34154b490f059510c3c132d9b34dfe1f3728f4d2e1e12008b29",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/read_while_update_async/read_while_update_async_20260903_v3"
+    },
+    {
+      "branch": "variants/experiments/svc_f0_20260905T150653Z",
+      "file_count": 3,
+      "payload_sha256": "2ba0e3248ec63314e645cf4bb587036564025c353c865e23b161bd4e14a97e6c",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_f0_20260905T150653Z"
+    },
+    {
+      "branch": "variants/experiments/svc_q0_20260905T154651Z",
+      "file_count": 7,
+      "payload_sha256": "e622cf83c0cdb62d4066da68141713371a17379503630d3b5642c55267b073e9",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q0_20260905T154651Z"
+    },
+    {
+      "branch": "variants/experiments/svc_q1_20260905T162808Z",
+      "file_count": 7,
+      "payload_sha256": "50d3f58f07b34745f9a818d567def41fb52d5749183c729bfc5c5cad702939b0",
+      "role": "Query/concurrency/service experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/svc_q1_20260905T162808Z"
+    },
+    {
+      "branch": "variants/experiments/tide_20260904_fusion_fair_control_gate0",
+      "file_count": 3,
+      "payload_sha256": "f345f430aaedf4e5712d23e9a8640793eae58d3f2a6b80f42d0d30c8b00f946b",
+      "role": "Fusion fair-control experiment",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/experiments/tide_20260904_fusion_fair_control_gate0"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_execution_release_v8_external_one_time_approval",
+      "file_count": 24,
+      "payload_sha256": "4e24b3a878db9739e7d24dc921f42b67220598feb472ca56694538fb2aff44b2",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_execution_release_v8_external_one_time_approval"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_heldout_gamma_probe",
+      "file_count": 2,
+      "payload_sha256": "d72c656e77b78036c4db7f145e23b0a7cce888dfd1703bc6730c6825e7ea5c90",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_heldout_gamma_probe"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark",
+      "file_count": 30,
+      "payload_sha256": "8849c1877bafddac27e52e1d26ddb68932ff08c21b827a9adfdaa3019ddf74de",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal",
+      "file_count": 37,
+      "payload_sha256": "cc42ac567582cf3f666aa7e0d7e8ea0afcfda0b7c20b108c75ffda6b76afec95",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v5_formal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v6_capacity_snapshot",
+      "file_count": 38,
+      "payload_sha256": "49324e3a77fdd1af2677161b6ad7f9db3b659a5e540097ec8b4255ebcee024a5",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v6_capacity_snapshot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight",
+      "file_count": 42,
+      "payload_sha256": "43614f6624505adc7982e8e000c660432eb528e4c7bce582899c13d5f4e1f98b",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_cpu_preflight"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_manifest_repair",
+      "file_count": 41,
+      "payload_sha256": "eff19cca70178a724eac206f7c0874a0c2cbb35888e879f18efb3ce2e705dfec",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v7_profile_manifest_repair"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v8_profile_child_sessions_contract",
+      "file_count": 42,
+      "payload_sha256": "c664165f2f70197fc647e513df85f7784b65b895e1408da0ed1cdbd9d7e9f75e",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c1_workspace_onequery_microbenchmark_v8_profile_child_sessions_contract"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_aabb_rounding_audit_v1",
+      "file_count": 1,
+      "payload_sha256": "af16b65c57b3a54c9691cebf292d0a21769f942772e67d880ea35c54f958c73c",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_aabb_rounding_audit_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_controlled_drift_recalibration",
+      "file_count": 2,
+      "payload_sha256": "b00a8560f9c86401cde4e0ae705143a7d2eed08bcb9cfadf41ac20adcc89cb1e",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_controlled_drift_recalibration"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_gamma_heldout_scale",
+      "file_count": 23,
+      "payload_sha256": "e2f734f7bfb71d6bd4fee7025694e7acc48c0f89e9196112d6011e30f19a7546",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_interval_bound_safe",
+      "file_count": 10,
+      "payload_sha256": "5f451079430faf3414467d00e44343ae1e588f6b502aca31c179644660e65aa8",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_interval_bound_safe_v2_tiefree",
+      "file_count": 17,
+      "payload_sha256": "3ede657d240bc44354e18ca5be579501e9fff34746cc6d662af2f818ff180225",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_interval_bound_safe_v2_tiefree"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v1",
+      "file_count": 2,
+      "payload_sha256": "ffcd04e769eaf17c5c282cca8c1d39c88df598c9016d23e58c22b113ec204b96",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v2",
+      "file_count": 2,
+      "payload_sha256": "1e0264c2ad5d2aa6ba837dec9020e9420238ba424a2b8afd751afa56ff16dfa8",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v2"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v3_aabb",
+      "file_count": 2,
+      "payload_sha256": "85aa1585901a08afc1daf1625b0ce741ec6ef329df3152b56b26391ba48fd9e8",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v3_aabb"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v4_projection",
+      "file_count": 2,
+      "payload_sha256": "738049300ecd587f2dc433bfaac19c7eec7f48ee81a65bd79d5285c2fe0cca9f",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_multilandmark_certificate_probe_v4_projection"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_speculative_fallback_v3",
+      "file_count": 24,
+      "payload_sha256": "aefdec030132639f953ae249bfb8f776ee55514f2df688d4810ffbcef5a23866",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v3"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_speculative_fallback_v4",
+      "file_count": 48,
+      "payload_sha256": "fa75e506e844c7dfc1aa9fac8af7632238fb05e85c3d45d31b882e946fccfb84",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_speculative_fallback_v4"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_static_aabb_v1",
+      "file_count": 73,
+      "payload_sha256": "9b5e4c5e46cb3cc1b61c86daaaa94f4125c619a949763a0b8405809fdddce74d",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_static_aabb_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c3_native_direct_insert_probe",
+      "file_count": 12,
+      "payload_sha256": "d06f01bbd732b6099eaebcf61841871e2138022ffe46e2e23f5d69b2df57b6f4",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_native_direct_insert_probe"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1",
+      "file_count": 9,
+      "payload_sha256": "7c94c4c5d06d4d4771e56ccb6435cccb299be7b7ad0f9fba87d6642943b52735",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_ancestor_fence_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c3_safe_leaf_envelope_v1",
+      "file_count": 7,
+      "payload_sha256": "d65aaaf951f8bd1dc671d6b3949b8afae015fdd62828819badeae2c5c687fdb3",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c3_safe_leaf_envelope_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/e1g_adapter",
+      "file_count": 8,
+      "payload_sha256": "a5158c3c0f7ce3fb8b7bade3d23983eb537609657a7c0074cc23dc5f0d1ab565",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/e1g_adapter"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/fair_dynamic_knn_safe_c1_v1",
+      "file_count": 53,
+      "payload_sha256": "519a714ad83b56ca06d6d86757bbe1179c2f3df1619d0103ade725ee39f2cbf6",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/fair_dynamic_knn_safe_c1_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/harness",
+      "file_count": 7,
+      "payload_sha256": "ce73d911bb98d73714ed959378a8421ead40a2e1ea3c11e25402618449446d00",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/harness"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/hnsw_fair_dynamic_knn",
+      "file_count": 2,
+      "payload_sha256": "32a9b013249092a1bb38d63ae009dfc9e9a417d816bb5c096d3906d72287e58e",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/hnsw_fair_dynamic_knn"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_cuda_reference",
+      "file_count": 3,
+      "payload_sha256": "64f8779d940d4b0f80f860ec8c89070b4f23faec3b664cdd1c94afa87fb75396",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_reference"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_cuda_skeleton",
+      "file_count": 2,
+      "payload_sha256": "5a60d8359f53ee692697f9ec80859765544365aed2a2cba8431f2e7e5dba0e54",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_cuda_skeleton"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_dynamic_gts_v1",
+      "file_count": 9,
+      "payload_sha256": "9b677f71f87d10161f424910fc4e75c264bf4462b8299e0d08c52cacfb8288f9",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_dynamic_gts_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_gts_integration",
+      "file_count": 2,
+      "payload_sha256": "26cee8123e3cd13dab15d09296d07aedbb7bbea5a3d052a47d07d86f7cbbdaac",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_gts_integration"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v1",
+      "file_count": 17,
+      "payload_sha256": "54c8e4eeaa8591d490f2805654937141c730c8d9b5911ed55989908d01ddb670",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v10_nvml_pci_bufferfix_pilot",
+      "file_count": 40,
+      "payload_sha256": "8aa483a7645747abc35301b9b1b1a6d60b531ebc0ea3efd6fe6973ba08023582",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v10_nvml_pci_bufferfix_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v11_range_safe_fallback_pilot",
+      "file_count": 40,
+      "payload_sha256": "b86b668d1e3b967ff79a8bef4d676d9726c8bd5a55c0abd137d63d97c36b06f7",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v11_range_safe_fallback_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v12_range_safe_empty_deltafix_pilot",
+      "file_count": 40,
+      "payload_sha256": "9415b1a1d673dd1926510b80efb3670158017d0308cdbf204ce5643040e6667c",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v12_range_safe_empty_deltafix_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag",
+      "file_count": 32,
+      "payload_sha256": "a6ef0252bdbe2473c6b094c59e4bc44dcb485928d612011b12cb371b31967fe7",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v14_frozen_snapshot_certificate_diag_evidencefix",
+      "file_count": 32,
+      "payload_sha256": "bb2018ba08f5e9720fe9d7fd9ec7fa6303d5b1a775282b7fad795d4e6b4c006b",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v14_frozen_snapshot_certificate_diag_evidencefix"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v15_frozen_snapshot_certificate_diag_evidencefix_compilefix",
+      "file_count": 40,
+      "payload_sha256": "813fb66a770eb43b4516236f111748855e36fe4ae617084e7b1ccc18ec50938d",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v15_frozen_snapshot_certificate_diag_evidencefix_compilefix"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v16_json_receiptfix_validation",
+      "file_count": 24,
+      "payload_sha256": "c85c1716eecb3be0411e7c0d9c981e5a336d2e9fe4da2cef16214c1af8914664",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v16_json_receiptfix_validation"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v17_json_receiptfix_preflightroot",
+      "file_count": 40,
+      "payload_sha256": "f3d63edb6ed0125c11462a5d303d53366b8e8432e4e948bb07cd516a34480190",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v17_json_receiptfix_preflightroot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v18_json_receiptfix_bootstrapready",
+      "file_count": 40,
+      "payload_sha256": "359c0a1da715ac2e1d900c8434c2c4f7b6a54784af5ca58cfa7804aa5bb99a44",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v18_json_receiptfix_bootstrapready"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v19_fulltrace_nativecertfix_jsonseal",
+      "file_count": 24,
+      "payload_sha256": "cd6b4b0ba77807f18a6dead0109302cf07d9f0b09bab781c37a6665416cba964",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v19_fulltrace_nativecertfix_jsonseal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal",
+      "file_count": 24,
+      "payload_sha256": "6c5c9a3ee8f8276237e5b464dea8c0f915665d79a122064d870edc158cf645c8",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v21_fulltrace_nativecertfix_jsonseal",
+      "file_count": 24,
+      "payload_sha256": "8c7535eaa502998b105ada81f8cfd9eff0adb18ae4e0c2383eb9c8cfc5ed9d1e",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v21_fulltrace_nativecertfix_jsonseal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v22_fulltrace_nativecertfix_jsonseal",
+      "file_count": 24,
+      "payload_sha256": "9756631f9e60890d22d659fecdaf4e6a63252e810280afc2e98ae6dc5c33f520",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v22_fulltrace_nativecertfix_jsonseal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v23_fulltrace_nativecertfix_jsonseal",
+      "file_count": 32,
+      "payload_sha256": "d062c5ce5d42366d26ef16dd3f8cf2efd8e73cd4b01b842300ca4ca03b14cf88",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v23_fulltrace_nativecertfix_jsonseal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v24_fulltrace_nativecertfix_jsonseal",
+      "file_count": 40,
+      "payload_sha256": "ad4f7dcde2335082aa9437032191cd9e17ef456382800745b354330e39de79dc",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v24_fulltrace_nativecertfix_jsonseal"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v2_api_invariants",
+      "file_count": 19,
+      "payload_sha256": "bd013cbaa780dae5ca6234fba328e5ea777425e964406a81c8abbe1b0d3a156c",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v2_api_invariants"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v3_controlled_4k_pilot",
+      "file_count": 17,
+      "payload_sha256": "2d2d6ad3ebbc5850a83e5a976af3d20ce405ad367e047a90fb9bfaf1e03027b8",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v3_controlled_4k_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v4_lightweight_identity_pilot",
+      "file_count": 17,
+      "payload_sha256": "5439db4fb6f31909cb8a110576248a2a199e63b17398283a4a6b64ae17d7317c",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v4_lightweight_identity_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot",
+      "file_count": 22,
+      "payload_sha256": "cce6d794868e0e27e251867c6d5a1be1a96c514510a183ddeef996aebe0017fe",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v5_failstop_boundinput_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v6_guarded_token_pilot",
+      "file_count": 31,
+      "payload_sha256": "b3a27ba645639d2f0c0355e490cafeb64c81835e310627cc9f404ff7ac02166d",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v6_guarded_token_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v7_compilefix_pilot",
+      "file_count": 39,
+      "payload_sha256": "79fe9a152cd5c3f066caf9f5848968520d5b6bad14afcc9168e8ef11936b2522",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v7_compilefix_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v8_loader_allowlist_pilot",
+      "file_count": 39,
+      "payload_sha256": "ba1144439ab23979a17c81f48b7e15bad11b7e48de95d7cf261faccaab9b8c6e",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v8_loader_allowlist_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v9_nvml_only_pilot",
+      "file_count": 24,
+      "payload_sha256": "02fa006f49fc38050b2fbc23a5110dfa95e267bbac747588e7e3cbaea8b4a283",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v9_nvml_only_pilot"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/source_gts_incremental",
+      "file_count": 27,
+      "payload_sha256": "d3b50dddc4619b0bd505b84502679a44aa75658886a9b1d7933f253318b02de5",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/source_gts_incremental"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native",
+      "file_count": 16,
+      "payload_sha256": "e5a021bc72593868a230dbd4f01927c1758720364ffc0729026addaf585d5f80",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v2_search_native"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness",
+      "file_count": 11,
+      "payload_sha256": "fabdbcf55230f2098d77b570ad4b8ba35c3a4a68be51d612c00bcd49b7860334",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v3_capacity_witness"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness",
+      "file_count": 11,
+      "payload_sha256": "8093bbef905daec221c25eb4705b6ec13b749753a8f2f30f25b979bcd397b34a",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v4_rebuild_witness"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned",
+      "file_count": 17,
+      "payload_sha256": "84fe3121416f88cd76749f8651a63ccbce3b7da008f87b8d6e07c3e7c16f1285",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1",
+      "file_count": 5,
+      "payload_sha256": "666498af930891284cca82582ec21d046b62a5184b154bca63b2503a6f4635f6",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_frozen_topk_exporter_v1"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_search_native_certificate_v2",
+      "file_count": 2,
+      "payload_sha256": "e81bc469c928c8209de13d5c0a7faac8e52c6e5b200b1c4fda62957cdb1459aa",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_search_native_certificate_v2"
+    },
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260730/safe_c1_fable5_matched_v1",
+      "file_count": 53,
+      "payload_sha256": "5078fc5facc4ee96fb68bea5f254204fd7c74f270514075552e168b7d477313a",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260730/safe_c1_fable5_matched_v1"
+    },
+    {
+      "branch": "variants/protocol/tide_d0_control_plane_v1_sourceonly_20260809T103000CST",
+      "file_count": 1,
+      "payload_sha256": "02f500b82bde18aee1731b8b24fb04fb8969de9a86e0e2ffd9ac44522810717e",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_d0_control_plane_v1_sourceonly_20260809T103000CST"
+    },
+    {
+      "branch": "variants/protocol/tide_d0_control_plane_v2_issuerclaim_isolatedprobe_sourceonly_20260809T111500CST",
+      "file_count": 1,
+      "payload_sha256": "b32c31a968683fdd620b95be5cd16ee6b7c76c762f6e878975c00feef2d80974",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_d0_control_plane_v2_issuerclaim_isolatedprobe_sourceonly_20260809T111500CST"
+    },
+    {
+      "branch": "variants/protocol/tide_d0_control_plane_v3_claimterminalwording_sourceonly_20260809T120000CST",
+      "file_count": 1,
+      "payload_sha256": "fddd0277d49c0dc0ebf708244db8747ff033cca7ab3a99b26298986f566769fe",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_d0_control_plane_v3_claimterminalwording_sourceonly_20260809T120000CST"
+    },
+    {
+      "branch": "variants/protocol/tide_d0_control_plane_v5_postexpiry_m1_sourceonly_20260809T104443CST",
+      "file_count": 1,
+      "payload_sha256": "742816e87a470235b6c8acd5c3ab17f29dcb0c8aa2bff69e456c7f8f063b90f1",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_d0_control_plane_v5_postexpiry_m1_sourceonly_20260809T104443CST"
+    },
+    {
+      "branch": "variants/protocol/tide_dynamic_e1_binding_preflight_v1_sourceonly_20260810T031500CST",
+      "file_count": 2,
+      "payload_sha256": "e4407455e94e76709b5befa5b83b13939446725fdfd974d18b34c3abd1d023da",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v1_sourceonly_20260810T031500CST"
+    },
+    {
+      "branch": "variants/protocol/tide_dynamic_e1_binding_preflight_v2_sourceonly_20260810T032000CST",
+      "file_count": 2,
+      "payload_sha256": "fe97f4629bea58cd4173937fb7c5a1d5c72cf61b73c5810a5bd9893a5d07ecf6",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_dynamic_e1_binding_preflight_v2_sourceonly_20260810T032000CST"
+    },
+    {
+      "branch": "variants/protocol/tide_e1_synthetic_fixture_builder_v1_sourceonly_20260810T025940CST",
+      "file_count": 1,
+      "payload_sha256": "e1ee476c59a3da6479a85083d356f440ac42e604a24b95aaf7559f979e8438c9",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v1_sourceonly_20260810T025940CST"
+    },
+    {
+      "branch": "variants/protocol/tide_e1_synthetic_fixture_builder_v2_sourceonly_20260810T030500CST",
+      "file_count": 2,
+      "payload_sha256": "013e329009e2a191546c7a9f32ce5242133a736e3c343c37aa5f97072ca0ec80",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_fixture_builder_v2_sourceonly_20260810T030500CST"
+    },
+    {
+      "branch": "variants/protocol/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210",
+      "file_count": 4,
+      "payload_sha256": "3c82174ebf202343d38611b5db19219786058553b1c1a95e1f8883bb4d1a4482",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210"
+    },
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z",
+      "file_count": 9,
+      "payload_sha256": "074005db9645250a802a564bda3456d1853f88fbf7f62b9332ba508a3bd840a0",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e1e3_protocol_v1_sourceonly_20260809T154509Z"
+    },
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z",
+      "file_count": 4,
+      "payload_sha256": "c788f6720728835a34e71d8e73e922bbce551f279484eeabac0f7780a61ac22e",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_campaign_v1_sourceonly_20260809T185806Z"
+    },
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e2e3_synthetic_runner_v1_sourceonly_20260809T190544Z",
+      "file_count": 3,
+      "payload_sha256": "bf6729de19120c35fcba12bad4176e3cd29ccbe59c16421e02e4959e0cd08dcb",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_runner_v1_sourceonly_20260809T190544Z"
+    },
+    {
+      "branch": "variants/protocol/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z",
+      "file_count": 3,
+      "payload_sha256": "e5bc8763a1cfc541dfecd77c427f99521f8ab49313376c323f5120fba009e42d",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_e2e3_synthetic_runner_v2_receipt_sidecar_v_exact_delta_sourceonly_20260809T191430Z"
+    },
+    {
+      "branch": "variants/protocol/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z",
+      "file_count": 6,
+      "payload_sha256": "c39c43cc1f9d80a59318d36055764a2e532032e6c5289cdb8d308056e98ded44",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_sigmod2027_native_gts_e2e3_contract_v1_sourceonly_20260809T224955Z"
+    },
+    {
+      "branch": "variants/rt-tide/bottleneck_20260824",
+      "file_count": 117,
+      "payload_sha256": "1c192b00d0554b2274a4bf578dfca01762ebe04f8f8cb6ef4086a05e19834d96",
+      "role": "RT-TIDE experiment",
+      "source_label": "RT-TIDE/experiments/bottleneck_20260824"
+    },
+    {
+      "branch": "variants/rt-tide/large_batch_20260825",
+      "file_count": 91,
+      "payload_sha256": "acc58afe94cab29fffb333ad11a36593635eba158eb84facc27b99c2a95dc337",
+      "role": "RT-TIDE experiment",
+      "source_label": "RT-TIDE/experiments/large_batch_20260825"
+    },
+    {
+      "branch": "variants/rt-tide/pca_bound_crossover",
+      "file_count": 87,
+      "payload_sha256": "3cf10efad19ab28dd9ee0b89addeb14959a47a7c54df3e83c70ffbef96087996",
+      "role": "RT-TIDE experiment",
+      "source_label": "RT-TIDE/experiments/pca_bound_crossover"
+    },
+    {
+      "branch": "variants/rt-tide/rt_delta_probe",
+      "file_count": 87,
+      "payload_sha256": "3073e21033af67b73b2042e77c8d8ffa40dbdcca699bb6a96980aa9a4aee739d",
+      "role": "RT-TIDE probe",
+      "source_label": "RT-TIDE/src/rt_delta_probe"
+    },
+    {
+      "branch": "variants/rt-tide/rt_distance_probe",
+      "file_count": 87,
+      "payload_sha256": "04c4a23b2c83f67e4462bac4d2123d9f94e93d8a55c7c4dee3981e83af0a5ae8",
+      "role": "RT-TIDE probe",
+      "source_label": "RT-TIDE/src/rt_distance_probe"
+    },
+    {
+      "branch": "variants/rt-tide/rt_tide_fused_probe",
+      "file_count": 87,
+      "payload_sha256": "c44c37c3ce016ffc055c2673211bb5b73bc20d4113edd2477f6b03d1634c10fd",
+      "role": "RT-TIDE probe",
+      "source_label": "RT-TIDE/src/rt_tide_fused_probe"
+    },
+    {
+      "branch": "variants/rt-tide/rt_tide_pca_bound_probe",
+      "file_count": 87,
+      "payload_sha256": "6d94f418f08d4344ccb9cd88f56e0c2729231b9be397ec1302d495f64dcfdbfe",
+      "role": "RT-TIDE probe",
+      "source_label": "RT-TIDE/src/rt_tide_pca_bound_probe"
+    },
+    {
+      "branch": "variants/rt-tide/shared-context",
+      "file_count": 87,
+      "payload_sha256": "e5b69920a6a64e6b5d20abea83b2c689cfbe3ac30a5182504b73563602874920",
+      "role": "RTSpatial dependency and GTS comparison context",
+      "source_label": "RT-TIDE"
+    },
+    {
+      "branch": "variants/tidepro/GTSPP-TIDEpro_20260913_gate0",
+      "file_count": 6,
+      "payload_sha256": "de080cda22c4b4ee0237046be359620996eae1a236bc878d70ba0ab3e7c490e8",
+      "role": "TIDEpro maintenance/service experiment",
+      "source_label": "GTSPP-TIDEpro_20260913_gate0"
+    },
+    {
+      "branch": "variants/tidepro/GTSPP-TIDEpro_20260913_gate1",
+      "file_count": 11,
+      "payload_sha256": "134c914560fbccc1d566a2b4c0d86197fb539f04879165b16e509454bd2e4b25",
+      "role": "TIDEpro maintenance/service experiment",
+      "source_label": "GTSPP-TIDEpro_20260913_gate1"
+    },
+    {
+      "branch": "variants/tidepro/GTSPP-TIDEpro_20260915_gate2",
+      "file_count": 13,
+      "payload_sha256": "29fb88be45252cc0cd19af675d2aa68825c6660c9be2b3e676873ff1d728e4f9",
+      "role": "TIDEpro maintenance/service experiment",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2"
+    }
+  ]
+}

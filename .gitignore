@@ -1,0 +1,9 @@
+/build/
+/bin/
+*.o
+*.so
+*.a
+*.ptx
+*.cubin
+__pycache__/
+.DS_Store
