@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/les3_same_data/full_20260902_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/full_20260902_v1"
+    }
+  ],
+  "files": {
+    "source/input/dense_to_les3.cpp": {
+      "mode": "100644",
+      "original_sha256": "ab0d01d8c941b751fcddeabfe3c03a5c9ac3f89c3613d93d2ff6da7bc182ff1f",
+      "publication_adjustments": [],
+      "sha256": "ab0d01d8c941b751fcddeabfe3c03a5c9ac3f89c3613d93d2ff6da7bc182ff1f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/full_20260902_v1/input/dense_to_les3.cpp"
+    },
+    "source/input/measure_command.py": {
+      "mode": "100755",
+      "original_sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "publication_adjustments": [],
+      "sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/full_20260902_v1/input/measure_command.py"
+    }
+  },
+  "payload_sha256": "8e7410d0e657c9a9ca4b19789dd7bf2604294bfab82b216e3f2c0ea6bfbd3fc9",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
