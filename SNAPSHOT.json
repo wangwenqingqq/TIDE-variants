@@ -1,0 +1,28 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_controlled_drift_recalibration",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_controlled_drift_recalibration"
+    }
+  ],
+  "files": {
+    "source/analyze_c2_drift_monitor.py": {
+      "mode": "100755",
+      "original_sha256": "6cbabd6575172a2f03df2ff79bcdb3a08dca370abc0486af094cf4d9f5dcabdb",
+      "publication_adjustments": [],
+      "sha256": "6cbabd6575172a2f03df2ff79bcdb3a08dca370abc0486af094cf4d9f5dcabdb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_controlled_drift_recalibration/analyze_c2_drift_monitor.py"
+    },
+    "source/prepare_sift1m_c2_drift_inputs.py": {
+      "mode": "100755",
+      "original_sha256": "9b79739b07059f073ef4f6777cf380bcd85e1a09cb6e69f0e6a5d7021af9f163",
+      "publication_adjustments": [],
+      "sha256": "9b79739b07059f073ef4f6777cf380bcd85e1a09cb6e69f0e6a5d7021af9f163",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_controlled_drift_recalibration/prepare_sift1m_c2_drift_inputs.py"
+    }
+  },
+  "payload_sha256": "b00a8560f9c86401cde4e0ae705143a7d2eed08bcb9cfadf41ac20adcc89cb1e",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
