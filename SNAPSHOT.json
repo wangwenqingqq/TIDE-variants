@@ -1,0 +1,78 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/companions/certigraph_gate0_20260827",
+      "role": "Related GTS/CertiGraph comparison, not a TIDE contribution",
+      "source_label": "TIDE/active/certigraph_gate0_20260827"
+    }
+  ],
+  "files": {
+    "source/run_algorithm_formal.sh": {
+      "mode": "100755",
+      "original_sha256": "54f2282b52c871bb1d528f4a9cc595be4959829d1e083b1c8f4f9d736875c60d",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "external-environment-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "0df362f90001a3946ba5d07c17fd40b36e2ad31ceb9ef06c6bdf91831fb0991f",
+      "source_label": "TIDE/active/certigraph_gate0_20260827/run_algorithm_formal.sh"
+    },
+    "source/run_export_formal.sh": {
+      "mode": "100755",
+      "original_sha256": "fcb56d624dd4cd15473ff7409ae6a8cebac420bddf2b504a8e459def2402dd7c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "8ce629afeeb1539f7148227e7de99aaa13f8ae1fcbf9ce036b0b7dc24adf2c07",
+      "source_label": "TIDE/active/certigraph_gate0_20260827/run_export_formal.sh"
+    },
+    "source/src/diagnose_failure.py": {
+      "mode": "100644",
+      "original_sha256": "711789b6b97a456487ab0e83e8bb230f1b88f1fe43db9550565cc020fdbb0319",
+      "publication_adjustments": [],
+      "sha256": "711789b6b97a456487ab0e83e8bb230f1b88f1fe43db9550565cc020fdbb0319",
+      "source_label": "TIDE/active/certigraph_gate0_20260827/src/diagnose_failure.py"
+    },
+    "source/src/export_edit_evidence.cu": {
+      "mode": "100644",
+      "original_sha256": "3e18e93b5d2458f20f844e4a6afdf98120cf95d2b9b318f5510a9907b49f67c1",
+      "publication_adjustments": [],
+      "sha256": "3e18e93b5d2458f20f844e4a6afdf98120cf95d2b9b318f5510a9907b49f67c1",
+      "source_label": "TIDE/active/certigraph_gate0_20260827/src/export_edit_evidence.cu"
+    },
+    "source/src/prepare_queries.py": {
+      "mode": "100644",
+      "original_sha256": "db50005ff1b423897bf8d2d8a026eb4fe5355f436ac09e1dcbad1a113d5f7846",
+      "publication_adjustments": [],
+      "sha256": "db50005ff1b423897bf8d2d8a026eb4fe5355f436ac09e1dcbad1a113d5f7846",
+      "source_label": "TIDE/active/certigraph_gate0_20260827/src/prepare_queries.py"
+    },
+    "source/src/run_algorithmic_gate.py": {
+      "mode": "100644",
+      "original_sha256": "8bce3fd57a0852631c38c4d0a82eac31e953b4c15a723653dfb3004ca1e77c87",
+      "publication_adjustments": [],
+      "sha256": "8bce3fd57a0852631c38c4d0a82eac31e953b4c15a723653dfb3004ca1e77c87",
+      "source_label": "TIDE/active/certigraph_gate0_20260827/src/run_algorithmic_gate.py"
+    }
+  },
+  "payload_sha256": "bbac7adaf3bfe4b1c0d1d7812a585d714c97609c013ea3625ab581fb5c7dde14",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
