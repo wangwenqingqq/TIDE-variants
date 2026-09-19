@@ -1,0 +1,222 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal"
+    }
+  ],
+  "files": {
+    "source/reference/g1_safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "3ba34419ad9da35401a85bb5af6362f40cfd90e13d6a2b370bbf072479e67431",
+      "publication_adjustments": [],
+      "sha256": "3ba34419ad9da35401a85bb5af6362f40cfd90e13d6a2b370bbf072479e67431",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/g1_safe_c1_dynamic_gts.cu"
+    },
+    "source/reference/g1_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/g1_safe_search_v2.cuh"
+    },
+    "source/reference/gts_tree_source.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/gts_tree_source.cuh"
+    },
+    "source/reference/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/include/config.cuh"
+    },
+    "source/reference/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/include/file.cuh"
+    },
+    "source/reference/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/include/mlp_constant.cuh"
+    },
+    "source/reference/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/include/residual_pruning.cuh"
+    },
+    "source/reference/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/include/safe_search_v2.cuh"
+    },
+    "source/reference/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/reference/include/tree.cuh"
+    },
+    "source/runner/g3_4k_pilot_wrapper.cu": {
+      "mode": "100644",
+      "original_sha256": "804b5c4386c5809a1dab1f29aaabb2e765fc6f00aaa8df3b9355f7f2a857be26",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "d75a6e7e5192150b1aff882ed54669a56755e4d8edaca94ddf2097a03c27ca61",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/runner/g3_4k_pilot_wrapper.cu"
+    },
+    "source/src/g3_safe_c1_native_matrix.cu": {
+      "mode": "100644",
+      "original_sha256": "b2a334711339c7dbd6d23e15d0d9c6ade6572da6aa31932846c36ab48e11d74a",
+      "publication_adjustments": [],
+      "sha256": "b2a334711339c7dbd6d23e15d0d9c6ade6572da6aa31932846c36ab48e11d74a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/src/g3_safe_c1_native_matrix.cu"
+    },
+    "source/src/g3_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "publication_adjustments": [],
+      "sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/src/g3_safe_search_v2.cuh"
+    },
+    "source/tools/.build_and_attest_g3_4k_single_tu.body.sh": {
+      "mode": "100644",
+      "original_sha256": "4282c023485db04368665801e2b8c21f036f60bbb80cd837e9d5355718110d1c",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "ba933aeda82212dea98965571c30d76ae4337c4963fca088a144f6a076c757ca",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/.build_and_attest_g3_4k_single_tu.body.sh"
+    },
+    "source/tools/.compile_g3_4k_wrapper_only.body.sh": {
+      "mode": "100644",
+      "original_sha256": "9bd67c2f7ba67f5ae1e7d10d42a9bcc075b0580c509d21c2533c50fad9567ce2",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "f8ad0d6cd1a0c7d67e648e04d004960c2e802cc62fe4463ab229fea7ab048f0a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/.compile_g3_4k_wrapper_only.body.sh"
+    },
+    "source/tools/.g3_nvml_snapshot.py": {
+      "mode": "100644",
+      "original_sha256": "d5d57ccd816f377209f6a4f2709f75cb030e65739423b8967c126197513891c8",
+      "publication_adjustments": [],
+      "sha256": "d5d57ccd816f377209f6a4f2709f75cb030e65739423b8967c126197513891c8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/.g3_nvml_snapshot.py"
+    },
+    "source/tools/.run_g3_4k_single_tu.body.sh": {
+      "mode": "100644",
+      "original_sha256": "412326beee5fb04e8e7c3e34845d2ab66d75d00864f688a5fc2d880dbebaf5b2",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "4217a8952101b698602f91227a624978b6bc035d312054b9d0aa06aca2cba707",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/.run_g3_4k_single_tu.body.sh"
+    },
+    "source/tools/build_and_attest_g3_4k_single_tu.sh": {
+      "mode": "100755",
+      "original_sha256": "484ba17ea793c0b82dfc55d12db9dcb9f88fa3fffd5da977e26299d0e3ae6980",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "48a095eb7c79f933a1b501a9c5329d082c5d834ff949e7ff48c6c82d8c85a832",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/build_and_attest_g3_4k_single_tu.sh"
+    },
+    "source/tools/compile_g3_4k_wrapper_only.sh": {
+      "mode": "100755",
+      "original_sha256": "602108ade01df137d4d18a3320356c691e288e7f33c97d77a1739851c76a3032",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "8486e18bdf4402fa204020e394bb3367187e69685130eaf94a7d4813f0db300f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/compile_g3_4k_wrapper_only.sh"
+    },
+    "source/tools/g3_common.py": {
+      "mode": "100644",
+      "original_sha256": "dbc806d80278c6d41da8dfcddda59294a5f720b51bd3393aa214ffb0ded1abb3",
+      "publication_adjustments": [],
+      "sha256": "dbc806d80278c6d41da8dfcddda59294a5f720b51bd3393aa214ffb0ded1abb3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/g3_common.py"
+    },
+    "source/tools/generate_g3_bootstrap_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "c187e1d84ff8e664e946e22981d284eed390d90cbbb58d31f86e6ae1421fac90",
+      "publication_adjustments": [],
+      "sha256": "c187e1d84ff8e664e946e22981d284eed390d90cbbb58d31f86e6ae1421fac90",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/generate_g3_bootstrap_oracle.py"
+    },
+    "source/tools/issue_g3_4k_gpu_token.sh": {
+      "mode": "100755",
+      "original_sha256": "36a487120800ceb3436b0a52a3f7b2b8f60280d9a162a121b622c63ca55bb4db",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "28f0e66e2f9742c0aa1adbe0259dfb835a0070de5e4a572e89bcbe318573a32a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/issue_g3_4k_gpu_token.sh"
+    },
+    "source/tools/run_g3_4k_single_tu.sh": {
+      "mode": "100755",
+      "original_sha256": "16f71d331486a4be8ebad7c1e647555b402900aac4c5725328b1f38170bb7fab",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "226a65438b9498ed93a9bf193fa6d795820e1bfe34292c7329354807e9c3712b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/run_g3_4k_single_tu.sh"
+    },
+    "source/tools/validate_g3_bootstrap_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "3b061214e1601814ba09549816d41ff9223dcfcfcf8d1702924540eed99b0fdd",
+      "publication_adjustments": [],
+      "sha256": "3b061214e1601814ba09549816d41ff9223dcfcfcf8d1702924540eed99b0fdd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/validate_g3_bootstrap_oracle.py"
+    },
+    "source/tools/validate_g3_fixture.py": {
+      "mode": "100644",
+      "original_sha256": "5eabf72a22887a1d7d5b78ed4f68682f903406367b582ffd39ef7f3167f82c90",
+      "publication_adjustments": [],
+      "sha256": "5eabf72a22887a1d7d5b78ed4f68682f903406367b582ffd39ef7f3167f82c90",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v20_fulltrace_nativecertfix_jsonseal/tools/validate_g3_fixture.py"
+    }
+  },
+  "payload_sha256": "6c5c9a3ee8f8276237e5b464dea8c0f915665d79a122064d870edc158cf645c8",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
