@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/protocol/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210",
+      "role": "Synthetic protocol / control-plane tooling, not a GPU algorithm",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210"
+    }
+  ],
+  "files": {
+    "source/source/base_oracle_identity.py": {
+      "mode": "100644",
+      "original_sha256": "ca569c3eff3fd1117547c84ed0d4c10515abe8d843b4047cd56379f407c52d75",
+      "publication_adjustments": [],
+      "sha256": "ca569c3eff3fd1117547c84ed0d4c10515abe8d843b4047cd56379f407c52d75",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210/source/base_oracle_identity.py"
+    },
+    "source/source/full_oracle_identity.py": {
+      "mode": "100644",
+      "original_sha256": "20dd1017f5c3f071808b66cab5ab94da18bfcceb63313c53ff38f9b151196e9e",
+      "publication_adjustments": [],
+      "sha256": "20dd1017f5c3f071808b66cab5ab94da18bfcceb63313c53ff38f9b151196e9e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210/source/full_oracle_identity.py"
+    },
+    "source/source/mirror_oracle_identity.py": {
+      "mode": "100644",
+      "original_sha256": "936004b44678cb34d492f520c6babee689bd1dac949795edc8e73ae7673c28a0",
+      "publication_adjustments": [],
+      "sha256": "936004b44678cb34d492f520c6babee689bd1dac949795edc8e73ae7673c28a0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210/source/mirror_oracle_identity.py"
+    },
+    "source/source/synthetic_e1_fixture_builder.py": {
+      "mode": "100644",
+      "original_sha256": "3faf74d779dfd192f65b4e21b63d029aa4fee1795d049f5b903b8e6862a54e79",
+      "publication_adjustments": [],
+      "sha256": "3faf74d779dfd192f65b4e21b63d029aa4fee1795d049f5b903b8e6862a54e79",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/root_artifacts/tide_e1_synthetic_lifecycle_evidence_v2_20260810T030500CST_8a7b6c5d4e3f2910fedcba9876543210/source/synthetic_e1_fixture_builder.py"
+    }
+  },
+  "payload_sha256": "3c82174ebf202343d38611b5db19219786058553b1c1a95e1f8883bb4d1a4482",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
