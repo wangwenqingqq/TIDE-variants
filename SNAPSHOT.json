@@ -1,0 +1,166 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned"
+    }
+  ],
+  "files": {
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/file.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/residual_pruning.cuh"
+    },
+    "source/include/safe_c1_search_native_routing_certificate.hpp": {
+      "mode": "100644",
+      "original_sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "publication_adjustments": [],
+      "sha256": "84e541ed1427f450cd1d0df7cb1574be151b609ee4e34cae70cc753930a16688",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/safe_c1_search_native_routing_certificate.hpp"
+    },
+    "source/include/safe_c1_tie_free_witness.hpp": {
+      "mode": "100644",
+      "original_sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "publication_adjustments": [],
+      "sha256": "7768c28e338b77d1d56958b0b4cc92cb1e59bb8c84c0f143ee9894d112ab914f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/safe_c1_tie_free_witness.hpp"
+    },
+    "source/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/safe_search_v2.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/include/tree.cuh"
+    },
+    "source/src/safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "5d0bfbd56c974855881bd2639f1bc00b50e2157615e23fe9673f53c10078c6d5",
+      "publication_adjustments": [],
+      "sha256": "5d0bfbd56c974855881bd2639f1bc00b50e2157615e23fe9673f53c10078c6d5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/src/safe_c1_dynamic_gts.cu"
+    },
+    "source/tools/artifact_pinning_v5.py": {
+      "mode": "100755",
+      "original_sha256": "e11cfc5cf8b4fed01879b28863b5667b8d266049204015158aabe07ed9ce122e",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "50fc9b1097d28a6e7abd8f196a5de7912888f3d8bc7f648c5f70d9546fcc7b8f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/artifact_pinning_v5.py"
+    },
+    "source/tools/audit_g2_static_contract_v5.py": {
+      "mode": "100755",
+      "original_sha256": "76bb3533d0692048f8c0eba3019c7445a0f6a64eb5fff3ed52402e4a4f3f6105",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "4287963a83b3d8fcb7c9f2dd68b848286c909dc4bb9a3b9bbf5c8452b0a7a8fc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/audit_g2_static_contract_v5.py"
+    },
+    "source/tools/finalize_g2_rebuild_witness_v5.py": {
+      "mode": "100755",
+      "original_sha256": "f534e0e7858f4faceb815b79dd108ee399c061d2b626c5a8bb2b5b06817f55b3",
+      "publication_adjustments": [],
+      "sha256": "f534e0e7858f4faceb815b79dd108ee399c061d2b626c5a8bb2b5b06817f55b3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/finalize_g2_rebuild_witness_v5.py"
+    },
+    "source/tools/make_g2_rebuild_witness_bundle_v5.py": {
+      "mode": "100755",
+      "original_sha256": "8f9558d9c9871282854257f8cf15739ccc8848000a2a150e07463e9e177b1b77",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "e0613fe088a373d528944e47dc70468903698de4c4d0093a4d41bae8ee51dcef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/make_g2_rebuild_witness_bundle_v5.py"
+    },
+    "source/tools/preflight_g2_rebuild_witness_v5.py": {
+      "mode": "100755",
+      "original_sha256": "ee46c0d320384054db303df1e4f0739e05c97295af231c369d8b0915bd15f281",
+      "publication_adjustments": [
+        {
+          "occurrences": 3,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "217f47bb547844e48fa8de35bada5c2fd652f38e8db7ac2b15c65ea313cd6514",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/preflight_g2_rebuild_witness_v5.py"
+    },
+    "source/tools/run_g2_rebuild_witness_guarded_v5.sh": {
+      "mode": "100755",
+      "original_sha256": "94128e7b94f1e90f553c49510b7c3eaf8819e5a21dfb6bf68f29e6da0f2acb76",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "eac2fccefa231460b802e622c8e30fb8173fee3ff6acb149d5829a1499356540",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/run_g2_rebuild_witness_guarded_v5.sh"
+    },
+    "source/tools/safe_c1_v5_rebuild_bundle_contract.py": {
+      "mode": "100755",
+      "original_sha256": "6ec65efb5b5cdc8277113054817b05e562cede2eb90015bd16479d96238f42e2",
+      "publication_adjustments": [],
+      "sha256": "6ec65efb5b5cdc8277113054817b05e562cede2eb90015bd16479d96238f42e2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/safe_c1_v5_rebuild_bundle_contract.py"
+    },
+    "source/tools/test_g2_rebuild_witness_pipeline_v5.py": {
+      "mode": "100755",
+      "original_sha256": "9e1039f6100726e3bab07d6fb356d4a34bc563c2533735fb6f521877c64c03ac",
+      "publication_adjustments": [],
+      "sha256": "9e1039f6100726e3bab07d6fb356d4a34bc563c2533735fb6f521877c64c03ac",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260728/safe_c1_dynamic_gts_v5_g2_artifact_pinned/tools/test_g2_rebuild_witness_pipeline_v5.py"
+    }
+  },
+  "payload_sha256": "84fe3121416f88cd76749f8651a63ccbce3b7da008f87b8d6e07c3e7c16f1285",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
