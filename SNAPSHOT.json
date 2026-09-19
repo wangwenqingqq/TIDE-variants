@@ -1,0 +1,77 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/baselines/les3_same_data/l2p_update_five_20260903_v1",
+      "role": "External baseline/paired adapter",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1"
+    }
+  ],
+  "files": {
+    "source/gxx_sanitized.sh": {
+      "mode": "100755",
+      "original_sha256": "c4c653272386b4e463064cad9f52c7e2ff9e91481c5b4b6716aee8ab039c0c0e",
+      "publication_adjustments": [],
+      "sha256": "c4c653272386b4e463064cad9f52c7e2ff9e91481c5b4b6716aee8ab039c0c0e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/gxx_sanitized.sh"
+    },
+    "source/input/exact_transition_oracle.cpp": {
+      "mode": "100644",
+      "original_sha256": "a5ed3b16a3ba0a24ac9c06537bc877da972e891d609242e238a8cf8ec3a6a9e2",
+      "publication_adjustments": [],
+      "sha256": "a5ed3b16a3ba0a24ac9c06537bc877da972e891d609242e238a8cf8ec3a6a9e2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/exact_transition_oracle.cpp"
+    },
+    "source/input/l2p_build_ptr.cpp": {
+      "mode": "100644",
+      "original_sha256": "c2d66af1e308b148e11d336a7b1025acebce7670bb403c468a1185ea3457099d",
+      "publication_adjustments": [],
+      "sha256": "c2d66af1e308b148e11d336a7b1025acebce7670bb403c468a1185ea3457099d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/l2p_build_ptr.cpp"
+    },
+    "source/input/l2p_train.cpp": {
+      "mode": "100644",
+      "original_sha256": "0e6ca4c5928c8ad876b321107cd51030bc213a0577f4801123225ad12c46b27c",
+      "publication_adjustments": [],
+      "sha256": "0e6ca4c5928c8ad876b321107cd51030bc213a0577f4801123225ad12c46b27c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/l2p_train.cpp"
+    },
+    "source/input/measure_command.py": {
+      "mode": "100755",
+      "original_sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "publication_adjustments": [],
+      "sha256": "b830cc34c26831e107aab13d73d19f5ee36eff705e9106bf2e114bc3a93105e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/measure_command.py"
+    },
+    "source/input/partition_tgm_stats.cpp": {
+      "mode": "100644",
+      "original_sha256": "5d2b040d4d63ff34f59213cf6e80edffbf252de09dd8dc1103eeca1011dcfc47",
+      "publication_adjustments": [],
+      "sha256": "5d2b040d4d63ff34f59213cf6e80edffbf252de09dd8dc1103eeca1011dcfc47",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/partition_tgm_stats.cpp"
+    },
+    "source/input/test_exact_transition_oracle.py": {
+      "mode": "100755",
+      "original_sha256": "a8ded6991c38bbedd82145ac461fe06affdf231c7bd6343a46469ed07c96c1a4",
+      "publication_adjustments": [],
+      "sha256": "a8ded6991c38bbedd82145ac461fe06affdf231c7bd6343a46469ed07c96c1a4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/test_exact_transition_oracle.py"
+    },
+    "source/input/test_tgm_update_benchmark.py": {
+      "mode": "100644",
+      "original_sha256": "4493aedeb0127fd8fe77bf4ff3dff7f9be41ffff05926a74a44d83a644429344",
+      "publication_adjustments": [],
+      "sha256": "4493aedeb0127fd8fe77bf4ff3dff7f9be41ffff05926a74a44d83a644429344",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/test_tgm_update_benchmark.py"
+    },
+    "source/input/tgm_update_benchmark.cpp": {
+      "mode": "100644",
+      "original_sha256": "64a7433b4b930e37d9e6244feba16dac7e7d8a52b17c4a2e6d98f734b98ad656",
+      "publication_adjustments": [],
+      "sha256": "64a7433b4b930e37d9e6244feba16dac7e7d8a52b17c4a2e6d98f734b98ad656",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scratch/les3_same_data/l2p_update_five_20260903_v1/input/tgm_update_benchmark.cpp"
+    }
+  },
+  "payload_sha256": "70cfe7eddab04caacb242319271cad5df8e0a7e932600c15dc8965539e7456be",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
