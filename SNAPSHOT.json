@@ -1,0 +1,220 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/c2_gamma_heldout_scale",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale"
+    }
+  ],
+  "files": {
+    "source/backups/build_c2_perlevel_runner.pre_cuda_pathfix.sh": {
+      "mode": "100755",
+      "original_sha256": "cfa0a23272d5de46cb90922892ec2d30eaff68c06f39cc198c65e5781d98bc8a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "f04cd585e2e66df10389b3936535cdc25580ae928e0c200c47b0f325d376baeb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/backups/build_c2_perlevel_runner.pre_cuda_pathfix.sh"
+    },
+    "source/backups/gts_c2_perlevel_sift1m.pre_namespacefix.cu": {
+      "mode": "100644",
+      "original_sha256": "373c1f20771ff0ef817105bd0759c318e2d6ff1dbdffbda67357701d7e8c3f4b",
+      "publication_adjustments": [],
+      "sha256": "373c1f20771ff0ef817105bd0759c318e2d6ff1dbdffbda67357701d7e8c3f4b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/backups/gts_c2_perlevel_sift1m.pre_namespacefix.cu"
+    },
+    "source/backups/gts_c2_perlevel_sift1m.pre_pairedbaseline.cu": {
+      "mode": "100644",
+      "original_sha256": "01ac6b089674876d3ab1d978f39eb36be1319718491f304113e25469340706b1",
+      "publication_adjustments": [],
+      "sha256": "01ac6b089674876d3ab1d978f39eb36be1319718491f304113e25469340706b1",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/backups/gts_c2_perlevel_sift1m.pre_pairedbaseline.cu"
+    },
+    "source/backups/gts_c2_perlevel_sift1m.pre_reviewfix.cu": {
+      "mode": "100644",
+      "original_sha256": "d8fd3b823c285a4c4b040aeae3f5e1f8544b9cd76b63416c5e5b898e4a30bf8d",
+      "publication_adjustments": [],
+      "sha256": "d8fd3b823c285a4c4b040aeae3f5e1f8544b9cd76b63416c5e5b898e4a30bf8d",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/backups/gts_c2_perlevel_sift1m.pre_reviewfix.cu"
+    },
+    "source/backups/run_submitted_vldb_c2_guarded.pre_hardening_20260727T093641Z.sh": {
+      "mode": "100755",
+      "original_sha256": "1f5929f6ff3e0b1ff38ae4e3283bef9db525348bfac4689e413e7648bca1cec0",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 4,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "143f7f7d11b51c298e730fdaffdcbd2018d08d3a32743e6488d13035f9efafd7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/backups/run_submitted_vldb_c2_guarded.pre_hardening_20260727T093641Z.sh"
+    },
+    "source/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/config.cuh"
+    },
+    "source/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/file.cuh"
+    },
+    "source/include/gpu_timer.cuh": {
+      "mode": "100644",
+      "original_sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "publication_adjustments": [],
+      "sha256": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/gpu_timer.cuh"
+    },
+    "source/include/incremental_insert.cuh": {
+      "mode": "100644",
+      "original_sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "publication_adjustments": [],
+      "sha256": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/incremental_insert.cuh"
+    },
+    "source/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/mlp_constant.cuh"
+    },
+    "source/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/residual_pruning.cuh"
+    },
+    "source/include/residual_tuner.cuh": {
+      "mode": "100644",
+      "original_sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "publication_adjustments": [],
+      "sha256": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/residual_tuner.cuh"
+    },
+    "source/include/search.cuh": {
+      "mode": "100644",
+      "original_sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "publication_adjustments": [],
+      "sha256": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/search.cuh"
+    },
+    "source/include/search_naive.cuh": {
+      "mode": "100644",
+      "original_sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "publication_adjustments": [],
+      "sha256": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/search_naive.cuh"
+    },
+    "source/include/search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "58ffc7b8dd4cdf3a68f92118be89895dfb2bad2c89904c7e9447b90aacd18bfe",
+      "publication_adjustments": [],
+      "sha256": "58ffc7b8dd4cdf3a68f92118be89895dfb2bad2c89904c7e9447b90aacd18bfe",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/search_v2.cuh"
+    },
+    "source/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "publication_adjustments": [],
+      "sha256": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/tree.cuh"
+    },
+    "source/include/update.cuh": {
+      "mode": "100644",
+      "original_sha256": "483a4386d7f8f858f2bae7e4eab55e6bd8c4951add433ca093c4e5b15bd30596",
+      "publication_adjustments": [],
+      "sha256": "483a4386d7f8f858f2bae7e4eab55e6bd8c4951add433ca093c4e5b15bd30596",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/update.cuh"
+    },
+    "source/include/update_optimized.cuh": {
+      "mode": "100644",
+      "original_sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "publication_adjustments": [],
+      "sha256": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/update_optimized.cuh"
+    },
+    "source/include/update_user_modified.cuh": {
+      "mode": "100644",
+      "original_sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "publication_adjustments": [],
+      "sha256": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/include/update_user_modified.cuh"
+    },
+    "source/src/gts_c2_perlevel_sift1m.cu": {
+      "mode": "100644",
+      "original_sha256": "09a5209b6a376c16d94c0a8304868a4198c69822e26589271c4aadbcd4ce0b24",
+      "publication_adjustments": [],
+      "sha256": "09a5209b6a376c16d94c0a8304868a4198c69822e26589271c4aadbcd4ce0b24",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/src/gts_c2_perlevel_sift1m.cu"
+    },
+    "source/tools/build_c2_perlevel_runner.sh": {
+      "mode": "100755",
+      "original_sha256": "3d2b0b1632fb6f93e94d854ada9172335711a4e0b0d29bea3e43d757ebc4ae16",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "cd5f53ac7d86bb30e54c36ffeb05d2843e267fb1c2a095f328cbf0eb9f0be036",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/tools/build_c2_perlevel_runner.sh"
+    },
+    "source/tools/prepare_sift1m_c2_preflight.py": {
+      "mode": "100755",
+      "original_sha256": "d76f3ab389771f46fae72b1612ece5937a8748bf09f48e73eb99bcd162087234",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "09adfb0f858d7c501289740aefbcdd11cdcdc96fedf4cbea3fa2a6688dcef53f",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/tools/prepare_sift1m_c2_preflight.py"
+    },
+    "source/tools/run_submitted_vldb_c2_guarded.sh": {
+      "mode": "100755",
+      "original_sha256": "306458296133ccdd83cab5c7c5e876d60cfb1c0666e9bc6562f3a791b934fcf5",
+      "publication_adjustments": [
+        {
+          "occurrences": 5,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "host-guard"
+        },
+        {
+          "occurrences": 4,
+          "reason": "legacy-workspace-route"
+        }
+      ],
+      "sha256": "ae547c5418c7f0d04ed97e130499ea9354fc4deba260b73f1bafce6232078579",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/c2_gamma_heldout_scale/tools/run_submitted_vldb_c2_guarded.sh"
+    }
+  },
+  "payload_sha256": "e2f734f7bfb71d6bd4fee7025694e7acc48c0f89e9196112d6011e30f19a7546",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
