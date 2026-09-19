@@ -1,0 +1,283 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/legacy/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag",
+      "role": "Historical shared GTS/TIDE safety implementation or harness",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag"
+    }
+  ],
+  "files": {
+    "source/preflight/compile_wrapper_only/sealed_source/reference/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/reference/include/config.cuh"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/reference/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/reference/include/file.cuh"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/reference/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/reference/include/mlp_constant.cuh"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/reference/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/reference/include/residual_pruning.cuh"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/reference/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/reference/include/tree.cuh"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/runner/g3_4k_pilot_wrapper.cu": {
+      "mode": "100644",
+      "original_sha256": "f6e3b91f4d6d40a9519f68f48716674063b774087a1f699b3a89abad4171dc8a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5b2de37012a59f55c2fd711672964d613c6c9a6b6f2960398c5a946997a360af",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/runner/g3_4k_pilot_wrapper.cu"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/src/g3_safe_c1_native_matrix.cu": {
+      "mode": "100644",
+      "original_sha256": "18293057dbffab1dd068f9a5313b922948e0110058f5f143f5c065cb8be18b7b",
+      "publication_adjustments": [],
+      "sha256": "18293057dbffab1dd068f9a5313b922948e0110058f5f143f5c065cb8be18b7b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/src/g3_safe_c1_native_matrix.cu"
+    },
+    "source/preflight/compile_wrapper_only/sealed_source/src/g3_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "publication_adjustments": [],
+      "sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/preflight/compile_wrapper_only/sealed_source/src/g3_safe_search_v2.cuh"
+    },
+    "source/reference/g1_safe_c1_dynamic_gts.cu": {
+      "mode": "100644",
+      "original_sha256": "3ba34419ad9da35401a85bb5af6362f40cfd90e13d6a2b370bbf072479e67431",
+      "publication_adjustments": [],
+      "sha256": "3ba34419ad9da35401a85bb5af6362f40cfd90e13d6a2b370bbf072479e67431",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/g1_safe_c1_dynamic_gts.cu"
+    },
+    "source/reference/g1_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/g1_safe_search_v2.cuh"
+    },
+    "source/reference/gts_tree_source.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/gts_tree_source.cuh"
+    },
+    "source/reference/include/config.cuh": {
+      "mode": "100644",
+      "original_sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "publication_adjustments": [],
+      "sha256": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/include/config.cuh"
+    },
+    "source/reference/include/file.cuh": {
+      "mode": "100644",
+      "original_sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "publication_adjustments": [],
+      "sha256": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/include/file.cuh"
+    },
+    "source/reference/include/mlp_constant.cuh": {
+      "mode": "100644",
+      "original_sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "publication_adjustments": [],
+      "sha256": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/include/mlp_constant.cuh"
+    },
+    "source/reference/include/residual_pruning.cuh": {
+      "mode": "100644",
+      "original_sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "publication_adjustments": [],
+      "sha256": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/include/residual_pruning.cuh"
+    },
+    "source/reference/include/safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "publication_adjustments": [],
+      "sha256": "52160dfb3d8f39df2d63823e100da6ed8f18344946ede94c33bd2f886834d0cc",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/include/safe_search_v2.cuh"
+    },
+    "source/reference/include/tree.cuh": {
+      "mode": "100644",
+      "original_sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "publication_adjustments": [],
+      "sha256": "c1324bef173358c31a8371e1f050d4372cd1c92cd98c71af3832b2d19c769fd6",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/reference/include/tree.cuh"
+    },
+    "source/runner/g3_4k_pilot_wrapper.cu": {
+      "mode": "100644",
+      "original_sha256": "f6e3b91f4d6d40a9519f68f48716674063b774087a1f699b3a89abad4171dc8a",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5b2de37012a59f55c2fd711672964d613c6c9a6b6f2960398c5a946997a360af",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/runner/g3_4k_pilot_wrapper.cu"
+    },
+    "source/src/g3_safe_c1_native_matrix.cu": {
+      "mode": "100644",
+      "original_sha256": "18293057dbffab1dd068f9a5313b922948e0110058f5f143f5c065cb8be18b7b",
+      "publication_adjustments": [],
+      "sha256": "18293057dbffab1dd068f9a5313b922948e0110058f5f143f5c065cb8be18b7b",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/src/g3_safe_c1_native_matrix.cu"
+    },
+    "source/src/g3_safe_search_v2.cuh": {
+      "mode": "100644",
+      "original_sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "publication_adjustments": [],
+      "sha256": "65688fedcbb05a1fff680555e3139b6e640bfdd72288b93dfccddcec90dfbf01",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/src/g3_safe_search_v2.cuh"
+    },
+    "source/tools/.build_and_attest_g3_4k_single_tu.body.sh": {
+      "mode": "100644",
+      "original_sha256": "c7bb5447f490d2dcf062f7f2b11df955c801bd7fc3a5bb121b4e0c72de5030cc",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "5f287177da98d52649116edf5abd687b53e63bce667f2425a34921402c0682e5",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/.build_and_attest_g3_4k_single_tu.body.sh"
+    },
+    "source/tools/.compile_g3_4k_wrapper_only.body.sh": {
+      "mode": "100644",
+      "original_sha256": "019855822a52e1325b0c55d3764807b1896abfcb81571459ad32880e7020ecaf",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "f6084ade511ef37377f634a1d14e06d8a2e92b6914701bce35acefdcc20bfe69",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/.compile_g3_4k_wrapper_only.body.sh"
+    },
+    "source/tools/.g3_nvml_snapshot.py": {
+      "mode": "100644",
+      "original_sha256": "d5d57ccd816f377209f6a4f2709f75cb030e65739423b8967c126197513891c8",
+      "publication_adjustments": [],
+      "sha256": "d5d57ccd816f377209f6a4f2709f75cb030e65739423b8967c126197513891c8",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/.g3_nvml_snapshot.py"
+    },
+    "source/tools/.run_g3_4k_single_tu.body.sh": {
+      "mode": "100644",
+      "original_sha256": "db6fe53004221731e68be043423321f82ca1e819a92ccbd15a6e870a91df9c13",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "033faa331e58d1f7d701cb707f446267ac6366c315deac4d446ce54f648cac30",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/.run_g3_4k_single_tu.body.sh"
+    },
+    "source/tools/build_and_attest_g3_4k_single_tu.sh": {
+      "mode": "100755",
+      "original_sha256": "719b5c95b51e3c1e009cde3a4e7e4603671df189f89d3280f0b1ef4d6adeb13e",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "3c1ce3d75397cd90c35caba884791358cd2f25df67e39b4be0fa84d5894aece0",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/build_and_attest_g3_4k_single_tu.sh"
+    },
+    "source/tools/compile_g3_4k_wrapper_only.sh": {
+      "mode": "100755",
+      "original_sha256": "40183d7f4f13d8d3d359a7ee944ddd86fc4671bb86d18013d7e9e17f2e1207f9",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "6d7fa8a79ebcc47a54b87521a91a92bedeba8e8e2e52cdbec92cb994b18a9b6e",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/compile_g3_4k_wrapper_only.sh"
+    },
+    "source/tools/g3_common.py": {
+      "mode": "100644",
+      "original_sha256": "dbc806d80278c6d41da8dfcddda59294a5f720b51bd3393aa214ffb0ded1abb3",
+      "publication_adjustments": [],
+      "sha256": "dbc806d80278c6d41da8dfcddda59294a5f720b51bd3393aa214ffb0ded1abb3",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/g3_common.py"
+    },
+    "source/tools/generate_g3_bootstrap_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "c187e1d84ff8e664e946e22981d284eed390d90cbbb58d31f86e6ae1421fac90",
+      "publication_adjustments": [],
+      "sha256": "c187e1d84ff8e664e946e22981d284eed390d90cbbb58d31f86e6ae1421fac90",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/generate_g3_bootstrap_oracle.py"
+    },
+    "source/tools/issue_g3_4k_gpu_token.sh": {
+      "mode": "100755",
+      "original_sha256": "ede7fa94cbe8b9c7a0edccf4964363a44ffa695abe56568e1f8dad466c72ffa0",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "398748a040446863cadf0eeac1e41507580a047314a537c46956a29a07fb84e7",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/issue_g3_4k_gpu_token.sh"
+    },
+    "source/tools/run_g3_4k_single_tu.sh": {
+      "mode": "100755",
+      "original_sha256": "e4e8dcb7584f8acc6669e8cddde50dd87d565400f45de9b42e990c949e188282",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "2fbdf116441aefd03d87cf11e3e14e6887e3353968ac0062bc964f31329d2b49",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/run_g3_4k_single_tu.sh"
+    },
+    "source/tools/validate_g3_bootstrap_oracle.py": {
+      "mode": "100644",
+      "original_sha256": "3b061214e1601814ba09549816d41ff9223dcfcfcf8d1702924540eed99b0fdd",
+      "publication_adjustments": [],
+      "sha256": "3b061214e1601814ba09549816d41ff9223dcfcfcf8d1702924540eed99b0fdd",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/validate_g3_bootstrap_oracle.py"
+    },
+    "source/tools/validate_g3_fixture.py": {
+      "mode": "100644",
+      "original_sha256": "5eabf72a22887a1d7d5b78ed4f68682f903406367b582ffd39ef7f3167f82c90",
+      "publication_adjustments": [],
+      "sha256": "5eabf72a22887a1d7d5b78ed4f68682f903406367b582ffd39ef7f3167f82c90",
+      "source_label": "TIDE/archive/snapshot_20260824T0545Z/experiments/tide_safe_c1_20260727/safe_c1_native_matrix_g3_v13_frozen_snapshot_certificate_diag/tools/validate_g3_fixture.py"
+    }
+  },
+  "payload_sha256": "a6ef0252bdbe2473c6b094c59e4bc44dcb485928d612011b12cb371b31967fe7",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
