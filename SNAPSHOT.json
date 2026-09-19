@@ -1,0 +1,242 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/active/tide_surechembl_gate6_20260828",
+      "role": "Active TIDE stage",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828"
+    }
+  ],
+  "files": {
+    "source/scripts/aggregate_fpsim2_lifecycle.py": {
+      "mode": "100644",
+      "original_sha256": "daf0e6bc2ba2a83b83f30f0bdcf326ceee9f4adc8537508e4c163a19b2dc26de",
+      "publication_adjustments": [],
+      "sha256": "daf0e6bc2ba2a83b83f30f0bdcf326ceee9f4adc8537508e4c163a19b2dc26de",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/aggregate_fpsim2_lifecycle.py"
+    },
+    "source/scripts/aggregate_gate6_update.py": {
+      "mode": "100644",
+      "original_sha256": "b49801a4b8e2ed617e2b2ee38cd4f16af5e62d5de2e89ed99c9d709d596e98c2",
+      "publication_adjustments": [],
+      "sha256": "b49801a4b8e2ed617e2b2ee38cd4f16af5e62d5de2e89ed99c9d709d596e98c2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/aggregate_gate6_update.py"
+    },
+    "source/scripts/aggregate_mechanism_ncu.py": {
+      "mode": "100644",
+      "original_sha256": "64d728c1ece07d8b84d59ce48713c307d7a7ebfcb86506cda402db9a0bc3cea4",
+      "publication_adjustments": [],
+      "sha256": "64d728c1ece07d8b84d59ce48713c307d7a7ebfcb86506cda402db9a0bc3cea4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/aggregate_mechanism_ncu.py"
+    },
+    "source/scripts/aggregate_mechanism_sustained.py": {
+      "mode": "100644",
+      "original_sha256": "1ac6f264cc12c28d95b7e44cbd4bfda00cabd17459676dca26b64472ebd68a7e",
+      "publication_adjustments": [],
+      "sha256": "1ac6f264cc12c28d95b7e44cbd4bfda00cabd17459676dca26b64472ebd68a7e",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/aggregate_mechanism_sustained.py"
+    },
+    "source/scripts/audit_snapshot_transitions.py": {
+      "mode": "100755",
+      "original_sha256": "6723c7f5955b22524d3a816a100777147fc8d4fcc070d17219adb74d382f5f84",
+      "publication_adjustments": [],
+      "sha256": "6723c7f5955b22524d3a816a100777147fc8d4fcc070d17219adb74d382f5f84",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/audit_snapshot_transitions.py"
+    },
+    "source/scripts/diagnose_fpsim2_non_csi_sort.py": {
+      "mode": "100644",
+      "original_sha256": "5c0f0fe579f3efa78866e577e920c92ce43be9092dc3d9f6dbdc4ab8b35b082d",
+      "publication_adjustments": [],
+      "sha256": "5c0f0fe579f3efa78866e577e920c92ce43be9092dc3d9f6dbdc4ab8b35b082d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/diagnose_fpsim2_non_csi_sort.py"
+    },
+    "source/scripts/fetch_local_staging.py": {
+      "mode": "100755",
+      "original_sha256": "b70f31abac955474a645d97e0d32b51f0859485fa4fe1426c949963428cb3a58",
+      "publication_adjustments": [],
+      "sha256": "b70f31abac955474a645d97e0d32b51f0859485fa4fe1426c949963428cb3a58",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/fetch_local_staging.py"
+    },
+    "source/scripts/fetch_official_inputs.py": {
+      "mode": "100755",
+      "original_sha256": "896d747f15a143f5e5e5e4f4884e66b440f41220ae9ef13f1ac892a19ccc25d6",
+      "publication_adjustments": [
+        {
+          "occurrences": 2,
+          "reason": "workspace-root"
+        }
+      ],
+      "sha256": "7a6ad46b64e592d0e61520b194254c4349a50856c3eded9dbd889cc345415e5b",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/fetch_official_inputs.py"
+    },
+    "source/scripts/measure_fpsim2_lifecycle.py": {
+      "mode": "100644",
+      "original_sha256": "9a096538e8377c9386e78da114af0235492085896441d752980be2564808ad1f",
+      "publication_adjustments": [],
+      "sha256": "9a096538e8377c9386e78da114af0235492085896441d752980be2564808ad1f",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/measure_fpsim2_lifecycle.py"
+    },
+    "source/scripts/prepare_flat_inputs.py": {
+      "mode": "100755",
+      "original_sha256": "2e3e32fdfee17e8dce7c38718f3b787a0741d5bf8ed413338c6a2343608a8fd8",
+      "publication_adjustments": [],
+      "sha256": "2e3e32fdfee17e8dce7c38718f3b787a0741d5bf8ed413338c6a2343608a8fd8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/prepare_flat_inputs.py"
+    },
+    "source/scripts/prepare_sanitizer_fixture.py": {
+      "mode": "100644",
+      "original_sha256": "c3dc6e62d226a444c52c7a78dd6d8df7dc782644445cfdcbee1a5319b1e3437d",
+      "publication_adjustments": [],
+      "sha256": "c3dc6e62d226a444c52c7a78dd6d8df7dc782644445cfdcbee1a5319b1e3437d",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/prepare_sanitizer_fixture.py"
+    },
+    "source/scripts/repair_transition_delta_order.py": {
+      "mode": "100644",
+      "original_sha256": "188767c19f2c17ede048880b55c58fab13c15bee4bc710f2d6994a641db57b73",
+      "publication_adjustments": [],
+      "sha256": "188767c19f2c17ede048880b55c58fab13c15bee4bc710f2d6994a641db57b73",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/repair_transition_delta_order.py"
+    },
+    "source/scripts/run_fpsim2_lifecycle_trace.sh": {
+      "mode": "100755",
+      "original_sha256": "c7927c8fa5b40d1381925ebd237cdf45e24c753015a4e93ecc6a723e5eb864d4",
+      "publication_adjustments": [],
+      "sha256": "c7927c8fa5b40d1381925ebd237cdf45e24c753015a4e93ecc6a723e5eb864d4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/run_fpsim2_lifecycle_trace.sh"
+    },
+    "source/scripts/run_fpsim2cuda_benchmark.py": {
+      "mode": "100644",
+      "original_sha256": "83ed672545fdde643e40e5fa65a567b535abc3f49399ac749328fb1bd6e7bbdf",
+      "publication_adjustments": [],
+      "sha256": "83ed672545fdde643e40e5fa65a567b535abc3f49399ac749328fb1bd6e7bbdf",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/run_fpsim2cuda_benchmark.py"
+    },
+    "source/scripts/run_fpsim2cuda_exact.py": {
+      "mode": "100644",
+      "original_sha256": "69cd2a17f62f7a636cf3276f61f97ff9d93b28dfcc4b8d7f1a8937450f1e33d6",
+      "publication_adjustments": [],
+      "sha256": "69cd2a17f62f7a636cf3276f61f97ff9d93b28dfcc4b8d7f1a8937450f1e33d6",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/run_fpsim2cuda_exact.py"
+    },
+    "source/scripts/run_gate6_exact_surechembl.sh": {
+      "mode": "100755",
+      "original_sha256": "cbefe08d7340f037f8c108297fab71b883e9d46c2d6af9a4773b69f86345a012",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "ff3f14033dc12fcbfdca1b8d46686e68c9f3c0977e2b8d1c771efcd218c9d01c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/run_gate6_exact_surechembl.sh"
+    },
+    "source/scripts/run_gate6_mechanism_ncu.sh": {
+      "mode": "100755",
+      "original_sha256": "2f5cfa4d09731c927998b50dc18eec4e25f5b67807411de2393b43327e5afd70",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        },
+        {
+          "occurrences": 4,
+          "reason": "owner-label"
+        }
+      ],
+      "sha256": "74384c26e222ffbb1e92ced0898163a9f9dea6f15ff12f3b75a6a0512fe78261",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/run_gate6_mechanism_ncu.sh"
+    },
+    "source/scripts/run_gate6_update_formal.sh": {
+      "mode": "100755",
+      "original_sha256": "ef808748d3ad7ca1d49ea09244141f5c713b5f742fa7a18e443f3a2ba23125de",
+      "publication_adjustments": [
+        {
+          "occurrences": 1,
+          "reason": "workspace-root"
+        },
+        {
+          "occurrences": 1,
+          "reason": "device-identity"
+        }
+      ],
+      "sha256": "01cece307168930f3a2b33e2eccac3d385ac2890605bbb984626f349d00af566",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/run_gate6_update_formal.sh"
+    },
+    "source/scripts/validate_chembl_fps_h5.py": {
+      "mode": "100755",
+      "original_sha256": "1af643573c6fb5133fcfda10f857a573496997bc6f65a641e799f110106390cd",
+      "publication_adjustments": [],
+      "sha256": "1af643573c6fb5133fcfda10f857a573496997bc6f65a641e799f110106390cd",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/validate_chembl_fps_h5.py"
+    },
+    "source/scripts/validate_flat_inputs.py": {
+      "mode": "100644",
+      "original_sha256": "86d73bfa7f6340f49fccb2d84f341605adf3e7eed0193a8846c1de98496c3c59",
+      "publication_adjustments": [],
+      "sha256": "86d73bfa7f6340f49fccb2d84f341605adf3e7eed0193a8846c1de98496c3c59",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/scripts/validate_flat_inputs.py"
+    },
+    "source/src/gate6_exact_id_oracle.cpp": {
+      "mode": "100644",
+      "original_sha256": "a5ed3b16a3ba0a24ac9c06537bc877da972e891d609242e238a8cf8ec3a6a9e2",
+      "publication_adjustments": [],
+      "sha256": "a5ed3b16a3ba0a24ac9c06537bc877da972e891d609242e238a8cf8ec3a6a9e2",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_exact_id_oracle.cpp"
+    },
+    "source/src/gate6_freshness_proxy.cpp": {
+      "mode": "100644",
+      "original_sha256": "0fca3c6b57797062f26828db70cb3bcc2645b6c6eb4deb80021b9def4b66ad69",
+      "publication_adjustments": [],
+      "sha256": "0fca3c6b57797062f26828db70cb3bcc2645b6c6eb4deb80021b9def4b66ad69",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_freshness_proxy.cpp"
+    },
+    "source/src/gate6_query_campaign.cu": {
+      "mode": "100644",
+      "original_sha256": "252130cfa12cb501ffe12773c905eb0bf2e68e045815b4fa5541dd691e9efac4",
+      "publication_adjustments": [],
+      "sha256": "252130cfa12cb501ffe12773c905eb0bf2e68e045815b4fa5541dd691e9efac4",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign.cu"
+    },
+    "source/src/gate6_query_campaign_8p.cu": {
+      "mode": "100644",
+      "original_sha256": "21c105743ecc8a90117ce686050e8e725919c0da23e104e73643f02bbacbb9e8",
+      "publication_adjustments": [],
+      "sha256": "21c105743ecc8a90117ce686050e8e725919c0da23e104e73643f02bbacbb9e8",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign_8p.cu"
+    },
+    "source/src/gate6_query_campaign_external_v2.cu": {
+      "mode": "100644",
+      "original_sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "publication_adjustments": [],
+      "sha256": "81269b022e9521f9afea86ecd585335c6528f13877b33a1cef718c58f379aa36",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign_external_v2.cu"
+    },
+    "source/src/gate6_query_campaign_sustained_unbounded_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "dc3ee151e4e55a6dea342e6f36d039b4c46f9dc8773d669d4ffca54c9ff76d83",
+      "publication_adjustments": [],
+      "sha256": "dc3ee151e4e55a6dea342e6f36d039b4c46f9dc8773d669d4ffca54c9ff76d83",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign_sustained_unbounded_v1.cu"
+    },
+    "source/src/gate6_query_campaign_sustained_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "41b2c803e2fdeba215303de14b90d073fc3d1bf12127e220db7dac5373ef8b4c",
+      "publication_adjustments": [],
+      "sha256": "41b2c803e2fdeba215303de14b90d073fc3d1bf12127e220db7dac5373ef8b4c",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_query_campaign_sustained_v1.cu"
+    },
+    "source/src/gate6_update_campaign_v1.cu": {
+      "mode": "100644",
+      "original_sha256": "cbdd124c669b2b8c9b680b7357095e2611bb4418aeaea41bb5cd9256789a8a3a",
+      "publication_adjustments": [],
+      "sha256": "cbdd124c669b2b8c9b680b7357095e2611bb4418aeaea41bb5cd9256789a8a3a",
+      "source_label": "TIDE/active/tide_surechembl_gate6_20260828/src/gate6_update_campaign_v1.cu"
+    }
+  },
+  "payload_sha256": "f9934bdb1fef7afb29b2405d69550a97e772ca2002a63eef8c3b0e9fcbad7d4c",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
