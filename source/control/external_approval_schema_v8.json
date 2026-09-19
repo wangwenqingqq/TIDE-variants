@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "This schema is not an authorization. A production approval must be external to the release root, regular/non-symlink, exact-hash-bound, unexpired, and atomically claimed by control/approval_gate_v8.py before any mkdir or GPU tool is reached.",
+  "properties": {
+    "approval_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{7,127}$",
+      "type": "string"
+    },
+    "binaries": {
+      "type": "array"
+    },
+    "buildmanifest": {
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "commit": {
+      "required": [
+        "v7_source_commit",
+        "release_git_commit"
+      ],
+      "type": "object"
+    },
+    "expires_utc": {
+      "type": "string"
+    },
+    "gpu": {
+      "required": [
+        "physical_index",
+        "expected_uuid"
+      ],
+      "type": "object"
+    },
+    "guards": {
+      "type": "object"
+    },
+    "host": {
+      "const": "CONFIGURE_ARCHIVE_HOST"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "issued_utc": {
+      "type": "string"
+    },
+    "launchers": {
+      "type": "object"
+    },
+    "mode": {
+      "const": "MEASURED_5X4_C1_V8"
+    },
+    "one_time": {
+      "const": true
+    },
+    "output": {
+      "required": [
+        "absolute_run_path"
+      ],
+      "type": "object"
+    },
+    "pins": {
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "plan": {
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "policy": {
+      "required": [
+        "allow_gpu_telemetry",
+        "allow_cuda_binary",
+        "allow_nsys",
+        "kill_preexisting_processes"
+      ],
+      "type": "object"
+    },
+    "release_root": {
+      "const": "/workspace/experiments/tide_safe_c1_20260727/c1_execution_release_v8_external_one_time_approval"
+    },
+    "schema": {
+      "const": "gtspp-c1-v8-external-one-time-approval-v1"
+    }
+  },
+  "required": [
+    "schema",
+    "approval_id",
+    "one_time",
+    "issued_utc",
+    "expires_utc",
+    "mode",
+    "release_root",
+    "commit",
+    "pins",
+    "guards",
+    "launchers",
+    "buildmanifest",
+    "binaries",
+    "inputs",
+    "plan",
+    "host",
+    "gpu",
+    "output",
+    "policy"
+  ],
+  "title": "GTS++ C1 v8 external one-time execution approval (not an approval)",
+  "type": "object"
+}
