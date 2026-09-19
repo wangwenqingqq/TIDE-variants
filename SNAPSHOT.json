@@ -1,0 +1,105 @@
+{
+  "aliases": [
+    {
+      "branch": "variants/tidepro/GTSPP-TIDEpro_20260915_gate2",
+      "role": "TIDEpro maintenance/service experiment",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2"
+    }
+  ],
+  "files": {
+    "source/experiments/gate0/prepare_history.py": {
+      "mode": "100644",
+      "original_sha256": "1952b42992a31c2fa6e426d486c176bfa8c2a15d5b5c928fff0b23c16e47def8",
+      "publication_adjustments": [],
+      "sha256": "1952b42992a31c2fa6e426d486c176bfa8c2a15d5b5c928fff0b23c16e47def8",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate0/prepare_history.py"
+    },
+    "source/experiments/gate1/build.py": {
+      "mode": "100644",
+      "original_sha256": "181e507ee173c2b9e49658810cff280add03eefd93cd2f2f34f0c8e0504de1a8",
+      "publication_adjustments": [],
+      "sha256": "181e507ee173c2b9e49658810cff280add03eefd93cd2f2f34f0c8e0504de1a8",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate1/build.py"
+    },
+    "source/experiments/gate1/prepare.py": {
+      "mode": "100644",
+      "original_sha256": "398da7102e5a4a177c1e54a7d1240d9597c4645ecac26f2afb177547770b4648",
+      "publication_adjustments": [],
+      "sha256": "398da7102e5a4a177c1e54a7d1240d9597c4645ecac26f2afb177547770b4648",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate1/prepare.py"
+    },
+    "source/experiments/gate1/replay.cu": {
+      "mode": "100644",
+      "original_sha256": "50f1af18514ffffc484c02ccfe39ae7df4c877d7587ae201e37cc83ace5919d6",
+      "publication_adjustments": [],
+      "sha256": "50f1af18514ffffc484c02ccfe39ae7df4c877d7587ae201e37cc83ace5919d6",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate1/replay.cu"
+    },
+    "source/experiments/gate1/run_guarded.py": {
+      "mode": "100644",
+      "original_sha256": "8acd3823ab8f20de0a5407b4184cbd0b2681324aec5d0ee6c57a19aa8c7059ce",
+      "publication_adjustments": [],
+      "sha256": "8acd3823ab8f20de0a5407b4184cbd0b2681324aec5d0ee6c57a19aa8c7059ce",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate1/run_guarded.py"
+    },
+    "source/experiments/gate1/runtime.cuh": {
+      "mode": "100644",
+      "original_sha256": "09e31729e1ac5e9f37649e0ed64b5d55688114f9654c85ff1cadc8878070e246",
+      "publication_adjustments": [],
+      "sha256": "09e31729e1ac5e9f37649e0ed64b5d55688114f9654c85ff1cadc8878070e246",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate1/runtime.cuh"
+    },
+    "source/experiments/gate2/campaign.py": {
+      "mode": "100644",
+      "original_sha256": "76ae57d03f9a43c679c5952d8da56a079cb3e349c1900c94baeb6076da974736",
+      "publication_adjustments": [],
+      "sha256": "76ae57d03f9a43c679c5952d8da56a079cb3e349c1900c94baeb6076da974736",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate2/campaign.py"
+    },
+    "source/experiments/gate2/cpu_stage.py": {
+      "mode": "100644",
+      "original_sha256": "25f1709b26033301746bee04781485f6eb523e68a75ac72a895be7bbffcac935",
+      "publication_adjustments": [],
+      "sha256": "25f1709b26033301746bee04781485f6eb523e68a75ac72a895be7bbffcac935",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate2/cpu_stage.py"
+    },
+    "source/experiments/gate2/metrics.py": {
+      "mode": "100644",
+      "original_sha256": "4a7becf2bd984102931c79dfcecf50db4fbc1ca1852f74e3b80af50bcc445fa1",
+      "publication_adjustments": [],
+      "sha256": "4a7becf2bd984102931c79dfcecf50db4fbc1ca1852f74e3b80af50bcc445fa1",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate2/metrics.py"
+    },
+    "source/experiments/gate2/prepare.py": {
+      "mode": "100644",
+      "original_sha256": "3427c8fcd91e20c9e96a248ad7d3d6124a5a5909404a3132c725d0fd90546836",
+      "publication_adjustments": [],
+      "sha256": "3427c8fcd91e20c9e96a248ad7d3d6124a5a5909404a3132c725d0fd90546836",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate2/prepare.py"
+    },
+    "source/experiments/gate2/replay.cu": {
+      "mode": "100644",
+      "original_sha256": "14ee5ff7aeb2acf63172ce7ebdd5838072b8c006b9ab4a952009f26aea4f3999",
+      "publication_adjustments": [],
+      "sha256": "14ee5ff7aeb2acf63172ce7ebdd5838072b8c006b9ab4a952009f26aea4f3999",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/experiments/gate2/replay.cu"
+    },
+    "source/tests/test_gate2.py": {
+      "mode": "100644",
+      "original_sha256": "7df7256a4eecbdb92b993f057fd40834540e180c0a259e14eea7f9202b391902",
+      "publication_adjustments": [],
+      "sha256": "7df7256a4eecbdb92b993f057fd40834540e180c0a259e14eea7f9202b391902",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/tests/test_gate2.py"
+    },
+    "source/vendor/tide/frozen_query_runtime.cuh": {
+      "mode": "100644",
+      "original_sha256": "7ccf4416f08ec653f8d74c32562a4ee75b9ede251f953e3ec8619e8b63523302",
+      "publication_adjustments": [],
+      "sha256": "7ccf4416f08ec653f8d74c32562a4ee75b9ede251f953e3ec8619e8b63523302",
+      "source_label": "GTSPP-TIDEpro_20260915_gate2/vendor/tide/frozen_query_runtime.cuh"
+    }
+  },
+  "payload_sha256": "29fb88be45252cc0cd19af675d2aa68825c6660c9be2b3e676873ff1d728e4f9",
+  "snapshot_date": "2026-09-19",
+  "validation": "archival snapshot; no correctness or performance qualification"
+}
